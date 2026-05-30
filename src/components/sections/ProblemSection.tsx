@@ -28,7 +28,7 @@ export default function ProblemSection() {
         />
         <div className={styles.grid}>
           <div className={styles.col}>
-            <div className={`${styles.heading} ${styles.bad}`}>
+            <div className={styles.heading}>
               <span className={styles.dot} />
               Before Anvax
             </div>
@@ -42,7 +42,7 @@ export default function ProblemSection() {
             </ul>
           </div>
           <div className={`${styles.col} ${styles.good}`}>
-            <div className={`${styles.heading} ${styles.goodHeading}`}>
+            <div className={styles.heading}>
               <span className={`${styles.dot} ${styles.dotGood}`} />
               After Anvax
             </div>

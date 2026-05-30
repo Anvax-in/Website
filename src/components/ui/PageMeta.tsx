@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 
 interface PageMetaProps {
   title: string
@@ -7,11 +7,11 @@ interface PageMetaProps {
 
 export default function PageMeta({ title, description }: PageMetaProps) {
   return (
-    <Helmet>
+    <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-    </Helmet>
+    </Head>
   )
 }
