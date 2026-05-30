@@ -1,0 +1,203 @@
+/* Platform.module.css */
+
+/* Inner hero */
+.hero {
+  position: relative;
+  padding: 88px 0 96px;
+  border-bottom: 1px solid var(--border-dark);
+  background: var(--ink-900);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url('/assets/lattice.svg');
+  background-size: 220px 220px;
+  opacity: 0.06;
+  pointer-events: none;
+}
+.heroInner {
+  position: relative;
+  max-width: 760px;
+}
+.heroEyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber-500);
+  margin-bottom: 20px;
+}
+.heroH1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: -0.018em;
+  color: var(--bone-100);
+}
+.heroLede {
+  margin-top: 24px;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--fg-on-dark-dim);
+  max-width: 58ch;
+}
+
+/* Capabilities section */
+.capRow {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--border);
+}
+.capRow:last-child { border-bottom: 0; }
+.capGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 80px;
+  align-items: start;
+}
+.capLeft {}
+.capTag { margin-bottom: 16px; }
+.capH3 {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 34px;
+  margin-bottom: 14px;
+  color: var(--ink-900);
+}
+.capDesc {
+  color: var(--fg-2);
+  font-size: 15px;
+  line-height: 24px;
+}
+.capRight {}
+.specsTable {
+  width: 100%;
+  font-size: 13.5px;
+}
+.specsTable th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  padding: 0 0 10px;
+  border-bottom: 1px solid var(--border);
+}
+.specsTable td {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  color: var(--fg-2);
+  font-size: 13.5px;
+  line-height: 20px;
+}
+.specsTable td:first-child {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--ink-900);
+  font-weight: 500;
+  padding-right: 20px;
+  white-space: nowrap;
+}
+.specsTable tr:last-child td { border-bottom: 0; }
+
+/* Moats grid */
+.moatsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+.moatCard {
+  background: var(--bone-100);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 28px 24px;
+}
+.moatIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--bone-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+.moatH3 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.moatDesc {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--fg-2);
+}
+
+/* Logo wall */
+.logoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-top: 40px;
+}
+.logoTile {
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px 16px;
+  text-align: center;
+  min-height: 100px;
+}
+.logoImg {
+  max-height: 32px;
+  max-width: 80px;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.7;
+}
+.logoMark {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-700);
+  background: var(--bone-200);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logoName {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--fg-2);
+}
+.logoKind {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--fg-3);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 960px) {
+  .heroH1 { font-size: 36px; line-height: 46px; }
+  .capGrid { grid-template-columns: 1fr; gap: 28px; }
+  .moatsGrid { grid-template-columns: 1fr; }
+  .logoGrid { grid-template-columns: repeat(2, 1fr); }
+}

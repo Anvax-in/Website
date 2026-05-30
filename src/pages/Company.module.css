@@ -1,0 +1,231 @@
+/* Company.module.css */
+
+.hero {
+  position: relative;
+  padding: 88px 0 96px;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  background-image:
+    radial-gradient(120% 90% at 90% -10%, rgba(184,132,62,0.08) 0%, rgba(184,132,62,0) 55%);
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url('/assets/lattice.svg');
+  background-size: 220px 220px;
+  opacity: 0.04;
+  pointer-events: none;
+}
+.heroInner {
+  position: relative;
+  max-width: 700px;
+}
+.heroEyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber-700);
+  margin-bottom: 20px;
+}
+.heroH1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: -0.018em;
+  color: var(--ink-900);
+}
+.heroLede {
+  margin-top: 24px;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--ink-500);
+  max-width: 56ch;
+}
+
+/* Vision */
+.visionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: start;
+}
+.pullquote {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 400;
+  color: var(--ink-900);
+  border-left: 3px solid var(--amber-600);
+  padding-left: 24px;
+  margin: 0;
+}
+.visionBody {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.visionPara {
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--fg-2);
+}
+
+/* Values */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.valueCard {
+  background: var(--bone-100);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+}
+.valueH3 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: var(--ink-900);
+}
+.valueDesc {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--fg-2);
+}
+
+/* Team */
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+  max-width: 640px;
+}
+.teamCard {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  background: var(--paper);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.teamAvatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--bone-200);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: var(--ink-500);
+}
+.teamName {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink-900);
+  margin-bottom: 4px;
+}
+.teamRole {
+  font-size: 13px;
+  color: var(--fg-3);
+  font-family: var(--font-mono);
+}
+
+/* Careers */
+.careersList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: 40px;
+}
+.careerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--paper);
+  transition: background var(--dur-base) var(--ease-out);
+}
+.careerRow:last-child { border-bottom: 0; }
+.careerRow:hover { background: var(--bone-50); }
+.careerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.careerTitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink-900);
+}
+.careerMeta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-3);
+  display: flex;
+  gap: 12px;
+}
+.careerMetaItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Contact */
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+.contactCard {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  background: var(--paper);
+}
+.contactCardTitle {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: var(--ink-900);
+}
+.contactCardDesc {
+  font-size: 14px;
+  color: var(--fg-2);
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+.contactEmail {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--amber-700);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 16px;
+}
+.contactEmail:hover { text-decoration: underline; }
+
+@media (max-width: 960px) {
+  .heroH1 { font-size: 36px; line-height: 46px; }
+  .visionGrid { grid-template-columns: 1fr; gap: 40px; }
+  .valuesGrid { grid-template-columns: 1fr; }
+  .teamGrid { grid-template-columns: 1fr; max-width: 100%; }
+  .contactGrid { grid-template-columns: 1fr; }
+}

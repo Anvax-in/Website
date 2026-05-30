@@ -1,0 +1,171 @@
+/* Industries.module.css */
+
+.hero {
+  position: relative;
+  padding: 88px 0 96px;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  background-image:
+    radial-gradient(120% 90% at 90% -10%, rgba(184,132,62,0.08) 0%, rgba(184,132,62,0) 55%);
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url('/assets/lattice.svg');
+  background-size: 220px 220px;
+  opacity: 0.04;
+  pointer-events: none;
+}
+.heroInner {
+  position: relative;
+  max-width: 700px;
+}
+.heroEyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber-700);
+  margin-bottom: 20px;
+}
+.heroH1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: -0.018em;
+  color: var(--ink-900);
+}
+.heroLede {
+  margin-top: 24px;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--ink-500);
+  max-width: 56ch;
+}
+
+/* Accordion list */
+.accordionList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.accordionItem {
+  border-bottom: 1px solid var(--border);
+}
+.accordionItem:last-child { border-bottom: 0; }
+
+.accordionTrigger {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 22px 28px;
+  background: var(--paper);
+  transition: background var(--dur-base) var(--ease-out);
+}
+.accordionTrigger:hover {
+  background: var(--bone-50);
+}
+.accordionTriggerOpen {
+  background: var(--bone-100);
+}
+.accordionTriggerOpen:hover {
+  background: var(--bone-100);
+}
+.accordionTitle {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink-900);
+}
+.accordionChevron {
+  font-size: 12px;
+  color: var(--fg-3);
+  transition: transform var(--dur-base) var(--ease-out);
+}
+.accordionChevronOpen {
+  transform: rotate(180deg);
+}
+
+.accordionBody {
+  background: var(--bone-50);
+  border-top: 1px solid var(--border);
+  padding: 32px 28px;
+}
+.accordionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.accordionIntro {
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--fg-2);
+  margin-bottom: 20px;
+}
+.corpusLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  margin-bottom: 10px;
+}
+.corpusPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.corpusPill {
+  background: var(--bone-200);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 4px 12px;
+  font-size: 12.5px;
+  color: var(--fg-2);
+}
+.roleTable {
+  width: 100%;
+  font-size: 13.5px;
+}
+.roleTable th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  padding: 0 0 10px;
+  border-bottom: 1px solid var(--border);
+}
+.roleTable td {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  color: var(--fg-2);
+  line-height: 20px;
+}
+.roleTable td:first-child {
+  font-weight: 500;
+  color: var(--ink-900);
+  padding-right: 20px;
+  white-space: nowrap;
+  width: 44%;
+}
+.roleTable tr:last-child td { border-bottom: 0; }
+
+@media (max-width: 960px) {
+  .heroH1 { font-size: 36px; line-height: 46px; }
+  .accordionGrid { grid-template-columns: 1fr; gap: 28px; }
+  .accordionTrigger { padding: 18px 20px; }
+  .accordionBody { padding: 24px 20px; }
+}
