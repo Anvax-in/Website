@@ -1,0 +1,19 @@
+/* IndustriesGrid.module.css */
+.grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden;
+}
+.card {
+  background: var(--paper); padding: 28px 28px 32px;
+  display: flex; flex-direction: column; gap: 12px; min-height: 200px;
+  text-decoration: none; color: inherit;
+  transition: background var(--dur-base) var(--ease-out);
+}
+.card:hover { background: var(--bone-100); }
+.head { display: flex; align-items: center; justify-content: space-between; }
+.tagLabel { font-family: var(--font-mono); font-size: 10px; color: var(--amber-700); letter-spacing: 0.12em; text-transform: uppercase; }
+.h3 { font-family: var(--font-serif); font-size: 24px; line-height: 30px; font-weight: 400; letter-spacing: -0.008em; }
+.body { font-size: 13px; line-height: 20px; color: var(--ink-500); max-width: 32ch; }
+.roles { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 6px 8px; font-family: var(--font-mono); font-size: 10px; color: var(--fg-3); letter-spacing: 0.04em; text-transform: uppercase; }
+@media (max-width: 960px) { .grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,27 @@
+/* ArchDiagram.module.css */
+.arch { border: 1px solid var(--border-strong); background: var(--paper); border-radius: var(--radius-md); overflow: hidden; }
+.row { display: grid; grid-template-columns: 220px 1fr; border-bottom: 1px solid var(--border); }
+.row:last-of-type { border-bottom: 0; }
+.meta { background: var(--bone-100); padding: 24px; border-right: 1px solid var(--border); }
+.layerNum { font-family: var(--font-mono); font-size: 11px; color: var(--amber-700); letter-spacing: 0.08em; text-transform: uppercase; }
+.layerName { font-family: var(--font-serif); font-size: 22px; line-height: 28px; font-weight: 400; letter-spacing: -0.005em; margin-top: 6px; color: var(--ink-900); }
+.layerDesc { margin-top: 8px; font-size: 12px; line-height: 18px; color: var(--ink-500); max-width: 22ch; }
+.blocks { padding: 24px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; align-content: start; }
+.block { border: 1px solid var(--border); background: var(--bone-50); border-radius: var(--radius-sm); padding: 14px; display: flex; flex-direction: column; gap: 4px; min-height: 76px; }
+.accent { background: var(--amber-100); border-color: var(--amber-500); }
+.blockH { font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: var(--ink-900); }
+.blockS { font-family: var(--font-mono); font-size: 11px; color: var(--fg-3); letter-spacing: 0.04em; text-transform: uppercase; }
+.accent .blockS { color: var(--amber-700); }
+.foot {
+  padding: 16px 24px; display: flex; gap: 20px; align-items: center; justify-content: space-between;
+  font-family: var(--font-mono); font-size: 11px; color: var(--fg-3);
+  letter-spacing: 0.04em; text-transform: uppercase;
+  background: var(--bone-50); border-top: 1px solid var(--border);
+}
+.foot a { color: var(--ink-900); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; }
+.foot a:hover { color: var(--amber-700); }
+@media (max-width: 800px) {
+  .row { grid-template-columns: 1fr; }
+  .meta { border-right: 0; border-bottom: 1px solid var(--border); }
+  .blocks { grid-template-columns: 1fr 1fr; }
+}

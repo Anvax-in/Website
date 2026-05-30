@@ -1,0 +1,30 @@
+/* ProblemSection.module.css */
+.grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden;
+}
+.col { background: var(--bone-50); padding: 36px; }
+.good { background: var(--paper); }
+.heading {
+  display: flex; align-items: center; gap: 9px;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ink-500); margin-bottom: 20px; white-space: nowrap;
+}
+.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--rust-700); flex-shrink: 0; }
+.dotGood { background: var(--sage-700); }
+.colH {
+  font-family: var(--font-serif); font-size: 22px; line-height: 30px;
+  font-weight: 400; letter-spacing: -0.008em; margin-bottom: 24px; max-width: 28ch;
+}
+.list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+.item {
+  position: relative; padding-left: 26px;
+  font-size: 14px; line-height: 22px; color: var(--ink-500);
+}
+.item::before {
+  content: ''; position: absolute; left: 0; top: 10px; width: 14px; height: 1px; background: var(--rust-700);
+}
+.itemGood::before { background: var(--sage-700); }
+.item strong { color: var(--ink-900); font-weight: 600; }
+@media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
