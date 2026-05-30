@@ -9,7 +9,7 @@ interface StatusPillProps {
 
 export default function StatusPill({ status, children }: StatusPillProps) {
   return (
-    <span className={`${styles.pill} ${styles[status]}`}>
+    <span className={`${styles.pill} ${status !== 'live' ? styles[status] ?? '' : ''}`}>
       {children}
     </span>
   )

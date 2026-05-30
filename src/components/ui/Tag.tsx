@@ -7,7 +7,7 @@ interface TagProps {
 
 export default function Tag({ children, variant = 'default' }: TagProps) {
   return (
-    <span className={`${styles.tag} ${styles[variant]}`}>
+    <span className={`${styles.tag} ${variant !== 'default' ? styles[variant] ?? '' : ''}`}>
       {(variant === 'live') && <span className={styles.dot} />}
       {(variant === 'next') && <span className={`${styles.dot} ${styles.dotNext}`} />}
       {(variant === 'roadmap') && <span className={`${styles.dot} ${styles.dotRoadmap}`} />}
