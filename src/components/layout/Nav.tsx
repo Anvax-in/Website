@@ -25,7 +25,7 @@ export default function Nav() {
             <Link
               key={to}
               to={to}
-              className={`${styles.link} ${pathname === to ? styles.active : ''}`}
+              className={`${styles.link} ${pathname.startsWith(to) ? styles.active : ''}`}
             >
               {label}
             </Link>
