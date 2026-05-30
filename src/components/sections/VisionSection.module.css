@@ -6,6 +6,7 @@
   border-left: none; padding-left: 0; border-top: 2px solid var(--amber-600); padding-top: 24px;
   text-align: center;
 }
-.body p { font-family: var(--font-serif); font-size: 19px; line-height: 30px; color: var(--ink-700); max-width: 56ch; }
+.body { text-align: center; }
+.body p { font-family: var(--font-serif); font-size: 19px; line-height: 30px; color: var(--ink-700); max-width: 68ch; margin: 0 auto; }
 .body p + p { margin-top: 18px; }
 @media (max-width: 960px) { .vision { gap: 32px; } }

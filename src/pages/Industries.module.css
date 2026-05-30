@@ -2,7 +2,7 @@
 
 .hero {
   position: relative;
-  padding: 88px 0 96px;
+  padding: 60px 0 72px;
   border-bottom: 1px solid var(--border);
   overflow: hidden;
   background-image:
@@ -19,6 +19,7 @@
 .heroInner {
   position: relative;
   max-width: 700px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -3,7 +3,7 @@
 /* Dark hero */
 .hero {
   position: relative;
-  padding: 88px 0 96px;
+  padding: 60px 0 72px;
   background: var(--ink-900);
   border-bottom: 1px solid var(--border-dark);
   overflow: hidden;
@@ -19,6 +19,7 @@
 .heroInner {
   position: relative;
   max-width: 780px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;

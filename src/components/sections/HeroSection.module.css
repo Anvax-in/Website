@@ -1,7 +1,7 @@
 /* HeroSection.module.css */
 .hero {
   position: relative;
-  padding: 88px 0 96px;
+  padding: 60px 0 72px;
   border-bottom: 1px solid var(--border);
   overflow: hidden;
   background-image:
