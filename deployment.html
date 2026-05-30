@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Deployment — Anvax</title>
+<meta name="description" content="Four tiers, one product. Shared SaaS in AWS Mumbai, Indian sovereign GPU cloud, on-prem and air-gapped — same Anvax, different iron." />
+<link rel="stylesheet" href="styles/tokens.css" />
+<link rel="stylesheet" href="styles/site.css" />
+<link rel="stylesheet" href="styles/pages.css" />
+</head>
+<body data-screen-label="Deployment">
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav" aria-label="Primary">
+  <div class="container row">
+    <a href="index.html" class="brand" aria-label="Anvax home">
+      <img src="assets/anvax-wordmark-ink.svg" alt="Anvax" />
+    </a>
+    <div class="links">
+      <a href="platform.html">Platform</a>
+      <a href="industries.html">Industries</a>
+      <a href="trust.html">Trust</a>
+      <a href="deployment.html" class="active">Deployment</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="company.html">Company</a>
+    </div>
+    <div class="actions">
+      <a class="btn btn-ghost" href="#">Sign in</a>
+      <a class="btn btn-primary" href="index.html#demo">Request a demo</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== INNER HERO ===================== -->
+<header class="inner-hero">
+  <div class="container">
+    <div class="row">
+      <div>
+        <div class="eyebrow">Deployment · Same product, different iron</div>
+        <h1>Four tiers. One product. Anvax owns <span class="em">no GPUs</span>.</h1>
+        <p class="lede">Shared SaaS in AWS Mumbai for growth-stage fintechs. Indian sovereign GPU cloud for regulated NBFCs. On-prem and air-gapped for large banks, PSUs and defence-adjacent. IndiaAI subsidised compute as an overlay. We ship the platform; partners ship the iron.</p>
+        <div class="cta-row">
+          <a class="btn btn-accent" href="index.html#demo">Request a demo <span class="arr">→</span></a>
+          <a class="btn btn-secondary" href="trust.html">Architecture for regulators</a>
+        </div>
+      </div>
+      <aside class="meta">
+        <div class="item"><div class="k">Tiers</div><div class="v">SaaS · Sovereign · On-prem · IndiaAI overlay</div></div>
+        <div class="item"><div class="k">Topology</div><div class="v">Helm chart deploys the same Anvax across every tier</div></div>
+        <div class="item"><div class="k">Commitment</div><div class="v">All customer data, embeddings and inference traces stay in India</div></div>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== TIERS — QUICK CARDS ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">01 · The four tiers</div>
+        <h2 class="section-title">Pick where the iron runs. The product is the same.</h2>
+      </div>
+      <div class="right">
+        <p class="lede">Choice is on deployment topology, GPU substrate and inference path. Tenancy, governance, audit chain and India-residency commitment do not change between tiers.</p>
+      </div>
+    </div>
+
+    <div class="tiers-quick">
+      <div class="tier-quick">
+        <div class="feat-ic accent"><i data-lucide="cloud"></i></div>
+        <div class="n">Tier 1 · SaaS</div>
+        <h3>AWS Mumbai shared SaaS</h3>
+        <p class="who"><strong>For</strong> growth-stage fintechs, mid-market SaaS, consulting firms.</p>
+        <div class="iron">AWS · <span class="term" style="font-size:10px">ap-south-1</span></div>
+      </div>
+      <div class="tier-quick">
+        <div class="feat-ic accent"><i data-lucide="shield"></i></div>
+        <div class="n">Tier 2 · Sovereign</div>
+        <h3>Yotta Shakti sovereign GPU cloud</h3>
+        <p class="who"><strong>For</strong> regulated NBFCs, BFSI, insurance — anyone whose board wants Indian-owned infrastructure.</p>
+        <div class="iron">Yotta · E2E · Indian-owned</div>
+      </div>
+      <div class="tier-quick">
+        <div class="feat-ic accent"><i data-lucide="server"></i></div>
+        <div class="n">Tier 3 · On-prem</div>
+        <h3>On-prem / air-gapped in customer DC</h3>
+        <p class="who"><strong>For</strong> large banks, PSUs, defence-adjacent, RBI-supervised. The deployment your CISO can unplug.</p>
+        <div class="iron">Helm + vLLM · customer DC</div>
+      </div>
+      <div class="tier-quick">
+        <div class="feat-ic accent"><i data-lucide="layers"></i></div>
+        <div class="n">Tier 4 · Overlay</div>
+        <h3>IndiaAI subsidised compute</h3>
+        <p class="who"><strong>For</strong> any tier with long-running, cost-sensitive workloads — fine-tunes, batch evals, long-context summarisation.</p>
+        <div class="iron">IndiaAI · cost overlay</div>
+      </div>
+    </div>
+
+    <!-- Full comparison table -->
+    <div class="tier-table-wrap">
+      <table class="tier-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th><span class="n">Tier 1</span>SaaS<span class="sub">AWS Mumbai · shared</span></th>
+            <th><span class="n">Tier 2</span>Sovereign<span class="sub">Yotta / E2E · Indian-owned</span></th>
+            <th><span class="n">Tier 3</span>On-prem<span class="sub">Customer DC · air-gapped</span></th>
+            <th><span class="n">Tier 4</span>IndiaAI<span class="sub">Subsidised compute overlay</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hosting</td>
+            <td>AWS <span class="term">ap-south-1</span> · multi-tenant</td>
+            <td>Yotta Shakti / E2E · single-tenant VPC</td>
+            <td>Customer-owned DC · single-tenant cluster</td>
+            <td>Overlay on any tier · burstable</td>
+          </tr>
+          <tr>
+            <td>Inference path</td>
+            <td>Anthropic via Azure AI Foundry · region-locked</td>
+            <td>vLLM · AI Kosh / Sarvam / open Indian weights</td>
+            <td>vLLM · customer-supplied or open weights</td>
+            <td>vLLM on IndiaAI GPU pool · pinned</td>
+          </tr>
+          <tr>
+            <td>Data residency</td>
+            <td>Mumbai · all data &amp; embeddings stay in India</td>
+            <td>India sovereign · no cross-border replication</td>
+            <td>Customer DC · never leaves the rack</td>
+            <td>India sovereign · IndiaAI region</td>
+          </tr>
+          <tr>
+            <td>Sovereignty posture</td>
+            <td>Indian-resident · US hyperscaler</td>
+            <td>Indian-owned infrastructure end-to-end</td>
+            <td>Customer-owned end-to-end</td>
+            <td>Government-subsidised Indian compute</td>
+          </tr>
+          <tr>
+            <td>Audit chain</td>
+            <td>SHA-256 chained · exportable</td>
+            <td>SHA-256 chained · exportable</td>
+            <td>SHA-256 chained · local export</td>
+            <td>Same as host tier</td>
+          </tr>
+          <tr>
+            <td>Tenancy</td>
+            <td>Multi-tenant · Postgres RLS FORCE</td>
+            <td>Single-tenant VPC</td>
+            <td>Single-tenant air-gapped</td>
+            <td>Inherits host tier</td>
+          </tr>
+          <tr>
+            <td>Update cadence</td>
+            <td>Weekly · zero-downtime</td>
+            <td>Bi-weekly · customer-approved windows</td>
+            <td>Quarterly · signed Helm chart bundles</td>
+            <td>Aligned with host tier</td>
+          </tr>
+          <tr>
+            <td>Best fit</td>
+            <td>Growth-stage fintech · mid-market</td>
+            <td>Regulated NBFC · BFSI · insurance</td>
+            <td>Large banks · PSU · defence-adjacent</td>
+            <td>Long-running / cost-sensitive workloads</td>
+          </tr>
+          <tr>
+            <td>Pricing</td>
+            <td>Starter · Growth (public)</td>
+            <td>Business · contact sales</td>
+            <td>Sovereign · contact sales</td>
+            <td>Pass-through on IndiaAI rates</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SAME-PRODUCT-DIFFERENT-IRON DIAGRAM ===================== -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">02 · Same product, different iron</div>
+        <h2 class="section-title">Every tier deploys from the same Helm chart.</h2>
+      </div>
+      <div class="right">
+        <p class="lede">The Anvax application is one artefact. Tiers configure what sits underneath — the GPU substrate, the model weights, the inference endpoint. The audit chain, the governance layer and the residency commitment do not move.</p>
+      </div>
+    </div>
+
+    <div class="iron-diagram">
+      <div class="iron-product">
+        <div>
+          <div class="label">The Anvax product</div>
+          <div class="name">One Helm chart · one audit chain · one governance layer</div>
+        </div>
+        <div class="nodes">
+          <span class="node accent">Application</span>
+          <span class="node">Governance</span>
+          <span class="node">Audit chain</span>
+          <span class="node">Tenancy</span>
+        </div>
+      </div>
+      <div class="iron-flows">
+        <div class="label">↓ Different iron, per tier</div>
+        <div class="iron-rows">
+          <div class="iron-cell">
+            <div class="n">Tier 1 · SaaS</div>
+            <div class="h">AWS Mumbai</div>
+            <div class="s"><span class="term" style="font-size:10px">ap-south-1</span> · shared</div>
+          </div>
+          <div class="iron-cell">
+            <div class="n">Tier 2 · Sovereign</div>
+            <div class="h">Yotta / E2E</div>
+            <div class="s">Indian-owned · single-tenant</div>
+          </div>
+          <div class="iron-cell">
+            <div class="n">Tier 3 · On-prem</div>
+            <div class="h">Customer DC</div>
+            <div class="s">Helm + vLLM · air-gapped</div>
+          </div>
+          <div class="iron-cell">
+            <div class="n">Tier 4 · IndiaAI</div>
+            <div class="h">Subsidised GPU pool</div>
+            <div class="s">Overlay on any tier</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RESIDENCY COMMITMENT ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="commit-band">
+      <div>
+        <div class="label">Residency commitment</div>
+        <div class="head">All customer data, embeddings and inference traces stay in India — regardless of tier.</div>
+        <p>This is not a configuration flag. It is the substrate. Region-locked KMS, no cross-border replication, audit chain stored in the same jurisdiction as the data it audits. Verified by quarterly internal red-team.</p>
+      </div>
+      <div class="items">
+        <div class="item"><div class="k">Customer data</div><div class="v">Mumbai · ap-south-1 · or customer DC</div></div>
+        <div class="item"><div class="k">Embeddings</div><div class="v">Co-located with the source tenant</div></div>
+        <div class="item"><div class="k">Inference traces</div><div class="v">SHA-256 chained · stored alongside</div></div>
+        <div class="item"><div class="k">KMS</div><div class="v">Region-locked · per-tenant DEK</div></div>
+        <div class="item"><div class="k">Telemetry</div><div class="v">PII scrubbed before export</div></div>
+        <div class="item"><div class="k">Cross-border</div><div class="v">None · by design, not by policy</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT SHIPS ===================== -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">03 · How it ships</div>
+        <h2 class="section-title">Helm chart in, signed bundle out.</h2>
+      </div>
+      <div class="right">
+        <p class="lede">For on-prem and sovereign tiers, Anvax ships as a signed Helm chart bundle. Your platform team installs it; your security team reads the SBOM; your audit team gets the same chain the SaaS tier produces.</p>
+      </div>
+    </div>
+
+    <div class="posture">
+      <div class="posture-card">
+        <div class="stat">Helm</div>
+        <div class="lbl">Distribution</div>
+        <p>Signed Helm chart per release. SBOM and image attestations published. Reproducible from public commit hashes.</p>
+      </div>
+      <div class="posture-card">
+        <div class="stat">vLLM</div>
+        <div class="lbl">Inference</div>
+        <p>vLLM with model-pinning. Anvax does not require a specific GPU vendor — runs on NVIDIA, anywhere a recent CUDA stack does.</p>
+      </div>
+      <div class="posture-card">
+        <div class="stat">air-gap</div>
+        <div class="lbl">Network</div>
+        <p>On-prem tier runs fully air-gapped. Updates arrive as signed bundles via secure transfer; the system does not phone home.</p>
+      </div>
+      <div class="posture-card">
+        <div class="stat">SBOM</div>
+        <div class="lbl">Supply chain</div>
+        <p>Every release ships with an SBOM and signed container images. Your CISO can diff what changed between versions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="cta-block">
+      <div>
+        <div class="eyebrow" style="color: var(--amber-500);">Plan a deployment</div>
+        <h2>Tell us where the iron sits. We'll bring the platform.</h2>
+        <p>A 30-minute deployment review with our platform lead and your security team. We map your topology, your sovereignty constraints, your existing GPU contracts — and tell you the cleanest path to live.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-accent" href="index.html#demo">Book a deployment review <span class="arr">→</span></a>
+        <a class="btn btn-secondary on-dark" href="trust.html#downloads">Get the regulator pack</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="grid">
+      <div class="brand-cell">
+        <img src="assets/anvax-wordmark-ink.svg" alt="Anvax" />
+        <p>The sovereign AI platform for India's regulated enterprises. Built in India, governed for India's regulators.</p>
+      </div>
+      <div class="col"><h4>Product</h4><ul><li><a href="platform.html">Platform</a></li><li><a href="industries.html">Industries</a></li><li><a href="deployment.html">Deployment</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+      <div class="col"><h4>Trust</h4><ul><li><a href="trust.html">Architecture</a></li><li><a href="trust.html#freeai">RBI FREE-AI</a></li><li><a href="trust.html#dpdp">DPDP &amp; CERT-In</a></li><li><a href="trust.html#downloads">Regulator pack</a></li></ul></div>
+      <div class="col"><h4>Company</h4><ul><li><a href="company.html">About</a></li><li><a href="company.html#team">Team</a></li><li><a href="company.html#careers">Careers</a></li><li><a href="company.html#contact">Contact</a></li></ul></div>
+      <div class="col"><h4>Legal</h4><ul><li><a href="#">Privacy</a></li><li><a href="#">DPA</a></li><li><a href="#">Terms</a></li><li><a href="#">Responsible disclosure</a></li></ul></div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Anvax Technologies Pvt. Ltd.</span>
+      <span class="residency">Data residency · Mumbai · ap-south-1</span>
+      <span>v0.7 · 28 May 2026</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script>window.addEventListener('DOMContentLoaded',function(){if(window.lucide)lucide.createIcons();});</script>
+</body>
+</html>

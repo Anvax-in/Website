@@ -5,7 +5,6 @@ const product = [
   { to: '/platform',   label: 'Platform' },
   { to: '/industries', label: 'Industries' },
   { to: '/deployment', label: 'Deployment' },
-  { to: '/pricing',    label: 'Pricing' },
 ]
 const trust = [
   { to: '/trust',              label: 'Architecture' },

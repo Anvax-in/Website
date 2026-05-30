@@ -5,7 +5,6 @@ import Platform from './pages/Platform'
 import Industries from './pages/Industries'
 import Trust from './pages/Trust'
 import Deployment from './pages/Deployment'
-import Pricing from './pages/Pricing'
 import Company from './pages/Company'
 
 export const routes: RouteObject[] = [
@@ -18,7 +17,6 @@ export const routes: RouteObject[] = [
       { path: 'industries',   element: <Industries /> },
       { path: 'trust',        element: <Trust /> },
       { path: 'deployment',   element: <Deployment /> },
-      { path: 'pricing',      element: <Pricing /> },
       { path: 'company',      element: <Company /> },
     ],
   },

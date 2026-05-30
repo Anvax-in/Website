@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Platform — Anvax</title>
+<meta name="description" content="The Anvax platform — search, chat, workflows and agents over your own corpus. Four moats. India-stack native. Sovereign by deployment." />
+<link rel="stylesheet" href="styles/tokens.css" />
+<link rel="stylesheet" href="styles/site.css" />
+<link rel="stylesheet" href="styles/pages.css" />
+</head>
+<body data-screen-label="Platform">
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav" aria-label="Primary">
+  <div class="container row">
+    <a href="index.html" class="brand" aria-label="Anvax home">
+      <img src="assets/anvax-wordmark-ink.svg" alt="Anvax" />
+    </a>
+    <div class="links">
+      <a href="platform.html" class="active">Platform</a>
+      <a href="industries.html">Industries</a>
+      <a href="trust.html">Trust</a>
+      <a href="deployment.html">Deployment</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="company.html">Company</a>
+    </div>
+    <div class="actions">
+      <a class="btn btn-ghost" href="#">Sign in</a>
+      <a class="btn btn-primary" href="index.html#demo">Request a demo</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== INNER HERO ===================== -->
+<header class="inner-hero">
+  <div class="container">
+    <div class="row">
+      <div>
+        <div class="eyebrow">Platform · The governed intelligence layer</div>
+        <h1>Search, chat, workflows and agents over <span class="em">your own</span> corpus.</h1>
+        <p class="lede">Four product surfaces. Four compounding moats. One India-stack-native substrate that your regulator can read end-to-end.</p>
+        <div class="cta-row">
+          <a class="btn btn-accent" href="index.html#demo">Request a demo <span class="arr">→</span></a>
+          <a class="btn btn-secondary" href="trust.html">See the architecture</a>
+        </div>
+      </div>
+      <aside class="meta">
+        <div class="item"><div class="k">Status</div><div class="v">v0.7 · in production with design partners</div></div>
+        <div class="item"><div class="k">Surfaces</div><div class="v">Search · Chat · Workflows · Agents</div></div>
+        <div class="item"><div class="k">Built around</div><div class="v">Postgres + OpenSearch + Temporal + a tier-gated model gateway</div></div>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== CAPABILITIES ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">01 · Capabilities</div>
+        <h2 class="section-title">Four surfaces. One governance layer underneath all of them.</h2>
+      </div>
+      <div class="right">
+        <p class="lede">Each surface is opinionated about citations, audit trail and tenancy. None of them lets a user paste customer PII into a model and walk away.</p>
+      </div>
+    </div>
+
+    <div class="cap-row">
+      <div class="label"><div class="feat-ic accent"><i data-lucide="search"></i></div><span class="n">01</span>Search</div>
+      <div>
+        <h3>Hybrid search across every system, scoped to the user's role.</h3>
+        <p class="desc">RAG + semantic + structured retrieval over the customer's corpus and India-stack connectors. Every result cites the source by document, row and paragraph. No "answer-from-the-air" hallucinations — if the corpus doesn't have it, the response says so.</p>
+      </div>
+      <ul class="specs">
+        <li><span class="k">Index</span><span class="v">Hybrid · BM25 + dense · per-tenant</span></li>
+        <li><span class="k">DLS</span><span class="v"><span class="term">tenant_id</span> enforced at search layer</span></li>
+        <li><span class="k">Cite</span><span class="v">Document · row · paragraph</span></li>
+        <li><span class="k">Latency</span><span class="v">P95 &lt; 800ms · 99.5% target</span></li>
+      </ul>
+    </div>
+
+    <div class="cap-row">
+      <div class="label"><div class="feat-ic accent"><i data-lucide="messages-square"></i></div><span class="n">02</span>Chat</div>
+      <div>
+        <h3>Threads with explainability built into the response, not bolted on.</h3>
+        <p class="desc">Every assistant reply carries a confidence score, the cited chunk IDs and the exact <span class="term">model_version</span>. An expandable "Why?" panel renders for compliance review without leaving the thread. PII redaction runs before the prompt leaves the network.</p>
+      </div>
+      <ul class="specs">
+        <li><span class="k">Threads</span><span class="v">Resumable · shareable · auditable</span></li>
+        <li><span class="k">Redaction</span><span class="v">Aadhaar · PAN · IFSC · GSTIN · UPI · mobile</span></li>
+        <li><span class="k">Why panel</span><span class="v"><span class="term">confidence_score</span> · cited chunks</span></li>
+        <li><span class="k">Sign-in</span><span class="v">Google OAuth · SSO/SCIM (Growth+)</span></li>
+      </ul>
+    </div>
+
+    <div class="cap-row">
+      <div class="label"><div class="feat-ic accent"><i data-lucide="workflow"></i></div><span class="n">03</span>Workflows</div>
+      <div>
+        <h3>Durable workflows for the operational drudge work.</h3>
+        <p class="desc">Compliance monitoring, board-memo generation, audit prep, customer briefings. Humans approve, AI executes. Built on Temporal — resumable across pod restarts and across days, with full execution history retained for examiner review.</p>
+      </div>
+      <ul class="specs">
+        <li><span class="k">Engine</span><span class="v">Temporal-backed · durable</span></li>
+        <li><span class="k">Approvals</span><span class="v">Role-gated · SLA-tracked</span></li>
+        <li><span class="k">Templates</span><span class="v">Board memos · audit packs · KFS reviews</span></li>
+        <li><span class="k">Trigger</span><span class="v">Cron · webhook · circular drop</span></li>
+      </ul>
+    </div>
+
+    <div class="cap-row">
+      <div class="label"><div class="feat-ic accent"><i data-lucide="bot"></i></div><span class="n">04</span>Agents</div>
+      <div>
+        <h3>Governed agents that act within policy, within permissions, with full audit.</h3>
+        <p class="desc">Agents inherit the user's role. Every tool call passes through SSRF and path-traversal guards. Critical-tier policies set <span class="term">always_human=True</span> — the agent drafts, a human approves. Production systems, not toys.</p>
+      </div>
+      <ul class="specs">
+        <li><span class="k">Runtime</span><span class="v">Policy-checked · permission-bound</span></li>
+        <li><span class="k">Tools</span><span class="v">SSRF + path-traversal guarded</span></li>
+        <li><span class="k">HITL</span><span class="v">Always-human on critical risk</span></li>
+        <li><span class="k">Trace</span><span class="v">Every step in <span class="term">inference_traces</span></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MOATS ===================== -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">02 · Moats</div>
+        <h2 class="section-title">Four moats. Each one compounds with the next.</h2>
+      </div>
+      <div class="right">
+        <p class="lede">Glean has search. Copilot has Microsoft. The Indian incumbents don't have knowledge. Anvax has all four moats at once — and the regulator-readable substrate underneath.</p>
+      </div>
+    </div>
+
+    <div class="moats">
+      <div class="moat">
+        <div class="card-top"><div class="feat-ic accent"><i data-lucide="brain"></i></div><div class="num">01 · Compounding</div></div>
+        <h3>Organizational memory.</h3>
+        <p>Every document, decision, interaction and outcome — stored, connected, made queryable. The longer a customer uses Anvax, the sharper Anvax gets about their business. This is the moat that gets harder to switch out of each quarter.</p>
+        <svg class="spark" viewBox="0 0 220 40" preserveAspectRatio="none" aria-hidden="true">
+          <path class="area" d="M0,34 L31,32 L63,29 L94,24 L126,20 L157,13 L189,8 L220,4 L220,40 L0,40 Z"></path>
+          <path class="line" d="M0,34 L31,32 L63,29 L94,24 L126,20 L157,13 L189,8 L220,4"></path>
+          <circle class="dot" cx="220" cy="4" r="3"></circle>
+        </svg>
+        <div class="meta">Year-over-year retrieval relevance<strong>+18% lift, design-partner cohort, 12-month window</strong></div>
+      </div>
+      <div class="moat">
+        <div class="card-top"><div class="feat-ic accent"><i data-lucide="layers-3"></i></div><div class="num">02 · India stack depth</div></div>
+        <h3>GST, MCA21, Tally, Account Aggregator, RBI circulars — wired in.</h3>
+        <p>Not "connector marketplace" theatre. Real, structured ingestion that understands a Tally trial-balance, a GST 2A vs 2B reconciliation, an AA consent artefact. The kind of depth a US incumbent never ships.</p>
+        <div class="meta">Native connectors at v0.7<strong>14 India-stack + 22 SaaS</strong></div>
+      </div>
+      <div class="moat">
+        <div class="card-top"><div class="feat-ic accent"><i data-lucide="boxes"></i></div><div class="num">03 · Vertical intelligence</div></div>
+        <h3>Vertical packs, NBFC first.</h3>
+        <p>Sectoral templates, regulator-specific workflows, role-based use-case tables. NBFC ships first; wealth, lending, insurance, broking, payments follow. Horizontal AI loses on every detail — Anvax wins on every detail.</p>
+        <div class="meta">Pack roadmap<strong>NBFC · Wealth · Lending · Insurance · Broking · Payments</strong></div>
+      </div>
+      <div class="moat">
+        <div class="card-top"><div class="feat-ic accent"><i data-lucide="shield-check"></i></div><div class="num">04 · Compliance infrastructure</div></div>
+        <h3>SOC 2, ISO 27001, CERT-In, DPDP — on day one.</h3>
+        <p>Most AI startups treat compliance as a Q4 problem. Anvax treats it as the product. Per-tenant <span class="term">AES-256-GCM</span> keys, RLS FORCE, SHA-256-chained audit, RBI FREE-AI controls live — before the first paid seat.</p>
+        <div class="meta">Posture<strong>DPDP live · SOC 2 / ISO 27001 / CERT-In in progress</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INDIA STACK ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">03 · The India stack</div>
+        <h2 class="section-title">First-class connectors to the systems Indian enterprises actually run on.</h2>
+      </div>
+      <div class="right">
+        <p class="lede">Not "build your own with our API." Connectors are typed, audited and consent-bound — and they don't leak credentials into the agent context.</p>
+      </div>
+    </div>
+
+    <div class="stack-grid">
+      <div class="stack-tile"><div class="logo-box"><img src="assets/logos/gst.png" alt="GST portal"></div><div class="ti"><div class="name">GST portal</div><div class="kind">Regulator · live</div></div></div>
+      <div class="stack-tile"><div class="logo-box"><img src="assets/logos/mca.png" alt="MCA21"></div><div class="ti"><div class="name">MCA21</div><div class="kind">Regulator · live</div></div></div>
+      <div class="stack-tile"><div class="logo-box"><img src="assets/logos/account-aggregator.svg" alt="Account Aggregator (Sahamati)"></div><div class="ti"><div class="name">Account Aggregator</div><div class="kind">Consent · live</div></div></div>
+      <div class="stack-tile"><div class="logo-box"><img src="assets/logos/tally.png" alt="Tally"></div><div class="ti"><div class="name">Tally</div><div class="kind">Ledger · live</div></div></div>
+      <div class="stack-tile"><div class="logo-box"><img src="assets/logos/rbi.png" alt="Reserve Bank of India"></div><div class="ti"><div class="name">RBI circulars</div><div class="kind">Regulator · live</div></div></div>
+      <div class="stack-tile"><div class="logo-box"><img src="assets/logos/digilocker.svg" alt="DigiLocker"></div><div class="ti"><div class="name">DigiLocker</div><div class="kind">Identity · beta</div></div></div>
+
+      <div class="stack-tile"><div class="logo-box"><span class="mono-mark" style="--c:#2A6FA8">CK</span></div><div class="ti"><div class="name">CKYC</div><div class="kind">Identity · beta</div></div></div>
+      <div class="stack-tile"><div class="logo-box"><img src="assets/logos/npci.svg" alt="UPI / NPCI"></div><div class="ti"><div class="name">UPI / NPCI</div><div class="kind">Payments · beta</div></div></div>
+      <div class="stack-tile"><div class="logo-box"><img src="assets/logos/sebi.jpg" alt="SEBI"></div><div class="ti"><div class="name">SEBI feeds</div><div class="kind">Regulator · beta</div></div></div>
+      <div class="stack-tile"><div class="logo-box"><img src="assets/logos/irdai.png" alt="IRDAI"></div><div class="ti"><div class="name">IRDAI</div><div class="kind">Regulator · beta</div></div></div>
+      <div class="stack-tile"><div class="logo-box"><img src="assets/logos/zoho.svg" alt="Zoho Books"></div><div class="ti"><div class="name">Zoho Books</div><div class="kind">Ledger · live</div></div></div>
+      <div class="stack-tile"><div class="logo-box"><img src="assets/logos/busy.jpg" alt="BUSY"></div><div class="ti"><div class="name">BUSY / Marg</div><div class="kind">Ledger · roadmap</div></div></div>
+
+      <div class="stack-tile"><div class="logo-box"><img src="assets/logos/salesforce-official.svg" alt="Salesforce"></div><div class="ti"><div class="name">Salesforce</div><div class="kind">CRM · live</div></div></div>
+      <div class="stack-tile"><div class="logo-box"><img src="assets/logos/slack.svg" alt="Slack"></div><div class="ti"><div class="name">Slack</div><div class="kind">Collab · live</div></div></div>
+      <div class="stack-tile"><div class="logo-box"><img src="assets/logos/confluence-official.svg" alt="Confluence"></div><div class="ti"><div class="name">Confluence</div><div class="kind">Wiki · live</div></div></div>
+      <div class="stack-tile"><div class="logo-box"><img src="assets/logos/snowflake-official.svg" alt="Snowflake"></div><div class="ti"><div class="name">Snowflake</div><div class="kind">Warehouse · live</div></div></div>
+      <div class="stack-tile"><div class="logo-box"><img src="assets/logos/drive-official.svg" alt="Google Drive"></div><div class="ti"><div class="name">Google Drive</div><div class="kind">Files · live</div></div></div>
+      <div class="stack-tile"><div class="logo-box"><img src="assets/logos/sharepoint.svg" alt="SharePoint"></div><div class="ti"><div class="name">SharePoint</div><div class="kind">Files · live</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MODEL GATEWAY ===================== -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">04 · Model gateway</div>
+        <h2 class="section-title">One gateway. Tier-gated, region-locked, model-pinned.</h2>
+      </div>
+      <div class="right">
+        <p class="lede">The gateway decides which model serves which request, and it does so on the basis of customer tier, deployment topology and risk policy. The user does not pick. The gateway does — and writes its reasoning to the audit chain.</p>
+      </div>
+    </div>
+
+    <div class="gateway">
+      <div class="gateway-head">
+        <span>Anvax model gateway</span>
+        <span>v0.7 · 28 May 2026</span>
+      </div>
+      <div class="gateway-body">
+        <div class="gateway-col">
+          <div class="col-h">Request</div>
+          <div class="gw-node"><span class="h">User message</span><span class="s">Thread · session</span></div>
+          <div class="gw-node"><span class="h">Tenant + role</span><span class="s">RLS · DLS scope</span></div>
+          <div class="gw-node"><span class="h">Risk policy</span><span class="s">Critical → HITL</span></div>
+        </div>
+        <div class="gw-arrow">→</div>
+        <div class="gateway-col">
+          <div class="col-h">Gateway · governance</div>
+          <div class="gw-node accent"><span class="h">PII redaction</span><span class="s">Verhoeff · regex · NER</span></div>
+          <div class="gw-node accent"><span class="h">Prompt-injection gate</span><span class="s">Per user msg</span></div>
+          <div class="gw-node accent"><span class="h">Tier &amp; model pinning</span><span class="s"><span class="term">model_id</span> · <span class="term">pin_expires_at</span></span></div>
+          <div class="gw-node accent"><span class="h">Rate limit</span><span class="s">10 / 60s / session</span></div>
+        </div>
+        <div class="gw-arrow">→</div>
+        <div class="gateway-col">
+          <div class="col-h">Inference</div>
+          <div class="gw-node dark"><span class="h">SaaS · Anthropic</span><span class="s">Azure AI Foundry · region-locked</span></div>
+          <div class="gw-node dark"><span class="h">Sovereign · vLLM</span><span class="s">AI Kosh · Sarvam · open weights</span></div>
+          <div class="gw-node dark"><span class="h">On-prem · vLLM</span><span class="s">Helm · air-gapped</span></div>
+          <div class="gw-node"><span class="h">Audit write</span><span class="s">SHA-256 chained</span></div>
+        </div>
+      </div>
+      <div class="gateway-foot">
+        <span>Tier-gated · region-locked · model-pinned</span>
+        <span>All inference traces written to <span class="term" style="font-size:11px;letter-spacing:0">inference_traces</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="cta-block">
+      <div>
+        <div class="eyebrow" style="color: var(--amber-500);">See it on your corpus</div>
+        <h2>Bring twenty documents. We'll show you the platform on your own data.</h2>
+        <p>Forty-five minutes, your CISO and CIO in the room, your corpus ingested in isolation. You keep everything. The demo tenant is deleted afterwards.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-accent" href="index.html#demo">Request a demo <span class="arr">→</span></a>
+        <a class="btn btn-secondary on-dark" href="trust.html">Architecture for regulators</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="grid">
+      <div class="brand-cell">
+        <img src="assets/anvax-wordmark-ink.svg" alt="Anvax" />
+        <p>The sovereign AI platform for India's regulated enterprises. Built in India, governed for India's regulators.</p>
+      </div>
+      <div class="col"><h4>Product</h4><ul><li><a href="platform.html">Platform</a></li><li><a href="industries.html">Industries</a></li><li><a href="deployment.html">Deployment</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+      <div class="col"><h4>Trust</h4><ul><li><a href="trust.html">Architecture</a></li><li><a href="trust.html#freeai">RBI FREE-AI</a></li><li><a href="trust.html#dpdp">DPDP &amp; CERT-In</a></li><li><a href="trust.html#downloads">Regulator pack</a></li></ul></div>
+      <div class="col"><h4>Company</h4><ul><li><a href="company.html">About</a></li><li><a href="company.html#team">Team</a></li><li><a href="company.html#careers">Careers</a></li><li><a href="company.html#contact">Contact</a></li></ul></div>
+      <div class="col"><h4>Legal</h4><ul><li><a href="#">Privacy</a></li><li><a href="#">DPA</a></li><li><a href="#">Terms</a></li><li><a href="#">Responsible disclosure</a></li></ul></div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Anvax Technologies Pvt. Ltd.</span>
+      <span class="residency">Data residency · Mumbai · ap-south-1</span>
+      <span>v0.7 · 28 May 2026</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script>window.addEventListener('DOMContentLoaded',function(){if(window.lucide)lucide.createIcons();});</script>
+</body>
+</html>

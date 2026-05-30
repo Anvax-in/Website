@@ -7,7 +7,6 @@ const links = [
   { to: '/industries', label: 'Industries' },
   { to: '/trust',      label: 'Trust' },
   { to: '/deployment', label: 'Deployment' },
-  { to: '/pricing',    label: 'Pricing' },
   { to: '/company',    label: 'Company' },
 ]
 

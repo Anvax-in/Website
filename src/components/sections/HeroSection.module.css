@@ -31,6 +31,7 @@
   letter-spacing: -0.018em;
   color: var(--ink-900);
   margin-top: 22px;
+  text-align: center;
 }
 .em { color: var(--amber-700); font-style: italic; }
 .lede {
@@ -40,6 +41,9 @@
   color: var(--ink-500);
   max-width: 52ch;
   margin-top: 28px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .ctaRow {
   margin-top: 36px;
@@ -47,6 +51,7 @@
   gap: 12px;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .trustStrip {
   margin-top: 44px;
@@ -55,6 +60,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   font-family: var(--font-mono);
   font-size: 10.5px;
   letter-spacing: 0.05em;
