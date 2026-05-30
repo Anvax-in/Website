@@ -1,1 +1,88 @@
-/* Global styles — to be populated in Task 2 */
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg-page);
+  color: var(--fg-1);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 26px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-image: linear-gradient(
+    180deg,
+    var(--bone-50) 0%,
+    var(--bone-50) 60%,
+    #F7F1E0 100%
+  );
+  background-attachment: fixed;
+}
+h1, h2, h3, h4, h5, h6 { margin: 0; color: var(--fg-1); text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
+a { color: inherit; }
+code, kbd, samp, pre { font-family: var(--font-mono); }
+table { border-collapse: collapse; font-variant-numeric: tabular-nums; }
+::selection { background: var(--amber-100); color: var(--ink-900); }
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+img { display: block; max-width: 100%; }
+
+/* Layout utility */
+.container {
+  max-width: var(--site-max);
+  margin: 0 auto;
+  padding: 0 var(--site-gutter);
+}
+@media (max-width: 960px) {
+  .container { padding: 0 var(--site-gutter-sm); }
+}
+
+/* Section frame */
+.section {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.section.alt {
+  background: var(--bone-100);
+  background-image: radial-gradient(
+    120% 50% at 50% 0%,
+    rgba(184,132,62,0.04) 0%,
+    rgba(184,132,62,0) 60%
+  );
+}
+.section.dark {
+  background: var(--ink-900);
+  color: var(--bone-100);
+  border-bottom-color: transparent;
+}
+.section.dark h1,
+.section.dark h2,
+.section.dark h3 { color: var(--bone-100); }
+
+/* Inline mono pill — used across all pages */
+.term {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--bone-100);
+  border: 1px solid var(--border);
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: var(--ink-900);
+  white-space: nowrap;
+}
+
+/* Lede — serif secondary paragraph */
+.lede {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--ink-500);
+  max-width: 58ch;
+  text-wrap: pretty;
+}
