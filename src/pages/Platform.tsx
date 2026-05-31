@@ -57,7 +57,7 @@ const capabilities = [
       { spec: 'Actions', value: 'Slack alert, task create, workflow trigger, email' },
       { spec: 'Memory', value: 'Tenant-scoped persistent memory with TTL policy' },
       { spec: 'Guardrails', value: 'Action whitelist, spend cap, human-in-the-loop gate' },
-      { spec: 'Status', value: 'Shipping Q3 2026' },
+      { spec: 'Status', value: 'In active development' },
     ],
   },
 ]

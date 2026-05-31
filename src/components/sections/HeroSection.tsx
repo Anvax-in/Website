@@ -39,7 +39,7 @@ export default function HeroSection() {
               {[
                 { step: 'Request', label: 'User query', sub: <span>tenant <Term>acme_nbfc</Term> · session 0xA21F</span>, status: 'Bound' },
                 { step: 'Policy',  label: 'PII detection & redaction', sub: 'Aadhaar · PAN · IFSC · GSTIN · UPI · mobile', status: '3 redacted' },
-                { step: 'Route',   label: 'Tier-gated model', sub: <span><Term>claude-sonnet-4-20250514</Term> · region <Term>ap-south</Term></span>, status: 'Pinned' },
+                { step: 'Route',   label: 'Tier-gated model', sub: 'Region-locked · India data boundary', status: 'Pinned' },
                 { step: 'Cite',    label: 'Retrieved sources', sub: 'RBI/2024-25/108 · policies/kfs-v3.md · 4 chunks', status: 'Verified' },
                 { step: 'Trail',   label: 'Immutable audit write', sub: 'SHA-256 chained · UPDATE/DELETE blocked', status: 'Sealed' },
               ].map(({ step, label, sub, status }) => (
@@ -54,7 +54,7 @@ export default function HeroSection() {
               ))}
             </div>
             <div className={styles.schemaFoot}>
-              <span className={styles.schemaResidency}>Data residency · Mumbai (ap-south-1)</span>
+              <span className={styles.schemaResidency}>Data residency · India</span>
               <span>14:32:11 IST</span>
             </div>
           </aside>

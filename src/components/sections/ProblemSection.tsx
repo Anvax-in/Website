@@ -14,7 +14,7 @@ const after = [
   { lead: 'Every query is logged', body: 'Immutable inference trail, SHA-256 chained. UPDATE and DELETE are blocked by DDL trigger. The examiner gets a full export on request.' },
   { lead: 'One workspace over your corpus', body: 'Search, chat, workflows, and agents running on your documents — Tally, GST portal, MCA filings, Confluence, SharePoint.' },
   { lead: 'India-stack native', body: 'GST, MCA21, Account Aggregator, RBI circulars as first-class connectors. Not bolted on — wired in at the data layer.' },
-  { lead: "Your data never leaves India", body: 'SaaS in AWS Mumbai. Indian sovereign cloud. Air-gapped on-prem. Choose the tier; the residency commitment is the same.' },
+  { lead: "Your data never leaves India", body: 'Hosted infrastructure in India. Indian sovereign cloud. Air-gapped on-prem. Choose the tier; the residency commitment is the same.' },
 ]
 
 export default function ProblemSection() {

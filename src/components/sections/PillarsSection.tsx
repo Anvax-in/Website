@@ -31,10 +31,10 @@ const pillars = [
   {
     tag: 'Deployment',
     sub: 'Same product, your iron',
-    title: 'Four tiers. One product. Anvax owns no GPUs.',
-    body: 'Shared SaaS in AWS Mumbai for growth-stage fintechs. Indian sovereign GPU cloud for regulated NBFCs. On-prem and air-gapped for large banks and PSUs. IndiaAI subsidised compute as an overlay. We ship the platform. You keep the iron.',
+    title: 'Three tiers. One product. Your data never leaves India.',
+    body: 'Fully managed SaaS on Indian infrastructure for growth-stage fintechs. Sovereign deployment into your own VPC for regulated NBFCs. On-prem and air-gapped for large banks and PSUs. Same product at every tier.',
     meta: [
-      { k: 'Tiers', v: 'SaaS · Sovereign · On-prem · IndiaAI' },
+      { k: 'Tiers', v: 'SaaS · Sovereign · On-prem' },
       { k: 'Residency', v: 'All data & embeddings stay in India' },
     ],
     cta: 'See deployment',

@@ -13,7 +13,7 @@ const tiers = [
       'Shared compute, isolated data',
       'Anvax-managed updates',
       'Standard SLA (99.9%)',
-      'Mumbai region (ap-south-1)',
+      'Hosted in India',
       'All India-stack connectors',
     ],
     featured: false,
@@ -46,20 +46,6 @@ const tiers = [
     ],
     featured: false,
   },
-  {
-    icon: '🇮🇳',
-    name: 'IndiaAI',
-    tagLine: 'Sovereign GPU infra',
-    desc: 'Deployed on IndiaAI Mission infrastructure. For institutions that need domestic GPU compute and want to participate in India\'s sovereign AI ecosystem.',
-    features: [
-      'IndiaAI Mission compute',
-      'Domestic GPU cluster',
-      'Government data handling',
-      'Preferred for public sector',
-      'MeitY-aligned deployment',
-    ],
-    featured: false,
-  },
 ]
 
 const productNodes = [
@@ -77,7 +63,6 @@ const tierCells = [
   { name: 'SaaS', note: 'Shared compute' },
   { name: 'Sovereign', note: 'Customer VPC' },
   { name: 'On-prem', note: 'Customer HW' },
-  { name: 'IndiaAI', note: 'Sovereign GPU' },
 ]
 
 export default function Deployment() {
@@ -85,7 +70,7 @@ export default function Deployment() {
     <>
       <PageMeta
         title="Deployment — Anvax"
-        description="SaaS to air-gapped. Same product, four tiers. All data stays in India."
+        description="SaaS to air-gapped. Same product, three tiers. All data stays in India."
       />
 
       {/* Hero */}
@@ -94,8 +79,7 @@ export default function Deployment() {
           <div className={styles.heroInner}>
             <p className={styles.heroEyebrow}>Deployment</p>
             <h1 className={styles.heroH1}>
-              Same product. Four tiers.<br />
-              Anvax owns no GPUs.
+              Same product.<br />Three tiers.
             </h1>
             <p className={styles.heroLede}>
               From shared SaaS to air-gapped on-prem — the same product, the same feature set,
@@ -178,7 +162,7 @@ export default function Deployment() {
             Regardless of tier.
           </h2>
           <p className={styles.residencyNote}>
-            ap-south-1 (Mumbai) · No cross-border data transfer · DPDP Act 2023 compliant
+            All data hosted in India · No cross-border data transfer · DPDP Act 2023 compliant
           </p>
           <div style={{ marginTop: 32, display: 'flex', justifyContent: 'center', gap: 12 }}>
             <Button variant="accent" href="/trust" arrow>Read the architecture</Button>

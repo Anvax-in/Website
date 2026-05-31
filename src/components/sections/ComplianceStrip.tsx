@@ -5,7 +5,7 @@ const cells = [
   {
     k: 'Data residency',
     v: 'All customer data and embeddings stored in India.',
-    items: ['SaaS · AWS Mumbai (ap-south-1)', 'Sovereign · Yotta / E2E Networks', 'On-prem · customer DC'],
+    items: ['SaaS · Hosted in India', 'Sovereign · Indian cloud infrastructure', 'On-prem · customer DC'],
   },
   {
     k: 'Sovereign inference',

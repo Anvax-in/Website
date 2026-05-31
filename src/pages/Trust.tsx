@@ -74,7 +74,7 @@ const aiControls = [
   { control: 'Model pinning', detail: 'Specific model version per tenant tier; no silent model upgrades' },
   { control: 'Inference trace', detail: 'Every prompt, context, and completion logged to immutable inference_traces table' },
   { control: 'IMDS firewall', detail: '169.254.169.254 blocked at host level; iptables rule prevents SSRF exfiltration' },
-  { control: 'Data residency', detail: 'All inference routed through ap-south-1; no data sent outside India boundary' },
+  { control: 'Data residency', detail: 'All inference routed within India; no data sent outside India boundary' },
   { control: 'Spend controls', detail: 'Per-tenant token budget, rate limits, hard-stop on anomalous spikes' },
   { control: 'Human-in-the-loop', detail: 'High-risk workflow steps require human approval before proceeding' },
 ]
@@ -92,8 +92,8 @@ const freeAiControls = [
 
 const certifications = [
   { name: 'DPDP Act 2023', status: 'live' as const, note: 'Controls implemented' },
-  { name: 'SOC 2 Type II', status: 'wip' as const, note: 'Q3 2026' },
-  { name: 'ISO 27001', status: 'wip' as const, note: 'Q4 2026' },
+  { name: 'SOC 2 Type II', status: 'wip' as const, note: 'In progress' },
+  { name: 'ISO 27001', status: 'wip' as const, note: 'In progress' },
   { name: 'CERT-In empanelment', status: 'wip' as const, note: 'Initiated' },
 ]
 
@@ -295,7 +295,7 @@ export default function Trust() {
             {[
               { num: 'P95 < 1.4s', label: 'End-to-end query latency including model call and audit write' },
               { num: '99.9%', label: 'Uptime SLA on Growth tier and above' },
-              { num: 'ap-south-1', label: 'Single region; all data, embeddings, traces stay in India' },
+              { num: 'India', label: 'All data, embeddings, and inference traces stay in country' },
               { num: '0', label: 'Third-party sub-processors with access to your tenant data' },
             ].map((s) => (
               <div key={s.num} className={styles.statCard}>

@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
         <div className={styles.legal}>
           <span>© 2026 Anvax Technologies Pvt. Ltd.</span>
-          <span className={styles.residency}>Data residency · Mumbai · ap-south-1</span>
+          <span className={styles.residency}>Data residency · India</span>
           <span>v0.7 · May 2026</span>
         </div>
       </div>
