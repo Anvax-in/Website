@@ -137,9 +137,10 @@
     transform 0.32s ease,
     background var(--dur-fast) var(--ease-out);
 }
+.lane { pointer-events: none; }
 .lane:hover { background: var(--bone-100); }
 .lane:last-child { border-bottom: 0; }
-.laneVisible { opacity: 1; transform: none; }
+.laneVisible { opacity: 1; transform: none; pointer-events: auto; }
 
 /* Icon container */
 .laneIcon {
@@ -184,20 +185,11 @@
 .laneStatus::before {
   content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--sage-700);
 }
-.laneStatusAmber {
-  font-family: var(--font-mono); font-size: 10px;
-  letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber-700);
-  display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
-  opacity: 0;
-  transform: scale(0.82);
-  transition: opacity 0.22s ease 0.28s, transform 0.22s ease 0.28s;
-}
-.laneStatusAmber::before {
-  content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--amber-600);
-}
-/* Must follow individual badge rules — same specificity, source order wins */
-.laneVisible .laneStatus,
-.laneVisible .laneStatusAmber { opacity: 1; transform: scale(1); }
+/* Modifier — overrides color only; always applied alongside .laneStatus */
+.laneStatusAmber { color: var(--amber-700); }
+.laneStatusAmber::before { background: var(--amber-600); }
+/* Higher specificity (0,2,0) wins over base (0,1,0) rules above */
+.laneVisible .laneStatus { opacity: 1; transform: scale(1); }
 
 .schemaFoot {
   border-top: 1px solid var(--border);

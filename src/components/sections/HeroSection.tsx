@@ -84,7 +84,7 @@ export default function HeroSection() {
                     {label}
                     <span className={styles.laneSub}>{sub}</span>
                   </span>
-                  <span className={statusVariant === 'amber' ? styles.laneStatusAmber : styles.laneStatus}>
+                  <span className={`${styles.laneStatus}${statusVariant === 'amber' ? ` ${styles.laneStatusAmber}` : ''}`}>
                     {status}
                   </span>
                 </div>
