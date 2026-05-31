@@ -123,7 +123,7 @@
   border-bottom: 1px dashed var(--border);
   transition: background var(--dur-fast) var(--ease-out);
 }
-.lane:hover { background: var(--bone-50); }
+.lane:hover { background: var(--bone-100); }
 .lane:last-child { border-bottom: 0; }
 .laneTag {
   font-family: var(--font-mono); font-size: 10px;
@@ -143,6 +143,14 @@
 .laneStatus::before {
   content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--sage-700);
 }
+.laneStatusAmber {
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber-700);
+  display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+}
+.laneStatusAmber::before {
+  content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--amber-600);
+}
 .schemaFoot {
   border-top: 1px solid var(--border);
   background: var(--bone-50);
@@ -158,12 +166,4 @@
 @media (max-width: 960px) {
   .row { grid-template-columns: 1fr; gap: 48px; }
   .h1 { font-size: 44px; line-height: 52px; }
-}
-.laneStatusAmber {
-  font-family: var(--font-mono); font-size: 10px;
-  letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber-700);
-  display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
-}
-.laneStatusAmber::before {
-  content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--amber-600);
 }
