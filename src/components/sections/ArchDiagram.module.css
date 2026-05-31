@@ -35,6 +35,7 @@
 }
 
 .accent { background: var(--amber-100); border-color: var(--amber-500); }
+/* Must follow .block:hover — same specificity, source order wins */
 .accent:hover {
   box-shadow: 0 4px 12px rgba(184, 132, 62, 0.18);
   border-color: var(--amber-600);
@@ -55,7 +56,7 @@
   color: var(--ink-500);
 }
 .accent .iconWrap {
-  background: var(--amber-100);
+  background: var(--paper);
   border-color: var(--amber-500);
   color: var(--amber-700);
 }
