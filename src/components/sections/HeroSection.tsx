@@ -37,19 +37,21 @@ export default function HeroSection() {
             </div>
             <div className={styles.schemaBody}>
               {[
-                { step: 'Request', label: 'User query', sub: <span>tenant <Term>acme_nbfc</Term> · session 0xA21F</span>, status: 'Bound' },
-                { step: 'Policy',  label: 'PII detection & redaction', sub: 'Aadhaar · PAN · IFSC · GSTIN · UPI · mobile', status: '3 redacted' },
-                { step: 'Route',   label: 'Tier-gated model', sub: 'Region-locked · India data boundary', status: 'Pinned' },
-                { step: 'Cite',    label: 'Retrieved sources', sub: 'RBI/2024-25/108 · policies/kfs-v3.md · 4 chunks', status: 'Verified' },
-                { step: 'Trail',   label: 'Immutable audit write', sub: 'SHA-256 chained · UPDATE/DELETE blocked', status: 'Sealed' },
-              ].map(({ step, label, sub, status }) => (
+                { step: 'Request', label: 'User query',               sub: <span>tenant <Term>acme_nbfc</Term> · session 0xA21F</span>, status: 'Bound',      statusVariant: 'sage' as const },
+                { step: 'Policy',  label: 'PII detection & redaction', sub: 'Aadhaar · PAN · IFSC · GSTIN · UPI · mobile',              status: '3 redacted', statusVariant: 'amber' as const },
+                { step: 'Route',   label: 'Tier-gated model',          sub: 'Region-locked · India data boundary',                      status: 'Pinned',     statusVariant: 'sage' as const },
+                { step: 'Cite',    label: 'Retrieved sources',         sub: 'RBI/2024-25/108 · policies/kfs-v3.md · 4 chunks',          status: 'Verified',   statusVariant: 'sage' as const },
+                { step: 'Trail',   label: 'Immutable audit write',     sub: 'SHA-256 chained · UPDATE/DELETE blocked',                  status: 'Sealed',     statusVariant: 'sage' as const },
+              ].map(({ step, label, sub, status, statusVariant }) => (
                 <div key={step} className={styles.lane}>
                   <span className={styles.laneTag}>{step}</span>
                   <span className={styles.laneLabel}>
                     {label}
                     <span className={styles.laneSub}>{sub}</span>
                   </span>
-                  <span className={styles.laneStatus}>{status}</span>
+                  <span className={statusVariant === 'amber' ? styles.laneStatusAmber : styles.laneStatus}>
+                    {status}
+                  </span>
                 </div>
               ))}
             </div>
