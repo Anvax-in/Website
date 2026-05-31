@@ -1,21 +1,22 @@
+import { Link } from 'react-router-dom'
 import SectionHead from '../ui/SectionHead'
 import styles from './ComplianceStrip.module.css'
 
-const cells = [
+const cards = [
   {
-    k: 'Data residency',
-    v: 'All customer data and embeddings stored in India.',
-    items: ['SaaS · Hosted in India', 'Sovereign · Indian cloud infrastructure', 'On-prem · customer DC'],
+    label: 'Data residency',
+    title: 'Your data never leaves India.',
+    body: 'Customer data, embeddings, and model responses stay in India at every tier — SaaS, sovereign cloud, or on-prem. No exceptions.',
   },
   {
-    k: 'Sovereign inference',
-    v: 'Region-locked, tier-gated, model-pinned.',
-    items: ['SaaS · Anthropic via Azure AI Foundry', 'Sovereign · vLLM + AI Kosh / Sarvam', 'Air-gapped · Helm + vLLM'],
+    label: 'Audit trail',
+    title: 'Every query is logged and traceable.',
+    body: 'Complete inference trail from prompt to response. Immutable, tamper-evident, and exportable when your examiner asks for it.',
   },
   {
-    k: 'Audit-ready',
-    v: "RBI FREE-AI controls live in product — not a roadmap slide.",
-    items: ['R7 · AI Use-Case Registry', 'R17 · Model version tracking', 'R19 · Explainability "Why?"', 'R23 · Immutable inference trail'],
+    label: 'RBI compliance',
+    title: 'Controls live in the product — not on a roadmap.',
+    body: 'RBI FREE-AI requirements, DPDP Act 2023, and CERT-In obligations are implemented in the product. See the full mapping on the Trust page.',
   },
 ]
 
@@ -25,23 +26,22 @@ export default function ComplianceStrip() {
       <div className="container">
         <SectionHead
           eyebrow="Compliance & sovereignty"
-          title="Examiner-ready. Audit-aligned. India-resident."
-          lede="Anvax was built with the RBI FREE-AI report and the DPDP Act open on the desk. Controls are live in product."
+          title="Built for the regulator in the room."
+          lede="Controls that matter to your examiner are already in the product — not planned for a future release."
         />
-        <div className={styles.strip}>
-          <div className={styles.lead}>
-            <h3 className={styles.leadH}>The compliance story your regulator can read in twenty minutes.</h3>
-            <p className={styles.leadP}>Full mapping of RBI FREE-AI, DPDP Act 2023, CERT-In 2022, and the RBI IT Framework lives on the Trust page — controls, references, and current status.</p>
-          </div>
-          {cells.map(({ k, v, items }) => (
-            <div key={k} className={styles.cell}>
-              <div className={styles.cellK}>{k}</div>
-              <div className={styles.cellV}>{v}</div>
-              <ul className={styles.cellList}>
-                {items.map(i => <li key={i}>{i}</li>)}
-              </ul>
+        <div className={styles.grid}>
+          {cards.map(({ label, title, body }) => (
+            <div key={label} className={styles.card}>
+              <div className={styles.label}>{label}</div>
+              <h3 className={styles.title}>{title}</h3>
+              <p className={styles.body}>{body}</p>
             </div>
           ))}
+        </div>
+        <div className={styles.cta}>
+          <Link to="/trust" className={styles.ctaLink}>
+            Read the full compliance architecture →
+          </Link>
         </div>
       </div>
     </section>
