@@ -26,6 +26,7 @@ export default function HeroSection() {
   const [visibleCount, setVisibleCount] = useState(0)
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const STEP_MS = 700
     const PAUSE_MS = 3200
     const t = setTimeout(
@@ -61,7 +62,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <aside className={styles.schema} aria-label="Inference flow">
+          <aside className={styles.schema} aria-label="Inference flow" aria-hidden="true">
             <div className={styles.schemaHead}>
               <span className={styles.schemaTtl}>Inference trace · INF-9871</span>
               <span className={styles.pulse}>Live</span>
@@ -76,7 +77,7 @@ export default function HeroSection() {
                   key={step}
                   className={`${styles.lane} ${index < visibleCount ? styles.laneVisible : ''}`}
                 >
-                  <span className={`${styles.laneIcon} ${step === 'Policy' ? styles.laneIconGov : ''}`}>
+                  <span className={`${styles.laneIcon} ${statusVariant === 'amber' ? styles.laneIconGov : ''}`}>
                     <Icon size={13} strokeWidth={1.75} />
                   </span>
                   <span className={styles.laneTag}>{step}</span>

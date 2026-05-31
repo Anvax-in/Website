@@ -136,8 +136,8 @@
     opacity 0.32s ease,
     transform 0.32s ease,
     background var(--dur-fast) var(--ease-out);
+  pointer-events: none;
 }
-.lane { pointer-events: none; }
 .lane:hover { background: var(--bone-100); }
 .lane:last-child { border-bottom: 0; }
 .laneVisible { opacity: 1; transform: none; pointer-events: auto; }
@@ -207,4 +207,7 @@
 @media (max-width: 960px) {
   .row { grid-template-columns: 1fr; gap: 48px; }
   .h1 { font-size: 44px; line-height: 52px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lane, .laneIcon, .laneStatus, .rail { transition: none; }
 }
