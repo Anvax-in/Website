@@ -7,15 +7,15 @@ export default function VisionSection() {
       <div className="container">
         <SectionHead
           eyebrow="Vision"
-          title="The hardest regulated market in the world is India. We start there."
+          title="Built for India's regulated enterprises — from the ground up."
         />
         <div className={styles.vision}>
           <div className={styles.pullquote}>
-            What AWS did for cloud infrastructure, Anvax does for enterprise AI.
+            The compliance layer is not a feature you configure. It is the foundation.
           </div>
           <div className={styles.body}>
-            <p>India's regulated enterprise has three constraints at once — data sovereignty, deep India-stack dependencies, and a regulator that expects to see every model decision in writing. Solve those, and the rest of the world is a generalisation.</p>
-            <p>Anvax begins as the governed intelligence layer for one industry that lives at the intersection of all three — Indian NBFCs — and grows outward, vertical by vertical, until enterprise AI in India runs on a single substrate the way enterprise compute runs on cloud today.</p>
+            <p>Every AI tool available to Indian compliance teams was built for a different market, a different regulator, and a different risk culture. Compliance is bolted on after the fact. India-stack integrations are absent. The audit trail is an afterthought.</p>
+            <p>Anvax reverses that. RBI, SEBI, and IRDAI requirements are the foundation. Account Aggregator, GST Portal, MCA21, and DigiLocker are first-class connectors — not integrations. Every query is logged, every PII field is redacted, and every model decision is traceable before we ship a single feature.</p>
           </div>
         </div>
       </div>
