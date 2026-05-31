@@ -1,12 +1,12 @@
 /* VisionSection.module.css */
-.vision { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 48px; }
+.vision { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px; }
 .pullquote {
-  font-family: var(--font-serif); font-style: italic; font-size: 28px; line-height: 38px;
-  color: var(--ink-700); letter-spacing: -0.005em; text-wrap: balance; max-width: 36ch;
-  border-left: none; padding-left: 0; border-top: 2px solid var(--amber-600); padding-top: 24px;
+  font-family: var(--font-serif); font-style: italic; font-size: 26px; line-height: 36px;
+  color: var(--ink-700); letter-spacing: -0.005em; text-wrap: balance; max-width: 40ch;
+  border-top: 2px solid var(--amber-600); padding-top: 16px;
   text-align: center;
 }
 .body { text-align: center; }
-.body p { font-family: var(--font-serif); font-size: 19px; line-height: 30px; color: var(--ink-700); max-width: 68ch; margin: 0 auto; }
-.body p + p { margin-top: 18px; }
-@media (max-width: 960px) { .vision { gap: 32px; } }
+.body p { font-family: var(--font-serif); font-size: 18px; line-height: 29px; color: var(--ink-700); max-width: 68ch; margin: 0 auto; }
+.body p + p { margin-top: 14px; }
+@media (max-width: 960px) { .vision { gap: 18px; } }

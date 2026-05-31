@@ -30,7 +30,7 @@
   line-height: 66px;
   letter-spacing: -0.018em;
   color: var(--ink-900);
-  margin-top: 22px;
+  margin-top: 14px;
   text-align: center;
 }
 .em { color: var(--amber-700); font-style: italic; }
@@ -40,13 +40,13 @@
   line-height: 32px;
   color: var(--ink-500);
   max-width: 52ch;
-  margin-top: 28px;
+  margin-top: 18px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
 .ctaRow {
-  margin-top: 36px;
+  margin-top: 24px;
   display: flex;
   gap: 12px;
   align-items: center;
@@ -54,7 +54,7 @@
   justify-content: center;
 }
 .trustStrip {
-  margin-top: 44px;
+  margin-top: 32px;
   padding-top: 24px;
   border-top: 1px solid var(--border);
   display: flex;
