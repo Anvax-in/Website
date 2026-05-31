@@ -116,33 +116,6 @@ export default function Company() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="section">
-        <div className="container">
-          <SectionHead
-            eyebrow="Team"
-            title="Built by people who've been inside regulated finance."
-            lede="We've spent years working inside and alongside Indian regulated enterprises. We know what examiners ask and what compliance officers actually need."
-          />
-          <div className={styles.teamGrid}>
-            <div className={styles.teamCard}>
-              <div className={styles.teamAvatar}>A</div>
-              <div>
-                <div className={styles.teamName}>Founder, CEO</div>
-                <div className={styles.teamRole}>Previously: NBFC credit risk, fintech infra</div>
-              </div>
-            </div>
-            <div className={styles.teamCard}>
-              <div className={styles.teamAvatar}>B</div>
-              <div>
-                <div className={styles.teamName}>Co-founder, CTO</div>
-                <div className={styles.teamRole}>Previously: distributed systems, payments</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Careers */}
       <section className="section alt">
         <div className="container">
