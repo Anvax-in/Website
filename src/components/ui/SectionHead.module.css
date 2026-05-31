@@ -13,27 +13,28 @@
 .title {
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: 36px;
-  line-height: 43px;
+  font-size: 42px;
+  line-height: 50px;
   letter-spacing: -0.02em;
   color: var(--ink-900);
-  margin-top: 12px;
-  max-width: 24ch;
+  margin-top: 10px;
+  max-width: 22ch;
   text-wrap: balance;
   text-align: center;
 }
 .dark .title { color: var(--bone-100); }
-.right { text-align: center; }
+.right { text-align: center; width: 100%; }
 .lede {
   font-family: var(--font-serif);
   font-size: 20px;
   line-height: 30px;
   color: var(--ink-500);
-  max-width: 68ch;
   text-wrap: pretty;
   text-align: center;
+  width: 100%;
 }
 .dark .lede { color: rgba(244,240,229,0.6); }
 @media (max-width: 960px) {
   .head { gap: 12px; }
+  .title { font-size: 32px; line-height: 40px; }
 }

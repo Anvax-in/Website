@@ -2,11 +2,11 @@
 .vision { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px; }
 .pullquote {
   font-family: var(--font-serif); font-style: italic; font-size: 26px; line-height: 36px;
-  color: var(--ink-700); letter-spacing: -0.005em; text-wrap: balance; max-width: 40ch;
+  color: var(--ink-700); letter-spacing: -0.005em; text-wrap: balance;
   border-top: 2px solid var(--amber-600); padding-top: 16px;
-  text-align: center;
+  text-align: center; width: 100%;
 }
-.body { text-align: center; }
-.body p { font-family: var(--font-serif); font-size: 18px; line-height: 29px; color: var(--ink-700); max-width: 68ch; margin: 0 auto; }
+.body { text-align: center; width: 100%; }
+.body p { font-family: var(--font-serif); font-size: 18px; line-height: 29px; color: var(--ink-700); }
 .body p + p { margin-top: 14px; }
 @media (max-width: 960px) { .vision { gap: 18px; } }

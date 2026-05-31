@@ -49,10 +49,7 @@
   font-size: 20px;
   line-height: 30px;
   color: var(--fg-on-dark-dim);
-  max-width: 58ch;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Capabilities section */
