@@ -13,12 +13,11 @@
 .title {
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: 42px;
-  line-height: 50px;
-  letter-spacing: -0.02em;
+  font-size: 34px;
+  line-height: 42px;
+  letter-spacing: -0.015em;
   color: var(--ink-900);
   margin-top: 10px;
-  max-width: 22ch;
   text-wrap: balance;
   text-align: center;
 }
@@ -36,5 +35,5 @@
 .dark .lede { color: rgba(244,240,229,0.6); }
 @media (max-width: 960px) {
   .head { gap: 12px; }
-  .title { font-size: 32px; line-height: 40px; }
+  .title { font-size: 28px; line-height: 36px; }
 }
