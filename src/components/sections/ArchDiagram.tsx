@@ -1,37 +1,40 @@
+import { Link2, Bot, Workflow, MessageSquare, Search, Shield, Zap, Route, Database, Layers3, Network, KeyRound, type LucideIcon } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import SectionHead from '../ui/SectionHead'
 import Term from '../ui/Term'
 import styles from './ArchDiagram.module.css'
 
-const layers = [
+type Block = { h: string; s: string | null; icon: LucideIcon }
+
+const layers: { num: string; name: string; desc: string; blocks: Block[]; accent: boolean }[] = [
   {
     num: 'Layer 03', name: 'Application layer',
     desc: 'The surface your analyst, RM, and compliance officer use every day.',
     blocks: [
-      { h: 'Search', s: 'Hybrid · cited' },
-      { h: 'Chat', s: 'Threads · ⌘K' },
-      { h: 'Workflows', s: 'Temporal-backed' },
-      { h: 'Agents', s: 'Policy-checked' },
+      { h: 'Search',    s: 'Hybrid · cited',       icon: Search },
+      { h: 'Chat',      s: 'Threads · ⌘K',         icon: MessageSquare },
+      { h: 'Workflows', s: 'Temporal-backed',       icon: Workflow },
+      { h: 'Agents',    s: 'Policy-checked',        icon: Bot },
     ], accent: false,
   },
   {
     num: 'Layer 02', name: 'Governance layer',
     desc: 'Every request passes through here. Not an afterthought — wired into the data path.',
     blocks: [
-      { h: 'PII redaction', s: 'Aadhaar · PAN · UPI' },
-      { h: 'Prompt-injection gate', s: 'Per user message' },
-      { h: 'Model gateway', s: 'Tier-gated · pinned' },
-      { h: 'Immutable audit', s: 'SHA-256 chained' },
+      { h: 'PII redaction',        s: 'Aadhaar · PAN · UPI',   icon: Shield },
+      { h: 'Prompt-injection gate', s: 'Per user message',      icon: Zap },
+      { h: 'Model gateway',        s: 'Tier-gated · pinned',    icon: Route },
+      { h: 'Immutable audit',      s: 'SHA-256 chained',        icon: Link2 },
     ], accent: true,
   },
   {
     num: 'Layer 01', name: 'Knowledge core',
     desc: 'Customer corpus, India-stack connectors, and the hybrid index that makes them queryable.',
     blocks: [
-      { h: 'Customer corpus', s: 'Per-tenant' },
-      { h: 'India stack', s: 'GST · MCA · AA · Tally' },
-      { h: 'Hybrid index', s: 'RAG + structured' },
-      { h: 'Encrypted at rest', s: null },
+      { h: 'Customer corpus', s: 'Per-tenant',              icon: Database },
+      { h: 'India stack',     s: 'GST · MCA · AA · Tally', icon: Layers3 },
+      { h: 'Hybrid index',    s: 'RAG + structured',        icon: Network },
+      { h: 'Encrypted at rest', s: null,                    icon: KeyRound },
     ], accent: false,
   },
 ]
@@ -54,11 +57,18 @@ export default function ArchDiagram() {
                 <p className={styles.layerDesc}>{desc}</p>
               </div>
               <div className={styles.blocks}>
-                {blocks.map(({ h, s }) => (
+                {blocks.map(({ h, s, icon: Icon }) => (
                   <div key={h} className={`${styles.block} ${accent ? styles.accent : ''}`}>
-                    <span className={styles.blockH}>{h}</span>
-                    <span className={styles.blockS}>
-                      {h === 'Encrypted at rest' ? <><Term>AES-256-GCM</Term> · per-tenant DEK</> : s}
+                    <span className={styles.iconWrap}>
+                      <Icon size={14} strokeWidth={1.75} />
+                    </span>
+                    <span className={styles.blockText}>
+                      <span className={styles.blockH}>{h}</span>
+                      <span className={styles.blockS}>
+                        {h === 'Encrypted at rest'
+                          ? <><Term>AES-256-GCM</Term> · per-tenant DEK</>
+                          : s}
+                      </span>
                     </span>
                   </div>
                 ))}
