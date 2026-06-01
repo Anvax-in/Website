@@ -70,7 +70,7 @@ const moats = [
   {
     icon: '🇮🇳',
     h3: 'India stack wired in',
-    desc: 'GST Portal, Account Aggregator, DigiLocker, MCA21, UPI/NPCI — pre-connected. Your US alternatives had to build for US regulators; we built for RBI, SEBI, IRDAI from day zero.',
+    desc: 'GST Portal, Account Aggregator, DigiLocker, MCA21, UPI/NPCI — pre-connected at the data layer. Built for RBI, SEBI, and IRDAI from day one, not retrofitted later.',
   },
   {
     icon: '🏦',
@@ -110,7 +110,7 @@ export default function Platform() {
     <>
       <PageMeta
         title="Platform — Anvax"
-        description="Four capabilities, four moats, and an India-stack that no US incumbent has wired in."
+        description="Four capabilities purpose-built for India's regulated enterprises — search, chat, workflows, and agents with sovereign data residency baked in."
       />
 
       {/* Hero */}
@@ -119,8 +119,8 @@ export default function Platform() {
           <div className={styles.heroInner}>
             <p className={styles.heroEyebrow}>Platform</p>
             <h1 className={styles.heroH1}>
-              Four capabilities. Four moats.<br />
-              No US incumbent has built this.
+              Four capabilities. One sovereign platform.<br />
+              Built for India's regulatory stack.
             </h1>
             <p className={styles.heroLede}>
               Search, Chat, Workflows, and Agents — each with an India-stack connector layer,
@@ -177,8 +177,8 @@ export default function Platform() {
         <div className="container">
           <SectionHead
             eyebrow="Moats"
-            title="Why copying our feature list is not enough."
-            lede="These are structural advantages. They compound over time and require years of India-specific investment to replicate."
+            title="Advantages that compound the longer you use Anvax."
+            lede="Each layer deepens with every query, every workflow, every integration added to your instance. The platform gets more valuable, not just more familiar."
           />
           <div className={styles.moatsGrid}>
             {moats.map((m) => (

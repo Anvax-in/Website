@@ -15,9 +15,9 @@ const pillars = [
   {
     tag: 'Platform',
     sub: 'Compounding',
-    title: 'Four moats US incumbents structurally cannot cross.',
+    title: 'Four structural advantages built into every deployment.',
     body: 'Organisational memory that compounds per customer. GST, MCA21, Tally, Account Aggregator, RBI circulars — wired in, not bolted on. Vertical packs for every regulated sector. Compliance infrastructure that arrives on day one.',
-    cta: 'See the moats',
+    cta: 'See the platform',
     href: '/platform',
   },
   {
@@ -40,7 +40,7 @@ export default function PillarsSection() {
           lede="A wedge that ships today, a platform that compounds, and a deployment model that meets every regulator where they are."
         />
         <div className={styles.grid}>
-          {pillars.map(({ tag, sub, title, body, meta, cta, href }) => (
+          {pillars.map(({ tag, sub, title, body, cta, href }) => (
             <Link key={tag} to={href} className={styles.card}>
               <div className={styles.cardTop}>
                 <Tag>{tag}</Tag>
