@@ -2,7 +2,6 @@ import { useState, useEffect, type ReactNode } from 'react'
 import { ArrowRight, Shield, Zap, FileText, Lock, type LucideIcon } from 'lucide-react'
 import Button from '../ui/Button'
 import Eyebrow from '../ui/Eyebrow'
-import Term from '../ui/Term'
 import styles from './HeroSection.module.css'
 
 type Lane = {
@@ -15,11 +14,11 @@ type Lane = {
 }
 
 const lanes: Lane[] = [
-  { step: 'Request', label: 'User query',               sub: <span>tenant <Term>acme_nbfc</Term> · session 0xA21F</span>, status: 'Bound',      statusVariant: 'sage',  icon: ArrowRight },
-  { step: 'Policy',  label: 'PII detection & redaction', sub: 'Aadhaar · PAN · IFSC · GSTIN · UPI · mobile',              status: '3 redacted', statusVariant: 'amber', icon: Shield     },
-  { step: 'Route',   label: 'Tier-gated model',          sub: 'Region-locked · India data boundary',                      status: 'Pinned',     statusVariant: 'sage',  icon: Zap        },
-  { step: 'Cite',    label: 'Retrieved sources',         sub: 'RBI/2024-25/108 · policies/kfs-v3.md · 4 chunks',          status: 'Verified',   statusVariant: 'sage',  icon: FileText   },
-  { step: 'Trail',   label: 'Immutable audit write',     sub: 'SHA-256 chained · UPDATE/DELETE blocked',                  status: 'Sealed',     statusVariant: 'sage',  icon: Lock       },
+  { step: 'Receive',  label: 'Question received',        sub: 'Acme Bank · Meera · credit team',               status: 'Accepted',  statusVariant: 'sage',  icon: ArrowRight },
+  { step: 'Privacy',  label: 'Sensitive data masked',    sub: 'Aadhaar · PAN · account numbers hidden',        status: '3 masked',  statusVariant: 'amber', icon: Shield     },
+  { step: 'Route',    label: 'Approved AI model locked', sub: 'India only · no data leaves the country',       status: 'Confirmed', statusVariant: 'sage',  icon: Zap        },
+  { step: 'Sources',  label: 'Relevant documents found', sub: 'RBI 2024 circular · KFS policy · 4 documents', status: 'Verified',  statusVariant: 'sage',  icon: FileText   },
+  { step: 'Audit',    label: 'Permanent record created', sub: 'Tamper-proof · examiner can export anytime',    status: 'Sealed',    statusVariant: 'sage',  icon: Lock       },
 ]
 
 export default function HeroSection() {
@@ -64,7 +63,7 @@ export default function HeroSection() {
 
           <aside className={styles.schema} aria-label="Inference flow" aria-hidden="true">
             <div className={styles.schemaHead}>
-              <span className={styles.schemaTtl}>Inference trace · INF-9871</span>
+              <span className={styles.schemaTtl}>Query trace · #9871</span>
               <span className={styles.pulse}>Live</span>
             </div>
             <div className={styles.schemaBody}>
