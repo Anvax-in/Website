@@ -41,7 +41,7 @@ export default function HeroSection() {
       <div className="container">
         <div className={styles.row}>
           <div>
-            <Eyebrow>Sovereign AI · Built for India's regulators</Eyebrow>
+            <Eyebrow onDark>Sovereign AI · Built for India's regulators</Eyebrow>
             <h1 className={styles.h1}>
               Enterprise AI your RBI examiner<br />
               <span className={styles.em}>can sit with.</span>
@@ -53,7 +53,7 @@ export default function HeroSection() {
             </p>
             <div className={styles.ctaRow}>
               <Button variant="accent" href="#demo" arrow>Request a demo</Button>
-              <Button variant="secondary" href="/trust">Architecture for regulators</Button>
+              <Button variant="secondaryDark" href="/trust">Architecture for regulators</Button>
             </div>
             <div className={styles.trustStrip} aria-label="Compliance posture">
               <span className={styles.item}>Built for RBI · SEBI · IRDAI · DPDP</span>

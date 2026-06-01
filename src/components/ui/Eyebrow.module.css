@@ -20,3 +20,5 @@
 .bare::before { display: none; }
 .muted { color: var(--fg-3); }
 .muted::before { background: var(--slate-300); }
+.onDark { color: var(--amber-500); }
+.onDark::before { background: var(--amber-500); }

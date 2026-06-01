@@ -2,18 +2,19 @@
 .hero {
   position: relative;
   padding: 60px 0 72px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-dark);
+  background: var(--ink-900);
   overflow: hidden;
   background-image:
-    radial-gradient(120% 90% at 90% -10%, rgba(184,132,62,0.10) 0%, rgba(184,132,62,0) 55%),
-    radial-gradient(80% 60% at 10% 110%, rgba(11,26,42,0.04) 0%, rgba(11,26,42,0) 60%);
+    radial-gradient(120% 90% at 90% -10%, rgba(184,132,62,0.18) 0%, rgba(184,132,62,0) 55%),
+    radial-gradient(80% 60% at 0% 100%, rgba(20,35,55,1) 0%, rgba(11,26,42,0) 60%);
 }
 .hero::before {
   content: '';
   position: absolute; inset: 0;
   background-image: url('/assets/lattice.svg');
   background-size: 220px 220px;
-  opacity: 0.045;
+  opacity: 0.06;
   pointer-events: none;
 }
 .row {
@@ -29,16 +30,16 @@
   font-size: 58px;
   line-height: 66px;
   letter-spacing: -0.018em;
-  color: var(--ink-900);
+  color: var(--bone-100);
   margin-top: 14px;
   text-align: center;
 }
-.em { color: var(--amber-700); font-style: italic; }
+.em { color: var(--amber-500); font-style: italic; }
 .lede {
   font-family: var(--font-serif);
   font-size: 21px;
   line-height: 32px;
-  color: var(--ink-500);
+  color: var(--fg-on-dark-dim);
   margin-top: 18px;
   text-align: center;
 }
@@ -53,7 +54,7 @@
 .trustStrip {
   margin-top: 32px;
   padding-top: 24px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border-dark);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -62,10 +63,10 @@
   font-size: 10.5px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--fg-3);
+  color: var(--fg-on-dark-dim);
 }
 .item { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
-.item + .item { padding-left: 22px; margin-left: 22px; border-left: 1px solid var(--border); }
+.item + .item { padding-left: 22px; margin-left: 22px; border-left: 1px solid var(--border-dark); }
 .live::before {
   content: ''; width: 6px; height: 6px;
   border-radius: 50%; background: var(--sage-700);

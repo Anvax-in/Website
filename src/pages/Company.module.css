@@ -3,17 +3,19 @@
 .hero {
   position: relative;
   padding: 60px 0 72px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-dark);
+  background: var(--ink-900);
   overflow: hidden;
   background-image:
-    radial-gradient(120% 90% at 90% -10%, rgba(184,132,62,0.08) 0%, rgba(184,132,62,0) 55%);
+    radial-gradient(70% 80% at 90% 0%, rgba(184,132,62,0.18) 0%, rgba(184,132,62,0) 55%),
+    radial-gradient(80% 60% at 0% 100%, rgba(20,35,55,1) 0%, rgba(11,26,42,0) 60%);
 }
 .hero::before {
   content: '';
   position: absolute; inset: 0;
   background-image: url('/assets/lattice.svg');
   background-size: 220px 220px;
-  opacity: 0.04;
+  opacity: 0.06;
   pointer-events: none;
 }
 .heroInner {
@@ -29,7 +31,7 @@
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--amber-700);
+  color: var(--amber-500);
   margin-bottom: 20px;
   justify-content: center;
   text-align: center;
@@ -40,7 +42,7 @@
   font-size: 50px;
   line-height: 60px;
   letter-spacing: -0.018em;
-  color: var(--ink-900);
+  color: var(--bone-100);
   text-align: center;
 }
 .heroLede {
@@ -48,7 +50,7 @@
   font-family: var(--font-serif);
   font-size: 20px;
   line-height: 30px;
-  color: var(--ink-500);
+  color: var(--fg-on-dark-dim);
   text-align: center;
 }
 
