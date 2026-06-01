@@ -1,7 +1,6 @@
 import PageMeta from '../components/ui/PageMeta'
 import SectionHead from '../components/ui/SectionHead'
 import StatusPill from '../components/ui/StatusPill'
-import Term from '../components/ui/Term'
 import Button from '../components/ui/Button'
 import styles from './Trust.module.css'
 
@@ -20,74 +19,73 @@ const defenceLayers = [
   {
     code: 'L1',
     layer: 'Transport',
-    controls: 'TLS 1.3, HSTS',
-    protects: 'Eavesdropping, MITM',
+    controls: 'TLS 1.3 enforced on all connections; HSTS preloaded',
+    guarantee: 'No plaintext data in transit — ever',
   },
   {
     code: 'L2',
-    layer: 'AuthN',
-    controls: 'JWT, Argon2id, Google OAuth, session binding to tenant',
-    protects: 'Credential stuffing, session hijacking',
+    layer: 'Identity & session',
+    controls: 'Phishing-resistant authentication, short-lived tokens, sessions bound to tenant context',
+    guarantee: 'Identity verified before any resource is touched',
   },
   {
     code: 'L3',
-    layer: 'AuthZ',
-    controls: 'Tenant scope middleware + Pydantic',
-    protects: 'Cross-tenant request forgery',
+    layer: 'Request authorisation',
+    controls: 'Every API call validated against tenant context before execution reaches the data layer',
+    guarantee: 'No request proceeds without an explicit authorisation check',
   },
   {
     code: 'L4',
-    layer: 'DB role demotion',
-    controls: 'SET LOCAL ROLE anvax_app (NOSUPERUSER, NOBYPASSRLS)',
-    protects: 'Privilege escalation via ORM bug',
+    layer: 'Least privilege',
+    controls: 'Database connection demoted to minimum-required role per request; superuser access structurally unavailable to the application',
+    guarantee: 'Application code cannot exceed its declared permissions',
   },
   {
     code: 'L5',
-    layer: 'Row-Level Security',
-    controls: 'Postgres RLS FORCE with USING + WITH CHECK',
-    protects: 'Cross-tenant data read/write',
+    layer: 'Storage isolation',
+    controls: 'Row-level policy enforced at the database engine — not the application — with both read and write guards',
+    guarantee: 'Tenant A data is unreachable from Tenant B at the storage layer',
   },
   {
     code: 'L6',
-    layer: 'Search-layer DLS',
-    controls: 'OpenSearch Document-Level Security tenant_id',
-    protects: 'Cross-tenant retrieval',
+    layer: 'Search isolation',
+    controls: 'Document retrieval scoped to tenant at the index layer before results are returned',
+    guarantee: 'No cross-tenant document leakage through search or retrieval',
   },
   {
     code: 'L7',
     layer: 'Encryption at rest',
-    controls: 'Per-tenant DEK (HKDF), AES-256-GCM on PII + OAuth',
-    protects: 'DB dump exposure',
+    controls: 'Per-tenant encryption keys; PII fields carry a second encryption pass independent of the primary store',
+    guarantee: 'A storage dump yields no readable customer data',
   },
   {
     code: 'L8',
-    layer: 'Audit chain',
-    controls: 'Append-only audit_log + immutable inference_traces SHA-256 chained, DDL trigger blocks UPDATE/DELETE',
-    protects: 'Tampering, repudiation',
+    layer: 'Audit integrity',
+    controls: 'Append-only log with cryptographic chaining across every inference and data event; no record can be modified or deleted',
+    guarantee: 'Every action is permanently attributable and tamper-evident',
   },
 ]
 
 const aiControls = [
-  { control: 'Hallucination mitigation', detail: 'RAG grounding, "not found in corpus" instruction, top-k citation requirement' },
-  { control: 'PII auto-redaction', detail: 'Aadhaar, PAN, IFSC, GSTIN, UPI, mobile — detected before model context window' },
-  { control: 'Prompt injection guard', detail: 'Input sanitisation, user-vs-system prompt separation, role boundary enforcement' },
-  { control: 'Model pinning', detail: 'Specific model version per tenant tier; no silent model upgrades' },
-  { control: 'Inference trace', detail: 'Every prompt, context, and completion logged to immutable inference_traces table' },
-  { control: 'IMDS firewall', detail: '169.254.169.254 blocked at host level; iptables rule prevents SSRF exfiltration' },
-  { control: 'Data residency', detail: 'All inference routed within India; no data sent outside India boundary' },
-  { control: 'Spend controls', detail: 'Per-tenant token budget, rate limits, hard-stop on anomalous spikes' },
-  { control: 'Human-in-the-loop', detail: 'High-risk workflow steps require human approval before proceeding' },
+  { control: 'Hallucination mitigation', detail: 'Answers grounded in retrieved context only; model surfaces uncertainty rather than inventing — every response cites the source it drew from' },
+  { control: 'PII auto-redaction', detail: 'Aadhaar, PAN, IFSC, GSTIN, UPI, mobile — detected and redacted before the model context window is assembled' },
+  { control: 'Prompt isolation', detail: 'User input is structurally separated from system instructions; role boundaries enforced at the prompt layer, not relying on model instruction-following alone' },
+  { control: 'Model pinning', detail: 'Model version locked per tenant tier; behaviour cannot change without an explicit upgrade decision and audit entry' },
+  { control: 'Inference audit', detail: 'Every prompt, retrieved context, and completion stored in an append-only, cryptographically chained audit log' },
+  { control: 'Data residency enforcement', detail: 'All inference routed within India — model calls, embeddings, retrieval — nothing crosses the geographic boundary' },
+  { control: 'Spend controls', detail: 'Per-tenant token budgets with hard limits; anomalous usage patterns trigger alerts before they become incidents' },
+  { control: 'Human-in-the-loop', detail: 'Credit decisions, compliance filings, and audit outputs require explicit human sign-off before any downstream action is taken' },
 ]
 
 const freeAiControls = [
-  { ref: 'R7', control: 'AI Use-Case Registry', detail: 'Every AI use case catalogued with business purpose, data inputs, and risk classification' },
-  { ref: 'R8', control: 'Board oversight docs', detail: 'Board-level AI governance documentation generated from audit trail' },
-  { ref: 'R15', control: 'Board report on AI use', detail: 'Periodic board reporting on AI usage, incidents, and risk metrics' },
-  { ref: 'R17', control: 'Model version tracking', detail: 'Every model version change logged with date, reason, and approval' },
-  { ref: 'R18', control: 'Human-in-the-loop high-risk', detail: 'Workflow gates require human sign-off for credit, compliance, and audit decisions' },
-  { ref: 'R19', control: 'Explainability', detail: 'Every AI output includes source citations and retrieval context' },
-  { ref: 'R23', control: 'Immutable inference trail', detail: 'SHA-256 chained inference_traces; DDL triggers block UPDATE/DELETE' },
-  { ref: 'R26', control: 'LLM monitoring', detail: 'Real-time monitoring of token usage, latency, error rates, and anomalous patterns' },
+  { ref: 'R7',  control: 'AI Use-Case Registry',       detail: 'Every AI use case catalogued with business purpose, data inputs, and risk classification — exportable for examiner review' },
+  { ref: 'R8',  control: 'Board oversight docs',        detail: 'Board-level AI governance documentation synthesised automatically from the audit trail' },
+  { ref: 'R15', control: 'Periodic board reporting',    detail: 'Usage, incident, and risk summaries generated on a defined cadence for board-level visibility' },
+  { ref: 'R17', control: 'Model version governance',    detail: 'Every model version change logged with date, rationale, and approval; rollback is a single operation' },
+  { ref: 'R18', control: 'Human gate on high-risk',     detail: 'Credit decisions, compliance filings, and audit outputs require explicit human sign-off before execution' },
+  { ref: 'R19', control: 'Explainability by design',    detail: 'Every AI output cites the specific source document and retrieval context it drew from — not a post-hoc explanation layer' },
+  { ref: 'R23', control: 'Immutable inference trail',   detail: 'Cryptographically chained audit log across every inference event; no record can be modified or deleted after the fact' },
+  { ref: 'R26', control: 'Real-time LLM monitoring',   detail: 'Token usage, latency, error rates, and behavioural anomalies monitored continuously — not sampled' },
 ]
 
 const certifications = [
@@ -165,44 +163,25 @@ export default function Trust() {
         <div className="container">
           <SectionHead
             eyebrow="Defence-in-depth"
-            title="Eight layers from transport to audit chain."
-            lede="Each layer addresses a distinct threat. They stack — a breach at one layer does not compromise the next."
+            title="Eight independent security guarantees."
+            lede="Each layer operates independently. A failure at one does not cascade to the next — and each guarantee is verifiable by your security team."
           />
           <table className={styles.dataTable}>
             <thead>
               <tr>
                 <th>Layer</th>
                 <th>Name</th>
-                <th>Controls</th>
-                <th>Protects against</th>
+                <th>How it works</th>
+                <th>What it guarantees</th>
               </tr>
             </thead>
             <tbody>
               {defenceLayers.map((row) => (
                 <tr key={row.code}>
-                  <td>
-                    <span className={styles.layerCode}>{row.code}</span>
-                  </td>
+                  <td><span className={styles.layerCode}>{row.code}</span></td>
                   <td style={{ fontWeight: 500, color: 'var(--ink-900)', whiteSpace: 'nowrap' }}>{row.layer}</td>
-                  <td>
-                    {row.code === 'L2' && (
-                      <>JWT, <Term>Argon2id</Term>, Google OAuth, session binding to tenant</>
-                    )}
-                    {row.code === 'L4' && (
-                      <><Term>SET LOCAL ROLE anvax_app</Term> (NOSUPERUSER, NOBYPASSRLS)</>
-                    )}
-                    {row.code === 'L5' && (
-                      <><Term>Postgres RLS FORCE</Term> with USING + WITH CHECK</>
-                    )}
-                    {row.code === 'L7' && (
-                      <>Per-tenant DEK (HKDF), <Term>AES-256-GCM</Term> on PII + OAuth</>
-                    )}
-                    {row.code === 'L8' && (
-                      <>Append-only <Term>audit_log</Term> + immutable <Term>inference_traces</Term> SHA-256 chained, DDL trigger blocks UPDATE/DELETE</>
-                    )}
-                    {!['L2','L4','L5','L7','L8'].includes(row.code) && row.controls}
-                  </td>
-                  <td>{row.protects}</td>
+                  <td>{row.controls}</td>
+                  <td style={{ color: 'var(--ink-500)' }}>{row.guarantee}</td>
                 </tr>
               ))}
             </tbody>
@@ -215,8 +194,8 @@ export default function Trust() {
         <div className="container">
           <SectionHead
             eyebrow="AI controls"
-            title="Nine controls specific to LLM-based systems."
-            lede="Traditional security controls don't cover AI-specific attack surfaces. These nine controls do."
+            title="Security controls designed for AI, not retrofitted from the last decade."
+            lede="AI systems introduce attack surfaces that traditional security frameworks weren't built for. These controls address each one directly."
           />
           <table className={styles.dataTable}>
             <thead>
@@ -229,15 +208,7 @@ export default function Trust() {
               {aiControls.map((row) => (
                 <tr key={row.control}>
                   <td>{row.control}</td>
-                  <td>
-                    {row.control === 'Inference trace' && (
-                      <>Every prompt, context, and completion logged to immutable <Term>inference_traces</Term> table</>
-                    )}
-                    {row.control === 'IMDS firewall' && (
-                      <><Term>169.254.169.254</Term> blocked at host level; iptables rule prevents SSRF exfiltration</>
-                    )}
-                    {!['Inference trace', 'IMDS firewall'].includes(row.control) && row.detail}
-                  </td>
+                  <td>{row.detail}</td>
                 </tr>
               ))}
             </tbody>
@@ -269,12 +240,7 @@ export default function Trust() {
                     <span className={styles.layerCode}>{row.ref}</span>
                   </td>
                   <td style={{ fontWeight: 500, color: 'var(--ink-900)', whiteSpace: 'nowrap' }}>{row.control}</td>
-                  <td>
-                    {row.ref === 'R23' && (
-                      <>SHA-256 chained <Term>inference_traces</Term>; DDL triggers block UPDATE/DELETE</>
-                    )}
-                    {row.ref !== 'R23' && row.detail}
-                  </td>
+                  <td>{row.detail}</td>
                   <td><StatusPill status="live">Live</StatusPill></td>
                 </tr>
               ))}
@@ -288,7 +254,7 @@ export default function Trust() {
         <div className="container">
           <SectionHead
             eyebrow="Engineering posture"
-            title="Numbers your security team can verify."
+            title="Architecture commitments your security team can hold us to."
             dark
           />
           <div className={styles.statGrid}>
