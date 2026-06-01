@@ -115,6 +115,8 @@
   transition: background var(--dur-base) var(--ease-out);
 }
 .submit:hover { background: var(--amber-700); }
+.submit:disabled { opacity: 0.6; cursor: not-allowed; }
+.errorMsg { font-size: 13px; color: var(--rust-700); }
 
 /* Thank you state */
 .thanks {
