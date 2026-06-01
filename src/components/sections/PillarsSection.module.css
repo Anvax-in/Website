@@ -10,9 +10,9 @@
 .cardTop { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
 .sub { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-3); }
 .h3 { font-family: var(--font-serif); font-size: 26px; line-height: 32px; font-weight: 400; letter-spacing: -0.008em; margin-bottom: 16px; max-width: 18ch; }
-.body { font-size: 14px; line-height: 22px; color: var(--ink-500); max-width: 38ch; min-height: 88px; }
+.body { font-size: 14px; line-height: 22px; color: var(--ink-500); max-width: 38ch; }
 .meta {
-  margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border);
+  margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border);
   display: flex; flex-direction: column; gap: 8px;
   font-family: var(--font-sans); font-size: 12.5px; line-height: 18px; color: var(--fg-2);
 }
