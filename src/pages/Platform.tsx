@@ -119,7 +119,8 @@ export default function Platform() {
           <div className={styles.heroInner}>
             <p className={styles.heroEyebrow}>Platform</p>
             <h1 className={styles.heroH1}>
-              Four capabilities. One sovereign platform.<br />
+              Four capabilities.<br />
+              One sovereign platform.<br />
               Built for India's regulatory stack.
             </h1>
             <p className={styles.heroLede}>

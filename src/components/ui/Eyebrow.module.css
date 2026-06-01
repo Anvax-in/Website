@@ -11,14 +11,5 @@
   gap: 10px;
   text-align: center;
 }
-.eyebrow::before {
-  content: '';
-  width: 18px;
-  height: 1px;
-  background: var(--amber-600);
-}
-.bare::before { display: none; }
 .muted { color: var(--fg-3); }
-.muted::before { background: var(--slate-300); }
 .onDark { color: var(--amber-500); }
-.onDark::before { background: var(--amber-500); }
