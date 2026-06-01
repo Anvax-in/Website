@@ -9,10 +9,6 @@ const pillars = [
     sub: 'Shipping today',
     title: 'Your analysts work on your corpus. Not ours.',
     body: 'Search, chat, workflows, and agents running on your own documents — with full audit trails, DPDP compliance, and Indian data residency. When the examiner asks for the inference trail, it is one export away.',
-    meta: [
-      { k: 'Ships to', v: 'Banks · NBFCs · fintechs · PSUs' },
-      { k: 'Replaces', v: 'Glean · Copilot · shadow AI' },
-    ],
     cta: 'See the platform',
     href: '/platform',
   },
@@ -21,10 +17,6 @@ const pillars = [
     sub: 'Compounding',
     title: 'Four moats US incumbents structurally cannot cross.',
     body: 'Organisational memory that compounds per customer. GST, MCA21, Tally, Account Aggregator, RBI circulars — wired in, not bolted on. Vertical packs for every regulated sector. Compliance infrastructure that arrives on day one.',
-    meta: [
-      { k: 'Moats', v: 'Memory · India stack · verticals · compliance' },
-      { k: 'Rollout', v: 'BFSI → wealth → lending → insurance' },
-    ],
     cta: 'See the moats',
     href: '/platform',
   },
@@ -33,10 +25,6 @@ const pillars = [
     sub: 'Same product, your iron',
     title: 'Three tiers. One product. Your data never leaves India.',
     body: 'Fully managed SaaS on Indian infrastructure for growth-stage fintechs. Sovereign deployment into your own VPC for regulated enterprises. On-prem and air-gapped for large banks and PSUs. Same product at every tier.',
-    meta: [
-      { k: 'Tiers', v: 'SaaS · Sovereign · On-prem' },
-      { k: 'Residency', v: 'All data & embeddings stay in India' },
-    ],
     cta: 'See deployment',
     href: '/deployment',
   },
@@ -60,11 +48,6 @@ export default function PillarsSection() {
               </div>
               <h3 className={styles.h3}>{title}</h3>
               <p className={styles.body}>{body}</p>
-              <div className={styles.meta}>
-                {meta.map(({ k, v }) => (
-                  <div key={k}><span className={styles.metaK}>{k}</span>{v}</div>
-                ))}
-              </div>
               <span className={styles.more}>{cta} <span className={styles.arr}>→</span></span>
             </Link>
           ))}

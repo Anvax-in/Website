@@ -1,5 +1,5 @@
 /* PillarsSection.module.css */
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .card {
   background: var(--bone-100); border: 1px solid var(--border); border-radius: var(--radius-md);
   padding: 32px; display: flex; flex-direction: column;
