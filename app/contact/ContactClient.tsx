@@ -1,8 +1,9 @@
-import { useState, useRef } from 'react'
-import PageMeta from '../components/ui/PageMeta'
-import styles from './Contact.module.css'
+'use client'
 
-export default function Contact() {
+import { useState, useRef } from 'react'
+import styles from '@/pages/Contact.module.css'
+
+export default function ContactClient() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'done' | 'error'>('idle')
   const formRef = useRef<HTMLFormElement>(null)
 
@@ -35,11 +36,6 @@ export default function Contact() {
 
   return (
     <>
-      <PageMeta
-        title="Contact — Anvax"
-        description="Request a demo, ask about deployment options, or get in touch with the Anvax team."
-      />
-
       <section className={styles.hero}>
         <div className="container">
           <div className={styles.heroInner}>
