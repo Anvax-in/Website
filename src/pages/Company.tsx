@@ -117,7 +117,7 @@ export default function Company() {
       </section>
 
       {/* Careers */}
-      <section className="section alt">
+      <section className="section alt" id="careers">
         <div className="container">
           <SectionHead
             eyebrow="Careers"
@@ -143,7 +143,7 @@ export default function Company() {
       </section>
 
       {/* Contact */}
-      <section className="section">
+      <section className="section" id="contact">
         <div className="container">
           <SectionHead
             eyebrow="Contact"

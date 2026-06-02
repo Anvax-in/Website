@@ -8,13 +8,13 @@ const product = [
 ]
 const trust = [
   { to: '/trust',              label: 'Architecture' },
-  { to: '/trust#freeai',       label: 'RBI FREE-AI' },
+  { to: '/trust#free-ai',       label: 'RBI FREE-AI' },
   { to: '/trust#dpdp',         label: 'DPDP & CERT-In' },
   { to: '/trust#downloads',    label: 'Regulator pack' },
 ]
 const company = [
   { to: '/company',          label: 'About' },
-  { to: '/company#team',     label: 'Team' },
+  { to: '/company',          label: 'Team' },
   { to: '/company#careers',  label: 'Careers' },
   { to: '/company#contact',  label: 'Contact' },
 ]
