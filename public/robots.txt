@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://anvax.in/sitemap.xml
+Sitemap: https://www.anvax.in/sitemap.xml
