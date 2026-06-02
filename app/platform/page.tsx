@@ -1,7 +1,8 @@
-import PageMeta from '../components/ui/PageMeta'
-import SectionHead from '../components/ui/SectionHead'
-import Tag from '../components/ui/Tag'
-import styles from './Platform.module.css'
+import type { Metadata } from 'next'
+import Image from 'next/image'
+import SectionHead from '@/components/ui/SectionHead'
+import Tag from '@/components/ui/Tag'
+import styles from '@/pages/Platform.module.css'
 
 const capabilities = [
   {
@@ -105,14 +106,21 @@ const logoTiles = [
   { mono: 'CK', name: 'CKYC', kind: 'Identity' },
 ]
 
+export const metadata: Metadata = {
+  title: 'Platform — Anvax',
+  description: "Four capabilities purpose-built for India's regulated enterprises — search, chat, workflows, and agents with sovereign data residency baked in.",
+  openGraph: {
+    title: 'Platform — Anvax',
+    description: "Four capabilities purpose-built for India's regulated enterprises.",
+    url: 'https://anvax.in/platform',
+  },
+  twitter: { card: 'summary_large_image', title: 'Platform — Anvax', description: "Four capabilities purpose-built for India's regulated enterprises." },
+  alternates: { canonical: 'https://anvax.in/platform' },
+}
+
 export default function Platform() {
   return (
     <>
-      <PageMeta
-        title="Platform — Anvax"
-        description="Four capabilities purpose-built for India's regulated enterprises — search, chat, workflows, and agents with sovereign data residency baked in."
-      />
-
       {/* Hero */}
       <section className={styles.hero}>
         <div className="container">
@@ -207,7 +215,7 @@ export default function Platform() {
                 {'mono' in tile ? (
                   <div className={styles.logoMark}>{tile.mono}</div>
                 ) : (
-                  <img src={tile.src} alt={tile.name} className={styles.logoImg} />
+                  <Image src={tile.src} alt={tile.name} width={48} height={48} className={styles.logoImg} style={{ objectFit: 'contain' }} />
                 )}
                 <span className={styles.logoName}>{tile.name}</span>
                 <span className={styles.logoKind}>{tile.kind}</span>
