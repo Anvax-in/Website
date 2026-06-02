@@ -10,7 +10,7 @@ import Footer from '@/components/layout/Footer'
 const sourceSerif4 = Source_Serif_4({
   subsets: ['latin'],
   axes: ['opsz'],
-  weight: ['300', '400', '600'],
+  weight: 'variable',
   variable: '--font-serif',
   display: 'swap',
 })
