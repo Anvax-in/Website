@@ -1,7 +1,7 @@
-import PageMeta from '../components/ui/PageMeta'
-import SectionHead from '../components/ui/SectionHead'
-import Button from '../components/ui/Button'
-import styles from './Company.module.css'
+import type { Metadata } from 'next'
+import SectionHead from '@/components/ui/SectionHead'
+import Button from '@/components/ui/Button'
+import styles from '@/pages/Company.module.css'
 
 const values = [
   {
@@ -39,14 +39,17 @@ const openRoles = [
   },
 ]
 
+export const metadata: Metadata = {
+  title: 'Company — Anvax',
+  description: "Who we are, what we're building, and why we started with India's hardest market.",
+  openGraph: { title: 'Company — Anvax', description: "Who we are, what we're building.", url: 'https://anvax.in/company' },
+  twitter: { card: 'summary_large_image', title: 'Company — Anvax', description: "Who we are, what we're building." },
+  alternates: { canonical: 'https://anvax.in/company' },
+}
+
 export default function Company() {
   return (
     <>
-      <PageMeta
-        title="Company — Anvax"
-        description="Who we are, what we're building, and why we started with India's hardest market."
-      />
-
       {/* Hero */}
       <section className={styles.hero}>
         <div className="container">
