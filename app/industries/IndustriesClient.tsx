@@ -1,8 +1,9 @@
+'use client'
+
 import { useState } from 'react'
-import PageMeta from '../components/ui/PageMeta'
-import SectionHead from '../components/ui/SectionHead'
-import Tag from '../components/ui/Tag'
-import styles from './Industries.module.css'
+import SectionHead from '@/components/ui/SectionHead'
+import Tag from '@/components/ui/Tag'
+import styles from '@/pages/Industries.module.css'
 
 interface Role {
   role: string
@@ -101,16 +102,11 @@ const verticals: Vertical[] = [
   },
 ]
 
-export default function Industries() {
+export default function IndustriesClient() {
   const [open, setOpen] = useState<string>('nbfc')
 
   return (
     <>
-      <PageMeta
-        title="Industries — Anvax"
-        description="NBFC-first vertical packs with RBI circular tracking, credit workflows, and role-based AI."
-      />
-
       {/* Hero */}
       <section className={styles.hero}>
         <div className="container">
