@@ -1,7 +1,7 @@
-import PageMeta from '../components/ui/PageMeta'
-import SectionHead from '../components/ui/SectionHead'
-import Button from '../components/ui/Button'
-import styles from './Deployment.module.css'
+import type { Metadata } from 'next'
+import SectionHead from '@/components/ui/SectionHead'
+import Button from '@/components/ui/Button'
+import styles from '@/pages/Deployment.module.css'
 
 const tiers = [
   {
@@ -65,14 +65,17 @@ const tierCells = [
   { name: 'On-prem', note: 'Customer HW' },
 ]
 
+export const metadata: Metadata = {
+  title: 'Deployment — Anvax',
+  description: 'SaaS to air-gapped. Same product, three tiers. All data stays in India.',
+  openGraph: { title: 'Deployment — Anvax', description: 'SaaS to air-gapped. Same product, three tiers.', url: 'https://anvax.in/deployment' },
+  twitter: { card: 'summary_large_image', title: 'Deployment — Anvax', description: 'SaaS to air-gapped. Same product, three tiers.' },
+  alternates: { canonical: 'https://anvax.in/deployment' },
+}
+
 export default function Deployment() {
   return (
     <>
-      <PageMeta
-        title="Deployment — Anvax"
-        description="SaaS to air-gapped. Same product, three tiers. All data stays in India."
-      />
-
       {/* Hero */}
       <section className={styles.hero}>
         <div className="container">
