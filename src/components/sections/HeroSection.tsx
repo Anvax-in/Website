@@ -1,3 +1,4 @@
+'use client'
 import { useState, useEffect, type ReactNode } from 'react'
 import { ArrowRight, Shield, Zap, FileText, Lock, type LucideIcon } from 'lucide-react'
 import Button from '../ui/Button'

@@ -1,4 +1,6 @@
-import { Link, useLocation } from 'react-router-dom'
+'use client'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import Button from '../ui/Button'
 import styles from './Nav.module.css'
 
@@ -11,19 +13,19 @@ const links = [
 ]
 
 export default function Nav() {
-  const { pathname } = useLocation()
+  const pathname = usePathname()
 
   return (
     <nav className={styles.nav} aria-label="Primary">
       <div className={`container ${styles.row}`}>
-        <Link to="/" className={styles.brand} aria-label="Anvax home">
+        <Link href="/" className={styles.brand} aria-label="Anvax home">
           <img src="/assets/anvax-wordmark-ink.svg" alt="Anvax" />
         </Link>
         <div className={styles.links}>
           {links.map(({ to, label }) => (
             <Link
               key={to}
-              to={to}
+              href={to}
               className={`${styles.link} ${pathname.startsWith(to) ? styles.active : ''}`}
             >
               {label}

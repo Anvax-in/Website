@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import SectionHead from '../ui/SectionHead'
 import Tag from '../ui/Tag'
 import styles from './IndustriesGrid.module.css'
@@ -23,7 +23,7 @@ export default function IndustriesGrid() {
         />
         <div className={styles.grid}>
           {industries.map(({ tag, status, title, body, roles, href }) => (
-            <Link key={tag} to={href} className={styles.card}>
+            <Link key={tag} href={href} className={styles.card}>
               <div className={styles.head}>
                 <span className={styles.tagLabel}>{tag}</span>
                 <Tag variant={status}>{status === 'live' ? 'Live' : status === 'next' ? 'Next' : 'Roadmap'}</Tag>

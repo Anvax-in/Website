@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import SectionHead from '../ui/SectionHead'
 import Tag from '../ui/Tag'
 import styles from './PillarsSection.module.css'
@@ -41,7 +41,7 @@ export default function PillarsSection() {
         />
         <div className={styles.grid}>
           {pillars.map(({ tag, sub, title, body, cta, href }) => (
-            <Link key={tag} to={href} className={styles.card}>
+            <Link key={tag} href={href} className={styles.card}>
               <div className={styles.cardTop}>
                 <Tag>{tag}</Tag>
                 <span className={styles.sub}>{sub}</span>

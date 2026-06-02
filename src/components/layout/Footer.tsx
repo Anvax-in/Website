@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import styles from './Footer.module.css'
 
 const product = [
@@ -31,7 +31,7 @@ function FooterCol({ title, links }: { title: string; links: { to: string; label
       <h4>{title}</h4>
       <ul>
         {links.map(({ to, label }) => (
-          <li key={to}><Link to={to}>{label}</Link></li>
+          <li key={to}><Link href={to}>{label}</Link></li>
         ))}
       </ul>
     </div>

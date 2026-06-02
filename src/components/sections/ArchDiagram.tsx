@@ -1,5 +1,5 @@
 import { Link2, Bot, Workflow, MessageSquare, Search, Shield, Zap, Route, Database, Layers3, Network, KeyRound, type LucideIcon } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import SectionHead from '../ui/SectionHead'
 import Term from '../ui/Term'
 import styles from './ArchDiagram.module.css'
@@ -77,7 +77,7 @@ export default function ArchDiagram() {
           ))}
           <div className={styles.foot}>
             <span>All customer data, embeddings &amp; inference traces stay in India.</span>
-            <Link to="/trust">See the full architecture <span>→</span></Link>
+            <Link href="/trust">See the full architecture <span>→</span></Link>
           </div>
         </div>
       </div>

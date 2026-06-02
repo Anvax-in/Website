@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import SectionHead from '../ui/SectionHead'
 import styles from './ComplianceStrip.module.css'
 
@@ -39,7 +39,7 @@ export default function ComplianceStrip() {
           ))}
         </div>
         <div className={styles.cta}>
-          <Link to="/trust" className={styles.ctaLink}>
+          <Link href="/trust" className={styles.ctaLink}>
             Read the full compliance architecture →
           </Link>
         </div>
