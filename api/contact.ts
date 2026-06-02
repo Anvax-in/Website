@@ -11,6 +11,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json({ error: 'Name and email are required' })
   }
 
+  if (!process.env.LOOPS_API_KEY) {
+    console.error('LOOPS_API_KEY is not set')
+    return res.status(500).json({ error: 'Server misconfiguration' })
+  }
+
   const [firstName, ...rest] = String(name).trim().split(' ')
   const lastName = rest.join(' ') || undefined
 
@@ -34,6 +39,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     })
 
     const data = await loopsRes.json() as { success: boolean; message?: string }
+    console.log('Loops response:', loopsRes.status, JSON.stringify(data))
 
     // Contact already in Loops — treat as success
     if (!loopsRes.ok && data.message?.toLowerCase().includes('already exists')) {
@@ -41,7 +47,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     if (!loopsRes.ok) {
-      console.error('Loops error:', data)
+      console.error('Loops error:', loopsRes.status, data)
       return res.status(500).json({ error: 'Failed to save contact' })
     }
 
