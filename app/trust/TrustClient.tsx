@@ -1,8 +1,9 @@
-import PageMeta from '../components/ui/PageMeta'
-import SectionHead from '../components/ui/SectionHead'
-import StatusPill from '../components/ui/StatusPill'
-import Button from '../components/ui/Button'
-import styles from './Trust.module.css'
+'use client'
+
+import SectionHead from '@/components/ui/SectionHead'
+import StatusPill from '@/components/ui/StatusPill'
+import Button from '@/components/ui/Button'
+import styles from '@/pages/Trust.module.css'
 
 const subnavLinks = [
   { id: 'platform-glance', label: 'Platform' },
@@ -102,14 +103,9 @@ const engStats = [
   { num: 'India', label: 'All data, embeddings, and inference traces stay in country' },
 ]
 
-export default function Trust() {
+export default function TrustClient() {
   return (
     <>
-      <PageMeta
-        title="Architecture & Trust — Anvax"
-        description="Full defence-in-depth, RBI FREE-AI mapping, DPDP controls, and honest certification status."
-      />
-
       {/* Hero */}
       <section className={styles.hero}>
         <div className="container">
