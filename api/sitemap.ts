@@ -41,6 +41,6 @@ const SITEMAP = `<?xml version="1.0" encoding="UTF-8"?>
 
 export default function handler(_req: VercelRequest, res: VercelResponse) {
   res.setHeader('Content-Type', 'application/xml; charset=utf-8')
-  res.setHeader('Cache-Control', 'public, max-age=3600, s-maxage=3600')
+  res.setHeader('Cache-Control', 'no-store')
   return res.status(200).send(SITEMAP)
 }
