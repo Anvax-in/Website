@@ -13,7 +13,7 @@ export default function CtaSection() {
             <p className={styles.body}>Show us the audit your CISO is preparing for and we'll show you what an examiner-ready AI workspace looks like — live, on your own corpus. Procurement-grade documentation included.</p>
           </div>
           <div className={styles.actions}>
-            <Button variant="accent" href="#" arrow>Talk to sales</Button>
+            <Button variant="accent" href="/contact" arrow>Talk to sales</Button>
             <Button variant="secondaryDark" href="/trust#downloads">Get the regulator pack</Button>
           </div>
         </div>

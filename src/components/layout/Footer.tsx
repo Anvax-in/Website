@@ -16,7 +16,7 @@ const company = [
   { to: '/company',          label: 'About' },
   { to: '/company',          label: 'Team' },
   { to: '/company#careers',  label: 'Careers' },
-  { to: '/company#contact',  label: 'Contact' },
+  { to: '/contact',          label: 'Contact' },
 ]
 const legal = [
   { href: '#', label: 'Privacy' },

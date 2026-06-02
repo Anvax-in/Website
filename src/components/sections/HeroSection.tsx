@@ -51,7 +51,7 @@ export default function HeroSection() {
               before it leaves the boundary.
             </p>
             <div className={styles.ctaRow}>
-              <Button variant="accent" href="#demo" arrow>Request a demo</Button>
+              <Button variant="accent" href="/contact" arrow>Request a demo</Button>
               <Button variant="secondaryDark" href="/trust">Architecture for regulators</Button>
             </div>
             <div className={styles.trustStrip} aria-label="Compliance posture">
