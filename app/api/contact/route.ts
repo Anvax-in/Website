@@ -1,19 +1,14 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node'
-
-export default async function handler(req: VercelRequest, res: VercelResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-
-  const { name, company, email, role, message } = req.body ?? {}
+export async function POST(request: Request) {
+  const body = await request.json() as Record<string, unknown>
+  const { name, company, email, role, message } = body
 
   if (!email || !name) {
-    return res.status(400).json({ error: 'Name and email are required' })
+    return Response.json({ error: 'Name and email are required' }, { status: 400 })
   }
 
   if (!process.env.LOOPS_API_KEY) {
     console.error('LOOPS_API_KEY is not set')
-    return res.status(500).json({ error: 'Server misconfiguration' })
+    return Response.json({ error: 'Server misconfiguration' }, { status: 500 })
   }
 
   const [firstName, ...rest] = String(name).trim().split(' ')
@@ -41,19 +36,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const data = await loopsRes.json() as { success: boolean; message?: string }
     console.log('Loops response:', loopsRes.status, JSON.stringify(data))
 
-    // Contact already in Loops — treat as success
     if (!loopsRes.ok && data.message?.toLowerCase().includes('already exists')) {
-      return res.status(200).json({ success: true })
+      return Response.json({ success: true })
     }
 
     if (!loopsRes.ok) {
       console.error('Loops error:', loopsRes.status, data)
-      return res.status(500).json({ error: 'Failed to save contact' })
+      return Response.json({ error: 'Failed to save contact' }, { status: 500 })
     }
 
-    return res.status(200).json({ success: true })
+    return Response.json({ success: true })
   } catch (err) {
     console.error('Contact handler error:', err)
-    return res.status(500).json({ error: 'Internal server error' })
+    return Response.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
