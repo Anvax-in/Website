@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://anvax.in'),
   applicationName: 'Anvax',
   robots: { index: true, follow: true },
+  icons: { icon: '/favicon.svg', shortcut: '/favicon.svg' },
   openGraph: {
     siteName: 'Anvax',
     type: 'website',
