@@ -15,7 +15,7 @@
   height: 64px;
 }
 .brand { display: flex; align-items: center; text-decoration: none; }
-.brand img { height: 26px; }
+.brand img { height: 34px; }
 .links { display: flex; gap: 28px; align-items: center; }
 .link {
   font-family: var(--font-sans);

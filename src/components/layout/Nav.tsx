@@ -33,7 +33,6 @@ export default function Nav() {
           ))}
         </div>
         <div className={styles.actions}>
-          <Button variant="ghost" href="#">Sign in</Button>
           <Button variant="primary" href="/contact">Request a demo</Button>
         </div>
       </div>
