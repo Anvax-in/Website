@@ -1,6 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <circle cx="16" cy="16" r="16" fill="#0B1A2A"/>
-  <path fill-rule="evenodd" fill="#D4924A"
-    d="M16 4L29 27H3L16 4ZM16 13L22.5 27H9.5L16 13Z"/>
-  <circle cx="16" cy="23.5" r="2" fill="#FAF7F0"/>
+  <defs>
+    <pattern id="dots" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.85" fill="#FAF7F0" opacity="0.55"/>
+    </pattern>
+    <clipPath id="ca">
+      <path d="M16 5L29 27H3Z"/>
+    </clipPath>
+  </defs>
+  <circle cx="16" cy="16" r="16" fill="#F5F3EE"/>
+  <path d="M16 5L29 27H3Z" fill="#0B1A2A"/>
+  <rect width="32" height="32" fill="url(#dots)" clip-path="url(#ca)"/>
 </svg>
