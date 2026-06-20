@@ -192,8 +192,10 @@ export default function Platform() {
           <div className={styles.moatsGrid}>
             {moats.map((m) => (
               <div key={m.h3} className={styles.moatCard}>
-                <div className={styles.moatIcon}>{m.icon}</div>
-                <h3 className={styles.moatH3}>{m.h3}</h3>
+                <div className={styles.moatHeader}>
+                  <div className={styles.moatIcon}>{m.icon}</div>
+                  <h3 className={styles.moatH3}>{m.h3}</h3>
+                </div>
                 <p className={styles.moatDesc}>{m.desc}</p>
               </div>
             ))}

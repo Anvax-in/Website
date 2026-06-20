@@ -7,7 +7,7 @@
 .col { background: var(--bone-50); padding: 36px; }
 .good { background: var(--paper); }
 .heading {
-  display: flex; align-items: center; gap: 9px;
+  display: flex; align-items: center; justify-content: center; gap: 9px;
   font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--ink-500); margin-bottom: 10px; white-space: nowrap;
 }

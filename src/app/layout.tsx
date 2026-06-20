@@ -23,7 +23,7 @@ const generalSans = localFont({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://anvax.in'),
+  metadataBase: new URL('https://www.anvax.in'),
   applicationName: 'Anvax',
   robots: { index: true, follow: true },
   icons: { icon: '/favicon.svg', shortcut: '/favicon.svg' },
