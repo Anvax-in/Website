@@ -1,11 +1,9 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import { getAllPosts } from '@/lib/blog'
+import { getAllPosts, POSTS_PER_PAGE } from '@/lib/blog'
 import BlogCard from '@/components/blog/BlogCard'
 import Pagination from '@/components/blog/Pagination'
 import styles from '@/pages/Blog.module.css'
-
-const POSTS_PER_PAGE = 12
 
 export const dynamicParams = false
 

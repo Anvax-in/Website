@@ -20,14 +20,13 @@ export default function Pagination({ currentPage, totalPages, basePath }: Pagina
 
   return (
     <nav className={styles.nav} aria-label="Pagination">
-      <Link
-        href={pageHref(basePath, currentPage - 1)}
-        className={`${styles.arrow} ${!hasPrev ? styles.disabled : ''}`}
-        aria-disabled={!hasPrev}
-        tabIndex={hasPrev ? 0 : -1}
-      >
-        ← Prev
-      </Link>
+      {hasPrev ? (
+        <Link href={pageHref(basePath, currentPage - 1)} className={styles.arrow}>
+          ← Prev
+        </Link>
+      ) : (
+        <span className={`${styles.arrow} ${styles.disabled}`} aria-hidden="true">← Prev</span>
+      )}
 
       <div className={styles.pages}>
         {pages.map(page => (
@@ -42,14 +41,13 @@ export default function Pagination({ currentPage, totalPages, basePath }: Pagina
         ))}
       </div>
 
-      <Link
-        href={pageHref(basePath, currentPage + 1)}
-        className={`${styles.arrow} ${!hasNext ? styles.disabled : ''}`}
-        aria-disabled={!hasNext}
-        tabIndex={hasNext ? 0 : -1}
-      >
-        Next →
-      </Link>
+      {hasNext ? (
+        <Link href={pageHref(basePath, currentPage + 1)} className={styles.arrow}>
+          Next →
+        </Link>
+      ) : (
+        <span className={`${styles.arrow} ${styles.disabled}`} aria-hidden="true">Next →</span>
+      )}
     </nav>
   )
 }

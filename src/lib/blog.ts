@@ -2,6 +2,8 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
+export const POSTS_PER_PAGE = 12
+
 const CONTENT_DIR = path.join(process.cwd(), 'content/blog')
 
 export interface PostFrontmatter {
@@ -64,7 +66,7 @@ export function getPostBySlug(slug: string): PostWithContent | null {
     if (fs.existsSync(filepath)) {
       const raw = fs.readFileSync(filepath, 'utf-8')
       const { data, content } = matter(raw)
-      return {
+      const post: PostWithContent = {
         slug,
         frontmatter: {
           title: data.title as string,
@@ -78,6 +80,9 @@ export function getPostBySlug(slug: string): PostWithContent | null {
         readingTime: calculateReadingTime(content),
         content,
       }
+      const isDev = process.env.NODE_ENV === 'development'
+      if (!isDev && post.frontmatter.draft) return null
+      return post
     }
   }
   return null
