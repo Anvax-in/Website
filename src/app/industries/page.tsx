@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Industries — Anvax',
     description: 'NBFC-first vertical packs with RBI circular tracking, credit workflows, and role-based AI.',
-    url: 'https://anvax.in/industries',
+    url: 'https://www.anvax.in/industries',
   },
   twitter: { card: 'summary_large_image', title: 'Industries — Anvax', description: 'NBFC-first vertical packs with RBI circular tracking.' },
-  alternates: { canonical: 'https://anvax.in/industries' },
+  alternates: { canonical: 'https://www.anvax.in/industries' },
 }
 
 export default function IndustriesPage() {

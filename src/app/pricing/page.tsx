@@ -7,9 +7,7 @@ import styles from '@/pages/Pricing.module.css'
 export const metadata: Metadata = {
   title: 'Pricing — Anvax',
   description: 'Starter and Growth shown in full. Business and Sovereign tiers are custom — contact sales.',
-  openGraph: { title: 'Pricing — Anvax', description: 'Starter and Growth shown in full. Business and Sovereign tiers are custom.', url: 'https://anvax.in/pricing' },
-  twitter: { card: 'summary_large_image', title: 'Pricing — Anvax', description: 'Transparent pricing for sovereign AI.' },
-  alternates: { canonical: 'https://anvax.in/pricing' },
+  robots: { index: false, follow: false },
 }
 
 const plans = [

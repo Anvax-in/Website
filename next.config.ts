@@ -10,6 +10,12 @@ const nextConfig: NextConfig = {
         destination: 'https://www.anvax.in/:path*',
         permanent: true,
       },
+      // Redirect removed test post so Google gets a 301 instead of a 404
+      {
+        source: '/blog/test-post',
+        destination: '/blog',
+        permanent: true,
+      },
     ]
   },
 }

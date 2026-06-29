@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Architecture & Trust — Anvax',
     description: 'Full defence-in-depth, RBI FREE-AI mapping, DPDP controls.',
-    url: 'https://anvax.in/trust',
+    url: 'https://www.anvax.in/trust',
   },
   twitter: { card: 'summary_large_image', title: 'Architecture & Trust — Anvax', description: 'Full defence-in-depth, RBI FREE-AI mapping.' },
-  alternates: { canonical: 'https://anvax.in/trust' },
+  alternates: { canonical: 'https://www.anvax.in/trust' },
 }
 
 export default function TrustPage() {

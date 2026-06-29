@@ -42,9 +42,9 @@ const openRoles = [
 export const metadata: Metadata = {
   title: 'Company — Anvax',
   description: "Who we are, what we're building, and why we started with India's hardest market.",
-  openGraph: { title: 'Company — Anvax', description: "Who we are, what we're building.", url: 'https://anvax.in/company' },
+  openGraph: { title: 'Company — Anvax', description: "Who we are, what we're building.", url: 'https://www.anvax.in/company' },
   twitter: { card: 'summary_large_image', title: 'Company — Anvax', description: "Who we are, what we're building." },
-  alternates: { canonical: 'https://anvax.in/company' },
+  alternates: { canonical: 'https://www.anvax.in/company' },
 }
 
 export default function Company() {

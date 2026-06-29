@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact — Anvax',
     description: 'Request a demo or get in touch.',
-    url: 'https://anvax.in/contact',
+    url: 'https://www.anvax.in/contact',
   },
   twitter: { card: 'summary_large_image', title: 'Contact — Anvax', description: 'Request a demo or get in touch.' },
-  alternates: { canonical: 'https://anvax.in/contact' },
+  alternates: { canonical: 'https://www.anvax.in/contact' },
 }
 
 export default function ContactPage() {

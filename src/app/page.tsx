@@ -14,14 +14,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Anvax — Sovereign AI for India's regulated enterprises",
     description: "The AI workspace BFSI and NBFCs can run past their regulator. Search, chat, workflows — on your corpus, auditable by design.",
-    url: 'https://anvax.in',
+    url: 'https://www.anvax.in',
   },
   twitter: {
     card: 'summary_large_image',
     title: "Anvax — Sovereign AI for India's regulated enterprises",
     description: "The AI workspace BFSI and NBFCs can run past their regulator.",
   },
-  alternates: { canonical: 'https://anvax.in' },
+  alternates: { canonical: 'https://www.anvax.in' },
 }
 
 export default function Home() {

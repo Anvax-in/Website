@@ -112,10 +112,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Platform — Anvax',
     description: "Four capabilities purpose-built for India's regulated enterprises.",
-    url: 'https://anvax.in/platform',
+    url: 'https://www.anvax.in/platform',
   },
   twitter: { card: 'summary_large_image', title: 'Platform — Anvax', description: "Four capabilities purpose-built for India's regulated enterprises." },
-  alternates: { canonical: 'https://anvax.in/platform' },
+  alternates: { canonical: 'https://www.anvax.in/platform' },
 }
 
 export default function Platform() {
