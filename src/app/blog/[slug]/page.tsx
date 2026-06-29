@@ -15,6 +15,10 @@ export async function generateStaticParams() {
 
 type Props = { params: Promise<{ slug: string }> }
 
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const post = getPostBySlug(slug)
@@ -55,10 +59,6 @@ export default async function BlogPostPage({ params }: Props) {
 
   const { frontmatter, readingTime } = post
   const canonicalUrl = frontmatter.canonicalURL ?? `https://www.anvax.in/blog/${slug}`
-
-  function formatDate(date: Date): string {
-    return date.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })
-  }
 
   return (
     <>
