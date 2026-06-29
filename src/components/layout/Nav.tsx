@@ -10,6 +10,7 @@ const links = [
   { to: '/trust',      label: 'Trust' },
   { to: '/deployment', label: 'Deployment' },
   { to: '/company',    label: 'Company' },
+  { to: '/blog',       label: 'Blog' },
 ]
 
 export default function Nav() {

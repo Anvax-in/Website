@@ -16,6 +16,7 @@ const company = [
   { to: '/company',          label: 'About' },
   { to: '/company',          label: 'Team' },
   { to: '/company#careers',  label: 'Careers' },
+  { to: '/blog',             label: 'Sovereign Stack' },
   { to: '/contact',          label: 'Contact' },
 ]
 const legal = [
