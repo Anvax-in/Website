@@ -1,0 +1,140 @@
+/* Prose — styles MDX-rendered HTML. All selectors use :global() so they
+   target the raw HTML elements emitted by compileMDX. The .prose class
+   provides the scope; elements outside .prose are unaffected. */
+
+.prose {
+  font-size: 17px;
+  line-height: 28px;
+  color: var(--fg-2);
+  max-width: 66ch;
+}
+
+/* Headings — H1 is rendered by the page layout, not inside .prose */
+.prose :global(h2) {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 36px;
+  color: var(--ink-900);
+  margin-top: 48px;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+.prose :global(h3) {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--ink-900);
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+.prose :global(h4) {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink-900);
+  margin-top: 28px;
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+}
+
+/* Paragraph */
+.prose :global(p) {
+  margin-bottom: 20px;
+}
+.prose :global(p):last-child { margin-bottom: 0; }
+
+/* Links */
+.prose :global(a) {
+  color: var(--amber-700);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-base) var(--ease-out);
+}
+.prose :global(a:hover) { color: var(--amber-600); }
+
+/* Lists */
+.prose :global(ul),
+.prose :global(ol) {
+  padding-left: 24px;
+  margin-bottom: 20px;
+}
+.prose :global(li) { margin-bottom: 8px; }
+.prose :global(li):last-child { margin-bottom: 0; }
+
+/* Blockquote */
+.prose :global(blockquote) {
+  margin: 28px 0;
+  padding: 16px 24px;
+  border-left: 3px solid var(--amber-600);
+  background: var(--bone-100);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  color: var(--ink-700);
+  font-style: italic;
+}
+.prose :global(blockquote p) { margin-bottom: 0; }
+
+/* Inline code */
+.prose :global(code) {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--bone-100);
+  border: 1px solid var(--border);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  color: var(--ink-900);
+}
+
+/* Code block */
+.prose :global(pre) {
+  background: var(--ink-900);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  overflow-x: auto;
+  margin: 28px 0;
+}
+.prose :global(pre code) {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 13.5px;
+  color: var(--bone-100);
+  line-height: 22px;
+}
+
+/* Horizontal rule */
+.prose :global(hr) {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 40px 0;
+}
+
+/* Strong + em */
+.prose :global(strong) { color: var(--ink-900); font-weight: 600; }
+.prose :global(em) { font-style: italic; }
+
+/* Table */
+.prose :global(table) {
+  width: 100%;
+  margin: 28px 0;
+  font-size: 14px;
+}
+.prose :global(th) {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  text-align: left;
+  padding: 0 0 10px;
+  border-bottom: 1px solid var(--border);
+}
+.prose :global(td) {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--fg-2);
+  vertical-align: top;
+}
+.prose :global(tr:last-child td) { border-bottom: none; }
