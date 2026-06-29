@@ -19,13 +19,6 @@ const company = [
   { to: '/blog',             label: 'Sovereign Stack' },
   { to: '/contact',          label: 'Contact' },
 ]
-const legal = [
-  { href: '#', label: 'Privacy' },
-  { href: '#', label: 'DPA' },
-  { href: '#', label: 'Terms' },
-  { href: '#', label: 'Responsible disclosure' },
-]
-
 function FooterCol({ title, links }: { title: string; links: { to: string; label: string }[] }) {
   return (
     <div className={styles.col}>
@@ -51,14 +44,6 @@ export default function Footer() {
           <FooterCol title="Product" links={product} />
           <FooterCol title="Trust" links={trust} />
           <FooterCol title="Company" links={company} />
-          <div className={styles.col}>
-            <h4>Legal</h4>
-            <ul>
-              {legal.map(({ href, label }) => (
-                <li key={label}><a href={href}>{label}</a></li>
-              ))}
-            </ul>
-          </div>
         </div>
         <div className={styles.legal}>
           <span>© 2026 Anvax Technologies Pvt. Ltd.</span>
