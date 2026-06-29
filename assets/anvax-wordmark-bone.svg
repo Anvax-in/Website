@@ -1,8 +1,0 @@
-<svg width="220" height="48" viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Anvax">
-  <g fill="none" stroke="#F4F0E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M 6 36 L 22 8 L 38 36"></path>
-    <path d="M 12 36 L 22 18 L 32 36"></path>
-  </g>
-  <circle cx="22" cy="32" r="2.6" fill="#B8843E"></circle>
-  <text x="54" y="33" fill="#F4F0E5" font-family="&#39;Source Serif 4&#39;, &#39;Source Serif Pro&#39;, Georgia, serif" font-size="26" font-weight="400" letter-spacing="-0.6">Anvax</text>
-</svg>
