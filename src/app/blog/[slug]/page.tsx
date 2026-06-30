@@ -1,7 +1,9 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Fragment } from 'react'
 import { compileMDX } from 'next-mdx-remote/rsc'
+import remarkGfm from 'remark-gfm'
 import { getAllPosts, getPostBySlug } from '@/lib/blog'
 import JsonLd from '@/components/blog/JsonLd'
 import styles from '@/pages/BlogPost.module.css'
@@ -55,7 +57,7 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(slug)
   if (!post) notFound()
 
-  const { content } = await compileMDX({ source: post.content })
+  const { content } = await compileMDX({ source: post.content, options: { mdxOptions: { remarkPlugins: [remarkGfm] } } })
 
   const { frontmatter, readingTime } = post
   const canonicalUrl = frontmatter.canonicalURL ?? `https://www.anvax.in/blog/${slug}`
@@ -76,7 +78,14 @@ export default async function BlogPostPage({ params }: Props) {
             <div className={styles.headerInner}>
               <p className={styles.eyebrow}>Sovereign Stack</p>
               {/* Single H1 — never also rendered by layout */}
-              <h1 className={styles.h1}>{frontmatter.title}</h1>
+              <h1 className={styles.h1}>
+                {frontmatter.title.split(/\.\s+/).map((part, i, arr) => (
+                  <Fragment key={i}>
+                    {part}{i < arr.length - 1 ? '.' : ''}
+                    {i < arr.length - 1 && <br />}
+                  </Fragment>
+                ))}
+              </h1>
               <div className={styles.meta}>
                 <time dateTime={frontmatter.pubDate.toISOString()}>
                   {formatDate(frontmatter.pubDate)}

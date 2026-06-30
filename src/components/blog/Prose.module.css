@@ -6,7 +6,7 @@
   font-size: 17px;
   line-height: 28px;
   color: var(--fg-2);
-  max-width: 66ch;
+  width: 100%;
 }
 
 /* Headings — H1 is rendered by the page layout, not inside .prose */
@@ -104,6 +104,15 @@
   line-height: 22px;
 }
 
+/* Images */
+.prose :global(img) {
+  width: 100%;
+  border-radius: var(--radius-md);
+  margin: 4px 0 36px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-pop);
+}
+
 /* Horizontal rule */
 .prose :global(hr) {
   border: none;
@@ -118,8 +127,13 @@
 /* Table */
 .prose :global(table) {
   width: 100%;
-  margin: 28px 0;
+  margin: 32px 0;
   font-size: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 .prose :global(th) {
   font-family: var(--font-mono);
@@ -128,13 +142,16 @@
   text-transform: uppercase;
   color: var(--fg-3);
   text-align: left;
-  padding: 0 0 10px;
+  padding: 10px 16px;
+  background: var(--bone-100);
   border-bottom: 1px solid var(--border);
 }
 .prose :global(td) {
-  padding: 10px 0;
+  padding: 12px 16px;
   border-bottom: 1px solid var(--border);
   color: var(--fg-2);
   vertical-align: top;
+  line-height: 22px;
 }
 .prose :global(tr:last-child td) { border-bottom: none; }
+.prose :global(td:first-child) { color: var(--ink-900); font-weight: 500; white-space: nowrap; }
