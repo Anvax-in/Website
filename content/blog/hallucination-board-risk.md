@@ -84,8 +84,6 @@ Those are unlikely to remain consultation questions for long. They are the kinds
 
 ---
 
-This remains **draft guidance**, not a final regulatory direction. Comments are open until **24 July 2026** through RBI's *Connect 2 Regulate* portal and by email to **dor.mrmfeedback@rbi.org.in**. The wording may evolve. The philosophy probably won't.
-
 Across jurisdictions, regulators are gradually moving away from asking whether organisations use AI. They are beginning to ask something much harder.
 
 > **Can you prove that your organisation remains in control when AI is wrong?**
