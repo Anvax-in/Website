@@ -4,6 +4,10 @@ import { getAllPosts } from '@/lib/blog'
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts()
 
+  const latestPostDate = posts.length > 0
+    ? (posts[0].frontmatter.updatedDate ?? posts[0].frontmatter.pubDate)
+    : new Date('2026-06-03')
+
   const staticPages: MetadataRoute.Sitemap = [
     { url: 'https://www.anvax.in',            lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 1.0 },
     { url: 'https://www.anvax.in/platform',   lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 0.9 },
@@ -12,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.anvax.in/deployment', lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 0.8 },
     { url: 'https://www.anvax.in/company',    lastModified: new Date('2026-06-03'), changeFrequency: 'monthly', priority: 0.7 },
     { url: 'https://www.anvax.in/contact',    lastModified: new Date('2026-06-03'), changeFrequency: 'monthly', priority: 0.7 },
-    { url: 'https://www.anvax.in/blog',       lastModified: new Date(),             changeFrequency: 'weekly',  priority: 0.8 },
+    { url: 'https://www.anvax.in/blog',       lastModified: latestPostDate,         changeFrequency: 'weekly',  priority: 0.8 },
   ]
 
   const blogPosts: MetadataRoute.Sitemap = posts.map(post => ({
