@@ -1,7 +1,7 @@
 'use client'
 
 import styles from '@/pages/Contact.module.css'
-import ContactFormEmbed from '@/components/contact/ContactFormEmbed'
+import ContactFormLayout from '@/components/contact/ContactFormLayout'
 
 export default function ContactClient() {
   return (
@@ -24,25 +24,7 @@ export default function ContactClient() {
 
       <section className="section">
         <div className="container">
-          <div className={styles.layout}>
-
-            {/* Form */}
-            <div className={styles.formWrap}>
-              <ContactFormEmbed />
-            </div>
-
-            {/* Side info */}
-            <aside className={styles.aside}>
-              <div className={styles.asideCard}>
-                <div className={styles.asideLabel}>Response time</div>
-                <p className={styles.asideDesc}>
-                  We respond to every sales enquiry within one business day.
-                  Security reports within 24 hours.
-                </p>
-              </div>
-            </aside>
-
-          </div>
+          <ContactFormLayout />
         </div>
       </section>
     </>

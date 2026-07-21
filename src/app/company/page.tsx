@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import SectionHead from '@/components/ui/SectionHead'
 import Button from '@/components/ui/Button'
-import ContactFormEmbed from '@/components/contact/ContactFormEmbed'
+import ContactFormLayout from '@/components/contact/ContactFormLayout'
 import styles from '@/pages/Company.module.css'
 
 const values = [
@@ -153,7 +153,7 @@ export default function Company() {
             eyebrow="Contact"
             title="Get in touch."
           />
-          <ContactFormEmbed />
+          <ContactFormLayout />
         </div>
       </section>
     </>
