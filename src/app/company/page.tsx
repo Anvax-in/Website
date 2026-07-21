@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import SectionHead from '@/components/ui/SectionHead'
 import Button from '@/components/ui/Button'
+import ContactFormEmbed from '@/components/contact/ContactFormEmbed'
 import styles from '@/pages/Company.module.css'
 
 const values = [
@@ -152,27 +153,7 @@ export default function Company() {
             eyebrow="Contact"
             title="Get in touch."
           />
-          <div className={styles.contactGrid}>
-            <div className={styles.contactCard}>
-              <h3 className={styles.contactCardTitle}>Sales & product</h3>
-              <p className={styles.contactCardDesc}>
-                Questions about pricing, deployment options, or a specific compliance use case.
-                We respond to every sales enquiry within one business day.
-              </p>
-              <a href="mailto:sales@anvax.in" className={styles.contactEmail}>sales@anvax.in</a>
-              <Button variant="accent" href="/contact" arrow>Request a demo</Button>
-            </div>
-            <div className={styles.contactCard}>
-              <h3 className={styles.contactCardTitle}>Security disclosures</h3>
-              <p className={styles.contactCardDesc}>
-                Found a vulnerability? We operate a responsible disclosure programme.
-                Please do not share vulnerability details in public channels.
-                Use our PGP key for encrypted reports.
-              </p>
-              <a href="mailto:security@anvax.in" className={styles.contactEmail}>security@anvax.in</a>
-              <Button variant="secondary" href="mailto:security@anvax.in" arrow>Disclose a vulnerability</Button>
-            </div>
-          </div>
+          <ContactFormEmbed />
         </div>
       </section>
     </>
