@@ -43,8 +43,8 @@ export default function HeroSection() {
           <div>
             <Eyebrow onDark>Sovereign AI · Built for India's regulators</Eyebrow>
             <h1 className={styles.h1}>
-              Enterprise AI your Examiner<br />
-              <span className={styles.em}>can sit with.</span>
+              <span className={styles.em}>Enterprise AI your Examiner</span><br />
+              can sit with.
             </h1>
             <p className={styles.lede}>
               Your analysts search, chat, and run workflows on your own corpus — not
