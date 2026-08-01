@@ -66,7 +66,7 @@ export async function GET(request: NextRequest) {
             fontFamily: 'serif',
             fontSize: title.length > 70 ? '38px' : '50px',
             fontWeight: '400',
-            color: '#F4F0E5',          // --bone-100
+            color: '#F5F5F5',
             lineHeight: '1.25',
             maxWidth: '900px',
           }}

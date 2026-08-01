@@ -43,11 +43,11 @@ export default function HeroSection() {
           <div>
             <Eyebrow onDark>Sovereign AI · Built for India's regulators</Eyebrow>
             <h1 className={styles.h1}>
-              Enterprise AI, your Examiner<br />
-              <span className={styles.em}>can sit with.</span>
+              Governed AI<br />
+              <span className={styles.em}>for India's regulated enterprises.</span>
             </h1>
             <p className={styles.lede}>
-              Your analysts search, chat, and run workflows on your own corpus — not
+              Your analysts search, chat, and run workflows on your own corpus, not
               someone else's cloud. Every query is logged. Every PII field is redacted
               before it leaves the boundary.
             </p>
@@ -62,7 +62,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <aside className={styles.schema} aria-label="Inference flow" aria-hidden="true">
+          {/* <aside className={styles.schema} aria-label="Inference flow" aria-hidden="true">
             <div className={styles.schemaHead}>
               <span className={styles.schemaTtl}>Query trace · #9871</span>
               <span className={styles.pulse}>Live</span>
@@ -95,7 +95,7 @@ export default function HeroSection() {
               <span className={styles.schemaResidency}>Data residency · India</span>
               <span>14:32:11 IST</span>
             </div>
-          </aside>
+          </aside> */}
         </div>
       </div>
     </header>

@@ -10,12 +10,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background-image: linear-gradient(
-    180deg,
-    var(--bone-50) 0%,
-    var(--bone-50) 60%,
-    #F7F1E0 100%
-  );
   background-attachment: fixed;
 }
 h1, h2, h3, h4, h5, h6 { margin: 0; color: var(--fg-1); text-wrap: balance; }
