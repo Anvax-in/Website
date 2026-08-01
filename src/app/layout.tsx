@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Source_Serif_4 } from 'next/font/google'
 import localFont from 'next/font/local'
 import { GeistMono } from 'geist/font/mono'
 import Script from 'next/script'
@@ -8,10 +7,11 @@ import '@/styles/global.css'
 import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 
-const sourceSerif4 = Source_Serif_4({
-  subsets: ['latin'],
-  axes: ['opsz'],
-  weight: 'variable',
+const neco = localFont({
+  src: [
+    { path: './fonts/Neco-Variable.woff2', style: 'normal' },
+    { path: './fonts/Neco-VariableItalic.woff2', style: 'italic' },
+  ],
   variable: '--font-serif',
   display: 'swap',
 })
@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${sourceSerif4.variable} ${generalSans.variable} ${GeistMono.variable}`}
+      className={`${neco.variable} ${generalSans.variable} ${GeistMono.variable}`}
     >
       <body>
         <Script
