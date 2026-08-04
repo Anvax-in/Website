@@ -1,12 +1,9 @@
 /* VisionSection.module.css */
-.vision { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px; }
-.pullquote {
-  font-family: var(--font-serif); font-style: italic; font-size: 26px; line-height: 36px;
-  color: var(--ink-700); letter-spacing: -0.005em; text-wrap: balance;
-  border-top: 2px solid var(--amber-600); padding-top: 16px;
-  text-align: center; width: 100%;
+.body {
+  font-family: var(--font-sans);
+  font-size: 15.5px;
+  line-height: 27px;
+  color: var(--ink-500);
+  max-width: 64ch;
+  margin: 0;
 }
-.body { text-align: center; width: 100%; }
-.body p { font-family: var(--font-serif); font-size: 18px; line-height: 29px; color: var(--ink-700); }
-.body p + p { margin-top: 14px; }
-@media (max-width: 960px) { .vision { gap: 18px; } }

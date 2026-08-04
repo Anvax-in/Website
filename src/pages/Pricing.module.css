@@ -82,7 +82,7 @@
   color: var(--amber-700);
   letter-spacing: 0.12em; text-transform: uppercase;
 }
-.planTierFeatured { color: var(--amber-500); }
+.planTierFeatured { color: rgba(255, 255, 255, 0.5); }
 .planName {
   font-family: var(--font-serif);
   font-size: 28px; line-height: 32px;
@@ -140,7 +140,7 @@
   content: ''; position: absolute; left: 0; top: 9px;
   width: 8px; height: 1px; background: var(--amber-600);
 }
-.planFeatFeatured::before { background: var(--amber-500); }
+.planFeatFeatured::before { background: rgba(255, 255, 255, 0.45); }
 .planCta { margin-top: 12px; }
 .compareWrap {
   border: 1px solid var(--border-strong);
@@ -221,7 +221,7 @@
 .ctaEyebrow {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--amber-500);
+  color: rgba(255, 255, 255, 0.45);
   letter-spacing: 0.12em; text-transform: uppercase;
   position: relative;
 }

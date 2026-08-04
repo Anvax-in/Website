@@ -33,7 +33,7 @@
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--amber-500);
+  color: rgba(255, 255, 255, 0.45);
   margin-bottom: 20px;
 }
 .heroH1 {
@@ -44,7 +44,7 @@
   letter-spacing: -0.018em;
   color: var(--bone-100);
 }
-.heroEm { color: var(--amber-500); font-style: italic; }
+.heroEm { color: rgba(255, 255, 255, 0.85); font-style: italic; }
 .heroLede {
   margin-top: 24px;
   font-family: var(--font-serif);

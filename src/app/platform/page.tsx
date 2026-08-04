@@ -10,7 +10,7 @@ const capabilities = [
     tag: 'Search',
     tagVariant: 'live' as const,
     h3: 'Semantic search over every document in your corpus.',
-    desc: 'Hybrid retrieval — dense vectors plus BM25 keyword — across PDFs, RBI circulars, NBFC policies, emails, and structured data. Results arrive with source citations and paragraph-level provenance.',
+    desc: 'Hybrid retrieval (dense vectors plus BM25 keyword) across PDFs, RBI circulars, NBFC policies, emails, and structured data. Results arrive with source citations and paragraph-level provenance.',
     specs: [
       { spec: 'Retrieval', value: 'Dense + BM25 hybrid, reranked by cross-encoder' },
       { spec: 'Sources', value: 'PDF, DOCX, XLSX, JSON, emails, database views' },
@@ -24,10 +24,10 @@ const capabilities = [
     tag: 'Chat',
     tagVariant: 'live' as const,
     h3: 'Multi-turn grounded chat that never hallucinates a regulation.',
-    desc: 'Every answer is anchored to retrieved context. The model is instructed to say "not found in corpus" rather than fabricate. Thread history stays scoped to tenant — never mixed across customers.',
+    desc: 'Every answer is anchored to retrieved context. The model is instructed to say "not found in corpus" rather than fabricate. Thread history stays scoped to tenant, never mixed across customers.',
     specs: [
       { spec: 'Grounding', value: 'RAG with top-k=12, context window 128 K' },
-      { spec: 'Tenancy', value: 'Strict RLS — threads never cross tenant boundary' },
+      { spec: 'Tenancy', value: 'Strict RLS, threads never cross tenant boundary' },
       { spec: 'Models', value: 'Claude Sonnet, Haiku; Gemini Flash fallback' },
       { spec: 'Roles', value: 'System prompt + tool schema per role definition' },
       { spec: 'Audit', value: 'Every turn logged to immutable inference_traces' },
@@ -54,7 +54,7 @@ const capabilities = [
     h3: 'Persistent agents that monitor your regulatory environment 24/7.',
     desc: 'Long-running agents watch RBI, SEBI, IRDAI feeds. When a new circular drops, they classify, summarise, and route to the right team before your compliance officer opens email.',
     specs: [
-      { spec: 'Monitoring', value: 'RBI, SEBI, IRDAI, MCA — feed polling + delta diff' },
+      { spec: 'Monitoring', value: 'RBI, SEBI, IRDAI, MCA feed polling with delta diff' },
       { spec: 'Actions', value: 'Slack alert, task create, workflow trigger, email' },
       { spec: 'Memory', value: 'Tenant-scoped persistent memory with TTL policy' },
       { spec: 'Guardrails', value: 'Action whitelist, spend cap, human-in-the-loop gate' },
@@ -66,12 +66,12 @@ const moats = [
   {
     icon: '🧠',
     h3: 'Persistent memory',
-    desc: 'Every query, decision, and approval becomes part of a continuously updated corpus. The longer you use Anvax, the smarter your tenant instance gets — without any data leaving your boundary.',
+    desc: 'Every query, decision, and approval becomes part of a continuously updated corpus. The longer you use Anvax, the smarter your tenant instance gets, without any data leaving your boundary.',
   },
   {
     icon: '🇮🇳',
     h3: 'India stack wired in',
-    desc: 'GST Portal, Account Aggregator, DigiLocker, MCA21, UPI/NPCI — pre-connected at the data layer. Built for RBI, SEBI, and IRDAI from day one, not retrofitted later.',
+    desc: 'GST Portal, Account Aggregator, DigiLocker, MCA21, and UPI/NPCI are pre-connected at the data layer. Built for RBI, SEBI, and IRDAI from day one, not retrofitted later.',
   },
   {
     icon: '🏦',
@@ -81,7 +81,7 @@ const moats = [
   {
     icon: '📋',
     h3: 'Compliance by construction',
-    desc: 'Postgres RLS, per-tenant encryption keys, immutable audit chain, RBI FREE-AI mapping — not features you configure. They are the foundation. You cannot turn them off.',
+    desc: 'Postgres RLS, per-tenant encryption keys, immutable audit chain, RBI FREE-AI mapping: not features you configure. They are the foundation. You cannot turn them off.',
   },
 ]
 
@@ -132,7 +132,7 @@ export default function Platform() {
               Built for India's regulatory stack.
             </h1>
             <p className={styles.heroLede}>
-              Search, Chat, Workflows, and Agents — each with an India-stack connector layer,
+              Search, Chat, Workflows, and Agents, each with an India-stack connector layer,
               RBI-compliant audit trail, and per-tenant data isolation baked in by construction.
             </p>
           </div>

@@ -29,7 +29,7 @@
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--amber-500);
+  color: rgba(255, 255, 255, 0.45);
   margin-bottom: 20px;
   justify-content: center;
   text-align: center;
@@ -176,7 +176,7 @@
   font-family: var(--font-serif);
   font-size: 40px;
   font-weight: 400;
-  color: var(--amber-500);
+  color: var(--bone-100);
   line-height: 1;
   margin-bottom: 8px;
 }

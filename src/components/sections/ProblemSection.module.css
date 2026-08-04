@@ -1,30 +1,26 @@
 /* ProblemSection.module.css */
 .grid {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 1px; background: var(--border);
-  border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden;
+  gap: 0 clamp(24px, 5vw, 80px);
 }
-.col { background: var(--bone-50); padding: 36px; }
-.good { background: var(--paper); }
-.heading {
-  display: flex; align-items: center; justify-content: center; gap: 9px;
-  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--ink-500); margin-bottom: 10px; white-space: nowrap;
-}
-.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--rust-700); flex-shrink: 0; }
-.dotGood { background: var(--sage-700); }
+.col { border-top: 2px solid var(--border); padding-top: 24px; }
+.good { border-top-color: var(--ink-900); }
 .colH {
-  font-family: var(--font-serif); font-size: 22px; line-height: 30px;
-  font-weight: 400; letter-spacing: -0.008em; margin-bottom: 24px; text-align: center;
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  margin: 0 0 20px;
+  color: rgba(31, 37, 46, 0.78);
 }
-.list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+.colHGood { color: var(--ink-900); }
+.list { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; }
 .item {
-  position: relative; padding-left: 26px;
-  font-size: 14px; line-height: 22px; color: var(--ink-500);
+  font-size: 14.5px; line-height: 22px; color: var(--ink-500);
 }
-.item::before {
-  content: ''; position: absolute; left: 0; top: 10px; width: 14px; height: 1px; background: var(--rust-700);
-}
-.itemGood::before { background: var(--sage-700); }
 .item strong { color: var(--ink-900); font-weight: 600; }
-@media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+.itemGood { display: flex; gap: 10px; color: rgba(31, 37, 46, 0.82); }
+.itemGood strong { color: var(--ink-900); }
+.bullet { width: 8px; height: 8px; flex: none; background: var(--ink-900); transform: translateY(7px); }
+@media (max-width: 800px) { .grid { grid-template-columns: 1fr; gap: 40px; } }

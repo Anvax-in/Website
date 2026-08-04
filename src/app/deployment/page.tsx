@@ -85,7 +85,7 @@ export default function Deployment() {
               Same product.<br />Three tiers.
             </h1>
             <p className={styles.heroLede}>
-              From shared SaaS to air-gapped on-prem — the same product, the same feature set,
+              From shared SaaS to air-gapped on-prem. The same product, the same feature set,
               and the same India-stack connectors. Your tier choice is a data control decision, not a feature trade-off.
             </p>
           </div>
@@ -127,11 +127,11 @@ export default function Deployment() {
           <SectionHead
             eyebrow="Same product"
             title="Every tier runs the full product stack."
-            lede="Infrastructure tier determines where the product runs — not which features you get."
+            lede="Infrastructure tier determines where the product runs, not which features you get."
           />
           <div className={styles.diagram}>
             <div className={styles.diagramTop}>
-              <div className={styles.diagramTopLabel}>Product layer — identical across all tiers</div>
+              <div className={styles.diagramTopLabel}>Product layer: identical across all tiers</div>
               <div className={styles.diagramNodes}>
                 {productNodes.map((node) => (
                   <div key={node.name} className={styles.diagramNode}>
@@ -142,7 +142,7 @@ export default function Deployment() {
               </div>
             </div>
             <div className={styles.diagramBottom}>
-              <div className={styles.diagramBottomLabel}>Infrastructure tier — your choice</div>
+              <div className={styles.diagramBottomLabel}>Infrastructure tier: your choice</div>
               <div className={styles.diagramTiers}>
                 {tierCells.map((t) => (
                   <div key={t.name} className={styles.diagramTierCell}>

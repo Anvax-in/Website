@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
+import { Archivo } from 'next/font/google'
 import { GeistMono } from 'geist/font/mono'
 import Script from 'next/script'
 import '@/styles/tokens.css'
@@ -7,17 +7,9 @@ import '@/styles/global.css'
 import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 
-const neco = localFont({
-  src: [
-    { path: './fonts/Neco-Variable.woff2', style: 'normal' },
-    { path: './fonts/Neco-VariableItalic.woff2', style: 'italic' },
-  ],
-  variable: '--font-serif',
-  display: 'swap',
-})
-
-const generalSans = localFont({
-  src: './fonts/GeneralSans-Variable.woff2',
+const archivo = Archivo({
+  subsets: ['latin'],
+  weight: ['400', '600', '800'],
   variable: '--font-sans',
   display: 'swap',
 })
@@ -38,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${neco.variable} ${generalSans.variable} ${GeistMono.variable}`}
+      className={`${archivo.variable} ${GeistMono.variable}`}
     >
       <body>
         <Script

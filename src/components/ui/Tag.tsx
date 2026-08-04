@@ -2,7 +2,7 @@ import styles from './Tag.module.css'
 
 interface TagProps {
   children: React.ReactNode
-  variant?: 'default' | 'live' | 'next' | 'roadmap'
+  variant?: 'default' | 'live' | 'next' | 'roadmap' | 'outline'
 }
 
 export default function Tag({ children, variant = 'default' }: TagProps) {

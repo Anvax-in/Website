@@ -1,7 +1,7 @@
 /* Footer.module.css */
 .footer {
   background: var(--bone-100);
-  border-top: 1px solid var(--border);
+  border-top: 2px solid var(--border);
   padding: 72px 0 36px;
 }
 .grid {
@@ -32,15 +32,15 @@
 .legal {
   margin-top: 56px;
   padding-top: 24px;
-  border-top: 1px solid var(--border);
+  border-top: 2px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  font-family: var(--font-mono);
-  font-size: 11px;
+  font-family: var(--font-sans);
+  font-size: 12px;
   color: var(--fg-3);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 .residency { display: inline-flex; align-items: center; gap: 8px; }

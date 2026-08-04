@@ -29,7 +29,7 @@
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--amber-500);
+  color: rgba(255, 255, 255, 0.45);
   margin-bottom: 20px;
   justify-content: center;
   text-align: center;
@@ -120,7 +120,7 @@
   margin-top: 40px;
 }
 .moatCard {
-  background: var(--bone-100);
+  background: var(--paper);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 28px 28px 24px;

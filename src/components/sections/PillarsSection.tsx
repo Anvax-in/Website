@@ -5,27 +5,27 @@ import styles from './PillarsSection.module.css'
 
 const pillars = [
   {
-    tag: 'Wedge',
-    sub: 'Shipping today',
-    title: 'Your analysts work on your corpus. Not ours.',
-    body: 'Search, chat, workflows, and agents running on your own documents — with full audit trails, DPDP compliance, and Indian data residency. When the examiner asks for the inference trail, it is one export away.',
-    cta: 'See the platform',
+    tag: 'Shipping today',
+    title: 'Wedge',
+    body: 'Your analysts work on your corpus, not ours: search, chat, workflows and agents with full audit trails, DPDP compliance and Indian data residency.',
+    icon: 'M13 2 3 14h9l-1 8 10-12h-9l1-8z',
+    color: 'var(--blue)',
     href: '/platform',
   },
   {
-    tag: 'Platform',
-    sub: 'Compounding',
-    title: 'Four structural advantages built into every deployment.',
-    body: 'Organisational memory that compounds per customer. GST, MCA21, Tally, Account Aggregator, RBI circulars — wired in, not bolted on. Vertical packs for every regulated sector. Compliance infrastructure that arrives on day one.',
-    cta: 'See the platform',
+    tag: 'Compounding',
+    title: 'Platform',
+    body: 'Four structural advantages built into every deployment: organisational memory, India-stack connectors, vertical packs, and compliance infrastructure on day one.',
+    icon: 'M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5',
+    color: 'var(--ink-900)',
     href: '/platform',
   },
   {
-    tag: 'Deployment',
-    sub: 'Same product, your iron',
-    title: 'Three tiers. One product. Your data never leaves India.',
-    body: 'Fully managed SaaS on Indian infrastructure for growth-stage fintechs. Sovereign deployment into your own VPC for regulated enterprises. On-prem and air-gapped for large banks and PSUs. Same product at every tier.',
-    cta: 'See deployment',
+    tag: 'Your iron',
+    title: 'Deployment',
+    body: 'Three tiers, one product: fully managed SaaS on Indian infrastructure, sovereign VPC, or on-prem and air-gapped. Your data never leaves India.',
+    icon: 'M4 4h16v6H4zM4 14h16v6H4zM8 7h.01M8 17h.01',
+    color: 'var(--teal)',
     href: '/deployment',
   },
 ]
@@ -40,15 +40,16 @@ export default function PillarsSection() {
           lede="A wedge that ships today, a platform that compounds, and a deployment model that meets every regulator where they are."
         />
         <div className={styles.grid}>
-          {pillars.map(({ tag, sub, title, body, cta, href }) => (
-            <Link key={tag} href={href} className={styles.card}>
-              <div className={styles.cardTop}>
-                <Tag>{tag}</Tag>
-                <span className={styles.sub}>{sub}</span>
+          {pillars.map(({ tag, title, body, icon, color, href }) => (
+            <Link key={title} href={href} className={styles.card}>
+              <div className={styles.iconWrap} style={{ background: color }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d={icon} />
+                </svg>
               </div>
+              <Tag variant="outline">{tag}</Tag>
               <h3 className={styles.h3}>{title}</h3>
               <p className={styles.body}>{body}</p>
-              <span className={styles.more}>{cta} <span className={styles.arr}>→</span></span>
             </Link>
           ))}
         </div>

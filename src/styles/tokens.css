@@ -1,35 +1,39 @@
-/* Anvax design tokens — built on Opnin Design System */
-
+/* Anvax design tokens — charcoal / blue / teal system */
 
 :root {
-  /* Ink */
-  --ink-900: #0B1A2A;
-  --ink-800: #142337;
-  --ink-700: #1E2F44;
-  --ink-500: #3D5066;
-  --slate-400: #6B7A8C;
-  --slate-300: #9DA8B6;
-  --slate-200: #C2CAD4;
+  /* Ink (charcoal) */
+  --ink-900: #1F252E;
+  --ink-800: #2A313C;
+  --ink-700: #363E4B;
+  --ink-500: #5B6472;
+  --slate-400: #7C8492;
+  --slate-300: #A8AEB8;
+  --slate-200: #D3D6DB;
 
-  /* Bone */
+  /* Bone (light neutrals) */
   --bone-50:  #FFFFFF;
-  --bone-100: #F5F5F5;
-  --bone-200: #E5E7EB;
-  --bone-300: #D1D5DB;
+  --bone-100: #F4F4F3;
+  --bone-200: #E4E3E2;
+  --bone-300: #CFCDCC;
   --paper:    #FFFFFF;
 
-  /* Amber */
-  --amber-700: #9A6F31;
-  --amber-600: #B8843E;
-  --amber-500: #C99858;
-  --amber-100: #F2E6CC;
+  /* Accent — charcoal doubles as primary CTA / link color */
+  --amber-700: #12151A;
+  --amber-600: #1F252E;
+  --amber-500: #363E4B;
+  --amber-100: #E8E7E7;
 
-  /* Sage */
-  --sage-700: #2F5D4F;
-  --sage-600: #3F7464;
-  --sage-100: #DCE6DF;
+  /* Blue — "next" status, application layer */
+  --blue-700: #1D4FB0;
+  --blue-600: #2F6FED;
+  --blue-100: #E8EFFD;
 
-  /* Clay / Rust */
+  /* Teal — "live" status, knowledge layer */
+  --sage-700: #0A6259;
+  --sage-600: #0D8A7E;
+  --sage-100: #E1F2F0;
+
+  /* Clay / Rust — reserved for warning/danger states elsewhere on the site */
   --clay-700: #8B432E;
   --clay-600: #A8543A;
   --clay-100: #F1DDD2;
@@ -48,11 +52,11 @@
   --fg-3:           var(--slate-400);
   --fg-disabled:    var(--slate-300);
   --fg-on-dark:     var(--bone-100);
-  --fg-on-dark-dim: rgba(255, 255, 255, 0.6);
+  --fg-on-dark-dim: rgba(255, 255, 255, 0.68);
 
   --border:         var(--bone-200);
   --border-strong:  var(--bone-300);
-  --border-dark:    rgba(255, 255, 255, 0.12);
+  --border-dark:    rgba(255, 255, 255, 0.14);
 
   --accent:         var(--amber-600);
   --accent-hover:   var(--amber-700);
@@ -67,21 +71,34 @@
 
   --focus-ring:     var(--amber-600);
 
+  /* Categorical roles used directly by homepage sections */
+  --blue:           var(--blue-600);
+  --blue-light:     var(--blue-100);
+  --teal:           var(--sage-600);
+  --teal-light:     var(--sage-100);
+
+  /* Typography */
+  --font-heading:        var(--font-sans);
+  --font-heading-weight: 800;
+
   /* Spacing */
   --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 20px;
   --space-6: 24px; --space-7: 32px; --space-8: 40px; --space-9: 48px; --space-10: 64px;
   --space-11: 80px; --space-12: 96px;
 
-  /* Radii */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-button: 6px;
+  /* Radii — sharp, square system */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-button: 0px;
   --radius-pill: 999px;
 
   /* Shadows */
-  --shadow-pop:  0 1px 2px rgba(11, 26, 42, 0.06),  0 8px 24px rgba(11, 26, 42, 0.08);
-  --shadow-lift: 0 1px 2px rgba(11, 26, 42, 0.08),  0 16px 40px rgba(11, 26, 42, 0.12);
+  --shadow-pop:  0 1px 2px rgba(31, 37, 46, 0.07),  0 8px 24px rgba(31, 37, 46, 0.09);
+  --shadow-lift: 0 1px 2px rgba(31, 37, 46, 0.09),  0 16px 40px rgba(31, 37, 46, 0.13);
+  --shadow-sm:   0 1px 2px rgba(31, 37, 46, 0.14);
+  --shadow-md:   0 3px 10px rgba(31, 37, 46, 0.16);
+  --shadow-lg:   0 12px 32px rgba(31, 37, 46, 0.22);
 
   /* Motion */
   --ease-out:    cubic-bezier(0.2, 0, 0, 1);
@@ -93,3 +110,8 @@
   --site-gutter:    72px;
   --site-gutter-sm: 24px;
 }
+
+/* --font-serif previously carried the Neco display face; sitewide headline
+   rules still reference it, so alias it to the new Archivo body font rather
+   than leaving it undefined. */
+:root { --font-serif: var(--font-sans); }

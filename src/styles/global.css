@@ -46,8 +46,8 @@ img { display: block; max-width: 100%; }
   background: var(--bone-100);
   background-image: radial-gradient(
     120% 50% at 50% 0%,
-    rgba(184,132,62,0.04) 0%,
-    rgba(184,132,62,0) 60%
+    rgba(31,37,46,0.04) 0%,
+    rgba(31,37,46,0) 60%
   );
 }
 .section.dark {
