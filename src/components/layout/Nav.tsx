@@ -20,7 +20,8 @@ export default function Nav() {
     <nav className={styles.nav} aria-label="Primary">
       <div className={`container ${styles.row}`}>
         <Link href="/" className={styles.brand} aria-label="Anvax home">
-          <img src="/assets/anvax-wordmark-ink.svg" alt="Anvax" />
+          <img src="/anvax-icon.png" alt="" className={styles.brandIcon} />
+          <span className={styles.brandName}>Anvax</span>
         </Link>
         <div className={styles.links}>
           {links.map(({ to, label }) => (

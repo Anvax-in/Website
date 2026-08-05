@@ -16,7 +16,7 @@
   display: grid;
   grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
   gap: 32px;
-  align-items: center;
+  align-items: start;
 }
 .h1 {
   font-family: var(--font-heading);
@@ -53,11 +53,11 @@
 /* ── Stacked layer preview ── */
 .stack {
   position: relative;
-  height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 14px;
+  padding-top: 80px;
 }
 .block {
   padding: 18px 22px;
