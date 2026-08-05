@@ -38,7 +38,10 @@ export default function Footer() {
       <div className="container">
         <div className={styles.grid}>
           <div className={styles.brand}>
-            <img src="/assets/anvax-wordmark-ink.svg" alt="Anvax" />
+            <div className={styles.brandLogo}>
+              <img src="/anvax-icon.png" alt="" className={styles.brandIcon} />
+              <span className={styles.brandName}>Anvax</span>
+            </div>
             <p>The sovereign AI platform for India's regulated enterprises. Built in India, governed for India's regulators.</p>
           </div>
           <FooterCol title="Product" links={product} />

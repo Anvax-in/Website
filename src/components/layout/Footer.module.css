@@ -9,7 +9,16 @@
   grid-template-columns: 1.6fr 1fr 1fr 1fr;
   gap: 36px;
 }
-.brand img { height: 24px; }
+.brandLogo { display: flex; align-items: center; gap: 8px; }
+.brandIcon { height: 28px; width: 28px; }
+.brandName {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--ink-900);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
 .brand p {
   margin-top: 14px;
   font-size: 13px;
