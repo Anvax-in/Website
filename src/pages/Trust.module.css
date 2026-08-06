@@ -26,9 +26,8 @@
 }
 .heroEyebrow {
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.45);
   margin-bottom: 20px;
   justify-content: center;
@@ -73,9 +72,8 @@
   display: inline-block;
   padding: 14px 18px;
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.02em;
   color: var(--fg-3);
   text-decoration: none;
   white-space: nowrap;
@@ -101,6 +99,10 @@
 .glanceCell {
   background: var(--paper);
   padding: 28px 24px;
+  transition: background var(--dur-base) var(--ease-out);
+}
+.glanceCell:hover {
+  background: color-mix(in srgb, var(--blue) 6%, var(--paper));
 }
 .glanceStat {
   font-family: var(--font-serif);
@@ -116,7 +118,7 @@
   line-height: 20px;
 }
 
-/* Data tables */
+/* Data tables (AI-controls history / generic use) */
 .dataTable {
   width: 100%;
   margin-top: 32px;
@@ -125,9 +127,8 @@
 .dataTable th {
   text-align: left;
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.02em;
   color: var(--fg-3);
   padding: 0 16px 12px 0;
   border-bottom: 1px solid var(--border-strong);
@@ -157,6 +158,215 @@
   border-radius: var(--radius-sm);
   padding: 2px 7px;
   margin-right: 10px;
+}
+
+/* Defence-in-depth — interactive layer selector */
+.layerWrap {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 32px;
+  align-items: start;
+  margin-top: 40px;
+}
+.layerList {
+  border-top: 2px solid var(--border);
+}
+.layerRow {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 44px 1fr 64px;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 12px 14px 0;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  transition: background var(--dur-base) var(--ease-out);
+}
+.layerRow:hover {
+  background: color-mix(in srgb, var(--blue) 7%, transparent);
+}
+.layerRow.active {
+  background: color-mix(in srgb, var(--blue) 10%, transparent);
+}
+.layerChip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 28px;
+  margin-left: 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--fg-3);
+  background: var(--bone-100);
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.layerChip.active {
+  background: var(--blue);
+  color: var(--bone-50);
+}
+.layerName {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  color: var(--ink-900);
+}
+.layerBar {
+  display: block;
+  height: 6px;
+  justify-self: end;
+  background: var(--border-strong);
+  transition: background var(--dur-fast) var(--ease-out);
+}
+.layerBar.active {
+  background: var(--blue);
+}
+.layerDetail {
+  position: sticky;
+  top: 76px;
+  background: var(--blue-light);
+  padding: 32px;
+  border-left: 3px solid var(--blue);
+}
+.layerDetailHead {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 18px;
+}
+.layerBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  background: var(--blue);
+  color: var(--bone-50);
+  font-family: var(--font-mono);
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+.layerDetailTitle {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  margin: 0;
+  color: var(--ink-900);
+}
+.detailLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: var(--fg-3);
+  margin: 0 0 8px;
+}
+.detailText {
+  font-size: 15px;
+  line-height: 24px;
+  margin: 0 0 22px;
+  color: var(--ink-900);
+}
+.guaranteeBox {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: var(--paper);
+  padding: 16px 18px;
+}
+.guaranteeBox svg { flex: none; margin-top: 2px; }
+.guaranteeText {
+  font-size: 15px;
+  line-height: 22px;
+  margin: 0;
+  font-weight: 500;
+  color: var(--ink-900);
+}
+
+/* AI controls — icon grid */
+.aiGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 40px;
+}
+.aiCard {
+  background: var(--paper);
+  padding: 24px 22px;
+  transition: background var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+}
+.aiCard:hover {
+  background: var(--bone-50);
+  transform: translateY(-3px);
+}
+.aiIconWrap {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.aiTitle {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 16.5px;
+  line-height: 22px;
+  margin: 0 0 10px;
+  color: var(--ink-900);
+}
+.aiCopy {
+  font-size: 13.5px;
+  line-height: 21px;
+  color: var(--fg-2);
+  margin: 0;
+}
+
+/* RBI FREE-AI — control cards */
+.freeAiGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+.freeAiCard {
+  border: 1px solid var(--border);
+  background: var(--paper);
+  padding: 20px 22px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  transition: border-color var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+}
+.freeAiCard:hover {
+  border-color: var(--teal);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+.freeAiCard svg { flex: none; margin-top: 3px; }
+.freeAiTitle {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 16.5px;
+  line-height: 22px;
+  margin: 0 0 8px;
+  color: var(--ink-900);
+}
+.freeAiCopy {
+  font-size: 13.5px;
+  line-height: 21px;
+  color: var(--fg-2);
+  margin: 0;
 }
 
 /* Engineering stats */
@@ -201,16 +411,68 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+}
+.certCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 .certName {
   font-weight: 600;
   font-size: 15px;
   color: var(--ink-900);
 }
+.certTrack {
+  height: 4px;
+  background: color-mix(in srgb, var(--ink-900) 12%, transparent);
+}
+.certFill {
+  height: 4px;
+}
 .certNote {
   font-size: 13px;
   color: var(--fg-3);
   font-family: var(--font-mono);
+}
+
+/* DPDP — requirement cards */
+.dpdpGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 32px;
+}
+.dpdpCard {
+  background: var(--paper);
+  padding: 24px 22px;
+  transition: background var(--dur-base) var(--ease-out);
+}
+.dpdpCard:hover {
+  background: var(--teal-light);
+}
+.dpdpTitle {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 0 16px;
+  color: var(--ink-900);
+}
+.dpdpImpl {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+.dpdpImpl svg { flex: none; margin-top: 3px; }
+.dpdpImpl p {
+  font-size: 13.5px;
+  line-height: 21px;
+  color: var(--fg-2);
+  margin: 0;
 }
 
 /* Gated downloads */
@@ -225,6 +487,15 @@
   border-radius: var(--radius-lg);
   padding: 32px;
   background: var(--paper);
+}
+.downloadIconWrap {
+  width: 40px;
+  height: 40px;
+  background: var(--blue-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
 }
 .downloadTitle {
   font-family: var(--font-serif);
@@ -267,7 +538,12 @@
 @media (max-width: 960px) {
   .heroH1 { font-size: 36px; line-height: 46px; }
   .glanceGrid { grid-template-columns: repeat(2, 1fr); }
+  .layerWrap { grid-template-columns: 1fr; }
+  .layerDetail { position: static; }
+  .aiGrid { grid-template-columns: repeat(2, 1fr); }
+  .freeAiGrid { grid-template-columns: 1fr; }
   .statGrid { grid-template-columns: repeat(2, 1fr); }
   .certGrid { grid-template-columns: repeat(2, 1fr); }
+  .dpdpGrid { grid-template-columns: 1fr; }
   .downloadGrid { grid-template-columns: 1fr; }
 }
