@@ -28,9 +28,8 @@
 }
 .heroEyebrow {
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.45);
   margin-bottom: 20px;
   justify-content: center;
@@ -95,9 +94,8 @@
 }
 .tierTagLine {
   font-family: var(--font-mono);
-  font-size: 10.5px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.02em;
   color: var(--amber-600);
   margin-bottom: 4px;
 }
@@ -146,9 +144,8 @@
 }
 .diagramTopLabel {
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.45);
   margin-bottom: 20px;
 }
@@ -185,9 +182,8 @@
 }
 .diagramBottomLabel {
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.02em;
   color: var(--fg-3);
   margin-bottom: 14px;
 }
@@ -223,9 +219,8 @@
 }
 .residencyEyebrow {
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.45);
   margin-bottom: 16px;
 }

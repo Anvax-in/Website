@@ -30,9 +30,8 @@
 }
 .heroEyebrow {
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.45);
   margin-bottom: 20px;
 }
@@ -81,11 +80,10 @@
 .field { display: flex; flex-direction: column; gap: 6px; }
 .label {
   font-family: var(--font-sans);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.01em;
   color: var(--ink-500);
-  text-transform: uppercase;
 }
 .input, .textarea {
   font-family: var(--font-sans);
@@ -160,9 +158,8 @@
 }
 .asideLabel {
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.02em;
   color: var(--amber-700);
   margin-bottom: 10px;
 }

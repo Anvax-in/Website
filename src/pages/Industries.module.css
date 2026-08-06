@@ -28,9 +28,8 @@
 }
 .heroEyebrow {
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.45);
   margin-bottom: 20px;
   justify-content: center;
@@ -123,9 +122,8 @@
 }
 .corpusLabel {
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.02em;
   color: var(--fg-3);
   margin-bottom: 10px;
 }
@@ -149,9 +147,8 @@
 .roleTable th {
   text-align: left;
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.02em;
   color: var(--fg-3);
   padding: 0 0 10px;
   border-bottom: 1px solid var(--border);
