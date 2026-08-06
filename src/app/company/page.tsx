@@ -7,27 +7,27 @@ import styles from '@/pages/Company.module.css'
 const values = [
   {
     h3: 'Evidence first',
-    desc: 'We don\'t say "AI-powered" — we show you the retrieval context, the source citations, and the inference trace. Every output is auditable. If you can\'t verify it, we haven\'t done our job.',
+    desc: 'We don\'t say "AI-powered", we show you the retrieval context, the source citations, and the inference trace. Every output is auditable. If you can\'t verify it, we haven\'t done our job.',
   },
   {
     h3: 'Sovereignty is not a feature',
-    desc: 'Data residency, per-tenant encryption, and RLS are the foundation — not checkboxes on a pricing page. You can\'t configure them away. That\'s the point.',
+    desc: 'Data residency, per-tenant encryption, and RLS are the foundation, not checkboxes on a pricing page. You can\'t configure them away. That\'s the point.',
   },
   {
     h3: 'The examiner is always in the room',
-    desc: 'We build every feature as though an RBI examiner will ask about it during an inspection. Not because they always will — but because that\'s the bar that actually protects our customers.',
+    desc: 'We build every feature as though an RBI examiner will ask about it during an inspection. Not because they always will, but because that\'s the bar that actually protects our customers.',
   },
 ]
 
 const openRoles = [
   {
-    title: 'Staff engineer — backend',
+    title: 'Staff engineer, backend',
     location: 'Bengaluru / Remote',
     type: 'Full-time',
     team: 'Engineering',
   },
   {
-    title: 'Product manager — compliance workflows',
+    title: 'Product manager, compliance workflows',
     location: 'Bengaluru',
     type: 'Full-time',
     team: 'Product',
@@ -41,10 +41,10 @@ const openRoles = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Company — Anvax',
+  title: 'Company | Anvax',
   description: "Who we are, what we're building, and why we started with India's hardest market.",
-  openGraph: { title: 'Company — Anvax', description: "Who we are, what we're building.", url: 'https://www.anvax.in/company' },
-  twitter: { card: 'summary_large_image', title: 'Company — Anvax', description: "Who we are, what we're building." },
+  openGraph: { title: 'Company | Anvax', description: "Who we are, what we're building.", url: 'https://www.anvax.in/company' },
+  twitter: { card: 'summary_large_image', title: 'Company | Anvax', description: "Who we are, what we're building." },
   alternates: { canonical: 'https://www.anvax.in/company' },
 }
 
@@ -61,7 +61,7 @@ export default function Company() {
               is actually hard.
             </h1>
             <p className={styles.heroLede}>
-              India's regulated enterprises — NBFC, wealth, lending, insurance — carry the strictest
+              India's regulated enterprises, NBFC, wealth, lending, insurance, carry the strictest
               audit obligations and the least tolerance for AI hallucination. We built for them first.
             </p>
           </div>
@@ -83,18 +83,18 @@ export default function Company() {
               <p className={styles.visionPara}>
                 We started Anvax after watching compliance teams at Indian NBFCs and wealth managers
                 spend more time on manual document triage than on actual risk analysis. Not because
-                they lacked intelligence — because the tools they had were built for a different market,
+                they lacked intelligence, because the tools they had were built for a different market,
                 a different regulator, and a different risk culture.
               </p>
               <p className={styles.visionPara}>
                 US incumbents built horizontal AI and added compliance features later. We built for
-                RBI, SEBI, and IRDAI from day one — wiring in the India stack (Account Aggregator,
+                RBI, SEBI, and IRDAI from day one, wiring in the India stack (Account Aggregator,
                 GST Portal, MCA21, DigiLocker) before we built the product interface. The compliance
                 layer is not a feature you configure. It is the foundation.
               </p>
               <p className={styles.visionPara}>
                 Our goal: every analyst at every regulated Indian enterprise has a workspace where
-                they can search their corpus, run their workflows, and produce audit-ready outputs —
+                they can search their corpus, run their workflows, and produce audit-ready outputs -
                 without their CISO losing sleep or their examiner asking hard questions.
               </p>
             </div>

@@ -1,12 +1,12 @@
 ---
 title: "The era of AI policy is ending. The era of AI evidence is beginning."
-description: "Inside RBI's draft Guidance on Model Risk Management — what the shift from AI policy to AI evidence means for regulated entities."
+description: "Inside RBI's draft Guidance on Model Risk Management - what the shift from AI policy to AI evidence means for regulated entities."
 pubDate: 2026-06-30
 tags: ["RBI", "AI Governance", "Model Risk", "Regulation", "BFSI"]
 draft: false
 ---
 
-![The era of AI policy is ending. The era of AI evidence is beginning — RBI Model Risk Management infographic](/assets/blog/era-of-ai-policy-ending.png)
+![The era of AI policy is ending. The era of AI evidence is beginning - RBI Model Risk Management infographic](/assets/blog/era-of-ai-policy-ending.png)
 
 Last August, the RBI told regulated entities something simple: **you are accountable for what your AI systems do, whether you built them or bought them.**
 
@@ -40,7 +40,7 @@ The **Board remains accountable** for the overall framework.
 
 A dedicated risk committee is expected to oversee implementation and approve high-risk models. Responsibility cannot quietly disappear into operational teams.
 
-Every model relied upon by the institution — whether internally developed or sourced from a third party — is expected to exist within a **central model inventory**. Each model should have clearly assigned ownership, development responsibility, independent validation, approval records, and ongoing monitoring.
+Every model relied upon by the institution - whether internally developed or sourced from a third party - is expected to exist within a **central model inventory**. Each model should have clearly assigned ownership, development responsibility, independent validation, approval records, and ongoing monitoring.
 
 Perhaps the most overlooked requirement is **retention**.
 
@@ -58,7 +58,7 @@ A model's risk classification should reflect its **overall risk profile**, not m
 
 **Materiality takes precedence.**
 
-If a customer outcome, lending decision, fraud investigation, pricing decision, or regulatory obligation depends on the model, the governance expectations increase accordingly — regardless of whether the implementation is technically simple.
+If a customer outcome, lending decision, fraud investigation, pricing decision, or regulatory obligation depends on the model, the governance expectations increase accordingly - regardless of whether the implementation is technically simple.
 
 This has important implications for generative AI.
 
@@ -128,7 +128,7 @@ In other words, **human oversight is expected to function as an active governanc
 
 Perhaps most importantly, it aligns AI governance with a principle that financial institutions already understand well.
 
-> If an institution cannot explain how a decision was made, demonstrate how it was controlled, and produce evidence supporting its governance — **it should expect that decision to be challenged.**
+> If an institution cannot explain how a decision was made, demonstrate how it was controlled, and produce evidence supporting its governance - **it should expect that decision to be challenged.**
 
 **AI is no longer an exception. It is becoming another regulated capability.**
 
@@ -136,13 +136,13 @@ Perhaps most importantly, it aligns AI governance with a principle that financia
 
 As the consultation period closes, every regulated entity should be able to answer these four questions with confidence:
 
-1. **Model inventory** — Do we have a complete inventory of every model influencing customer outcomes, including systems that may not traditionally have been classified as models?
+1. **Model inventory** - Do we have a complete inventory of every model influencing customer outcomes, including systems that may not traditionally have been classified as models?
 
-2. **Risk tiering** — Would our current model tiering withstand independent regulatory scrutiny, particularly where business impact is significantly higher than technical complexity?
+2. **Risk tiering** - Would our current model tiering withstand independent regulatory scrutiny, particularly where business impact is significantly higher than technical complexity?
 
-3. **Third-party validation** — Can we independently validate every third-party model we rely upon, even without additional vendor involvement?
+3. **Third-party validation** - Can we independently validate every third-party model we rely upon, even without additional vendor involvement?
 
-4. **GenAI guardrails** — For every customer-facing generative AI system, have we implemented effective hallucination controls, meaningful human oversight, transparent customer disclosures, and auditable governance processes?
+4. **GenAI guardrails** - For every customer-facing generative AI system, have we implemented effective hallucination controls, meaningful human oversight, transparent customer disclosures, and auditable governance processes?
 
 These are unlikely to remain consultation questions for long.
 

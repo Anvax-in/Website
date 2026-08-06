@@ -5,8 +5,8 @@ import Eyebrow from '@/components/ui/Eyebrow'
 import styles from '@/pages/Pricing.module.css'
 
 export const metadata: Metadata = {
-  title: 'Pricing — Anvax',
-  description: 'Starter and Growth shown in full. Business and Sovereign tiers are custom — contact sales.',
+  title: 'Pricing | Anvax',
+  description: 'Starter and Growth shown in full. Business and Sovereign tiers are custom, contact sales.',
   robots: { index: false, follow: false },
 }
 
@@ -34,7 +34,7 @@ const plans = [
   },
   {
     tier: 'Tier 3 · On-prem', name: 'Sovereign', featured: false,
-    who: 'Large banks, PSUs and defence-adjacent — the deployment you can unplug.',
+    who: 'Large banks, PSUs and defence-adjacent, the deployment you can unplug.',
     contact: 'Contact sales', note: 'Custom · on-prem / air-gapped',
     feats: ['Everything in Business', 'Customer VPC / on-prem', 'Air-gapped option', 'Full compliance scope', 'Signed Helm bundles + SBOM', 'Dedicated support engineer', 'IndiaAI compute overlay'],
     cta: { label: 'Contact sales', href: '/contact', variant: 'secondary' as const },
@@ -42,11 +42,11 @@ const plans = [
 ]
 
 const faqs = [
-  { q: 'How is usage metered?', a: "By tokens — input and output, metered per tenant. Each plan includes a monthly allotment; overage is billed at the plan's per-token rate, visible in your admin console in real time. No surprise invoices." },
+  { q: 'How is usage metered?', a: "By tokens, input and output, metered per tenant. Each plan includes a monthly allotment; overage is billed at the plan's per-token rate, visible in your admin console in real time. No surprise invoices." },
   { q: "What's the difference between Business and Sovereign?", a: 'Business runs on a dedicated VPC in an Indian sovereign GPU cloud (Tier 2). Sovereign runs in your own data centre, optionally air-gapped (Tier 3). Both are quoted directly because the number depends on workload, topology and compliance scope.' },
-  { q: 'Does my data stay in India on every plan?', a: 'Yes. All customer data, embeddings and inference traces stay in India regardless of tier — Mumbai (ap-south-1) for SaaS, Indian sovereign cloud for Business, your DC for Sovereign. This is not a configuration flag; it\'s the substrate.' },
-  { q: 'Can I move between tiers?', a: 'Up at any time, prorated. Moving from SaaS to a dedicated or on-prem tier is a migration we run with you — your corpus, embeddings and audit chain move intact, in India, the whole way.' },
-  { q: 'Is there a free trial?', a: "We run a scoped pilot instead — your corpus, an isolated demo tenant, 45 minutes with your CISO and CIO. The tenant is deleted afterwards and you keep everything. It's more useful than a self-serve trial for a regulated buyer." },
+  { q: 'Does my data stay in India on every plan?', a: 'Yes. All customer data, embeddings and inference traces stay in India regardless of tier, Mumbai (ap-south-1) for SaaS, Indian sovereign cloud for Business, your DC for Sovereign. This is not a configuration flag; it\'s the substrate.' },
+  { q: 'Can I move between tiers?', a: 'Up at any time, prorated. Moving from SaaS to a dedicated or on-prem tier is a migration we run with you, your corpus, embeddings and audit chain move intact, in India, the whole way.' },
+  { q: 'Is there a free trial?', a: "We run a scoped pilot instead, your corpus, an isolated demo tenant, 45 minutes with your CISO and CIO. The tenant is deleted afterwards and you keep everything. It's more useful than a self-serve trial for a regulated buyer." },
 ]
 
 export default function Pricing() {
@@ -58,7 +58,7 @@ export default function Pricing() {
             <div>
               <Eyebrow>Pricing · Plain rupees, plain terms</Eyebrow>
               <h1 className={styles.heroH1}>Self-serve to sovereign. <span className={styles.heroEm}>No</span> &ldquo;starting from&rdquo;.</h1>
-              <p className={styles.heroLede}>Starter and Growth are listed in full. Business and Sovereign are custom — dedicated infrastructure, deployment topology and compliance scope decide the number, so we quote them directly.</p>
+              <p className={styles.heroLede}>Starter and Growth are listed in full. Business and Sovereign are custom, dedicated infrastructure, deployment topology and compliance scope decide the number, so we quote them directly.</p>
               <div className={styles.heroCtaRow}>
                 <Button variant="accent" href="/contact" arrow>Request a demo</Button>
                 <Button variant="secondary" href="/deployment">Compare deployment tiers</Button>
@@ -123,19 +123,19 @@ export default function Pricing() {
                 <tr className={styles.compareGroupRow}><td colSpan={5}>Deployment</td></tr>
                 <tr><td>Hosting</td><td className={styles.vmono}>Shared SaaS</td><td className={styles.vmono}>Shared SaaS</td><td className={styles.vmono}>Dedicated VPC</td><td className={styles.vmono}>On-prem / air-gap</td></tr>
                 <tr><td>GPU substrate</td><td className={styles.vmono}>AWS Mumbai</td><td className={styles.vmono}>AWS Mumbai</td><td className={styles.vmono}>Sovereign cloud</td><td className={styles.vmono}>Customer DC</td></tr>
-                <tr><td>IndiaAI overlay</td><td className={styles.no}>—</td><td className={styles.no}>—</td><td className={styles.yes}>Optional</td><td className={styles.yes}>Optional</td></tr>
+                <tr><td>IndiaAI overlay</td><td className={styles.no}></td><td className={styles.no}></td><td className={styles.yes}>Optional</td><td className={styles.yes}>Optional</td></tr>
                 <tr className={styles.compareGroupRow}><td colSpan={5}>Identity &amp; access</td></tr>
-                <tr><td>SSO / SCIM</td><td className={styles.no}>—</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td></tr>
-                <tr><td>Advanced RBAC</td><td className={styles.no}>—</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td></tr>
-                <tr><td>MFA enforced</td><td className={styles.no}>—</td><td className={styles.no}>—</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td></tr>
+                <tr><td>SSO / SCIM</td><td className={styles.no}></td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td></tr>
+                <tr><td>Advanced RBAC</td><td className={styles.no}></td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td></tr>
+                <tr><td>MFA enforced</td><td className={styles.no}></td><td className={styles.no}></td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td></tr>
                 <tr className={styles.compareGroupRow}><td colSpan={5}>Governance &amp; compliance</td></tr>
                 <tr><td>Audit logs · SHA-256 chained</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td></tr>
                 <tr><td>DPDP self-attestation</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td></tr>
-                <tr><td>RBI FREE-AI control suite</td><td className={styles.no}>—</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td></tr>
-                <tr><td>Full compliance scope</td><td className={styles.no}>—</td><td className={styles.no}>—</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td></tr>
+                <tr><td>RBI FREE-AI control suite</td><td className={styles.no}></td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td></tr>
+                <tr><td>Full compliance scope</td><td className={styles.no}></td><td className={styles.no}></td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td></tr>
                 <tr className={styles.compareGroupRow}><td colSpan={5}>Workflows &amp; support</td></tr>
                 <tr><td>Workflows</td><td className={styles.vmono}>Basic</td><td className={styles.vmono}>Advanced</td><td className={styles.vmono}>Custom</td><td className={styles.vmono}>Custom</td></tr>
-                <tr><td>Agents</td><td className={styles.no}>—</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td></tr>
+                <tr><td>Agents</td><td className={styles.no}></td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td><td className={styles.yes}>✓</td></tr>
                 <tr><td>Support</td><td className={styles.vmono}>Email</td><td className={styles.vmono}>Priority</td><td className={styles.vmono}>SLA</td><td className={styles.vmono}>Dedicated</td></tr>
               </tbody>
             </table>
@@ -165,7 +165,7 @@ export default function Pricing() {
             <div>
               <p className={styles.ctaEyebrow}>Get a quote</p>
               <h2 className={styles.ctaH2}>Business or Sovereign? We&rsquo;ll scope it in one call.</h2>
-              <p className={styles.ctaBody}>Tell us your user count, your deployment constraints and your compliance scope. We come back with a fixed quote — no &ldquo;contact us to contact us&rdquo; loop.</p>
+              <p className={styles.ctaBody}>Tell us your user count, your deployment constraints and your compliance scope. We come back with a fixed quote, no &ldquo;contact us to contact us&rdquo; loop.</p>
             </div>
             <div className={styles.ctaActions}>
               <Button variant="accent" href="/contact" arrow>Talk to sales</Button>

@@ -90,7 +90,7 @@ export default function ContactFormEmbed() {
         />
       </div>
       {status === 'error' && (
-        <p className={styles.errorMsg}>Something went wrong — please try again or email us at sales@anvax.in</p>
+        <p className={styles.errorMsg}>Something went wrong, please try again or email us at sales@anvax.in</p>
       )}
       <button type="submit" className={styles.submit} disabled={status === 'sending'}>
         {status === 'sending' ? 'Sending…' : 'Send message →'}

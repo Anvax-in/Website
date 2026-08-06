@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const ogImageUrl = `https://www.anvax.in/api/og?title=${encodeURIComponent(frontmatter.title)}`
 
   return {
-    title: `${frontmatter.title} — Sovereign Stack`,
+    title: `${frontmatter.title} - Sovereign Stack`,
     description: frontmatter.description,
     openGraph: {
       title: frontmatter.title,
@@ -77,7 +77,7 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="container">
             <div className={styles.headerInner}>
               <p className={styles.eyebrow}>Sovereign Stack</p>
-              {/* Single H1 — never also rendered by layout */}
+              {/* Single H1 - never also rendered by layout */}
               <h1 className={styles.h1}>
                 {frontmatter.title.split(/\.\s+/).map((part, i, arr) => (
                   <Fragment key={i}>

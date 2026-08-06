@@ -107,14 +107,14 @@ const logoTiles = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Platform — Anvax',
-  description: "Four capabilities purpose-built for India's regulated enterprises — search, chat, workflows, and agents with sovereign data residency baked in.",
+  title: 'Platform | Anvax',
+  description: "Four capabilities purpose-built for India's regulated enterprises, search, chat, workflows, and agents with sovereign data residency baked in.",
   openGraph: {
-    title: 'Platform — Anvax',
+    title: 'Platform | Anvax',
     description: "Four capabilities purpose-built for India's regulated enterprises.",
     url: 'https://www.anvax.in/platform',
   },
-  twitter: { card: 'summary_large_image', title: 'Platform — Anvax', description: "Four capabilities purpose-built for India's regulated enterprises." },
+  twitter: { card: 'summary_large_image', title: 'Platform | Anvax', description: "Four capabilities purpose-built for India's regulated enterprises." },
   alternates: { canonical: 'https://www.anvax.in/platform' },
 }
 

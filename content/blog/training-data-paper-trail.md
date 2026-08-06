@@ -10,7 +10,7 @@ draft: false
 
 ## The Question That Breaks Every Model Card
 
-Here's something that keeps compliance heads up at night: you can hand an examiner a beautifully written model card — intended use, performance metrics, fairness testing, sign-off dates — and still fail the audit on the very first follow-up question. Where did the training data come from? Not the dataset name. The actual chain: which source system, whose consent covered it, what was removed, who approved the removal, and when.
+Here's something that keeps compliance heads up at night: you can hand an examiner a beautifully written model card - intended use, performance metrics, fairness testing, sign-off dates - and still fail the audit on the very first follow-up question. Where did the training data come from? Not the dataset name. The actual chain: which source system, whose consent covered it, what was removed, who approved the removal, and when.
 
 Most institutions can answer the first four questions about their models. Very few can answer that one. The model card describes the model. It says almost nothing about the data that made the model what it is.
 
@@ -22,7 +22,7 @@ Your AI is not compliant because you have a model card. It is compliant because 
 
 Training data provenance is not a data dictionary. It's not a list of source systems in an appendix. And it's not solved by a one-time data audit before the model ships.
 
-Provenance, properly defined, is a continuously maintained record of a dataset's full lifecycle: where each record originated, what consent or legal basis covered its collection, every transformation applied to it — cleaning, deduplication, labeling, augmentation — and who authorized each step. A real provenance record lets you answer, for any training run, three questions without a scramble:
+Provenance, properly defined, is a continuously maintained record of a dataset's full lifecycle: where each record originated, what consent or legal basis covered its collection, every transformation applied to it - cleaning, deduplication, labeling, augmentation - and who authorized each step. A real provenance record lets you answer, for any training run, three questions without a scramble:
 
 - Which source systems and vintages fed this dataset
 - What was excluded, redacted, or reweighted, and on whose authority
@@ -32,9 +32,9 @@ The common failure is treating provenance as documentation written after the fac
 
 ## Why This Gap Is More Dangerous Than It Looks
 
-**Consent Has a Shelf Life That Data Doesn't Track.** A customer's KYC data collected for onboarding may not carry consent for training a marketing-recommendation model three years later. Nothing about the data itself flags that the purpose has drifted — only a provenance record tied to original consent scope would catch it.
+**Consent Has a Shelf Life That Data Doesn't Track.** A customer's KYC data collected for onboarding may not carry consent for training a marketing-recommendation model three years later. Nothing about the data itself flags that the purpose has drifted - only a provenance record tied to original consent scope would catch it.
 
-**Cleaning Steps Quietly Encode Judgment Calls.** Removing "noisy" records, rebalancing an underrepresented segment, dropping a data source that looked unreliable — each of these is a decision that shapes what the model learns, and each is invisible in the final dataset unless someone logged it at the time.
+**Cleaning Steps Quietly Encode Judgment Calls.** Removing "noisy" records, rebalancing an underrepresented segment, dropping a data source that looked unreliable - each of these is a decision that shapes what the model learns, and each is invisible in the final dataset unless someone logged it at the time.
 
 **Vendors And Open Datasets Import Someone Else's Gaps.** A vendor's pretrained base model or a public dataset used for fine-tuning carries its own provenance question mark, and it becomes your compliance exposure the moment you build on top of it, whether or not you asked.
 
@@ -48,6 +48,6 @@ Third, there's the slower, compounding cost: every model built without provenanc
 
 ## Closing Thought
 
-Model governance has spent the last few years getting good at documenting what a model does — its intended use, its limits, its performance across segments. That was the right first step, but it documents the output of a process while leaving the input undocumented. A model card without a data lineage record is a well-written summary of a black box.
+Model governance has spent the last few years getting good at documenting what a model does - its intended use, its limits, its performance across segments. That was the right first step, but it documents the output of a process while leaving the input undocumented. A model card without a data lineage record is a well-written summary of a black box.
 
-The institutions getting this right aren't adding more paperwork at model sign-off. They're capturing provenance at the moment data moves — source, consent basis, transformation, approval — so that six months or three years later, the paper trail already exists instead of needing to be reconstructed. That's the layer Anvax builds into the model lifecycle for BFSI institutions: not a data dictionary bolted on after the fact, but a live record of where every training input came from, so "prove it" is a query, not a research project.
+The institutions getting this right aren't adding more paperwork at model sign-off. They're capturing provenance at the moment data moves - source, consent basis, transformation, approval - so that six months or three years later, the paper trail already exists instead of needing to be reconstructed. That's the layer Anvax builds into the model lifecycle for BFSI institutions: not a data dictionary bolted on after the fact, but a live record of where every training input came from, so "prove it" is a query, not a research project.

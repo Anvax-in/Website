@@ -5,16 +5,16 @@ import Pagination from '@/components/blog/Pagination'
 import styles from '@/pages/Blog.module.css'
 
 export const metadata: Metadata = {
-  title: 'Sovereign Stack — AI Governance & Regulation for Indian BFSI',
+  title: 'Sovereign Stack: AI Governance & Regulation for Indian BFSI',
   description: "Weekly analysis of AI governance, RBI regulations, and compliance strategy for risk officers in India's regulated financial sector.",
   openGraph: {
-    title: 'Sovereign Stack — AI Governance & Regulation for Indian BFSI',
+    title: 'Sovereign Stack: AI Governance & Regulation for Indian BFSI',
     description: "Weekly analysis of AI governance, RBI regulations, and compliance strategy for risk officers in India's regulated financial sector.",
     url: 'https://www.anvax.in/blog',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sovereign Stack — AI Governance & Regulation for Indian BFSI',
+    title: 'Sovereign Stack: AI Governance & Regulation for Indian BFSI',
     description: "Weekly analysis on RBI, SEBI, IRDAI and what they mean for BFSI compliance teams.",
   },
   alternates: { canonical: 'https://www.anvax.in/blog' },
@@ -47,7 +47,7 @@ export default function BlogIndex() {
         <div className="container">
           {posts.length === 0 ? (
             <p style={{ color: 'var(--fg-3)', fontFamily: 'var(--font-mono)', fontSize: 13 }}>
-              No posts yet — check back soon.
+              No posts yet, check back soon.
             </p>
           ) : (
             <>

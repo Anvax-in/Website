@@ -21,7 +21,7 @@ const defenceLayers = [
     code: 'L1',
     layer: 'Transport',
     controls: 'TLS 1.3 enforced on all connections; HSTS preloaded',
-    guarantee: 'No plaintext data in transit — ever',
+    guarantee: 'No plaintext data in transit, ever',
   },
   {
     code: 'L2',
@@ -44,7 +44,7 @@ const defenceLayers = [
   {
     code: 'L5',
     layer: 'Storage isolation',
-    controls: 'Row-level policy enforced at the database engine — not the application — with both read and write guards',
+    controls: 'Row-level policy enforced at the database engine, not the application, with both read and write guards',
     guarantee: 'Tenant A data is unreachable from Tenant B at the storage layer',
   },
   {
@@ -68,25 +68,25 @@ const defenceLayers = [
 ]
 
 const aiControls = [
-  { control: 'Hallucination mitigation', detail: 'Answers grounded in retrieved context only; model surfaces uncertainty rather than inventing — every response cites the source it drew from' },
-  { control: 'PII auto-redaction', detail: 'Aadhaar, PAN, IFSC, GSTIN, UPI, mobile — detected and redacted before the model context window is assembled' },
+  { control: 'Hallucination mitigation', detail: 'Answers grounded in retrieved context only; model surfaces uncertainty rather than inventing, every response cites the source it drew from' },
+  { control: 'PII auto-redaction', detail: 'Aadhaar, PAN, IFSC, GSTIN, UPI, mobile, detected and redacted before the model context window is assembled' },
   { control: 'Prompt isolation', detail: 'User input is structurally separated from system instructions; role boundaries enforced at the prompt layer, not relying on model instruction-following alone' },
   { control: 'Model pinning', detail: 'Model version locked per tenant tier; behaviour cannot change without an explicit upgrade decision and audit entry' },
   { control: 'Inference audit', detail: 'Every prompt, retrieved context, and completion stored in an append-only, cryptographically chained audit log' },
-  { control: 'Data residency enforcement', detail: 'All inference routed within India — model calls, embeddings, retrieval — nothing crosses the geographic boundary' },
+  { control: 'Data residency enforcement', detail: 'All inference routed within India, model calls, embeddings, retrieval, nothing crosses the geographic boundary' },
   { control: 'Spend controls', detail: 'Per-tenant token budgets with hard limits; anomalous usage patterns trigger alerts before they become incidents' },
   { control: 'Human-in-the-loop', detail: 'Credit decisions, compliance filings, and audit outputs require explicit human sign-off before any downstream action is taken' },
 ]
 
 const freeAiControls = [
-  { ref: 'R7',  control: 'AI Use-Case Registry',       detail: 'Every AI use case catalogued with business purpose, data inputs, and risk classification — exportable for examiner review' },
+  { ref: 'R7',  control: 'AI Use-Case Registry',       detail: 'Every AI use case catalogued with business purpose, data inputs, and risk classification, exportable for examiner review' },
   { ref: 'R8',  control: 'Board oversight docs',        detail: 'Board-level AI governance documentation synthesised automatically from the audit trail' },
   { ref: 'R15', control: 'Periodic board reporting',    detail: 'Usage, incident, and risk summaries generated on a defined cadence for board-level visibility' },
   { ref: 'R17', control: 'Model version governance',    detail: 'Every model version change logged with date, rationale, and approval; rollback is a single operation' },
   { ref: 'R18', control: 'Human gate on high-risk',     detail: 'Credit decisions, compliance filings, and audit outputs require explicit human sign-off before execution' },
-  { ref: 'R19', control: 'Explainability by design',    detail: 'Every AI output cites the specific source document and retrieval context it drew from — not a post-hoc explanation layer' },
+  { ref: 'R19', control: 'Explainability by design',    detail: 'Every AI output cites the specific source document and retrieval context it drew from, not a post-hoc explanation layer' },
   { ref: 'R23', control: 'Immutable inference trail',   detail: 'Cryptographically chained audit log across every inference event; no record can be modified or deleted after the fact' },
-  { ref: 'R26', control: 'Real-time LLM monitoring',   detail: 'Token usage, latency, error rates, and behavioural anomalies monitored continuously — not sampled' },
+  { ref: 'R26', control: 'Real-time LLM monitoring',   detail: 'Token usage, latency, error rates, and behavioural anomalies monitored continuously, not sampled' },
 ]
 
 const certifications = [
@@ -160,7 +160,7 @@ export default function TrustClient() {
           <SectionHead
             eyebrow="Defence-in-depth"
             title="Eight independent security guarantees."
-            lede="Each layer operates independently. A failure at one does not cascade to the next — and each guarantee is verifiable by your security team."
+            lede="Each layer operates independently. A failure at one does not cascade to the next, and each guarantee is verifiable by your security team."
           />
           <table className={styles.dataTable}>
             <thead>

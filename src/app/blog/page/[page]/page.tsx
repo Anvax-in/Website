@@ -10,7 +10,7 @@ export const dynamicParams = false
 export async function generateStaticParams() {
   const allPosts = getAllPosts()
   const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE)
-  // Page 1 is at /blog — only generate params for pages 2+
+  // Page 1 is at /blog - only generate params for pages 2+
   return Array.from({ length: Math.max(0, totalPages - 1) }, (_, i) => ({
     page: String(i + 2),
   }))
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { page } = await params
   const pageNum = Number(page)
   return {
-    title: `Sovereign Stack — Page ${pageNum} · Anvax`,
+    title: `Sovereign Stack: Page ${pageNum} · Anvax`,
     alternates: { canonical: `https://www.anvax.in/blog/page/${pageNum}` },
   }
 }

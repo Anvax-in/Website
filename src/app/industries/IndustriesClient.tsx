@@ -40,7 +40,7 @@ const verticals: Vertical[] = [
     tag: 'Wealth management',
     tagVariant: 'next',
     title: 'Wealth management',
-    intro: 'SEBI-registered advisors manage portfolios under tightening disclosure and suitability rules. Anvax connects to portfolio data and SEBI regulatory feeds, giving relationship managers a single pane to research, comply, and advise — without leaving their corpus.',
+    intro: 'SEBI-registered advisors manage portfolios under tightening disclosure and suitability rules. Anvax connects to portfolio data and SEBI regulatory feeds, giving relationship managers a single pane to research, comply, and advise, without leaving their corpus.',
     roles: [
       { role: 'Relationship manager', uc: 'Summarise client portfolio, draft suitability note, flag product risks' },
       { role: 'Research analyst', uc: 'Synthesise company filings, generate research briefs, track SEBI disclosures' },
@@ -53,7 +53,7 @@ const verticals: Vertical[] = [
     tag: 'Lending',
     tagVariant: 'next',
     title: 'Lending',
-    intro: 'Underwriting at scale requires pulling together bank statements, GST returns, ITR filings, bureau reports, and internal credit policy — often across dozens of documents per application. Anvax automates the aggregation and surface anomaly flags so underwriters spend time on decisions, not data gathering.',
+    intro: 'Underwriting at scale requires pulling together bank statements, GST returns, ITR filings, bureau reports, and internal credit policy, often across dozens of documents per application. Anvax automates the aggregation and surface anomaly flags so underwriters spend time on decisions, not data gathering.',
     roles: [
       { role: 'Underwriter', uc: 'Aggregate applicant data, flag anomalies, draft credit memo' },
       { role: 'Risk manager', uc: 'Monitor portfolio risk, generate risk reports, track RBI limits' },
@@ -118,7 +118,7 @@ export default function IndustriesClient() {
             </h1>
             <p className={styles.heroLede}>
               Each vertical ships with a pre-built corpus schema, workflow library, role packs,
-              and regulatory connector set — not a horizontal AI with a compliance checkbox.
+              and regulatory connector set, not a horizontal AI with a compliance checkbox.
             </p>
           </div>
         </div>

@@ -9,16 +9,16 @@ import VisionSection from '@/components/sections/VisionSection'
 import CtaSection from '@/components/sections/CtaSection'
 
 export const metadata: Metadata = {
-  title: "Anvax — Sovereign AI for India's regulated enterprises",
-  description: "The AI workspace BFSI and NBFCs can run past their regulator. Search, chat, workflows — on your corpus, auditable by design.",
+  title: "Anvax: Sovereign AI for India's regulated enterprises",
+  description: "The AI workspace BFSI and NBFCs can run past their regulator. Search, chat, workflows, on your corpus, auditable by design.",
   openGraph: {
-    title: "Anvax — Sovereign AI for India's regulated enterprises",
-    description: "The AI workspace BFSI and NBFCs can run past their regulator. Search, chat, workflows — on your corpus, auditable by design.",
+    title: "Anvax: Sovereign AI for India's regulated enterprises",
+    description: "The AI workspace BFSI and NBFCs can run past their regulator. Search, chat, workflows, on your corpus, auditable by design.",
     url: 'https://www.anvax.in',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Anvax — Sovereign AI for India's regulated enterprises",
+    title: "Anvax: Sovereign AI for India's regulated enterprises",
     description: "The AI workspace BFSI and NBFCs can run past their regulator.",
   },
   alternates: { canonical: 'https://www.anvax.in' },

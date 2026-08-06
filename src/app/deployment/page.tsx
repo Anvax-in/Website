@@ -66,10 +66,10 @@ const tierCells = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Deployment — Anvax',
+  title: 'Deployment | Anvax',
   description: 'SaaS to air-gapped. Same product, three tiers. All data stays in India.',
-  openGraph: { title: 'Deployment — Anvax', description: 'SaaS to air-gapped. Same product, three tiers.', url: 'https://www.anvax.in/deployment' },
-  twitter: { card: 'summary_large_image', title: 'Deployment — Anvax', description: 'SaaS to air-gapped. Same product, three tiers.' },
+  openGraph: { title: 'Deployment | Anvax', description: 'SaaS to air-gapped. Same product, three tiers.', url: 'https://www.anvax.in/deployment' },
+  twitter: { card: 'summary_large_image', title: 'Deployment | Anvax', description: 'SaaS to air-gapped. Same product, three tiers.' },
   alternates: { canonical: 'https://www.anvax.in/deployment' },
 }
 
