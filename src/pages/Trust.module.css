@@ -578,9 +578,164 @@
   color: var(--fg-3);
 }
 
+/* Hero CTAs row */
+.heroCtas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+/* Six controls */
+.sixGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 40px;
+}
+.controlCard {
+  background: var(--paper);
+  padding: 26px 22px;
+  transition: background var(--dur-base) var(--ease-out);
+}
+.controlCard:hover { background: var(--bone-50); }
+.controlIconWrap {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.controlTitle {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 0 10px;
+  color: var(--ink-900);
+}
+.controlBody {
+  font-size: 13.5px;
+  line-height: 21px;
+  color: var(--fg-2);
+  margin: 0;
+}
+
+/* Three real questions */
+.questionsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.questionCard {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.questionRole {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--fg-3);
+}
+.questionQ {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--ink-900);
+  margin: 0;
+  font-style: italic;
+}
+.questionA {
+  font-size: 13.5px;
+  line-height: 22px;
+  color: var(--fg-2);
+  margin: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+
+/* Screenshot placeholder */
+.screenshotPlaceholder {
+  margin-top: 40px;
+  border: 2px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--bone-100);
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.screenshotLabel {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--fg-3);
+  text-align: center;
+  line-height: 20px;
+  max-width: 560px;
+}
+
+/* FAQ */
+.faqList {
+  margin-top: 40px;
+  border-top: 1px solid var(--border);
+}
+.faqItem {
+  border-bottom: 1px solid var(--border);
+}
+.faqQuestion {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: var(--ink-900);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: left;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.faqQuestion:hover { color: var(--blue); }
+.faqChevron {
+  flex: none;
+  font-size: 16px;
+  color: var(--fg-3);
+  transition: transform var(--dur-base) var(--ease-out);
+}
+.faqChevronOpen {
+  transform: rotate(180deg);
+}
+.faqAnswer {
+  padding: 0 0 20px;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--fg-2);
+  max-width: 700px;
+  margin: 0;
+}
+
 @media (max-width: 960px) {
   .heroH1 { font-size: 36px; line-height: 46px; }
   .glanceGrid { grid-template-columns: repeat(2, 1fr); }
+  .sixGrid { grid-template-columns: repeat(2, 1fr); }
+  .questionsGrid { grid-template-columns: 1fr; }
   .layerWrap { grid-template-columns: 1fr; }
   .layerDetail { position: static; }
   .aiGrid { grid-template-columns: repeat(2, 1fr); }
@@ -589,4 +744,11 @@
   .certGrid { grid-template-columns: repeat(2, 1fr); }
   .dpdpGrid { grid-template-columns: 1fr; }
   .downloadGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .sixGrid { grid-template-columns: 1fr; }
+  .certGrid { grid-template-columns: 1fr; }
+  .statGrid { grid-template-columns: 1fr; }
+  .aiGrid { grid-template-columns: 1fr; }
 }
