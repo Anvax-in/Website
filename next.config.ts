@@ -16,6 +16,12 @@ const nextConfig: NextConfig = {
         destination: '/blog',
         permanent: true,
       },
+      // Status page hosted on external uptime service
+      {
+        source: '/status',
+        destination: 'https://status.anvax.in',
+        permanent: false,
+      },
     ]
   },
 }
