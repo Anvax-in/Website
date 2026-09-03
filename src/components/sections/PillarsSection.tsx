@@ -7,7 +7,7 @@ const pillars = [
   {
     tag: 'Shipping today',
     title: 'Governed workspace',
-    body: 'Search, chat, workflows and agents on your own documents and systems — full audit trail, PII redaction, policy enforcement. Inside your perimeter, from day one.',
+    body: 'Search, chat, workflows and agents on your own documents and systems, full audit trail, PII redaction, policy enforcement. Inside your perimeter, from day one.',
     icon: 'M13 2 3 14h9l-1 8 10-12h-9l1-8z',
     color: 'var(--blue)',
     href: '/platform',
@@ -23,7 +23,7 @@ const pillars = [
   {
     tag: 'Your iron',
     title: 'Deployment',
-    body: 'Three tiers, one product: private cloud in your own AWS, Azure, or GCP — any region; sovereign cloud partners; or on-prem and air-gapped. Your data never leaves your perimeter.',
+    body: 'Three tiers, one product: private cloud in your own AWS, Azure, or GCP, any region; sovereign cloud partners; or on-prem and air-gapped. Your data never leaves your perimeter.',
     icon: 'M4 4h16v6H4zM4 14h16v6H4zM8 7h.01M8 17h.01',
     color: 'var(--teal)',
     href: '/deployment',

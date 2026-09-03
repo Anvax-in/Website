@@ -51,6 +51,62 @@
   text-align: center;
 }
 
+/* Capability overview grid (platform index page) */
+.capabilityGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 40px;
+}
+.capabilityCard {
+  background: var(--paper);
+  padding: 28px 24px 24px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: background var(--dur-base) var(--ease-out);
+}
+.capabilityCard:hover { background: var(--bone-50); }
+.capabilityCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.capabilityIconWrap {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.capabilityH3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--ink-900);
+  margin: 0 0 10px;
+}
+.capabilityDesc {
+  font-size: 13.5px;
+  line-height: 21px;
+  color: var(--fg-2);
+  margin: 0 0 16px;
+  flex: 1;
+}
+.capabilityArrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--fg-3);
+  margin-top: auto;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.capabilityCard:hover .capabilityArrow { color: var(--ink-900); }
+
 /* Capabilities section */
 .capRow {
   padding: 56px 0;
@@ -157,7 +213,7 @@
 /* Logo wall */
 .logoGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 1px;
   background: var(--border);
   border: 1px solid var(--border);
@@ -171,14 +227,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 24px 16px;
+  gap: 8px;
+  padding: 20px 12px;
   text-align: center;
-  min-height: 100px;
+  min-height: 90px;
 }
 .logoImg {
-  max-height: 32px;
-  max-width: 80px;
+  max-height: 28px;
+  max-width: 56px;
   object-fit: contain;
 }
 .logoMark {
@@ -206,9 +262,18 @@
   letter-spacing: 0.05em;
 }
 
+@media (max-width: 1100px) {
+  .logoGrid { grid-template-columns: repeat(4, 1fr); }
+}
+
 @media (max-width: 960px) {
   .heroH1 { font-size: 36px; line-height: 46px; }
   .capGrid { grid-template-columns: 1fr; gap: 28px; }
   .moatsGrid { grid-template-columns: 1fr; }
+  .logoGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .capabilityGrid { grid-template-columns: 1fr; }
   .logoGrid { grid-template-columns: repeat(2, 1fr); }
 }

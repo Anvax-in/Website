@@ -133,11 +133,11 @@ const defenceLayers = [
 
 const aiControls = [
   { title: 'Hallucination mitigation', color: 'var(--blue)', icon: 'M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2zM9 21h6', copy: 'Answers grounded in retrieved context only; model surfaces uncertainty rather than inventing, every response cites the source it drew from.' },
-  { title: 'PII auto-redaction', color: 'var(--teal)', icon: 'M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12zM3 3l18 18', copy: 'PII — names, ID numbers, payment card data, health identifiers — detected and redacted before the model context window is assembled.' },
+  { title: 'PII auto-redaction', color: 'var(--teal)', icon: 'M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12zM3 3l18 18', copy: 'PII, names, ID numbers, payment card data, health identifiers, detected and redacted before the model context window is assembled.' },
   { title: 'Prompt isolation', color: 'var(--ink-900)', icon: 'M4 4h7v16H4zM13 4h7v16h-7', copy: 'User input is structurally separated from system instructions; role boundaries enforced at the prompt layer, not relying on model instruction-following alone.' },
   { title: 'Model pinning', color: 'var(--blue)', icon: 'M12 2v9M12 11l4 4v3H8v-3l4-4zM12 18v4', copy: 'Model version locked per tenant tier; behaviour cannot change without an explicit upgrade decision and audit entry.' },
   { title: 'Inference audit', color: 'var(--teal)', icon: 'M4 3h12l4 4v14H4zM8 12h8M8 16h5', copy: 'Every prompt, retrieved context, and completion stored in an append-only, cryptographically chained audit log.' },
-  { title: 'Data residency enforcement', color: 'var(--ink-900)', icon: 'M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11zM12 10h.01', copy: 'All inference, embeddings, and retrieval routed within your chosen region — nothing crosses the perimeter you define.' },
+  { title: 'Data residency enforcement', color: 'var(--ink-900)', icon: 'M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11zM12 10h.01', copy: 'All inference, embeddings, and retrieval routed within your chosen region, nothing crosses the perimeter you define.' },
   { title: 'Spend controls', color: 'var(--blue)', icon: 'M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6', copy: 'Per-tenant token budgets with hard limits; anomalous usage patterns trigger alerts before they become incidents.' },
   { title: 'Human-in-the-loop', color: 'var(--teal)', icon: 'M20 6 9 17l-5-5', copy: 'Credit decisions, compliance filings, and audit outputs require explicit human sign-off before any downstream action is taken.' },
 ]
@@ -149,7 +149,7 @@ const frameworks: Framework[] = [
   {
     id: 'soc2',
     label: 'SOC 2',
-    subtitle: 'Trust service criteria for security, availability, and confidentiality — global baseline for enterprise security reviews.',
+    subtitle: 'Trust service criteria for security, availability, and confidentiality, global baseline for enterprise security reviews.',
     controls: [
       { ref: 'CC6.1', control: 'Logical access controls', detail: 'Every API call validated against tenant context; row-level policy enforced at the database engine, not the application layer.' },
       { ref: 'CC6.6', control: 'Network security', detail: 'TLS 1.3 enforced on all connections; HSTS preloaded; no plaintext data in transit, ever.' },
@@ -162,7 +162,7 @@ const frameworks: Framework[] = [
   {
     id: 'iso27001',
     label: 'ISO 27001',
-    subtitle: 'Information security management system controls — global certification in progress.',
+    subtitle: 'Information security management system controls, global certification in progress.',
     controls: [
       { ref: 'A.9', control: 'Access control', detail: 'Phishing-resistant authentication, short-lived tokens, sessions bound to tenant context; superuser access structurally unavailable to the application.' },
       { ref: 'A.10', control: 'Cryptography', detail: 'TLS 1.3 in transit; per-tenant encryption keys at rest; PII fields carry a second encryption pass independent of the primary store.' },
@@ -174,7 +174,7 @@ const frameworks: Framework[] = [
   {
     id: 'gdpr',
     label: 'GDPR',
-    subtitle: 'EU General Data Protection Regulation — controls implemented at the platform layer; DPA available on request.',
+    subtitle: 'EU General Data Protection Regulation, controls implemented at the platform layer; DPA available on request.',
     controls: [
       { ref: 'Art. 25', control: 'Data protection by design', detail: 'PII auto-detected and redacted before the model context window is assembled; purpose limitation enforced at the prompt layer.' },
       { ref: 'Art. 28', control: 'Data processor obligations', detail: 'Customer retains data ownership; Anvax acts as data processor; Data Processing Agreement available on request.' },
@@ -199,7 +199,7 @@ const frameworks: Framework[] = [
   {
     id: 'dora',
     label: 'DORA',
-    subtitle: 'Digital Operational Resilience Act — ICT risk requirements for EU financial services entities.',
+    subtitle: 'Digital Operational Resilience Act, ICT risk requirements for EU financial services entities.',
     controls: [
       { ref: 'Art. 9', control: 'ICT security policies', detail: 'Defence-in-depth architecture with eight independent security layers; failure at one does not cascade to the next.' },
       { ref: 'Art. 10', control: 'Detection capabilities', detail: 'Real-time monitoring of token usage, latency, error rates, and behavioural anomalies; continuous, not sampled.' },
@@ -211,7 +211,7 @@ const frameworks: Framework[] = [
   {
     id: 'nist',
     label: 'NIST AI RMF',
-    subtitle: 'AI Risk Management Framework — Govern, Map, Measure, Manage functions for US enterprises and government contractors.',
+    subtitle: 'AI Risk Management Framework, Govern, Map, Measure, Manage functions for US enterprises and government contractors.',
     controls: [
       { ref: 'GOVERN 1.1', control: 'AI governance policies', detail: 'AI use-case registry maintained per tenant; governance policies defined, documented, and enforced at the platform layer.' },
       { ref: 'MAP 1.5', control: 'Risk identification', detail: 'Risk classification embedded in the use-case registry; contextual risk assessed and documented per deployment.' },
@@ -224,7 +224,7 @@ const frameworks: Framework[] = [
   {
     id: 'rbi',
     label: 'RBI FREE-AI',
-    subtitle: 'RBI\'s governance framework for AI in regulated financial entities — India jurisdiction pack.',
+    subtitle: 'RBI\'s governance framework for AI in regulated financial entities, India jurisdiction pack.',
     controls: [
       { ref: 'R7', control: 'AI Use-Case Registry', detail: 'Every AI use case catalogued with business purpose, data inputs, and risk classification, exportable for examiner review.' },
       { ref: 'R8', control: 'Board oversight docs', detail: 'Board-level AI governance documentation synthesised automatically from the audit trail.' },
@@ -239,7 +239,7 @@ const frameworks: Framework[] = [
   {
     id: 'dpdp',
     label: 'DPDP',
-    subtitle: 'India\'s Digital Personal Data Protection Act 2023 — controls implemented at the platform layer.',
+    subtitle: 'India\'s Digital Personal Data Protection Act 2023, controls implemented at the platform layer.',
     controls: [
       { ref: 'S.6', control: 'Data minimisation', detail: 'Only required fields ingested; PII auto-redacted before the LLM context window is assembled.' },
       { ref: 'S.4', control: 'Purpose limitation', detail: 'System prompts scoped per role; model cannot deviate from the defined purpose.' },
@@ -265,7 +265,7 @@ const faqs: { q: string; a: string }[] = [
   { q: 'Can Anvax staff see our data?', a: 'No. We have no standing access to any deployment. Support access, when you request it, is time-boxed, logged, and revocable by you.' },
   { q: 'How is access controlled?', a: 'SSO (SAML/OIDC), SCIM, four built-in roles, per-workspace connector scoping, and permission-aware retrieval that checks source-system ACLs on every query.' },
   { q: 'Is the audit log tamper-evident?', a: 'The log is append-only with hash chaining; entries cannot be edited or deleted through the application. Scheduled export available today; native SIEM connectors are planned.' },
-  { q: 'How do you handle PII?', a: 'Configurable redaction at ingest and at prompt time for common identifiers — national IDs, card numbers, health identifiers — with per-region patterns. Redaction events are logged.' },
+  { q: 'How do you handle PII?', a: 'Configurable redaction at ingest and at prompt time for common identifiers, national IDs, card numbers, health identifiers, with per-region patterns. Redaction events are logged.' },
   { q: 'What about prompt injection and data exfiltration through the model?', a: 'Retrieval is scoped before the model sees anything, write actions are approval-gated, and on-prem deployments have no egress. We treat the model as untrusted; the controls sit around it, not inside it.' },
   { q: 'Do you sign a DPA? Do you have a subprocessor list?', a: 'Yes to both. On self-hosted tiers the subprocessor list is short because there are almost none. Request both via the contact form or the link below.' },
   { q: 'Can our security team review the architecture before we commit?', a: 'That is the intended path. Download the architecture report, send us your questionnaire, and we will walk your team through a live deployment.' },
@@ -313,7 +313,7 @@ export default function TrustClient() {
               not just your demo.
             </h1>
             <p className={styles.heroLede}>
-              Tenant isolation, read-only connectors, scoped retrieval, and an immutable audit trail —
+              Tenant isolation, read-only connectors, scoped retrieval, and an immutable audit trail,
               running inside your cloud or your data centre. Nothing leaves your perimeter, and
               everything the AI does is written down.
             </p>
@@ -402,7 +402,7 @@ export default function TrustClient() {
           <SectionHead
             eyebrow="Certifications"
             title="Honest status. No vanity badges."
-            lede="We list what is live, what is in progress, and when we expect to complete it. EU AI Act, DORA, NIST AI RMF, RBI FREE-AI, and DPDP are mapped — see Framework mappings below."
+            lede="We list what is live, what is in progress, and when we expect to complete it. EU AI Act, DORA, NIST AI RMF, RBI FREE-AI, and DPDP are mapped, see Framework mappings below."
           />
           <div className={styles.certGrid}>
             {certifications.map((c) => (
@@ -430,7 +430,7 @@ export default function TrustClient() {
           <SectionHead
             eyebrow="Framework mappings"
             title="Every control, mapped and downloadable."
-            lede="Select a framework to see how Anvax implements each requirement. Eight frameworks across US, EU, UK, Gulf, Singapore, and India — the same platform, the right pack for your regulator."
+            lede="Select a framework to see how Anvax implements each requirement. Eight frameworks across US, EU, UK, Gulf, Singapore, and India, the same platform, the right pack for your regulator."
           />
           <div className={styles.mappingsTabs}>
             {frameworks.map(f => (

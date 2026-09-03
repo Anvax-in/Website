@@ -9,16 +9,16 @@ import VisionSection from '@/components/sections/VisionSection'
 import CtaSection from '@/components/sections/CtaSection'
 
 export const metadata: Metadata = {
-  title: 'Anvax — Self-hosted governed AI workspace for regulated enterprises',
-  description: "The AI workspace for enterprises that cannot put their data into ChatGPT, Glean, or Copilot. Search, chat, workflows and agents — audited, inside your own perimeter.",
+  title: 'Anvax | Self-hosted governed AI workspace for regulated enterprises',
+  description: "The AI workspace for enterprises that cannot put their data into ChatGPT, Glean, or Copilot. Search, chat, agents, and governance, audited, inside your own perimeter.",
   openGraph: {
-    title: 'Anvax — Self-hosted governed AI workspace for regulated enterprises',
-    description: "The AI workspace for enterprises that cannot put their data into ChatGPT, Glean, or Copilot. Search, chat, workflows and agents — audited, inside your own perimeter.",
+    title: 'Anvax | Self-hosted governed AI workspace for regulated enterprises',
+    description: "The AI workspace for enterprises that cannot put their data into ChatGPT, Glean, or Copilot. Search, chat, agents, and governance, audited, inside your own perimeter.",
     url: 'https://www.anvax.in',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Anvax — Self-hosted governed AI workspace for regulated enterprises',
+    title: 'Anvax | Self-hosted governed AI workspace for regulated enterprises',
     description: "The AI workspace for enterprises that cannot put their data into ChatGPT, Glean, or Copilot. Audited and inside your perimeter.",
   },
   alternates: { canonical: 'https://www.anvax.in' },

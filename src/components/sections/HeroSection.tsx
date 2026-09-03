@@ -38,7 +38,7 @@ export default function HeroSection() {
               <span className={styles.line}>never has to leave for.</span>
             </h1>
             <p className={styles.lede}>
-              Your teams search, chat, and run workflows on your own documents — not
+              Your teams search, chat, and run workflows on your own documents, not
               someone else&apos;s cloud. Every query logged. Every prompt policy-checked.
               Your data stays in your perimeter.
             </p>

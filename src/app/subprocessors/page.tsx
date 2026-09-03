@@ -4,7 +4,7 @@ import styles from '@/pages/Legal.module.css'
 
 export const metadata: Metadata = {
   title: 'Sub-processors | Anvax',
-  description: 'The complete list of sub-processors Anvax uses — and why the list is short on self-hosted tiers.',
+  description: 'The complete list of sub-processors Anvax uses, and why the list is short on self-hosted tiers.',
   alternates: { canonical: 'https://www.anvax.in/subprocessors' },
 }
 
@@ -16,15 +16,15 @@ type Processor = {
 }
 
 const websiteProcessors: Processor[] = [
-  { name: 'Vercel', purpose: 'Website hosting (anvax.in)', location: 'USA / Global CDN', scope: 'Website only — no customer data' },
-  { name: 'Resend', purpose: 'Transactional email (contact form, notifications)', location: 'USA', scope: 'Website only — name and email of message sender' },
+  { name: 'Vercel', purpose: 'Website hosting (anvax.in)', location: 'USA / Global CDN', scope: 'Website only, no customer data' },
+  { name: 'Resend', purpose: 'Transactional email (contact form, notifications)', location: 'USA', scope: 'Website only, name and email of message sender' },
 ]
 
 const platformProcessors: Processor[] = [
-  { name: 'Stripe', purpose: 'Payment processing (SaaS tier billing)', location: 'USA', scope: 'Billing contact and payment data — no Customer Data' },
+  { name: 'Stripe', purpose: 'Payment processing (SaaS tier billing)', location: 'USA', scope: 'Billing contact and payment data, no Customer Data' },
 ]
 
-const selfHostedNote = 'On Private Cloud, Sovereign Cloud, and On-premises tiers, Customer Data never leaves your infrastructure. Anvax has no access to Customer Data on these tiers, so the sub-processor list for those deployments consists only of the infrastructure providers you have chosen — your own cloud account or data centre. Those relationships are yours, not ours.'
+const selfHostedNote = 'On Private Cloud, Sovereign Cloud, and On-premises tiers, Customer Data never leaves your infrastructure. Anvax has no access to Customer Data on these tiers, so the sub-processor list for those deployments consists only of the infrastructure providers you have chosen, your own cloud account or data centre. Those relationships are yours, not ours.'
 
 export default function SubprocessorsPage() {
   return (
@@ -68,7 +68,7 @@ export default function SubprocessorsPage() {
 
             <div id="website" className={styles.section}>
               <h2 className={styles.sectionH2}>Website sub-processors</h2>
-              <p className={styles.p}>These vendors process data submitted through anvax.in — visitor analytics, contact form submissions, and related website operations.</p>
+              <p className={styles.p}>These vendors process data submitted through anvax.in, visitor analytics, contact form submissions, and related website operations.</p>
               <div className={styles.tableWrap}>
                 <table className={styles.table}>
                   <thead>

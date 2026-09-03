@@ -1,0 +1,49 @@
+# Anvax
+
+> The self-hosted, governed AI workspace for enterprises that cannot put their data into ChatGPT, Glean, or Copilot.
+
+Anvax is a private-deployment AI platform, search, chat, agents, and governance, that runs entirely inside a customer's own infrastructure (private cloud, sovereign cloud partner, or air-gapped on-prem). No customer data transits Anvax systems. Every deployment is tenant-isolated with an immutable audit trail, PII redaction, and framework-mapped controls.
+
+## Core capabilities
+
+- **Search**: Hybrid retrieval (dense + BM25) across document corpora with paragraph-level citations and permission-checked access at query time.
+- **Chat**: Grounded multi-turn chat anchored to retrieved context. Tenant-isolated threads. Model says "not found in corpus" rather than fabricating.
+- **Agents**: Persistent agents that monitor regulatory feeds, classify new circulars, and route findings. Explicit action whitelist. Human approval gate.
+- **Governance**: Immutable SHA-256-chained audit trail, policy engine, PII redaction, and framework control mappings, wired into every capability, not configurable afterthoughts.
+
+## Deployment tiers
+
+- Private cloud, deployed inside the customer's own AWS, Azure, or GCP account, any region.
+- Sovereign cloud partners, Yotta, NxtGen (India); AWS GovCloud (US); others by request.
+- On-prem / air-gapped, full capability stack, no outbound network dependency.
+
+## Connectors (60+)
+
+Enterprise: Google Drive, Slack, Microsoft Teams, Gmail, Dropbox, Salesforce, SharePoint, GitHub, Notion, Jira, Confluence, Discord, AWS S3, HubSpot, GitLab, Google Storage, Box, Airtable, Asana, Zendesk, Snowflake, Bitbucket, ClickUp, Linear, Oracle Storage, Cloudflare R2, Coda, Gong, Fireflies, GitBook, Guru, Outline, Google Sites, Discourse, Egnyte, Document360, BookStack, Slab, Highspot, ProductBoard, Braintrust, Drupal Wiki, Web Scraper, Email/IMAP, File Upload, Wikipedia, MediaWiki, Loopio, Freshdesk, Zulip, Zoho Books
+
+India regional pack: RBI Circulars, SEBI, IRDAI, NPCI/UPI, GST Portal, DigiLocker, MCA21, Account Aggregator, Tally
+
+## Trust and compliance
+
+- Tenant isolation via Postgres RLS and per-tenant encryption keys (AES-256-GCM, CMEK-ready)
+- Read-only connectors, Anvax never writes to source systems
+- SSO/SCIM via SAML 2.0 / OIDC and SCIM 2.0
+- No model training on customer data, ever
+- Framework mappings: SOC 2, ISO 27001, GDPR, EU AI Act, DORA, NIST AI RMF, RBI FREE-AI, India DPDP
+- Certifications in progress: SOC 2 Type II, ISO 27001
+
+## Industries served
+
+Financial services (banks, asset managers, insurers, fintech), Healthcare & life sciences, Legal & professional services, Public sector & government, Defence & critical infrastructure, Technology & SaaS
+
+## Links
+
+- Homepage: https://www.anvax.in
+- Platform: https://www.anvax.in/platform
+- Trust & security: https://www.anvax.in/trust
+- Industries: https://www.anvax.in/industries
+- Deployment: https://www.anvax.in/deployment
+- Blog (Sovereign Stack): https://www.anvax.in/blog
+- Contact: https://www.anvax.in/contact
+- Terms: https://www.anvax.in/terms
+- Privacy: https://www.anvax.in/privacy

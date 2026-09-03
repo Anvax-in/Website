@@ -5,7 +5,7 @@ import styles from './ComplianceStrip.module.css'
 const cards = [
   {
     title: 'Data residency',
-    body: 'Customer data, embeddings and inference stay in your region at every tier — private cloud, sovereign partner, or on-prem. In-region by default, in-country on request.',
+    body: 'Customer data, embeddings and inference stay in your region at every tier, private cloud, sovereign partner, or on-prem. In-region by default, in-country on request.',
     icon: 'M12 21s7-6.4 7-12a7 7 0 0 0-14 0c0 5.6 7 12 7 12zM12 11.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z',
     color: 'var(--teal)',
   },

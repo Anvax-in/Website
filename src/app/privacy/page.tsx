@@ -4,7 +4,7 @@ import styles from '@/pages/Legal.module.css'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Anvax',
-  description: 'How Anvax collects, uses, and protects your data — and what rights you have over it.',
+  description: 'How Anvax collects, uses, and protects your data, and what rights you have over it.',
   alternates: { canonical: 'https://www.anvax.in/privacy' },
 }
 
@@ -76,7 +76,7 @@ export default function PrivacyPage() {
                 <li>Email address and display name</li>
                 <li>Organisation and role within the platform</li>
                 <li>Authentication events (login, MFA, session creation/destruction)</li>
-                <li>Usage metadata (feature use, connector configuration) for billing and support — not document content</li>
+                <li>Usage metadata (feature use, connector configuration) for billing and support, not document content</li>
               </ul>
             </div>
 
@@ -104,9 +104,9 @@ export default function PrivacyPage() {
               <h2 className={styles.sectionH2}>Sharing and sub-processors</h2>
               <p className={styles.p}>We do not sell personal data. We share data only with:</p>
               <ul className={styles.ul}>
-                <li><strong>Sub-processors</strong> — a small set of vendors who support our website and operations (listed on the <Link href="/subprocessors">sub-processors page</Link>). Each is bound by a data processing agreement.</li>
-                <li><strong>Law enforcement or regulators</strong> — only where required by applicable law, and we will notify you to the extent legally permitted.</li>
-                <li><strong>Business transfers</strong> — in the event of a merger or acquisition, under confidentiality obligations and with notice to affected parties.</li>
+                <li><strong>Sub-processors</strong>: a small set of vendors who support our website and operations (listed on the <Link href="/subprocessors">sub-processors page</Link>). Each is bound by a data processing agreement.</li>
+                <li><strong>Law enforcement or regulators</strong>: only where required by applicable law, and we will notify you to the extent legally permitted.</li>
+                <li><strong>Business transfers</strong>: in the event of a merger or acquisition, under confidentiality obligations and with notice to affected parties.</li>
               </ul>
               <p className={styles.p}>For self-hosted tiers, the sub-processor list is minimal because Customer Data does not leave your infrastructure.</p>
             </div>
@@ -115,7 +115,7 @@ export default function PrivacyPage() {
               <h2 className={styles.sectionH2}>Data residency</h2>
               <p className={styles.p}>Customer Data is processed in the region you choose. We offer:</p>
               <ul className={styles.ul}>
-                <li><strong>Private Cloud:</strong> your own AWS, Azure, or GCP account — any region you select</li>
+                <li><strong>Private Cloud:</strong> your own AWS, Azure, or GCP account, any region you select</li>
                 <li><strong>Sovereign Cloud:</strong> in-country partners for India, EU, Gulf (UAE/KSA), and Singapore</li>
                 <li><strong>On-premises:</strong> your own data centre, no network egress required</li>
               </ul>

@@ -62,7 +62,7 @@ export default function Company() {
             </h1>
             <p className={styles.heroLede}>
               Regulated enterprises carry the strictest audit obligations and the least tolerance
-              for AI hallucination. We built under the hardest data-residency regime in the world —
+              for AI hallucination. We built under the hardest data-residency regime in the world,
               which is why the product is credible in every other one.
             </p>
           </div>
@@ -84,7 +84,7 @@ export default function Company() {
               <p className={styles.visionPara}>
                 We started Anvax after watching compliance teams at NBFCs and wealth managers spend
                 more time on manual document triage than on actual risk analysis. Not because they
-                lacked intelligence — because the tools they had were built for a different market,
+                lacked intelligence, because the tools they had were built for a different market,
                 a different regulator, and a different risk culture.
               </p>
               <p className={styles.visionPara}>
@@ -95,8 +95,8 @@ export default function Company() {
                 points. That origin is why the product is credible everywhere data cannot leave.
               </p>
               <p className={styles.visionPara}>
-                Our goal: every compliance team at every regulated enterprise — in London, Dubai,
-                Singapore, or Mumbai — has a workspace where they can search their corpus, run
+                Our goal: every compliance team at every regulated enterprise, in London, Dubai,
+                Singapore, or Mumbai, has a workspace where they can search their corpus, run
                 their workflows, and produce audit-ready outputs, without their CISO losing sleep
                 or their examiner asking hard questions.
               </p>

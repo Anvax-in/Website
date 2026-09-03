@@ -13,7 +13,7 @@ const layers: { num: string; name: string; desc: string; icon: string; color: st
     chips: [
       { t: 'Search',    d: 'Hybrid · cited',    ci: 'M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0' },
       { t: 'Chat',      d: 'Threads · ⌘K',      ci: 'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z' },
-      { t: 'Workflows', d: 'Temporal-backed',   ci: 'M6 3v12M18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM18 9C9 9 6 15 6 15' },
+      { t: 'Governance', d: 'Audit · Policy',    ci: 'M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6z' },
       { t: 'Agents',    d: 'Policy-checked',    ci: 'M12 8V4H8M2 4h20M20 4v16M4 4v16M2 20h20M9 12h6M9 16h6' },
     ],
   },

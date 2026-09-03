@@ -26,21 +26,21 @@ const verticals: Vertical[] = [
     tag: 'Financial services',
     tagVariant: 'live',
     title: 'Financial services',
-    intro: 'Banks, asset managers, insurers, and fintech companies operate under tighter AI governance requirements than almost any other sector. Anvax ships with corpus schemas, workflow libraries, and jurisdiction packs built for regulated financial services — whether your regulator is the FCA, FINRA, MAS, RBI, or SAMA.',
+    intro: 'Banks, asset managers, insurers, and fintech companies operate under tighter AI governance requirements than almost any other sector. Anvax ships with corpus schemas, workflow libraries, and jurisdiction packs built for regulated financial services, whether your regulator is the FCA, FINRA, MAS, RBI, or SAMA.',
     roles: [
       { role: 'Compliance officer', uc: 'Track regulatory feeds, draft compliance responses, maintain the obligation register' },
       { role: 'Risk officer', uc: 'Model risk documentation, audit trail for algorithmic decisions, board-level AI governance reporting' },
       { role: 'Investment analyst', uc: 'Synthesise research, generate briefings, cross-reference filings and disclosures' },
-      { role: 'Relationship manager', uc: 'Client briefings, suitability notes, portfolio summaries — over your own data' },
+      { role: 'Relationship manager', uc: 'Client briefings, suitability notes, portfolio summaries, over your own data' },
     ],
     corpus: ['Regulatory circulars and guidance', 'Internal credit and investment policies', 'Client and portfolio data', 'Research reports and filings', 'Audit and board reports'],
   },
   {
     id: 'healthcare',
     tag: 'Healthcare',
-    tagVariant: 'next',
+    tagVariant: 'live',
     title: 'Healthcare & life sciences',
-    intro: 'Clinical documentation, research data, patient records, and regulatory submissions are among the most sensitive documents in any organisation. Anvax gives clinical, compliance, and research teams a workspace where PHI never leaves the facility and every query is auditable — by construction, not configuration.',
+    intro: 'Clinical documentation, research data, patient records, and regulatory submissions are among the most sensitive documents in any organisation. Anvax gives clinical, compliance, and research teams a workspace where PHI never leaves the facility and every query is auditable, by construction, not configuration.',
     roles: [
       { role: 'Clinical researcher', uc: 'Synthesise trial data, draft regulatory submissions, cross-reference literature' },
       { role: 'Medical affairs', uc: 'Summarise clinical evidence, prepare advisory board materials, cross-reference label' },
@@ -51,9 +51,9 @@ const verticals: Vertical[] = [
   {
     id: 'legal',
     tag: 'Legal',
-    tagVariant: 'next',
+    tagVariant: 'live',
     title: 'Legal & professional services',
-    intro: 'Matter files, contracts, M&A diligence, and privileged communications are the most confidential documents any firm handles — and none of them can go into a shared AI. Anvax gives practitioners a workspace over their own corpus with full privilege protection and an audit trail that satisfies bar council requirements.',
+    intro: 'Matter files, contracts, M&A diligence, and privileged communications are the most confidential documents any firm handles, and none of them can go into a shared AI. Anvax gives practitioners a workspace over their own corpus with full privilege protection and an audit trail that satisfies bar council requirements.',
     roles: [
       { role: 'Associate / solicitor', uc: 'Research precedents, draft documents, cross-reference matter files' },
       { role: 'Partner', uc: 'Matter summaries, client briefings, risk and scope assessments' },
@@ -64,9 +64,9 @@ const verticals: Vertical[] = [
   {
     id: 'public-sector',
     tag: 'Public sector',
-    tagVariant: 'roadmap',
+    tagVariant: 'live',
     title: 'Public sector & government',
-    intro: 'Government agencies and public bodies face strict data sovereignty requirements — often mandating that no citizen data leaves the jurisdiction. Anvax deploys fully on-prem or on sovereign cloud infrastructure, with no outbound network dependency. The same product; the same capability; inside your facility.',
+    intro: 'Government agencies and public bodies face strict data sovereignty requirements, often mandating that no citizen data leaves the jurisdiction. Anvax deploys fully on-prem or on sovereign cloud infrastructure, with no outbound network dependency. The same product; the same capability; inside your facility.',
     roles: [
       { role: 'Policy analyst', uc: 'Research legislation, draft briefings, cross-reference regulations and precedents' },
       { role: 'Procurement officer', uc: 'Supplier assessment, contract review, compliance verification against frameworks' },
@@ -77,9 +77,9 @@ const verticals: Vertical[] = [
   {
     id: 'defence',
     tag: 'Defence',
-    tagVariant: 'roadmap',
+    tagVariant: 'live',
     title: 'Defence & critical infrastructure',
-    intro: 'Classified environments require complete air-gap. Anvax\'s on-prem tier has no outbound network dependency — no cloud API, no model call that leaves the building. The full capability stack runs inside the facility, on hardware you control.',
+    intro: 'Classified environments require complete air-gap. Anvax\'s on-prem tier has no outbound network dependency, no cloud API, no model call that leaves the building. The full capability stack runs inside the facility, on hardware you control.',
     roles: [
       { role: 'Intelligence analyst', uc: 'Document synthesis, structured reporting, cross-reference across classified sources' },
       { role: 'Procurement specialist', uc: 'Supplier risk assessment, contract review, compliance documentation' },
@@ -90,9 +90,9 @@ const verticals: Vertical[] = [
   {
     id: 'technology',
     tag: 'Technology',
-    tagVariant: 'roadmap',
+    tagVariant: 'live',
     title: 'Technology & SaaS',
-    intro: 'Fast-growing technology companies increasingly handle sensitive customer data under contracts that prohibit sharing with AI vendors. Anvax gives engineering, legal, and product teams a governed AI workspace over their internal knowledge base — Confluence, docs, tickets, code — without the DPA headache.',
+    intro: 'Fast-growing technology companies increasingly handle sensitive customer data under contracts that prohibit sharing with AI vendors. Anvax gives engineering, legal, and product teams a governed AI workspace over their internal knowledge base, Confluence, docs, tickets, code, without the DPA headache.',
     roles: [
       { role: 'Engineer', uc: 'Search internal docs and code, ask architecture questions, generate technical summaries' },
       { role: 'Legal / compliance', uc: 'Review contracts, track regulatory obligations, manage DPA inventory' },
@@ -118,7 +118,7 @@ export default function IndustriesClient() {
             </h1>
             <p className={styles.heroLede}>
               Every vertical ships with a pre-built corpus schema, workflow library, role packs,
-              and jurisdiction pack — not a horizontal AI with a compliance checkbox.
+              and jurisdiction pack, not a horizontal AI with a compliance checkbox.
             </p>
           </div>
         </div>
@@ -130,7 +130,7 @@ export default function IndustriesClient() {
           <SectionHead
             eyebrow="Verticals"
             title="Every sector where 'no' to public AI is policy."
-            lede="The buyer in each vertical shares one constraint — their data cannot leave the building. These six sectors are where that constraint is sharpest."
+            lede="The buyer in each vertical shares one constraint, their data cannot leave the building. These six sectors are where that constraint is sharpest."
           />
           <div className={styles.accordionList}>
             {verticals.map((v) => {

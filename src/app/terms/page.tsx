@@ -4,7 +4,7 @@ import styles from '@/pages/Legal.module.css'
 
 export const metadata: Metadata = {
   title: 'Terms of Service | Anvax',
-  description: 'Anvax Terms of Service — the agreement that governs your use of the Anvax platform.',
+  description: 'Anvax Terms of Service, the agreement that governs your use of the Anvax platform.',
   alternates: { canonical: 'https://www.anvax.in/terms' },
 }
 
@@ -59,7 +59,7 @@ export default function TermsPage() {
 
             <div id="services" className={styles.section}>
               <h2 className={styles.sectionH2}>Services</h2>
-              <p className={styles.p}>Anvax provides a self-hosted, governed AI workspace that customers deploy in their own infrastructure — private cloud, sovereign cloud partner, or on-premises. The platform includes document search, AI-assisted chat, workflow automation, agents, and a governance layer including audit logging, PII redaction, and access control.</p>
+              <p className={styles.p}>Anvax provides a self-hosted, governed AI workspace that customers deploy in their own infrastructure, private cloud, sovereign cloud partner, or on-premises. The platform includes document search, AI-assisted chat, workflow automation, agents, and a governance layer including audit logging, PII redaction, and access control.</p>
               <h3 className={styles.sectionH3}>Deployment model</h3>
               <p className={styles.p}>For self-hosted deployments (Private Cloud, Sovereign Cloud, On-premises tiers), the platform runs in your infrastructure. Anvax does not have standing access to your environment. Customer data does not transit Anvax systems except where you have explicitly granted access for a support session, which is logged and time-bounded.</p>
               <h3 className={styles.sectionH3}>Service availability</h3>

@@ -8,10 +8,10 @@ const tiers = [
     icon: '☁️',
     name: 'Private cloud',
     tagLine: 'Any region, your account',
-    desc: 'Dedicated deployment in your own AWS, Azure, or GCP account. You own the infrastructure; Anvax manages the application layer. Available in any region — US, EU, Gulf, Asia.',
+    desc: 'Dedicated deployment in your own AWS, Azure, or GCP account. You own the infrastructure; Anvax manages the application layer. Available in any region, US, EU, Gulf, Asia.',
     features: [
       'Your cloud account, any hyperscaler',
-      'Any region — no data-residency constraint',
+      'Any region, no data-residency constraint',
       'Anvax-managed application layer',
       'Standard SLA (99.9%)',
       'Full enterprise connector stack',
@@ -36,7 +36,7 @@ const tiers = [
     icon: '🔒',
     name: 'On-prem / air-gapped',
     tagLine: 'Inside your facility',
-    desc: 'Deployed on your own hardware. No egress to Anvax or any cloud infrastructure. Full air-gap available for institutions with strict data sovereignty requirements — banks, defence-adjacent, critical infrastructure, government.',
+    desc: 'Deployed on your own hardware. No egress to Anvax or any cloud infrastructure. Full air-gap available for institutions with strict data sovereignty requirements, banks, defence-adjacent, critical infrastructure, government.',
     features: [
       'Customer data centre',
       'No outbound network required',

@@ -1,0 +1,240 @@
+/* CapabilityPage.module.css — shared by all /platform/* sub-pages */
+
+/* Dark hero */
+.hero {
+  position: relative;
+  padding: 60px 0 64px;
+  background: var(--ink-900);
+  border-bottom: 1px solid var(--border-dark);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url('/assets/lattice.svg');
+  background-size: 220px 220px;
+  opacity: 0.06;
+  pointer-events: none;
+}
+.heroInner {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+.heroEyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 16px;
+}
+.heroH1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 56px;
+  letter-spacing: -0.018em;
+  color: var(--bone-100);
+  margin-bottom: 20px;
+}
+.heroLede {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--fg-on-dark-dim);
+}
+
+/* Sibling navigation */
+.siblingNav {
+  background: var(--bone-50);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.siblingNavInner {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  justify-content: center;
+}
+.siblingNavInner::-webkit-scrollbar { display: none; }
+.siblingLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 13px 18px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--fg-3);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+.siblingLink:hover { color: var(--ink-900); }
+.siblingLinkActive {
+  color: var(--ink-900);
+  border-bottom-color: var(--amber-600);
+}
+.siblingDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex: none;
+}
+.siblingDotNext {
+  background: var(--amber-600);
+}
+
+/* Feature blocks grid */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 40px;
+}
+.featCard {
+  background: var(--paper);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: background var(--dur-base) var(--ease-out);
+}
+.featCard:hover { background: var(--bone-50); }
+.featIconWrap {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.featTitle {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--ink-900);
+  margin: 0 0 12px;
+}
+.featBody {
+  font-size: 14px;
+  line-height: 23px;
+  color: var(--fg-2);
+  margin: 0;
+  flex: 1;
+}
+.featSpec {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.featSpecRow {
+  display: flex;
+  gap: 10px;
+  font-size: 12.5px;
+  line-height: 18px;
+}
+.featSpecKey {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-3);
+  white-space: nowrap;
+  min-width: 80px;
+}
+.featSpecVal {
+  color: var(--fg-2);
+}
+
+/* How it's governed strip */
+.governedStrip {
+  background: var(--ink-900);
+  padding: 56px 0;
+  margin-top: 0;
+}
+.governedEyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 8px;
+}
+.governedTitle {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  color: var(--bone-100);
+  margin: 0 0 36px;
+  max-width: 560px;
+}
+.governedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.governedItem {}
+.governedItemLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 8px;
+}
+.governedItemBody {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--fg-on-dark-dim);
+}
+.governedItemBody strong {
+  color: var(--bone-100);
+  font-weight: 500;
+}
+
+/* CTA block */
+.ctaStrip {
+  padding: 64px 0;
+  background: var(--bone-50);
+  border-top: 1px solid var(--border);
+}
+.ctaInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.ctaH2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  color: var(--ink-900);
+  margin: 0 0 8px;
+}
+.ctaBody {
+  font-size: 15px;
+  color: var(--fg-2);
+  margin: 0;
+}
+.ctaActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 960px) {
+  .heroH1 { font-size: 34px; line-height: 44px; }
+  .featuresGrid { grid-template-columns: 1fr; }
+  .governedGrid { grid-template-columns: 1fr; gap: 24px; }
+  .ctaInner { flex-direction: column; align-items: flex-start; }
+}
