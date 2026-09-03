@@ -8,9 +8,9 @@ const product = [
 ]
 const trust = [
   { to: '/trust',              label: 'Architecture' },
-  { to: '/trust#free-ai',       label: 'RBI FREE-AI' },
-  { to: '/trust#dpdp',         label: 'DPDP & CERT-In' },
-  { to: '/trust#downloads',    label: 'Regulator pack' },
+  { to: '/trust#mappings',     label: 'Compliance mappings' },
+  { to: '/trust#residency',    label: 'Data residency' },
+  { to: '/trust#downloads',    label: 'Security pack' },
 ]
 const company = [
   { to: '/company',          label: 'About' },
@@ -42,7 +42,7 @@ export default function Footer() {
               <img src="/anvax-icon.png" alt="" className={styles.brandIcon} />
               <span className={styles.brandName}>Anvax</span>
             </div>
-            <p>The sovereign AI platform for India's regulated enterprises. Built in India, governed for India's regulators.</p>
+            <p>The self-hosted, governed AI workspace for enterprises that cannot use public AI.</p>
           </div>
           <FooterCol title="Product" links={product} />
           <FooterCol title="Trust" links={trust} />
@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
         <div className={styles.legal}>
           <span>© 2026 Anvax Technologies Pvt. Ltd.</span>
-          <span className={styles.residency}>Data residency · India</span>
+          <span className={styles.residency}>Data residency · your region</span>
         </div>
       </div>
     </footer>

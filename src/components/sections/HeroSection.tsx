@@ -3,7 +3,7 @@ import Eyebrow from '../ui/Eyebrow'
 import Tag from '../ui/Tag'
 import styles from './HeroSection.module.css'
 
-const complianceBadges = ['RBI', 'SEBI', 'IRDAI', 'DPDP-aware', 'SOC 2', 'ISO 27001', 'CERT-In (in progress)']
+const complianceBadges = ['SOC 2', 'ISO 27001', 'GDPR', 'EU AI Act (mapped)', 'DORA (mapped)', 'NIST AI RMF (mapped)']
 
 const stack = [
   {
@@ -19,7 +19,7 @@ const stack = [
     offset: 28,
   },
   {
-    label: 'Knowledge core: corpus, India stack',
+    label: 'Knowledge core: corpus, connectors',
     color: 'var(--teal)',
     path: 'M4 4h16v6H4zM4 14h16v6H4zM8 7h.01M8 17h.01',
     offset: 56,
@@ -32,15 +32,15 @@ export default function HeroSection() {
       <div className="container">
         <div className={styles.row}>
           <div>
-            <Eyebrow>Sovereign AI · Built for India&apos;s regulators</Eyebrow>
+            <Eyebrow>Self-hosted · Governed · Audited</Eyebrow>
             <h1 className={styles.h1}>
-              <span className={styles.line}>Governed AI for India&apos;s</span>
-              <span className={styles.line}>regulated enterprises.</span>
+              <span className={styles.line}>Governed AI your data</span>
+              <span className={styles.line}>never has to leave for.</span>
             </h1>
             <p className={styles.lede}>
-              Your analysts search, chat, and run workflows on your own corpus, not
-              someone else&apos;s cloud. Every query is logged. Every PII field is redacted
-              before it leaves the boundary.
+              Your teams search, chat, and run workflows on your own documents — not
+              someone else&apos;s cloud. Every query logged. Every prompt policy-checked.
+              Your data stays in your perimeter.
             </p>
             <div className={styles.ctaRow}>
               <Button variant="accent" href="/contact">Request a demo</Button>

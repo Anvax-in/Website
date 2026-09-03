@@ -6,16 +6,16 @@ import styles from './PillarsSection.module.css'
 const pillars = [
   {
     tag: 'Shipping today',
-    title: 'Wedge',
-    body: 'Your analysts work on your corpus, not ours: search, chat, workflows and agents with full audit trails, DPDP compliance and Indian data residency.',
+    title: 'Governed workspace',
+    body: 'Search, chat, workflows and agents on your own documents and systems — full audit trail, PII redaction, policy enforcement. Inside your perimeter, from day one.',
     icon: 'M13 2 3 14h9l-1 8 10-12h-9l1-8z',
     color: 'var(--blue)',
     href: '/platform',
   },
   {
     tag: 'Compounding',
-    title: 'Platform',
-    body: 'Four structural advantages built into every deployment: organisational memory, India-stack connectors, vertical packs, and compliance infrastructure on day one.',
+    title: 'Governance layer',
+    body: 'Four structural moats: organisational memory, immutable audit chain, jurisdiction packs across six regulatory frameworks, and enterprise connector depth that takes months to replicate.',
     icon: 'M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5',
     color: 'var(--ink-900)',
     href: '/platform',
@@ -23,7 +23,7 @@ const pillars = [
   {
     tag: 'Your iron',
     title: 'Deployment',
-    body: 'Three tiers, one product: fully managed SaaS on Indian infrastructure, sovereign VPC, or on-prem and air-gapped. Your data never leaves India.',
+    body: 'Three tiers, one product: private cloud in your own AWS, Azure, or GCP — any region; sovereign cloud partners; or on-prem and air-gapped. Your data never leaves your perimeter.',
     icon: 'M4 4h16v6H4zM4 14h16v6H4zM8 7h.01M8 17h.01',
     color: 'var(--teal)',
     href: '/deployment',
@@ -37,7 +37,7 @@ export default function PillarsSection() {
         <SectionHead
           eyebrow="How Anvax works"
           title="Three layers. One product."
-          lede="A wedge that ships today, a platform that compounds, and a deployment model that meets every regulator where they are."
+          lede="A workspace that ships today, a governance layer that compounds, and a deployment model that fits where your data has to stay."
         />
         <div className={styles.grid}>
           {pillars.map(({ tag, title, body, icon, color, href }) => (
