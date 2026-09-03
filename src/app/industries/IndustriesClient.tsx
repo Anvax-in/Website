@@ -22,88 +22,88 @@ interface Vertical {
 
 const verticals: Vertical[] = [
   {
-    id: 'nbfc',
-    tag: 'NBFC',
+    id: 'financial-services',
+    tag: 'Financial services',
     tagVariant: 'live',
-    title: 'NBFC',
-    intro: 'India has over 10,000 NBFCs navigating an ever-thickening stack of RBI master directions, circular updates, and AA data obligations. Anvax ships with an NBFC-specific corpus schema, pre-built workflows for circular triage and credit memo drafting, and role packs for every team from compliance to collections.',
+    title: 'Financial services',
+    intro: 'Banks, asset managers, insurers, and fintech companies operate under tighter AI governance requirements than almost any other sector. Anvax ships with corpus schemas, workflow libraries, and jurisdiction packs built for regulated financial services — whether your regulator is the FCA, FINRA, MAS, RBI, or SAMA.',
     roles: [
-      { role: 'Compliance officer', uc: 'Track RBI circulars, draft compliance responses, maintain master direction register' },
-      { role: 'Credit analyst', uc: 'Summarise AA data, analyse GST filings, generate underwriting memo' },
-      { role: 'Internal auditor', uc: 'Run audit checklists, flag policy deviations, generate audit reports' },
-      { role: 'Ops manager', uc: 'Monitor workflow queues, escalate exceptions, produce SLA reports' },
+      { role: 'Compliance officer', uc: 'Track regulatory feeds, draft compliance responses, maintain the obligation register' },
+      { role: 'Risk officer', uc: 'Model risk documentation, audit trail for algorithmic decisions, board-level AI governance reporting' },
+      { role: 'Investment analyst', uc: 'Synthesise research, generate briefings, cross-reference filings and disclosures' },
+      { role: 'Relationship manager', uc: 'Client briefings, suitability notes, portfolio summaries — over your own data' },
     ],
-    corpus: ['RBI circulars', 'NBFC master directions', 'Internal credit policies', 'Loan files', 'GST filings', 'Account Aggregator data'],
+    corpus: ['Regulatory circulars and guidance', 'Internal credit and investment policies', 'Client and portfolio data', 'Research reports and filings', 'Audit and board reports'],
   },
   {
-    id: 'wealth',
-    tag: 'Wealth management',
+    id: 'healthcare',
+    tag: 'Healthcare',
     tagVariant: 'next',
-    title: 'Wealth management',
-    intro: 'SEBI-registered advisors manage portfolios under tightening disclosure and suitability rules. Anvax connects to portfolio data and SEBI regulatory feeds, giving relationship managers a single pane to research, comply, and advise, without leaving their corpus.',
+    title: 'Healthcare & life sciences',
+    intro: 'Clinical documentation, research data, patient records, and regulatory submissions are among the most sensitive documents in any organisation. Anvax gives clinical, compliance, and research teams a workspace where PHI never leaves the facility and every query is auditable — by construction, not configuration.',
     roles: [
-      { role: 'Relationship manager', uc: 'Summarise client portfolio, draft suitability note, flag product risks' },
-      { role: 'Research analyst', uc: 'Synthesise company filings, generate research briefs, track SEBI disclosures' },
-      { role: 'Compliance officer', uc: 'Track SEBI regulations, verify KYC completeness, audit advice trail' },
+      { role: 'Clinical researcher', uc: 'Synthesise trial data, draft regulatory submissions, cross-reference literature' },
+      { role: 'Medical affairs', uc: 'Summarise clinical evidence, prepare advisory board materials, cross-reference label' },
+      { role: 'Compliance officer', uc: 'Track FDA, EMA, and local guidance; verify documentation completeness; maintain audit trail' },
     ],
-    corpus: ['Portfolio data', 'SEBI regulations', 'Research reports', 'Company filings', 'Client KYC'],
+    corpus: ['Clinical trial protocols and results', 'Regulatory guidance and submissions', 'Patient records (de-identified)', 'Research literature', 'Internal SOPs'],
   },
   {
-    id: 'lending',
-    tag: 'Lending',
+    id: 'legal',
+    tag: 'Legal',
     tagVariant: 'next',
-    title: 'Lending',
-    intro: 'Underwriting at scale requires pulling together bank statements, GST returns, ITR filings, bureau reports, and internal credit policy, often across dozens of documents per application. Anvax automates the aggregation and surface anomaly flags so underwriters spend time on decisions, not data gathering.',
+    title: 'Legal & professional services',
+    intro: 'Matter files, contracts, M&A diligence, and privileged communications are the most confidential documents any firm handles — and none of them can go into a shared AI. Anvax gives practitioners a workspace over their own corpus with full privilege protection and an audit trail that satisfies bar council requirements.',
     roles: [
-      { role: 'Underwriter', uc: 'Aggregate applicant data, flag anomalies, draft credit memo' },
-      { role: 'Risk manager', uc: 'Monitor portfolio risk, generate risk reports, track RBI limits' },
-      { role: 'Collections officer', uc: 'Summarise account history, draft outreach templates, log contacts' },
+      { role: 'Associate / solicitor', uc: 'Research precedents, draft documents, cross-reference matter files' },
+      { role: 'Partner', uc: 'Matter summaries, client briefings, risk and scope assessments' },
+      { role: 'Compliance / professional responsibility', uc: 'Track regulatory guidance, verify matter compliance, maintain the audit trail' },
     ],
-    corpus: ['Bank statements', 'GST returns', 'ITR filings', 'Bureau reports', 'RBI circulars', 'Internal credit policy'],
+    corpus: ['Matter files and correspondence', 'Contracts and precedent library', 'Regulatory guidance and case law', 'Client documents and filings'],
   },
   {
-    id: 'insurance',
-    tag: 'Insurance',
+    id: 'public-sector',
+    tag: 'Public sector',
     tagVariant: 'roadmap',
-    title: 'Insurance',
-    intro: 'IRDAI disclosure requirements, proposal processing, and claims assessment all generate large volumes of semi-structured documents. Anvax connects to policy documents and IRDAI regulations so underwriters and claims assessors can work faster without compliance risk.',
+    title: 'Public sector & government',
+    intro: 'Government agencies and public bodies face strict data sovereignty requirements — often mandating that no citizen data leaves the jurisdiction. Anvax deploys fully on-prem or on sovereign cloud infrastructure, with no outbound network dependency. The same product; the same capability; inside your facility.',
     roles: [
-      { role: 'Underwriter', uc: 'Analyse proposal forms, assess risk factors, draft terms and conditions' },
-      { role: 'Claims assessor', uc: 'Summarise claims files, verify policy coverage, generate assessment report' },
-      { role: 'Compliance officer', uc: 'Track IRDAI regulations, verify disclosure completeness, audit trail' },
+      { role: 'Policy analyst', uc: 'Research legislation, draft briefings, cross-reference regulations and precedents' },
+      { role: 'Procurement officer', uc: 'Supplier assessment, contract review, compliance verification against frameworks' },
+      { role: 'IT / security lead', uc: 'Governance documentation, access audit trail, incident reporting and reconstruction' },
     ],
-    corpus: ['Policy documents', 'IRDAI regulations', 'Proposal forms', 'Claims files', 'Medical records'],
+    corpus: ['Legislation and regulations', 'Policy documents and guidance', 'Procurement frameworks and contracts', 'Internal reports and briefings'],
   },
   {
-    id: 'broking',
-    tag: 'Broking',
+    id: 'defence',
+    tag: 'Defence',
     tagVariant: 'roadmap',
-    title: 'Broking',
-    intro: 'SEBI circular volume has grown 40% in three years. Broking compliance teams drown in classification and triage before they can start impact analysis. Anvax automates circular ingestion, summarisation, and team routing so compliance officers focus on interpretation, not administration.',
+    title: 'Defence & critical infrastructure',
+    intro: 'Classified environments require complete air-gap. Anvax\'s on-prem tier has no outbound network dependency — no cloud API, no model call that leaves the building. The full capability stack runs inside the facility, on hardware you control.',
     roles: [
-      { role: 'Compliance officer', uc: 'Triage SEBI circulars, draft compliance notes, maintain regulatory register' },
-      { role: 'Surveillance analyst', uc: 'Analyse trading patterns, flag anomalies, generate surveillance reports' },
-      { role: 'Research analyst', uc: 'Synthesise company filings, generate research briefs, track regulatory changes' },
+      { role: 'Intelligence analyst', uc: 'Document synthesis, structured reporting, cross-reference across classified sources' },
+      { role: 'Procurement specialist', uc: 'Supplier risk assessment, contract review, compliance documentation' },
+      { role: 'Security officer', uc: 'Governance documentation, incident log, audit trail reconstruction' },
     ],
-    corpus: ['SEBI circulars', 'Trading data', 'Company filings', 'Research reports', 'Internal policies'],
+    corpus: ['Classified and restricted documents', 'Technical specifications and manuals', 'Procurement and contract files', 'Incident and intelligence reports'],
   },
   {
-    id: 'payments',
-    tag: 'Payments',
+    id: 'technology',
+    tag: 'Technology',
     tagVariant: 'roadmap',
-    title: 'Payments',
-    intro: 'RBI PSO regulations, CERT-In incident obligations, and merchant agreement management all require constant compliance monitoring. Anvax gives payment operations teams a single workspace for regulatory compliance, risk monitoring, and merchant governance.',
+    title: 'Technology & SaaS',
+    intro: 'Fast-growing technology companies increasingly handle sensitive customer data under contracts that prohibit sharing with AI vendors. Anvax gives engineering, legal, and product teams a governed AI workspace over their internal knowledge base — Confluence, docs, tickets, code — without the DPA headache.',
     roles: [
-      { role: 'Compliance officer', uc: 'Track RBI PSO circulars, draft compliance responses, maintain obligations register' },
-      { role: 'Risk analyst', uc: 'Monitor transaction logs for anomalies, generate risk reports, flag threshold breaches' },
-      { role: 'Ops manager', uc: 'Manage merchant agreements, track SLA compliance, generate ops reports' },
+      { role: 'Engineer', uc: 'Search internal docs and code, ask architecture questions, generate technical summaries' },
+      { role: 'Legal / compliance', uc: 'Review contracts, track regulatory obligations, manage DPA inventory' },
+      { role: 'Product manager', uc: 'Synthesise user research, generate requirements docs, cross-reference product specs' },
     ],
-    corpus: ['RBI PSO circulars', 'CERT-In regulations', 'Transaction logs', 'Merchant agreements', 'GST + MCA data'],
+    corpus: ['Engineering documentation and code', 'Product specs and roadmaps', 'Legal and compliance documents', 'Customer research and feedback', 'Internal knowledge base'],
   },
 ]
 
 export default function IndustriesClient() {
-  const [open, setOpen] = useState<string>('nbfc')
+  const [open, setOpen] = useState<string>('financial-services')
 
   return (
     <>
@@ -113,12 +113,12 @@ export default function IndustriesClient() {
           <div className={styles.heroInner}>
             <p className={styles.heroEyebrow}>Industries</p>
             <h1 className={styles.heroH1}>
-              NBFC first.<br />
-              Then the rest of regulated India.
+              Defined by constraint,<br />
+              not by industry.
             </h1>
             <p className={styles.heroLede}>
-              Each vertical ships with a pre-built corpus schema, workflow library, role packs,
-              and regulatory connector set, not a horizontal AI with a compliance checkbox.
+              Every vertical ships with a pre-built corpus schema, workflow library, role packs,
+              and jurisdiction pack — not a horizontal AI with a compliance checkbox.
             </p>
           </div>
         </div>
@@ -129,8 +129,8 @@ export default function IndustriesClient() {
         <div className="container">
           <SectionHead
             eyebrow="Verticals"
-            title="Regulated India, vertical by vertical."
-            lede="Start with your sector. Get the corpus schema, workflow templates, and regulatory connector set built for your regulator."
+            title="Every sector where 'no' to public AI is policy."
+            lede="The buyer in each vertical shares one constraint — their data cannot leave the building. These six sectors are where that constraint is sharpest."
           />
           <div className={styles.accordionList}>
             {verticals.map((v) => {
