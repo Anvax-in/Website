@@ -6,40 +6,40 @@ import styles from '@/pages/Deployment.module.css'
 const tiers = [
   {
     icon: '☁️',
-    name: 'SaaS',
-    tagLine: 'Start in hours',
-    desc: 'Fully managed. Anvax hosts, monitors, and maintains the infrastructure. Shared compute, dedicated data plane. Fastest path to production.',
+    name: 'Private cloud',
+    tagLine: 'Any region, your account',
+    desc: 'Dedicated deployment in your own AWS, Azure, or GCP account. You own the infrastructure; Anvax manages the application layer. Available in any region — US, EU, Gulf, Asia.',
     features: [
-      'Shared compute, isolated data',
-      'Anvax-managed updates',
+      'Your cloud account, any hyperscaler',
+      'Any region — no data-residency constraint',
+      'Anvax-managed application layer',
       'Standard SLA (99.9%)',
-      'Hosted in India',
-      'All India-stack connectors',
+      'Full enterprise connector stack',
     ],
     featured: false,
   },
   {
     icon: '🏛️',
-    name: 'Sovereign',
-    tagLine: 'Your VPC, our product',
-    desc: 'Deployed into your AWS or Azure VPC. You own the infrastructure. Anvax manages the application layer. Preferred by tier-1 NBFCs and listed entities.',
+    name: 'Sovereign cloud',
+    tagLine: 'In-country by design',
+    desc: 'Deployed on a regional sovereign or in-country cloud partner. Data stays within the jurisdiction by construction. Preferred by regulated financial services, public sector, and enterprises with explicit data-residency mandates.',
     features: [
-      'Customer VPC in India region',
-      'No Anvax access to customer data',
+      'In-country cloud partners',
+      'Gulf, EU, India, SEA options',
+      'No cross-border data transfer',
       'Custom SLA negotiated',
-      'SSO, SCIM, RBAC',
       'Full compliance documentation',
     ],
     featured: true,
   },
   {
     icon: '🔒',
-    name: 'On-prem',
-    tagLine: 'Air-gapped option',
-    desc: 'Deployed on your own hardware. No egress to Anvax infrastructure. Full air-gap option available for institutions with strict data sovereignty requirements.',
+    name: 'On-prem / air-gapped',
+    tagLine: 'Inside your facility',
+    desc: 'Deployed on your own hardware. No egress to Anvax or any cloud infrastructure. Full air-gap available for institutions with strict data sovereignty requirements — banks, defence-adjacent, critical infrastructure, government.',
     features: [
-      'Customer hardware',
-      'Air-gapped deployment available',
+      'Customer data centre',
+      'No outbound network required',
       'Offline model serving',
       'Annual update cadence',
       'Dedicated support engineer',
@@ -53,23 +53,23 @@ const productNodes = [
   { name: 'Chat', sub: 'Multi-turn RAG' },
   { name: 'Workflows', sub: 'Node graph builder' },
   { name: 'Agents', sub: 'Persistent monitors' },
-  { name: 'Connectors', sub: 'India stack' },
+  { name: 'Connectors', sub: 'Enterprise stack' },
   { name: 'Audit trail', sub: 'Immutable log' },
   { name: 'RLS engine', sub: 'Per-tenant' },
   { name: 'PII guard', sub: 'Auto-redact' },
 ]
 
 const tierCells = [
-  { name: 'SaaS', note: 'Shared compute' },
-  { name: 'Sovereign', note: 'Customer VPC' },
-  { name: 'On-prem', note: 'Customer HW' },
+  { name: 'Private cloud', note: 'Your cloud account' },
+  { name: 'Sovereign cloud', note: 'In-country partner' },
+  { name: 'On-prem', note: 'Customer data centre' },
 ]
 
 export const metadata: Metadata = {
   title: 'Deployment | Anvax',
-  description: 'SaaS to air-gapped. Same product, three tiers. All data stays in India.',
-  openGraph: { title: 'Deployment | Anvax', description: 'SaaS to air-gapped. Same product, three tiers.', url: 'https://www.anvax.in/deployment' },
-  twitter: { card: 'summary_large_image', title: 'Deployment | Anvax', description: 'SaaS to air-gapped. Same product, three tiers.' },
+  description: 'Private cloud to air-gapped on-prem. Same product, three tiers. In-region by default, in-country on request.',
+  openGraph: { title: 'Deployment | Anvax', description: 'Private cloud to air-gapped on-prem. Same product, three tiers. In-region by default, in-country on request.', url: 'https://www.anvax.in/deployment' },
+  twitter: { card: 'summary_large_image', title: 'Deployment | Anvax', description: 'Private cloud to air-gapped on-prem. Same product, three tiers.' },
   alternates: { canonical: 'https://www.anvax.in/deployment' },
 }
 
@@ -85,8 +85,9 @@ export default function Deployment() {
               Same product.<br />Three tiers.
             </h1>
             <p className={styles.heroLede}>
-              From shared SaaS to air-gapped on-prem. The same product, the same feature set,
-              and the same India-stack connectors. Your tier choice is a data control decision, not a feature trade-off.
+              From private cloud in your own AWS or Azure to air-gapped on-prem. The same product,
+              the same feature set, the same enterprise connectors. Your tier choice is a data
+              control decision, not a feature trade-off.
             </p>
           </div>
         </div>
@@ -97,7 +98,7 @@ export default function Deployment() {
         <div className="container">
           <SectionHead
             eyebrow="Tiers"
-            title="Four ways to deploy. One codebase."
+            title="Three tiers. One codebase."
             lede="Pick the tier that matches your data control requirements. You can migrate up without re-implementation."
           />
           <div className={styles.tierGrid}>
@@ -161,11 +162,11 @@ export default function Deployment() {
         <div className="container">
           <p className={styles.residencyEyebrow}>Data residency commitment</p>
           <h2 className={styles.residencyH2}>
-            All customer data, embeddings, and inference traces stay in India.
-            Regardless of tier.
+            All customer data, embeddings, and inference traces stay in your region.
+            In-country on request.
           </h2>
           <p className={styles.residencyNote}>
-            All data hosted in India · No cross-border data transfer · DPDP Act 2023 compliant
+            In-region by default · In-country on request · GDPR, DPDP, PDPL residency options
           </p>
           <div style={{ marginTop: 32, display: 'flex', justifyContent: 'center', gap: 12 }}>
             <Button variant="accent" href="/trust" arrow>Read the architecture</Button>
