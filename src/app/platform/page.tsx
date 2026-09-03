@@ -235,11 +235,7 @@ export default function Platform() {
           <div className={styles.logoGrid}>
             {logoTiles.map((tile) => (
               <div key={tile.name} className={styles.logoTile}>
-                {'mono' in tile ? (
-                  <div className={styles.logoMark}>{tile.mono}</div>
-                ) : (
-                  <Image src={tile.src} alt={tile.name} width={48} height={48} className={styles.logoImg} style={{ objectFit: 'contain' }} />
-                )}
+                <Image src={tile.src} alt={tile.name} width={48} height={48} className={styles.logoImg} style={{ objectFit: 'contain' }} />
                 <span className={styles.logoName}>{tile.name}</span>
                 <span className={styles.logoKind}>{tile.kind}</span>
               </div>
