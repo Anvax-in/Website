@@ -15,7 +15,7 @@ const values = [
   },
   {
     h3: 'The examiner is always in the room',
-    desc: 'We build every feature as though an RBI examiner will ask about it during an inspection. Not because they always will, but because that\'s the bar that actually protects our customers.',
+    desc: 'We build every feature as though a compliance examiner will ask about it during an inspection. Not because they always will, but because that\'s the bar that actually protects our customers.',
   },
 ]
 
@@ -42,9 +42,9 @@ const openRoles = [
 
 export const metadata: Metadata = {
   title: 'Company | Anvax',
-  description: "Who we are, what we're building, and why we started with India's hardest market.",
-  openGraph: { title: 'Company | Anvax', description: "Who we are, what we're building.", url: 'https://www.anvax.in/company' },
-  twitter: { card: 'summary_large_image', title: 'Company | Anvax', description: "Who we are, what we're building." },
+  description: "Who we are, what we're building, and why we started in the world's hardest data-residency market.",
+  openGraph: { title: 'Company | Anvax', description: "Who we are, what we're building, and why we started in the world's hardest data-residency market.", url: 'https://www.anvax.in/company' },
+  twitter: { card: 'summary_large_image', title: 'Company | Anvax', description: "Built under the hardest data-residency regime. Sold everywhere data cannot leave." },
   alternates: { canonical: 'https://www.anvax.in/company' },
 }
 
@@ -61,8 +61,9 @@ export default function Company() {
               is actually hard.
             </h1>
             <p className={styles.heroLede}>
-              India's regulated enterprises, NBFC, wealth, lending, insurance, carry the strictest
-              audit obligations and the least tolerance for AI hallucination. We built for them first.
+              Regulated enterprises carry the strictest audit obligations and the least tolerance
+              for AI hallucination. We built under the hardest data-residency regime in the world —
+              which is why the product is credible in every other one.
             </p>
           </div>
         </div>
@@ -81,21 +82,23 @@ export default function Company() {
             </blockquote>
             <div className={styles.visionBody}>
               <p className={styles.visionPara}>
-                We started Anvax after watching compliance teams at Indian NBFCs and wealth managers
-                spend more time on manual document triage than on actual risk analysis. Not because
-                they lacked intelligence, because the tools they had were built for a different market,
+                We started Anvax after watching compliance teams at NBFCs and wealth managers spend
+                more time on manual document triage than on actual risk analysis. Not because they
+                lacked intelligence — because the tools they had were built for a different market,
                 a different regulator, and a different risk culture.
               </p>
               <p className={styles.visionPara}>
-                US incumbents built horizontal AI and added compliance features later. We built for
-                RBI, SEBI, and IRDAI from day one, wiring in the India stack (Account Aggregator,
-                GST Portal, MCA21, DigiLocker) before we built the product interface. The compliance
-                layer is not a feature you configure. It is the foundation.
+                The incumbents built horizontal AI and added compliance features later. We did the
+                opposite: started in one of the strictest data-residency and AI-governance regimes
+                in the world, and built the governance layer first. The audit chain, the policy
+                engine, the residency controls were production requirements before they were selling
+                points. That origin is why the product is credible everywhere data cannot leave.
               </p>
               <p className={styles.visionPara}>
-                Our goal: every analyst at every regulated Indian enterprise has a workspace where
-                they can search their corpus, run their workflows, and produce audit-ready outputs -
-                without their CISO losing sleep or their examiner asking hard questions.
+                Our goal: every compliance team at every regulated enterprise — in London, Dubai,
+                Singapore, or Mumbai — has a workspace where they can search their corpus, run
+                their workflows, and produce audit-ready outputs, without their CISO losing sleep
+                or their examiner asking hard questions.
               </p>
             </div>
           </div>
