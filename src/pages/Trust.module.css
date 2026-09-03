@@ -332,6 +332,49 @@
   margin: 0;
 }
 
+/* Framework mappings — tab bar */
+.mappingsTabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin: 40px 0 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.mappingsTabs::-webkit-scrollbar { display: none; }
+.mappingsTab {
+  padding: 12px 18px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--fg-3);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+  margin-bottom: -1px;
+  font: inherit;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+.mappingsTab:hover { color: var(--ink-900); }
+.mappingsTabActive {
+  color: var(--ink-900);
+  border-bottom: 2px solid var(--amber-600);
+  margin-bottom: -1px;
+}
+.mappingsSubtitle {
+  font-size: 14px;
+  color: var(--fg-2);
+  margin: 20px 0 24px;
+  line-height: 22px;
+}
+
+/* Framework mappings — reuses freeAiGrid / freeAiCard */
+
 /* RBI FREE-AI — control cards */
 .freeAiGrid {
   display: grid;
