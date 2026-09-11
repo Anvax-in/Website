@@ -1,86 +1,95 @@
-/* Footer.module.css */
+/* Footer — values from docs/redesign-spec/html/desktop/11-footer.html
+   The canvas has no footer breakpoints; the stacking below is written here. */
+
 .footer {
-  background: var(--bone-100);
-  border-top: 2px solid var(--border);
-  padding: 72px 0 36px;
+  width: 100%;
+  background: var(--ink-950);
+  padding: var(--space-11) 0 var(--space-8);
 }
+.inner {
+  max-width: var(--site-max);
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+}
+
 .grid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
-  gap: 36px;
+  grid-template-columns: 1.7fr 1fr 1fr 1fr;
+  gap: var(--space-8);
 }
-.brandLogo { display: flex; align-items: center; gap: 8px; }
-.brandIcon { height: 28px; width: 28px; }
+
+/* ---- brand ---- */
+.brand { display: flex; align-items: center; gap: 9px; }
+.brandLogo { height: 40px; width: auto; }
 .brandName {
-  font-family: var(--font-sans);
-  font-weight: 800;
-  font-size: 18px;
-  color: var(--ink-900);
+  font-weight: var(--weight-black);
+  font-size: var(--type-h5-size);
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
+  color: var(--paper);
 }
-.brand p {
-  margin-top: 14px;
-  font-size: 13px;
-  line-height: 20px;
-  color: var(--ink-500);
-  max-width: 36ch;
+.blurb {
+  margin-top: var(--space-4);
+  font-size: 13.5px;
+  line-height: 22px;
+  color: var(--fg-on-dark-2);
+  max-width: 34ch;
 }
-.col h4 {
-  font-family: var(--font-sans);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--fg-3);
-  margin-bottom: 16px;
+
+/* ---- columns ---- */
+.colTitle {
+  font-size: 11.5px;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--type-pill-track);
+  text-transform: uppercase;
+  color: var(--fg-on-dark-2);
+  margin: 0 0 var(--space-4);
 }
-.col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
-.col a { font-size: 14px; color: var(--ink-900); text-decoration: none; }
-.col a:hover { color: var(--amber-700); }
+.colList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.colLink {
+  font-size: var(--type-small-size);
+  color: var(--fg-on-dark-3);
+  text-decoration: none;
+  transition: color var(--dur-base) var(--ease-out);
+}
+.colLink:hover { color: var(--paper); }
+
+/* ---- legal bar ---- */
 .legal {
-  margin-top: 56px;
-  padding-top: 24px;
-  border-top: 2px solid var(--border);
+  margin-top: var(--space-10);
+  padding-top: 26px;
+  border-top: var(--rule-hair) solid var(--border-on-ink);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  font-family: var(--font-sans);
-  font-size: 13px;
-  color: var(--fg-3);
-  letter-spacing: 0.01em;
-}
-.certTracker {
-  display: inline-flex;
-  align-items: center;
-  gap: 20px;
+  gap: var(--space-4);
   flex-wrap: wrap;
+  font-size: var(--type-caption-size);
+  color: var(--fg-on-dark-2);
 }
-.certItem {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12px;
-  color: var(--fg-3);
+.legalLinks { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+.legalLink {
+  color: var(--fg-on-dark-2);
+  text-decoration: none;
+  transition: color var(--dur-base) var(--ease-out);
 }
-.certDot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.certDot_amber { background: var(--amber-600); }
-.certDot_green { background: #4caf7d; }
+.legalLink:hover { color: var(--paper); }
+.certs { display: flex; gap: 22px; flex-wrap: wrap; }
+.certOk { color: var(--sage-600); }
 
-@media (max-width: 1100px) {
-  .grid { grid-template-columns: 1fr 1fr; }
-  .brand { grid-column: span 2; }
-}
 @media (max-width: 960px) {
-  .grid { grid-template-columns: 1fr 1fr; }
-  .brand { grid-column: span 2; }
+  .grid { grid-template-columns: 1fr 1fr; gap: var(--space-8) var(--space-7); }
 }
-@media (max-width: 600px) {
-  .legal { flex-direction: column; align-items: flex-start; gap: 12px; }
-  .certTracker { gap: 12px; }
+@media (max-width: 560px) {
+  .footer { padding: var(--space-9) 0 var(--space-7); }
+  .inner  { padding: 0 var(--site-gutter-sm); }
+  .grid   { grid-template-columns: 1fr; gap: var(--space-7); }
+  .legal  { flex-direction: column; align-items: flex-start; gap: var(--space-3); }
 }
