@@ -1,0 +1,82 @@
+[
+  {
+    "i": 0,
+    "css": "background:var(--bone-100)"
+  },
+  {
+    "i": 1,
+    "css": "color:var(--blue-600)"
+  },
+  {
+    "i": 2,
+    "css": "color:var(--blue-600)"
+  },
+  {
+    "i": 3,
+    "css": "background:var(--bone-100);border-color:var(--ink-900)"
+  },
+  {
+    "i": 4,
+    "css": "background:var(--bone-100)"
+  },
+  {
+    "i": 5,
+    "css": "color:var(--blue-600)"
+  },
+  {
+    "i": 6,
+    "css": "color:var(--blue-600)"
+  },
+  {
+    "i": 7,
+    "css": "background:var(--bone-25)"
+  },
+  {
+    "i": 8,
+    "css": "box-shadow:var(--shadow-md)"
+  },
+  {
+    "i": 9,
+    "css": "box-shadow:var(--shadow-md)"
+  },
+  {
+    "i": 10,
+    "css": "box-shadow:var(--shadow-md)"
+  },
+  {
+    "i": 11,
+    "css": "transform:translateY(-3px)"
+  },
+  {
+    "i": 12,
+    "css": "transform:translateY(-3px)"
+  },
+  {
+    "i": 13,
+    "css": "transform:translateY(-3px)"
+  },
+  {
+    "i": 14,
+    "css": "transform:translateY(-3px)"
+  },
+  {
+    "i": 15,
+    "css": "transform:translateY(-3px)"
+  },
+  {
+    "i": 16,
+    "css": "transform:translateY(-3px)"
+  },
+  {
+    "i": 17,
+    "css": "transform:translateY(-4px);box-shadow:0 12px 32px rgba(31,37,46,0.13)"
+  },
+  {
+    "i": 18,
+    "css": "background:var(--bone-25)"
+  },
+  {
+    "i": 19,
+    "css": "color:var(--paper)"
+  }
+]

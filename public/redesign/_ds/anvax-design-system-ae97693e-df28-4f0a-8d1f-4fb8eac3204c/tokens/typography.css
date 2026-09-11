@@ -1,0 +1,47 @@
+/* Typography. --font-serif is an alias for the sans: the Neco display face was
+   retired and sitewide headline rules still reference --font-serif. */
+:root {
+  --font-sans:  Archivo, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:  "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-serif: var(--font-sans);
+
+  --font-heading:        var(--font-sans);
+  --font-heading-weight: 800;
+
+  /* Weights actually loaded */
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-semibold:600;
+  --weight-bold:    700;
+  --weight-black:   800;
+
+  /* Type scale, as used on the site (size / line-height / tracking) */
+  --type-hero-size: clamp(36px, 5.2vw, 68px);
+  --type-hero-line: clamp(40px, 5.5vw, 74px);
+  --type-hero-track: -0.02em;
+
+  --type-h1-size: 50px;   --type-h1-line: 60px;   --type-h1-track: -0.018em;
+  --type-h2-size: 32px;   --type-h2-line: 42px;   --type-h2-track: -0.015em;
+  --type-h3-size: 26px;   --type-h3-line: 32px;   --type-h3-track: -0.008em;
+  --type-h4-size: 20px;   --type-h4-line: 26px;   --type-h4-track: 0;
+  --type-h5-size: 19px;   --type-h5-line: 24px;   --type-h5-track: 0;
+
+  --type-lede-size: 20px;     --type-lede-line: 30px;
+  --type-body-size: 16px;     --type-body-line: 26px;
+  --type-prose-size: 17px;    --type-prose-line: 28px;
+  --type-small-size: 14px;    --type-small-line: 22px;
+  --type-caption-size: 13px;  --type-caption-line: 20px;
+  --type-micro-size: 12px;    --type-micro-line: 16px;
+
+  /* Mono label — eyebrows, status pills, table headers */
+  --type-label-size: 11px;
+  --type-label-track: 0.02em;
+  --type-pill-size: 10px;
+  --type-pill-track: 0.08em;
+
+  /* Semantic text roles */
+  --text-heading: var(--fg-1);
+  --text-body:    var(--fg-2);
+  --text-muted:   var(--fg-3);
+  --text-link:    var(--accent);
+}

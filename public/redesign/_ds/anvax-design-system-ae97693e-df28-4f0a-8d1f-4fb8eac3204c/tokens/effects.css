@@ -1,0 +1,31 @@
+/* Shadows, motion, textures. */
+:root {
+  --shadow-pop:  0 1px 2px rgba(31, 37, 46, 0.07),  0 8px 24px rgba(31, 37, 46, 0.09);
+  --shadow-lift: 0 1px 2px rgba(31, 37, 46, 0.09),  0 16px 40px rgba(31, 37, 46, 0.13);
+  --shadow-sm:   0 1px 2px rgba(31, 37, 46, 0.14);
+  --shadow-md:   0 3px 10px rgba(31, 37, 46, 0.16);
+  --shadow-lg:   0 12px 32px rgba(31, 37, 46, 0.22);
+
+  --ease-out: cubic-bezier(0.2, 0, 0, 1); /* @kind other */
+  --dur-fast: 120ms; /* @kind other */
+  --dur-base: 180ms; /* @kind other */
+
+  /* Hover wash used on rows and cards */
+  --hover-wash: rgba(31, 37, 46, 0.04);
+
+  /* Backdrop blur used by the sticky nav */
+  --nav-blur: blur(18px) saturate(140%); /* @kind other */
+  --nav-bg:   rgba(255, 255, 255, 0.88);
+
+  /* Button sheen — primary/accent buttons get a 1px-scale vertical gradient */
+  --sheen-primary: linear-gradient(180deg, rgba(244,240,229,0.06), rgba(0,0,0,0.18)); /* @kind color */
+  --sheen-accent:  linear-gradient(180deg, rgba(255,255,255,0.10), rgba(0,0,0,0.06)); /* @kind color */
+
+  /* Page washes */
+  --wash-hero: linear-gradient(180deg, rgba(31,37,46,0.025) 0%, rgba(31,37,46,0.008) 55%, rgba(31,37,46,0) 100%); /* @kind color */
+  --wash-alt:  radial-gradient(120% 50% at 50% 0%, rgba(31,37,46,0.04) 0%, rgba(31,37,46,0) 60%); /* @kind color */
+  --gradient-cta: linear-gradient(135deg, var(--blue) 0%, var(--ink-900) 100%);
+
+  /* Lattice texture — dark hero backgrounds tile it at 220px, opacity 0.06 */
+  --texture-lattice: url("../assets/lattice.svg"); /* @kind other */
+}
