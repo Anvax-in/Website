@@ -4,15 +4,19 @@ import styles from './CtaSection.module.css'
 export default function CtaSection() {
   return (
     <section className={styles.section} id="demo">
-      <div className="container">
-        <h2 className={styles.h2}>
-          <span className={styles.line}>Bring your regulator</span>
-          <span className={styles.line}>into the room.</span>
-        </h2>
-        <p className={styles.body}>Show us the audit your CISO is preparing for and we&apos;ll show you what an examiner-ready AI workspace looks like, live, on your own corpus.</p>
+      <div className={styles.inner}>
+        <h2 className={styles.h2}>Bring your regulator into the room.</h2>
+        <p className={styles.body}>
+          We will run the demo on your corpus, in your tenancy, with the audit
+          trail switched on. Forty-five minutes.
+        </p>
         <div className={styles.actions}>
-          <Button variant="secondaryDark" href="/contact">Talk to sales</Button>
-          <Button variant="secondaryDark" href="/trust#downloads">Get the regulator pack</Button>
+          <a href="/contact" className={styles.bookDemo}>
+            Book a demo&nbsp;&nbsp;→
+          </a>
+          <Button variant="secondaryDark" href="/trust">
+            Request the security pack
+          </Button>
         </div>
       </div>
     </section>

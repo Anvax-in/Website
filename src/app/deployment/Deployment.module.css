@@ -1,0 +1,522 @@
+/* ── Hero ── */
+.hero {
+  width: 100%;
+  background: var(--ink-950);
+  border-bottom: 1px solid var(--border-on-ink);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroLattice {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--border-on-ink) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-on-ink) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(90% 70% at 50% 0%, #000 0%, transparent 75%);
+  pointer-events: none;
+}
+
+.heroInner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 104px 40px 112px;
+  position: relative;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--blue-400);
+  margin-bottom: 22px;
+}
+
+.h1 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(38px, 5vw, 66px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--paper);
+  max-width: 16ch;
+  margin: 0;
+}
+
+.heroLede {
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--fg-on-dark-2);
+  max-width: 54ch;
+  margin-top: 24px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 26px;
+  background-color: var(--blue-600);
+  background-image: var(--sheen-primary);
+  color: var(--paper);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+  border: 1px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--dur-base) var(--ease-out);
+}
+
+.btnPrimary:hover {
+  background-color: var(--blue-700);
+}
+
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 24px;
+  border: 1px solid var(--border-on-ink);
+  background: transparent;
+  color: var(--fg-on-dark-3);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out);
+}
+
+.btnGhost:hover {
+  background: var(--border-on-ink);
+  color: var(--paper);
+}
+
+/* ── Tiers section ── */
+.tiers {
+  width: 100%;
+  background: var(--paper);
+  border-bottom: 1px solid var(--bone-200);
+}
+
+.tiersInner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 104px 40px;
+}
+
+.sectionHead {
+  max-width: 720px;
+  margin-bottom: 56px;
+}
+
+.sectionEyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--blue-600);
+  margin-bottom: 18px;
+}
+
+.h2 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: clamp(30px, 3.4vw, 44px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--ink-900);
+  margin: 0;
+}
+
+.sectionLede {
+  font-size: 17px;
+  line-height: 28px;
+  color: var(--ink-500);
+  margin-top: 20px;
+}
+
+.tierGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--bone-200);
+  border: 1px solid var(--bone-200);
+}
+
+.tierCard {
+  background: var(--paper);
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  transition: background var(--dur-base) var(--ease-out);
+}
+
+.tierCard:hover {
+  background: var(--bone-25);
+}
+
+.tierIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-500);
+  margin-bottom: 20px;
+}
+
+.tierKicker {
+  font-size: 12.5px;
+  color: var(--slate-400);
+  margin-bottom: 12px;
+}
+
+.h3 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--ink-900);
+  margin: 0 0 14px;
+}
+
+.tierBody {
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--ink-500);
+  margin: 0 0 24px;
+  flex: 1;
+}
+
+.tierFeatures {
+  list-style: none;
+  margin: 0;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--bone-200);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.tierFeature {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  font-size: 13.5px;
+  line-height: 20px;
+  color: var(--ink-900);
+}
+
+/* ── Same-product diagram ── */
+.diagram {
+  width: 100%;
+  background: var(--bone-100);
+  border-bottom: 1px solid var(--bone-200);
+}
+
+.diagramInner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 104px 40px;
+}
+
+.diagramCard {
+  border: 1px solid var(--bone-200);
+  overflow: hidden;
+}
+
+.diagramTop {
+  background: var(--ink-950);
+  padding: 36px 40px;
+  border-bottom: 1px solid var(--border-on-ink);
+}
+
+.diagramTopLabel {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--fg-on-dark-2);
+  margin-bottom: 24px;
+}
+
+.diagramNodes {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.diagramNode {
+  background: var(--border-on-ink);
+  border: 1px solid #2E3740;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.diagramNodeName {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--paper);
+}
+
+.diagramNodeSub {
+  font-size: 11px;
+  color: var(--fg-on-dark-2);
+}
+
+.diagramBottom {
+  background: var(--paper);
+  padding: 28px 40px;
+}
+
+.diagramBottomLabel {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--slate-400);
+  margin-bottom: 18px;
+}
+
+.diagramTiers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--bone-200);
+  border: 1px solid var(--bone-200);
+}
+
+.diagramTierCell {
+  background: var(--bone-25);
+  padding: 18px 20px;
+}
+
+.diagramTierName {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-900);
+  margin-bottom: 4px;
+}
+
+.diagramTierNote {
+  font-size: 12.5px;
+  color: var(--slate-400);
+}
+
+/* ── Residency band ── */
+.residency {
+  width: 100%;
+  background: var(--paper);
+  border-bottom: 1px solid var(--bone-200);
+}
+
+.residencyInner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.residencyH2 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: clamp(26px, 2.8vw, 36px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink-900);
+  margin: 0 0 16px;
+}
+
+.residencyBody {
+  font-size: 16px;
+  line-height: 27px;
+  color: var(--ink-500);
+  margin: 0;
+}
+
+.residencyTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.residencyTag {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-900);
+  border: 1px solid var(--bone-250);
+  padding: 5px 12px;
+}
+
+.residencyJurisdictions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--bone-200);
+  border: 1px solid var(--bone-200);
+}
+
+.jurisdictionCell {
+  background: var(--bone-25);
+  padding: 20px 22px;
+}
+
+.jurisdictionRegion {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink-900);
+  margin-bottom: 4px;
+}
+
+.jurisdictionNote {
+  font-size: 12.5px;
+  color: var(--slate-400);
+}
+
+/* ── CTA band ── */
+.cta {
+  width: 100%;
+  background: var(--gradient-cta);
+}
+
+.ctaInner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 104px 40px;
+  text-align: center;
+}
+
+.ctaH2 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: clamp(30px, 3.8vw, 50px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+  max-width: 22ch;
+  margin: 0 auto;
+}
+
+.ctaBody {
+  font-size: 17px;
+  line-height: 28px;
+  color: var(--fg-on-cta);
+  max-width: 54ch;
+  margin: 20px auto 0;
+}
+
+.ctaActions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+.ctaBookDemo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 28px;
+  background: var(--paper);
+  color: var(--ink-950);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+  border: 1px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--dur-base) var(--ease-out);
+}
+
+.ctaBookDemo:hover {
+  background: var(--bone-100);
+}
+
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: var(--paper);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out);
+}
+
+.ctaSecondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .residencyInner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .residencyJurisdictions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .heroInner,
+  .tiersInner,
+  .diagramInner,
+  .residencyInner,
+  .ctaInner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .diagramTop,
+  .diagramBottom {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .tierGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .diagramTiers {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroInner { padding-top: 72px; padding-bottom: 80px; }
+  .tiersInner,
+  .diagramInner { padding-top: 72px; padding-bottom: 72px; }
+  .residencyInner { padding-top: 56px; padding-bottom: 56px; }
+  .ctaInner { padding-top: 80px; padding-bottom: 80px; }
+}

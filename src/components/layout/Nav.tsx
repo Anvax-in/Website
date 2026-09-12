@@ -10,12 +10,36 @@ import styles from './Nav.module.css'
    routes are unchanged. */
 
 const productMenu = [
-  { to: '/platform',            title: 'Overview',   body: 'One workspace, three surfaces' },
-  { to: '/platform/search',     title: 'Search',     body: 'Cited answers, scoped to entitlements' },
-  { to: '/platform/chat',       title: 'Chat',       body: 'Grounded threads, redacted pre-inference' },
-  { to: '/platform/agents',     title: 'Agents',     body: 'Policy-checked before every action' },
-  { to: '/platform/governance', title: 'Governance', body: 'Every query on the audit trail' },
-  { to: '/deployment',          title: 'Deployment', body: 'VPC, sovereign cloud, or air-gapped' },
+  {
+    to: '/platform/search',
+    title: 'Search',
+    body: 'Cited answers across every connected system',
+    icon: 'M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0',
+  },
+  {
+    to: '/platform/chat',
+    title: 'Chat',
+    body: 'Grounded conversation over your own corpus',
+    icon: 'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z',
+  },
+  {
+    to: '/platform/agents',
+    title: 'Agents',
+    body: 'Actions in your systems, checked against policy',
+    icon: 'M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2zM9 21h6',
+  },
+  {
+    to: '/platform/governance',
+    title: 'Governance',
+    body: 'Redaction, policy, and the full inference trail',
+    icon: 'M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6z',
+  },
+  {
+    to: '/platform#connectors',
+    title: 'Connectors',
+    body: 'M365, Slack, Salesforce, Snowflake and more',
+    icon: 'M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71',
+  },
 ]
 
 const links = [
@@ -77,10 +101,17 @@ export default function Nav() {
             </button>
             {menuOpen && (
               <div className={styles.mega}>
-                {productMenu.map(({ to, title, body }) => (
-                  <Link key={to} href={to} className={styles.megaItem}>
-                    <span className={styles.megaTitle}>{title}</span>
-                    <span className={styles.megaBody}>{body}</span>
+                {productMenu.map(({ to, title, body, icon }) => (
+                  <Link key={to} href={to} className={`${styles.megaItem} ${title === 'Connectors' ? styles.megaItemWide : ''}`}>
+                    <span className={styles.megaIcon} aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d={icon} />
+                      </svg>
+                    </span>
+                    <span className={styles.megaText}>
+                      <span className={styles.megaTitle}>{title}</span>
+                      <span className={styles.megaBody}>{body}</span>
+                    </span>
                   </Link>
                 ))}
               </div>

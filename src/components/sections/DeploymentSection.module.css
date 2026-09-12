@@ -1,6 +1,6 @@
 .section {
   width: 100%;
-  background: var(--bone-100);
+  background: var(--paper);
   border-bottom: 1px solid var(--bone-200);
 }
 
@@ -12,7 +12,7 @@
 
 .head {
   max-width: 720px;
-  margin-bottom: 60px;
+  margin-bottom: 56px;
 }
 
 .eyebrow {
@@ -33,10 +33,19 @@
   margin: 0;
 }
 
+.lede {
+  font-size: 17px;
+  line-height: 28px;
+  color: var(--ink-500);
+  margin-top: 20px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  gap: 1px;
+  background: var(--bone-200);
+  border: 1px solid var(--bone-200);
 }
 
 .card {
@@ -45,38 +54,37 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  transition: background var(--dur-base) var(--ease-out);
+}
+
+.card:hover {
+  background: var(--bone-25);
 }
 
 .iconWrap {
-  width: 48px;
-  height: 48px;
-  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  color: var(--ink-500);
 }
 
-.badge {
-  display: inline-flex;
-  align-items: center;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 4px 12px;
-  border: 1px solid var(--ink-900);
-  color: var(--ink-900);
-  background: transparent;
-  margin-bottom: 20px;
+.kicker {
+  font-size: 13px;
+  color: var(--slate-400);
+  margin-bottom: 12px;
 }
 
 .h3 {
   font-family: var(--font-heading);
-  font-size: 28px;
-  font-weight: 800;
-  line-height: 34px;
-  letter-spacing: -0.012em;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.01em;
   color: var(--ink-900);
-  margin: 0 0 14px;
+  margin: 0 0 16px;
 }
 
 .body {
@@ -95,12 +103,5 @@
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: 1px;
-    background: var(--bone-200);
-    border: 1px solid var(--bone-200);
-  }
-
-  .card {
-    gap: 0;
   }
 }

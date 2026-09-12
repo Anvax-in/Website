@@ -19,7 +19,6 @@ const solutions = [
   { to: '/industries#legal',              label: 'Legal' },
   { to: '/industries#public-sector',      label: 'Public sector' },
   { to: '/industries',                    label: 'All industries' },
-  { to: '/deployment',                    label: 'Deployment' },
 ]
 
 const company = [
@@ -35,7 +34,6 @@ const legal = [
   { to: '/docs',          label: 'Documentation' },
   { to: '/terms',         label: 'Terms' },
   { to: '/privacy',       label: 'Privacy' },
-  { to: '/subprocessors', label: 'Subprocessors' },
 ]
 
 function Col({ title, links }: { title: string; links: { to: string; label: string }[] }) {
@@ -80,8 +78,8 @@ export default function Footer() {
             ))}
           </span>
           <span className={styles.certs}>
-            <span>SOC 2 · audit underway</span>
-            <span>ISO 27001 · audit underway</span>
+            <span>SOC 2</span>
+            <span>ISO 27001</span>
             <span className={styles.certOk}>GDPR-ready</span>
           </span>
         </div>

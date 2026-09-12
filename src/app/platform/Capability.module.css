@@ -1,0 +1,403 @@
+/* ── Hero ── */
+.hero {
+  width: 100%;
+  background: var(--ink-950);
+  border-bottom: 1px solid var(--border-on-ink);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroLattice {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--border-on-ink) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-on-ink) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(90% 70% at 50% 0%, #000 0%, transparent 75%);
+  pointer-events: none;
+}
+
+.heroInner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 104px 40px 112px;
+  position: relative;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--blue-400);
+  margin-bottom: 22px;
+}
+
+.h1 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(36px, 5vw, 62px);
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  color: var(--paper);
+  max-width: 18ch;
+  margin: 0;
+}
+
+.heroLede {
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--fg-on-dark-2);
+  max-width: 54ch;
+  margin-top: 24px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 26px;
+  background-color: var(--blue-600);
+  background-image: var(--sheen-primary);
+  color: var(--paper);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+  border: 1px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--dur-base) var(--ease-out);
+}
+
+.btnPrimary:hover { background-color: var(--blue-700); }
+
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 24px;
+  border: 1px solid var(--border-on-ink);
+  background: transparent;
+  color: var(--fg-on-dark-3);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out);
+}
+
+.btnGhost:hover {
+  background: var(--border-on-ink);
+  color: var(--paper);
+}
+
+/* ── Sibling nav ── */
+.siblingNav {
+  width: 100%;
+  background: var(--paper);
+  border-bottom: 1px solid var(--bone-200);
+}
+
+.siblingNavInner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  gap: 0;
+}
+
+.siblingLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-500);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color var(--dur-base) var(--ease-out);
+}
+
+.siblingLink:hover { color: var(--ink-900); }
+
+.siblingLinkActive {
+  color: var(--ink-900);
+  border-bottom-color: var(--blue-600);
+}
+
+/* ── Features section ── */
+.features {
+  width: 100%;
+  background: var(--paper);
+  border-bottom: 1px solid var(--bone-200);
+}
+
+.featuresInner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 104px 40px;
+}
+
+.sectionHead {
+  max-width: 720px;
+  margin-bottom: 56px;
+}
+
+.sectionEyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--blue-600);
+  margin-bottom: 18px;
+}
+
+.h2 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: clamp(28px, 3.2vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--ink-900);
+  margin: 0;
+}
+
+.sectionLede {
+  font-size: 17px;
+  line-height: 28px;
+  color: var(--ink-500);
+  margin-top: 18px;
+}
+
+.featGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--bone-200);
+  border: 1px solid var(--bone-200);
+}
+
+.featCard {
+  background: var(--paper);
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  transition: background var(--dur-base) var(--ease-out);
+}
+
+.featCard:hover { background: var(--bone-25); }
+
+.featIconWrap {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.featTitle {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--ink-900);
+  margin: 0 0 12px;
+}
+
+.featBody {
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--ink-500);
+  margin: 0;
+  flex: 1;
+}
+
+/* ── Governed strip ── */
+.governed {
+  width: 100%;
+  background: var(--ink-950);
+  border-bottom: 1px solid var(--border-on-ink);
+}
+
+.governedInner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.governedEyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--blue-400);
+  margin-bottom: 18px;
+}
+
+.governedH2 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: clamp(26px, 2.8vw, 36px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+  margin: 0 0 48px;
+}
+
+.governedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--border-on-ink);
+  border: 1px solid var(--border-on-ink);
+}
+
+.governedItem {
+  background: var(--ink-950);
+  padding: 32px 32px;
+}
+
+.governedLabel {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--blue-400);
+  margin-bottom: 12px;
+}
+
+.governedBody {
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--fg-on-dark-2);
+  margin: 0;
+}
+
+.governedBody strong {
+  color: var(--paper);
+  font-weight: 600;
+}
+
+/* ── CTA band ── */
+.cta {
+  width: 100%;
+  background: var(--gradient-cta);
+}
+
+.ctaInner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 96px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.ctaH2 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+  margin: 0 0 12px;
+  max-width: 30ch;
+}
+
+.ctaBody {
+  font-size: 16px;
+  line-height: 27px;
+  color: var(--fg-on-cta);
+  margin: 0;
+  max-width: 44ch;
+}
+
+.ctaActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.ctaWhite {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 28px;
+  background: var(--paper);
+  color: var(--ink-950);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+  border: 1px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--dur-base) var(--ease-out);
+}
+
+.ctaWhite:hover { background: var(--bone-100); }
+
+.ctaOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: var(--paper);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out);
+}
+
+.ctaOutline:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .featGrid { grid-template-columns: 1fr; }
+  .governedGrid { grid-template-columns: 1fr; }
+  .ctaInner { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 760px) {
+  .heroInner,
+  .featuresInner,
+  .governedInner,
+  .ctaInner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .siblingNavInner { padding-left: 16px; padding-right: 16px; }
+  .siblingLink { padding: 14px 14px; font-size: 13px; }
+}
+
+@media (max-width: 600px) {
+  .heroInner { padding-top: 72px; padding-bottom: 80px; }
+  .featuresInner,
+  .governedInner { padding-top: 72px; padding-bottom: 72px; }
+  .ctaInner { padding-top: 72px; padding-bottom: 72px; }
+}

@@ -73,6 +73,7 @@
   --fg-on-dark-dim: rgba(255, 255, 255, 0.68);
   --fg-on-dark-2:   #8B95A3;  /* body copy on ink-950 */
   --fg-on-dark-3:   #C5CBD4;  /* links on ink-950 */
+  --fg-on-cta:      rgba(255, 255, 255, 0.82); /* lede on gradient-cta band */
 
   /* ---- Borders & rules ---- */
   --border:         var(--bone-200);
