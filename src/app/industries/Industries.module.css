@@ -19,8 +19,6 @@
 }
 
 .heroInner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 104px 40px 112px;
   position: relative;
 }
@@ -109,8 +107,6 @@
 }
 
 .verticalsInner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 104px 40px;
 }
 
@@ -296,8 +292,6 @@
 }
 
 .ctaInner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 96px 40px;
   display: flex;
   align-items: center;

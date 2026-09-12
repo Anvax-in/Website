@@ -20,8 +20,6 @@
 
 /* ── Inner container ── */
 .inner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 96px 40px 0;
   position: relative;
 }

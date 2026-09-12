@@ -69,8 +69,6 @@
 }
 
 .heroInner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 104px 40px 112px;
   position: relative;
 }
@@ -157,8 +155,6 @@
 }
 
 .subnavInner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 0 40px;
   display: flex;
   gap: 0;
@@ -195,8 +191,6 @@
 }
 
 .glanceInner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 56px 40px;
 }
 
@@ -237,8 +231,6 @@
 }
 
 .controlsInner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 104px 40px;
 }
 
@@ -296,8 +288,6 @@
 }
 
 .questionsInner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 104px 40px;
 }
 
@@ -346,8 +336,6 @@
 }
 
 .certsInner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 104px 40px;
 }
 
@@ -437,8 +425,6 @@
 }
 
 .mappingsInner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 104px 40px;
 }
 
@@ -537,8 +523,6 @@
 }
 
 .defenceInner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 104px 40px;
 }
 
@@ -646,8 +630,6 @@
 }
 
 .aiControlsInner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 104px 40px;
 }
 
@@ -701,8 +683,6 @@
 }
 
 .statsInner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 80px 40px;
 }
 
@@ -743,8 +723,6 @@
 }
 
 .faqInner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 104px 40px;
 }
 
@@ -809,8 +787,6 @@
 }
 
 .downloadsInner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 104px 40px;
 }
 
@@ -906,8 +882,6 @@
 }
 
 .ctaInner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 104px 40px;
   text-align: center;
 }
@@ -920,7 +894,6 @@
   letter-spacing: -0.02em;
   color: var(--paper);
   max-width: 24ch;
-  margin: 0 auto;
 }
 
 .ctaBody {
