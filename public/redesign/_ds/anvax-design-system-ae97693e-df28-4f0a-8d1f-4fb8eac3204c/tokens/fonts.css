@@ -1,0 +1,8 @@
+/* Webfonts.
+   Source of truth: anvax-website/src/app/layout.tsx loads Archivo via next/font/google
+   (weights 400/600/800 -> --font-sans) and GeistMono via the `geist` package
+   (-> --font-mono). No self-hosted binaries ship with this design system, so both
+   families are pulled from Google Fonts here. The legacy display faces
+   (Neco-Variable.woff2, GeneralSans-Variable.woff2) still sit in the website repo but
+   are no longer referenced by any rule — Archivo replaced them. */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap");

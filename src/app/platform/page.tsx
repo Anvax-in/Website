@@ -69,14 +69,14 @@ const moats = [
 
 const logoTiles = [
   // Row 1
-  { src: '/assets/logos/google-drive.svg', name: 'Google Drive', kind: 'Storage' },
-  { src: '/assets/logos/slack-new.svg', name: 'Slack', kind: 'Messaging' },
+  { src: '/assets/logos/drive.svg', name: 'Google Drive', kind: 'Storage' },
+  { src: '/assets/logos/slack.svg', name: 'Slack', kind: 'Messaging' },
   { src: '/assets/logos/microsoft-teams.svg', name: 'Microsoft Teams', kind: 'Messaging' },
   { src: '/assets/logos/gmail.svg', name: 'Gmail', kind: 'Email' },
   { src: '/assets/logos/dropbox.svg', name: 'Dropbox', kind: 'Storage' },
   { src: '/assets/logos/salesforce.svg', name: 'Salesforce', kind: 'CRM' },
   // Row 2
-  { src: '/assets/logos/sharepoint-new.svg', name: 'SharePoint', kind: 'Storage' },
+  { src: '/assets/logos/sharepoint.svg', name: 'SharePoint', kind: 'Storage' },
   { src: '/assets/logos/github.svg', name: 'GitHub', kind: 'Code' },
   { src: '/assets/logos/notion.svg', name: 'Notion', kind: 'Knowledge' },
   { src: '/assets/logos/jira.svg', name: 'Jira', kind: 'Project mgmt' },
@@ -100,16 +100,12 @@ const logoTiles = [
   { src: '/assets/logos/oracle-storage.svg', name: 'Oracle Storage', kind: 'Storage' },
   { src: '/assets/logos/cloudflare-r2.svg', name: 'Cloudflare R2', kind: 'Storage' },
   { src: '/assets/logos/coda.svg', name: 'Coda', kind: 'Knowledge' },
-  { src: '/assets/logos/rbi.png', name: 'RBI', kind: 'Regional · Regulator' },
-  { src: '/assets/logos/sebi.jpg', name: 'SEBI', kind: 'Regional · Regulator' },
-  { src: '/assets/logos/irdai.png', name: 'IRDAI', kind: 'Regional · Regulator' },
-  // Row 6
   { src: '/assets/logos/npci.svg', name: 'NPCI', kind: 'Regional · Payments' },
   { src: '/assets/logos/gst.png', name: 'GST Portal', kind: 'Regional · Tax' },
   { src: '/assets/logos/digilocker.svg', name: 'DigiLocker', kind: 'Regional · Identity' },
+  // Row 6
   { src: '/assets/logos/mca.png', name: 'MCA21', kind: 'Regional · Corporate' },
   { src: '/assets/logos/account-aggregator.svg', name: 'Account Aggregator', kind: 'Regional · Finance' },
-  { src: '/assets/logos/tally.png', name: 'Tally', kind: 'Regional · Ledger' },
   // Row 7
   { src: '/assets/logos/zoho.svg', name: 'Zoho Books', kind: 'Ledger' },
   { src: '/assets/logos/freshdesk.svg', name: 'Freshdesk', kind: 'Support' },
@@ -138,6 +134,11 @@ const logoTiles = [
   { src: '/assets/logos/wikipedia.svg', name: 'Wikipedia', kind: 'Web' },
   { src: '/assets/logos/mediawiki.svg', name: 'MediaWiki', kind: 'Knowledge' },
   { src: '/assets/logos/loopio.svg', name: 'Loopio', kind: 'RFP' },
+  // Row 11
+  { src: '/assets/logos/rbi.png', name: 'RBI', kind: 'Regional · Regulator' },
+  { src: '/assets/logos/sebi.jpg', name: 'SEBI', kind: 'Regional · Regulator' },
+  { src: '/assets/logos/irdai.png', name: 'IRDAI', kind: 'Regional · Regulator' },
+  { src: '/assets/logos/tally.png', name: 'Tally', kind: 'Regional · Ledger' },
 ]
 
 export const metadata: Metadata = {
@@ -225,7 +226,7 @@ export default function Platform() {
       </section>
 
       {/* Connector logo wall */}
-      <section className="section">
+      <section className="section" id="connectors">
         <div className="container">
           <SectionHead
             eyebrow="Connectors"

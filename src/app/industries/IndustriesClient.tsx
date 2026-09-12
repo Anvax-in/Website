@@ -1,19 +1,12 @@
 'use client'
 
 import { useState } from 'react'
-import SectionHead from '@/components/ui/SectionHead'
-import Tag from '@/components/ui/Tag'
-import styles from '@/pages/Industries.module.css'
+import styles from './Industries.module.css'
 
-interface Role {
-  role: string
-  uc: string
-}
-
+interface Role { role: string; uc: string }
 interface Vertical {
   id: string
-  tag: string
-  tagVariant: 'live' | 'next' | 'roadmap'
+  sector: string
   title: string
   intro: string
   roles: Role[]
@@ -23,8 +16,7 @@ interface Vertical {
 const verticals: Vertical[] = [
   {
     id: 'financial-services',
-    tag: 'Financial services',
-    tagVariant: 'live',
+    sector: 'Financial services',
     title: 'Financial services',
     intro: 'Banks, asset managers, insurers, and fintech companies operate under tighter AI governance requirements than almost any other sector. Anvax ships with corpus schemas, workflow libraries, and jurisdiction packs built for regulated financial services, whether your regulator is the FCA, FINRA, MAS, RBI, or SAMA.',
     roles: [
@@ -37,8 +29,7 @@ const verticals: Vertical[] = [
   },
   {
     id: 'healthcare',
-    tag: 'Healthcare',
-    tagVariant: 'live',
+    sector: 'Healthcare',
     title: 'Healthcare & life sciences',
     intro: 'Clinical documentation, research data, patient records, and regulatory submissions are among the most sensitive documents in any organisation. Anvax gives clinical, compliance, and research teams a workspace where PHI never leaves the facility and every query is auditable, by construction, not configuration.',
     roles: [
@@ -50,8 +41,7 @@ const verticals: Vertical[] = [
   },
   {
     id: 'legal',
-    tag: 'Legal',
-    tagVariant: 'live',
+    sector: 'Legal',
     title: 'Legal & professional services',
     intro: 'Matter files, contracts, M&A diligence, and privileged communications are the most confidential documents any firm handles, and none of them can go into a shared AI. Anvax gives practitioners a workspace over their own corpus with full privilege protection and an audit trail that satisfies bar council requirements.',
     roles: [
@@ -63,8 +53,7 @@ const verticals: Vertical[] = [
   },
   {
     id: 'public-sector',
-    tag: 'Public sector',
-    tagVariant: 'live',
+    sector: 'Public sector',
     title: 'Public sector & government',
     intro: 'Government agencies and public bodies face strict data sovereignty requirements, often mandating that no citizen data leaves the jurisdiction. Anvax deploys fully on-prem or on sovereign cloud infrastructure, with no outbound network dependency. The same product; the same capability; inside your facility.',
     roles: [
@@ -76,8 +65,7 @@ const verticals: Vertical[] = [
   },
   {
     id: 'defence',
-    tag: 'Defence',
-    tagVariant: 'live',
+    sector: 'Defence',
     title: 'Defence & critical infrastructure',
     intro: 'Classified environments require complete air-gap. Anvax\'s on-prem tier has no outbound network dependency, no cloud API, no model call that leaves the building. The full capability stack runs inside the facility, on hardware you control.',
     roles: [
@@ -89,8 +77,7 @@ const verticals: Vertical[] = [
   },
   {
     id: 'technology',
-    tag: 'Technology',
-    tagVariant: 'live',
+    sector: 'Technology',
     title: 'Technology & SaaS',
     intro: 'Fast-growing technology companies increasingly handle sensitive customer data under contracts that prohibit sharing with AI vendors. Anvax gives engineering, legal, and product teams a governed AI workspace over their internal knowledge base, Confluence, docs, tickets, code, without the DPA headache.',
     roles: [
@@ -109,43 +96,49 @@ export default function IndustriesClient() {
     <>
       {/* Hero */}
       <section className={styles.hero}>
-        <div className="container">
-          <div className={styles.heroInner}>
-            <p className={styles.heroEyebrow}>Industries</p>
-            <h1 className={styles.heroH1}>
-              Defined by constraint,<br />
-              not by industry.
-            </h1>
-            <p className={styles.heroLede}>
-              Every vertical ships with a pre-built corpus schema, workflow library, role packs,
-              and jurisdiction pack, not a horizontal AI with a compliance checkbox.
-            </p>
+        <div className={styles.heroLattice} aria-hidden="true" />
+        <div className={styles.heroInner}>
+          <div className={styles.eyebrow}>Industries</div>
+          <h1 className={styles.h1}>Defined by constraint, not by industry.</h1>
+          <p className={styles.heroLede}>
+            Every vertical ships with a pre-built corpus schema, workflow library, role
+            packs, and jurisdiction pack. Not a horizontal AI with a compliance checkbox.
+          </p>
+          <div className={styles.heroActions}>
+            <a href="/contact" className={styles.btnPrimary}>Book a demo →</a>
+            <a href="/platform" className={styles.btnGhost}>See the platform</a>
           </div>
         </div>
       </section>
 
       {/* Accordion */}
-      <section className="section">
-        <div className="container">
-          <SectionHead
-            eyebrow="Verticals"
-            title="Every sector where 'no' to public AI is policy."
-            lede="The buyer in each vertical shares one constraint, their data cannot leave the building. These six sectors are where that constraint is sharpest."
-          />
+      <section className={styles.verticals}>
+        <div className={styles.verticalsInner}>
+          <div className={styles.sectionHead}>
+            <div className={styles.sectionEyebrow}>Verticals</div>
+            <h2 className={styles.h2}>Every sector where "no" to public AI is policy.</h2>
+            <p className={styles.sectionLede}>
+              The buyer in each vertical shares one constraint: their data cannot leave
+              the building. These six sectors are where that constraint is sharpest.
+            </p>
+          </div>
+
           <div className={styles.accordionList}>
             {verticals.map((v) => {
               const isOpen = open === v.id
               return (
                 <div key={v.id} className={styles.accordionItem}>
                   <button
+                    type="button"
                     className={`${styles.accordionTrigger} ${isOpen ? styles.accordionTriggerOpen : ''}`}
                     onClick={() => setOpen(isOpen ? '' : v.id)}
                     aria-expanded={isOpen}
                   >
-                    <Tag variant={v.tagVariant}>{v.tag}</Tag>
+                    <span className={styles.accordionSector}>{v.sector}</span>
                     <span className={styles.accordionTitle}>{v.title}</span>
                     <span className={`${styles.accordionChevron} ${isOpen ? styles.accordionChevronOpen : ''}`}>▾</span>
                   </button>
+
                   {isOpen && (
                     <div className={styles.accordionBody}>
                       <div className={styles.accordionGrid}>
@@ -163,7 +156,7 @@ export default function IndustriesClient() {
                             <thead>
                               <tr>
                                 <th>Role</th>
-                                <th>What they do</th>
+                                <th>What they use Anvax for</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -182,6 +175,23 @@ export default function IndustriesClient() {
                 </div>
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className={styles.cta}>
+        <div className={styles.ctaInner}>
+          <div>
+            <h2 className={styles.ctaH2}>Your sector is not on the list?</h2>
+            <p className={styles.ctaBody}>
+              If your data cannot leave your perimeter, Anvax can run there. Tell us
+              your constraint and we will walk you through a deployment.
+            </p>
+          </div>
+          <div className={styles.ctaActions}>
+            <a href="/contact" className={styles.ctaWhite}>Book a demo →</a>
+            <a href="/deployment" className={styles.ctaOutline}>See deployment options</a>
           </div>
         </div>
       </section>

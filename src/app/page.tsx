@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import HeroSection from '@/components/sections/HeroSection'
+import StatsSection from '@/components/sections/StatsSection'
 import ProblemSection from '@/components/sections/ProblemSection'
+import ProductSection from '@/components/sections/ProductSection'
+import ConnectorsSection from '@/components/sections/ConnectorsSection'
+import DeploymentSection from '@/components/sections/DeploymentSection'
+import JurisdictionSection from '@/components/sections/JurisdictionSection'
 import PillarsSection from '@/components/sections/PillarsSection'
-import ArchDiagram from '@/components/sections/ArchDiagram'
-import IndustriesGrid from '@/components/sections/IndustriesGrid'
-import ComplianceStrip from '@/components/sections/ComplianceStrip'
-import VisionSection from '@/components/sections/VisionSection'
+import FAQSection from '@/components/sections/FAQSection'
 import CtaSection from '@/components/sections/CtaSection'
 
 export const metadata: Metadata = {
@@ -28,12 +30,14 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <StatsSection />
       <ProblemSection />
+      <ProductSection />
+      <ConnectorsSection />
+      <DeploymentSection />
+      <JurisdictionSection />
       <PillarsSection />
-      <ArchDiagram />
-      <IndustriesGrid />
-      <ComplianceStrip />
-      <VisionSection />
+      <FAQSection />
       <CtaSection />
     </>
   )

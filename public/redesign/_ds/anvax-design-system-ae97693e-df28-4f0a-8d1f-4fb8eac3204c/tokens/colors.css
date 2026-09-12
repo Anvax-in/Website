@@ -1,0 +1,95 @@
+/* Colors — charcoal / blue / teal. Copied verbatim from
+   anvax-website/src/styles/tokens.css. The `amber-*` and `clay/rust-*` names are
+   historical: the amber ramp was re-pointed at charcoal when the brand moved off
+   its warm palette, so `--accent` is charcoal, not amber. Names kept so consuming
+   code stays compatible. */
+:root {
+  /* Ink (charcoal) */
+  --ink-900: #1F252E;
+  --ink-800: #2A313C;
+  --ink-700: #363E4B;
+  --ink-500: #5B6472;
+  --slate-400: #7C8492;
+  --slate-300: #A8AEB8;
+  --slate-200: #D3D6DB;
+
+  /* Bone (light neutrals) */
+  --bone-50:  #FFFFFF;
+  --bone-100: #F4F4F3;
+  --bone-200: #E4E3E2;
+  --bone-300: #CFCDCC;
+  --paper:    #FFFFFF;
+
+  /* Accent — charcoal doubles as primary CTA / link color */
+  --amber-700: #12151A;
+  --amber-600: #1F252E;
+  --amber-500: #363E4B;
+  --amber-100: #E8E7E7;
+
+  /* Blue — "next" status, application layer */
+  --blue-700: #1D4FB0;
+  --blue-600: #2F6FED;
+  --blue-100: #E8EFFD;
+
+  /* Teal — "live" status, knowledge layer */
+  --sage-700: #0A6259;
+  --sage-600: #0D8A7E;
+  --sage-100: #E1F2F0;
+
+  /* Clay / Rust — warning & danger */
+  --clay-700: #8B432E;
+  --clay-600: #A8543A;
+  --clay-100: #F1DDD2;
+  --rust-700: #8B2E1F;
+  --rust-100: #EBD2CC;
+
+  /* Semantic surfaces */
+  --bg-page:        var(--bone-50);
+  --bg-alt:         var(--bone-100);
+  --bg-card:        var(--bone-100);
+  --bg-inset:       var(--paper);
+  --bg-dark:        var(--ink-900);
+
+  /* Semantic foreground */
+  --fg-1:           var(--ink-900);
+  --fg-2:           var(--ink-500);
+  --fg-3:           var(--slate-400);
+  --fg-disabled:    var(--slate-300);
+  --fg-on-dark:     var(--bone-100);
+  --fg-on-dark-dim: rgba(255, 255, 255, 0.68);
+
+  /* Borders */
+  --border:         var(--bone-200);
+  --border-strong:  var(--bone-300);
+  --border-dark:    rgba(255, 255, 255, 0.14);
+
+  /* Accent + state */
+  --accent:         var(--amber-600);
+  --accent-hover:   var(--amber-700);
+  --accent-tint:    var(--amber-100);
+  --positive:       var(--sage-700);
+  --positive-tint:  var(--sage-100);
+  --warning:        var(--clay-600);
+  --warning-tint:   var(--clay-100);
+  --danger:         var(--rust-700);
+  --danger-tint:    var(--rust-100);
+  --focus-ring:     var(--amber-600);
+
+  /* Extended ramp — added for the 2026 homepage redesign. Deep band, tinted
+     surfaces, and on-dark foregrounds that the original ramps did not cover. */
+  --ink-950:        #0D1219;  /* deep full-bleed bands, footer */
+  --bone-25:        #FAFAF9;  /* inset panel / table header wash */
+  --bone-250:       #D6D5D3;  /* secondary button + rule on bone-100 */
+  --blue-50:        #EAF1FE;  /* icon plate on white */
+  --sage-50:        #EAF6F4;  /* status pill fill */
+  --sage-200:       #B9DFDA;  /* status pill border */
+  --fg-on-dark-2:   #8B95A3;  /* body copy on ink-950 */
+  --fg-on-dark-3:   #C5CBD4;  /* links on ink-950 */
+  --border-on-ink:  #232A33;  /* hairline on ink-950 */
+
+  /* Categorical roles — layer / status coding used across the site */
+  --blue:           var(--blue-600);
+  --blue-light:     var(--blue-100);
+  --teal:           var(--sage-600);
+  --teal-light:     var(--sage-100);
+}

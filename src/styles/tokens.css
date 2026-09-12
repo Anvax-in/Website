@@ -1,7 +1,19 @@
-/* Anvax design tokens — charcoal / blue / teal system */
+/* Anvax design tokens — charcoal / blue / teal system
+ *
+ * Source of truth for the 2026 redesign:
+ *   docs/redesign-spec/  (generated — see scripts/proto-extract.mjs)
+ * Kept in sync with the canvas design system at
+ *   Enterprise design inspiration -> _ds/anvax-design-system-<id>/tokens/
+ *
+ * Rules:
+ *   - Component CSS uses these tokens only. No raw hex in *.module.css.
+ *   - The radius system is deliberately square: 0 everywhere except pills
+ *     and the 4px inline mono chip. Do not add border-radius to components.
+ */
 
 :root {
-  /* Ink (charcoal) */
+  /* ---- Ink (charcoal) ---- */
+  --ink-950: #0D1219;   /* deep full-bleed bands, footer */
   --ink-900: #1F252E;
   --ink-800: #2A313C;
   --ink-700: #363E4B;
@@ -10,57 +22,75 @@
   --slate-300: #A8AEB8;
   --slate-200: #D3D6DB;
 
-  /* Bone (light neutrals) */
+  /* ---- Bone (light neutrals) ---- */
+  --bone-25:  #FAFAF9;  /* inset panel / table header wash */
   --bone-50:  #FFFFFF;
   --bone-100: #F4F4F3;
   --bone-200: #E4E3E2;
+  --bone-250: #D6D5D3;  /* secondary button + rule on bone-100 */
   --bone-300: #CFCDCC;
   --paper:    #FFFFFF;
 
-  /* Accent — charcoal doubles as primary CTA / link color */
+  /* ---- Accent — charcoal doubles as link colour ---- */
   --amber-700: #12151A;
   --amber-600: #1F252E;
   --amber-500: #363E4B;
   --amber-100: #E8E7E7;
 
-  /* Blue — "next" status, application layer */
+  /* ---- Blue — primary CTA, application layer ---- */
   --blue-700: #1D4FB0;
   --blue-600: #2F6FED;
   --blue-100: #E8EFFD;
+  --blue-50:  #EAF1FE;  /* icon plate on white */
 
-  /* Teal — "live" status, knowledge layer */
+  /* ---- Teal — live status, knowledge layer ---- */
   --sage-700: #0A6259;
   --sage-600: #0D8A7E;
+  --sage-200: #B9DFDA;  /* status pill border */
   --sage-100: #E1F2F0;
+  --sage-50:  #EAF6F4;  /* status pill fill */
 
-  /* Clay / Rust — reserved for warning/danger states elsewhere on the site */
+  /* ---- Clay / Rust — warning & danger ---- */
   --clay-700: #8B432E;
   --clay-600: #A8543A;
   --clay-100: #F1DDD2;
   --rust-700: #8B2E1F;
   --rust-100: #EBD2CC;
 
-  /* Semantic */
+  /* ---- Semantic surfaces ---- */
   --bg-page:        var(--bone-50);
   --bg-alt:         var(--bone-100);
   --bg-card:        var(--bone-100);
   --bg-inset:       var(--paper);
   --bg-dark:        var(--ink-900);
 
+  /* ---- Semantic foreground ---- */
   --fg-1:           var(--ink-900);
   --fg-2:           var(--ink-500);
   --fg-3:           var(--slate-400);
   --fg-disabled:    var(--slate-300);
   --fg-on-dark:     var(--bone-100);
   --fg-on-dark-dim: rgba(255, 255, 255, 0.68);
+  --fg-on-dark-2:   #8B95A3;  /* body copy on ink-950 */
+  --fg-on-dark-3:   #C5CBD4;  /* links on ink-950 */
+  --fg-on-cta:      rgba(255, 255, 255, 0.82); /* lede on gradient-cta band */
 
+  /* ---- Borders & rules ---- */
   --border:         var(--bone-200);
   --border-strong:  var(--bone-300);
   --border-dark:    rgba(255, 255, 255, 0.14);
+  --border-on-ink:  #232A33;  /* hairline on ink-950 */
+  --rule-hair:      1px;      /* inside grids */
+  --rule-strong:    2px;      /* between major bands */
 
+  /* ---- Accent + state ---- */
   --accent:         var(--amber-600);
   --accent-hover:   var(--amber-700);
   --accent-tint:    var(--amber-100);
+
+  --cta:            var(--blue-600);
+  --cta-hover:      var(--blue-700);
+  --cta-tint:       var(--blue-100);
 
   --positive:       var(--sage-700);
   --positive-tint:  var(--sage-100);
@@ -68,50 +98,99 @@
   --warning-tint:   var(--clay-100);
   --danger:         var(--rust-700);
   --danger-tint:    var(--rust-100);
+  --focus-ring:     var(--blue-600);
 
-  --focus-ring:     var(--amber-600);
-
-  /* Categorical roles used directly by homepage sections */
+  /* ---- Categorical roles — layer / status coding ---- */
   --blue:           var(--blue-600);
   --blue-light:     var(--blue-100);
   --teal:           var(--sage-600);
   --teal-light:     var(--sage-100);
 
-  /* Typography */
+  /* ---- Typography ---- */
   --font-heading:        var(--font-sans);
   --font-heading-weight: 800;
 
-  /* Spacing */
-  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 20px;
-  --space-6: 24px; --space-7: 32px; --space-8: 40px; --space-9: 48px; --space-10: 64px;
-  --space-11: 80px; --space-12: 96px;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-black:    800;
 
-  /* Radii — sharp, square system */
-  --radius-sm: 0px;
-  --radius-md: 0px;
-  --radius-lg: 0px;
+  /* Type scale (size / line-height / tracking) */
+  --type-hero-size:  clamp(36px, 5.2vw, 68px);
+  --type-hero-line:  clamp(40px, 5.5vw, 74px);
+  --type-hero-track: -0.02em;
+
+  --type-h1-size: 50px;  --type-h1-line: 60px;  --type-h1-track: -0.018em;
+  --type-h2-size: 32px;  --type-h2-line: 42px;  --type-h2-track: -0.015em;
+  --type-h3-size: 26px;  --type-h3-line: 32px;  --type-h3-track: -0.008em;
+  --type-h4-size: 20px;  --type-h4-line: 26px;  --type-h4-track: 0;
+  --type-h5-size: 19px;  --type-h5-line: 24px;  --type-h5-track: 0;
+
+  --type-lede-size:    20px;  --type-lede-line:    30px;
+  --type-body-size:    16px;  --type-body-line:    26px;
+  --type-prose-size:   17px;  --type-prose-line:   28px;
+  --type-small-size:   14px;  --type-small-line:   22px;
+  --type-caption-size: 13px;  --type-caption-line: 20px;
+  --type-micro-size:   12px;  --type-micro-line:   16px;
+
+  /* Mono label — eyebrows, status pills, table headers */
+  --type-label-size:  11px;   --type-label-track: 0.02em;
+  --type-pill-size:   10px;   --type-pill-track:  0.08em;
+
+  /* Semantic text roles */
+  --text-heading: var(--fg-1);
+  --text-body:    var(--fg-2);
+  --text-muted:   var(--fg-3);
+  --text-link:    var(--accent);
+
+  /* ---- Spacing ---- */
+  --space-1: 4px;  --space-2: 8px;   --space-3: 12px;  --space-4: 16px;
+  --space-5: 20px; --space-6: 24px;  --space-7: 32px;  --space-8: 40px;
+  --space-9: 48px; --space-10: 64px; --space-11: 80px; --space-12: 96px;
+
+  /* ---- Radii — square by design ---- */
+  --radius-sm:     0px;
+  --radius-md:     0px;
+  --radius-lg:     0px;
   --radius-button: 0px;
-  --radius-pill: 999px;
+  --radius-chip:   4px;   /* inline mono chip only */
+  --radius-pill:   999px;
 
-  /* Shadows */
+  /* ---- Shadows ---- */
   --shadow-pop:  0 1px 2px rgba(31, 37, 46, 0.07),  0 8px 24px rgba(31, 37, 46, 0.09);
   --shadow-lift: 0 1px 2px rgba(31, 37, 46, 0.09),  0 16px 40px rgba(31, 37, 46, 0.13);
   --shadow-sm:   0 1px 2px rgba(31, 37, 46, 0.14);
   --shadow-md:   0 3px 10px rgba(31, 37, 46, 0.16);
   --shadow-lg:   0 12px 32px rgba(31, 37, 46, 0.22);
 
-  /* Motion */
-  --ease-out:    cubic-bezier(0.2, 0, 0, 1);
-  --dur-fast:    120ms;
-  --dur-base:    180ms;
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --dur-fast: 120ms;
+  --dur-base: 180ms;
 
-  /* Layout */
+  /* ---- Surface treatments ---- */
+  --hover-wash:     rgba(31, 37, 46, 0.04);
+  --nav-bg:         rgba(255, 255, 255, 0.90);
+  --nav-blur:       blur(20px) saturate(150%);
+  --sheen-primary:  linear-gradient(180deg, rgba(255,255,255,0.10), rgba(0,0,0,0.08));
+  --sheen-accent:   linear-gradient(180deg, rgba(255,255,255,0.10), rgba(0,0,0,0.06));
+  --wash-hero:      linear-gradient(180deg, rgba(31,37,46,0.025) 0%, rgba(31,37,46,0.008) 55%, rgba(31,37,46,0) 100%);
+  --wash-alt:       radial-gradient(120% 50% at 50% 0%, rgba(31,37,46,0.04) 0%, rgba(31,37,46,0) 60%);
+  --gradient-cta:   linear-gradient(135deg, var(--blue-600) 0%, var(--ink-950) 100%);
+  /* The lattice texture has no token: Next's global-CSS loader resolves url() at
+     build time and fails on /public paths. Component modules reference it directly —
+     background-image: url('/assets/lattice.svg');  tiled 220px, opacity .06 on dark
+     bands. See src/pages/Platform.module.css for the existing usage. */
+
+  /* ---- Layout ---- */
   --site-max:       1240px;
   --site-gutter:    72px;
   --site-gutter-sm: 24px;
+  --section-pad-y:  64px;
+  --nav-height:     68px;
 }
 
 /* --font-serif previously carried the Neco display face; sitewide headline
-   rules still reference it, so alias it to the new Archivo body font rather
-   than leaving it undefined. */
+   rules still reference it, so alias it to Archivo rather than leave it undefined. */
 :root { --font-serif: var(--font-sans); }

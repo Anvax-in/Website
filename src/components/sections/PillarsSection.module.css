@@ -1,21 +1,106 @@
-/* PillarsSection.module.css */
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.section {
+  width: 100%;
+  background: var(--bone-100);
+  border-bottom: 1px solid var(--bone-200);
+}
+
+.inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 104px 40px;
+}
+
+.head {
+  max-width: 720px;
+  margin-bottom: 60px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--blue-600);
+  margin-bottom: 18px;
+}
+
+.h2 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: clamp(30px, 3.4vw, 44px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--ink-900);
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
 .card {
   background: var(--paper);
-  padding: 28px;
-  display: flex; flex-direction: column; gap: 12px; align-items: flex-start;
-  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), background var(--dur-base) var(--ease-out);
-  text-decoration: none; color: inherit;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); background: var(--paper); }
+
 .iconWrap {
-  width: 40px; height: 40px;
-  display: flex; align-items: center; justify-content: center;
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border: 1px solid var(--ink-900);
+  color: var(--ink-900);
+  background: transparent;
+  margin-bottom: 20px;
+}
+
 .h3 {
-  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
-  font-size: 26px; line-height: 32px; letter-spacing: -0.008em; margin: 0;
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 34px;
+  letter-spacing: -0.012em;
+  color: var(--ink-900);
+  margin: 0 0 14px;
 }
-.body { font-size: 14px; line-height: 22px; color: var(--ink-500); margin: 0; }
-@media (max-width: 960px) { .grid { grid-template-columns: 1fr; } }
+
+.body {
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--ink-500);
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .inner {
+    padding: 72px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1px;
+    background: var(--bone-200);
+    border: 1px solid var(--bone-200);
+  }
+
+  .card {
+    gap: 0;
+  }
+}

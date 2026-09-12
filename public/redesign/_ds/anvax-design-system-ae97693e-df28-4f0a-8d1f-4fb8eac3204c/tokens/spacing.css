@@ -1,0 +1,26 @@
+/* Spacing, radii, layout. The radius system is deliberately square: 0px
+   everywhere except pills and a 4px inline mono chip. */
+:root {
+  --space-1: 4px;  --space-2: 8px;   --space-3: 12px;  --space-4: 16px;
+  --space-5: 20px; --space-6: 24px;  --space-7: 32px;  --space-8: 40px;
+  --space-9: 48px; --space-10: 64px; --space-11: 80px; --space-12: 96px;
+
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-button: 0px;
+  --radius-chip: 4px;
+  --radius-pill: 999px;
+
+  /* Layout */
+  --site-max:       1240px;
+  --site-gutter:    72px;
+  --site-gutter-sm: 24px;
+  --section-pad-y:  64px;
+  --nav-height:     64px;
+
+  /* Structural rules — the site uses 1px hairlines inside grids and 2px rules
+     between major bands. */
+  --rule-hair:   1px;
+  --rule-strong: 2px;
+}

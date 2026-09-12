@@ -1,0 +1,146 @@
+.section {
+  width: 100%;
+  background: var(--paper);
+  border-bottom: 1px solid var(--bone-200);
+}
+
+.inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 104px 40px;
+}
+
+/* ── Header row ── */
+.head {
+  display: flex;
+  gap: 40px;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.headLeft {
+  max-width: 640px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--blue-600);
+  margin-bottom: 18px;
+}
+
+.h2 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: clamp(30px, 3.4vw, 44px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--ink-900);
+  margin: 0;
+}
+
+.lede {
+  font-size: 17px;
+  line-height: 28px;
+  color: var(--ink-500);
+  margin-top: 20px;
+}
+
+.browseLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--blue-600);
+  text-decoration: none;
+  padding-bottom: 6px;
+  white-space: nowrap;
+  transition: color var(--dur-base) var(--ease-out);
+}
+
+.browseLink:hover {
+  color: var(--blue-700);
+}
+
+/* ── Logo grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--bone-200);
+  border: 1px solid var(--bone-200);
+}
+
+.tile {
+  background: var(--paper);
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.tile:hover {
+  transform: translateY(-3px);
+}
+
+.logo {
+  height: 30px;
+  max-width: 78px;
+  object-fit: contain;
+}
+
+.tileName {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-500);
+}
+
+/* ── Chip list ── */
+.chips {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.chip {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-500);
+  background: var(--paper);
+  border: 1px solid var(--bone-200);
+  padding: 6px 12px;
+}
+
+.chipMore {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--ink-900);
+  padding: 6px 4px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 760px) {
+  .inner {
+    padding: 72px 24px;
+  }
+
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

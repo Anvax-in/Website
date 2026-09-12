@@ -21,15 +21,16 @@ const problems = [
 
 export default function ProblemSection() {
   return (
-    <section className="section">
-      <div className="container">
+    <section className={styles.section}>
+      <div className={styles.inner}>
         <div className={styles.head}>
+          <div className={styles.eyebrow}>The problem</div>
           <h2 className={styles.title}>
-            Employees want to move fast with AI.
-            <br />IT can&apos;t enable it safely.
+            Your people already use AI. You just can&apos;t see any of it.
           </h2>
-          <p className={styles.subtitle}>
-            When employees connect AI to third-party systems, it&apos;s all or nothing. Most companies have no way to scope tool access by role, no guardrails on what data reaches third party APIs, and no audit trail.
+          <p className={styles.lede}>
+            The tools that make employees faster are the ones your policy cannot
+            approve. So the work moves off-platform, and the risk moves with it.
           </p>
         </div>
         <div className={styles.cards}>

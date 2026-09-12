@@ -1,0 +1,370 @@
+{
+  "desktop": [
+    {
+      "i": 0,
+      "tag": "nav",
+      "label": "Anvax Product Why Anvax Industries Deployment Security Blog ",
+      "h": 69,
+      "len": 3596,
+      "styles": 17
+    },
+    {
+      "i": 1,
+      "tag": "header",
+      "label": "Governed AI your data never has to leave for.",
+      "h": 1276,
+      "len": 18453,
+      "styles": 97
+    },
+    {
+      "i": 2,
+      "tag": "section",
+      "label": "0 Bytes of customer data leaving your perimeter 4.2M Governe",
+      "h": 207,
+      "len": 2548,
+      "styles": 10
+    },
+    {
+      "i": 3,
+      "tag": "section",
+      "label": "Your people already use AI. You just can't see any of it.",
+      "h": 666,
+      "len": 3335,
+      "styles": 18
+    },
+    {
+      "i": 4,
+      "tag": "section",
+      "label": "One workspace. Three things your teams do every day.",
+      "h": 2441,
+      "len": 34094,
+      "styles": 185
+    },
+    {
+      "i": 5,
+      "tag": "section",
+      "label": "Reads the systems you already run.",
+      "h": 823,
+      "len": 7724,
+      "styles": 44
+    },
+    {
+      "i": 6,
+      "tag": "section",
+      "label": "Three layers. One product.",
+      "h": 765,
+      "len": 5102,
+      "styles": 20
+    },
+    {
+      "i": 7,
+      "tag": "section",
+      "label": "One platform. Your infrastructure.",
+      "h": 961,
+      "len": 5281,
+      "styles": 21
+    },
+    {
+      "i": 8,
+      "tag": "section",
+      "label": "Your regulator, already mapped.",
+      "h": 724,
+      "len": 7329,
+      "styles": 46
+    },
+    {
+      "i": 9,
+      "tag": "section",
+      "label": "The questions your security team asks first.",
+      "h": 585,
+      "len": 3606,
+      "styles": 4
+    },
+    {
+      "i": 10,
+      "tag": "section",
+      "label": "Bring your regulator into the room.",
+      "h": 531,
+      "len": 2483,
+      "styles": 9
+    },
+    {
+      "i": 11,
+      "tag": "footer",
+      "label": "Anvax The self-hosted, governed AI workspace for enterprise",
+      "h": 496,
+      "len": 5669,
+      "styles": 33
+    }
+  ],
+  "tablet": [
+    {
+      "i": 0,
+      "tag": "nav",
+      "label": "Anvax Product Why Anvax Industries Deployment Security Blog ",
+      "h": 69,
+      "len": 3426,
+      "styles": 16
+    },
+    {
+      "i": 1,
+      "tag": "header",
+      "label": "Governed AI your data never has to leave for.",
+      "h": 1163,
+      "len": 18453,
+      "styles": 97
+    },
+    {
+      "i": 2,
+      "tag": "section",
+      "label": "0 Bytes of customer data leaving your perimeter 4.2M Governe",
+      "h": 195,
+      "len": 2548,
+      "styles": 10
+    },
+    {
+      "i": 3,
+      "tag": "section",
+      "label": "Your people already use AI. You just can't see any of it.",
+      "h": 689,
+      "len": 3335,
+      "styles": 18
+    },
+    {
+      "i": 4,
+      "tag": "section",
+      "label": "One workspace. Three things your teams do every day.",
+      "h": 2438,
+      "len": 34094,
+      "styles": 185
+    },
+    {
+      "i": 5,
+      "tag": "section",
+      "label": "Reads the systems you already run.",
+      "h": 872,
+      "len": 7724,
+      "styles": 44
+    },
+    {
+      "i": 6,
+      "tag": "section",
+      "label": "Three layers. One product.",
+      "h": 829,
+      "len": 5102,
+      "styles": 20
+    },
+    {
+      "i": 7,
+      "tag": "section",
+      "label": "One platform. Your infrastructure.",
+      "h": 975,
+      "len": 5281,
+      "styles": 21
+    },
+    {
+      "i": 8,
+      "tag": "section",
+      "label": "Your regulator, already mapped.",
+      "h": 750,
+      "len": 7329,
+      "styles": 46
+    },
+    {
+      "i": 9,
+      "tag": "section",
+      "label": "The questions your security team asks first.",
+      "h": 585,
+      "len": 3606,
+      "styles": 4
+    },
+    {
+      "i": 10,
+      "tag": "section",
+      "label": "Bring your regulator into the room.",
+      "h": 505,
+      "len": 2483,
+      "styles": 9
+    },
+    {
+      "i": 11,
+      "tag": "footer",
+      "label": "Anvax The self-hosted, governed AI workspace for enterprise",
+      "h": 496,
+      "len": 5669,
+      "styles": 33
+    }
+  ],
+  "mobile": [
+    {
+      "i": 0,
+      "tag": "nav",
+      "label": "Anvax Menu Book a demo →",
+      "h": 69,
+      "len": 2186,
+      "styles": 8
+    },
+    {
+      "i": 1,
+      "tag": "header",
+      "label": "Governed AI your data never has to leave for.",
+      "h": 2497,
+      "len": 18443,
+      "styles": 97
+    },
+    {
+      "i": 2,
+      "tag": "section",
+      "label": "0 Bytes of customer data leaving your perimeter 4.2M Governe",
+      "h": 312,
+      "len": 2548,
+      "styles": 10
+    },
+    {
+      "i": 3,
+      "tag": "section",
+      "label": "Your people already use AI. You just can't see any of it.",
+      "h": 908,
+      "len": 3335,
+      "styles": 18
+    },
+    {
+      "i": 4,
+      "tag": "section",
+      "label": "One workspace. Three things your teams do every day.",
+      "h": 3315,
+      "len": 34094,
+      "styles": 185
+    },
+    {
+      "i": 5,
+      "tag": "section",
+      "label": "Reads the systems you already run.",
+      "h": 985,
+      "len": 7724,
+      "styles": 44
+    },
+    {
+      "i": 6,
+      "tag": "section",
+      "label": "Three layers. One product.",
+      "h": 1066,
+      "len": 5102,
+      "styles": 20
+    },
+    {
+      "i": 7,
+      "tag": "section",
+      "label": "One platform. Your infrastructure.",
+      "h": 1548,
+      "len": 5281,
+      "styles": 21
+    },
+    {
+      "i": 8,
+      "tag": "section",
+      "label": "Your regulator, already mapped.",
+      "h": 1062,
+      "len": 7329,
+      "styles": 46
+    },
+    {
+      "i": 9,
+      "tag": "section",
+      "label": "The questions your security team asks first.",
+      "h": 689,
+      "len": 3606,
+      "styles": 4
+    },
+    {
+      "i": 10,
+      "tag": "section",
+      "label": "Bring your regulator into the room.",
+      "h": 483,
+      "len": 2483,
+      "styles": 9
+    },
+    {
+      "i": 11,
+      "tag": "footer",
+      "label": "Anvax The self-hosted, governed AI workspace for enterprise",
+      "h": 592,
+      "len": 5669,
+      "styles": 33
+    }
+  ],
+  "responsive": [
+    {
+      "i": 0,
+      "tag": "nav",
+      "label": "Anvax Product Why Anvax Industries Deployment Security Blog ",
+      "domChanges": true
+    },
+    {
+      "i": 1,
+      "tag": "header",
+      "label": "Governed AI your data never has to leave for.",
+      "domChanges": true
+    },
+    {
+      "i": 2,
+      "tag": "section",
+      "label": "0 Bytes of customer data leaving your perimeter 4.2M Governe",
+      "domChanges": false
+    },
+    {
+      "i": 3,
+      "tag": "section",
+      "label": "Your people already use AI. You just can't see any of it.",
+      "domChanges": false
+    },
+    {
+      "i": 4,
+      "tag": "section",
+      "label": "One workspace. Three things your teams do every day.",
+      "domChanges": false
+    },
+    {
+      "i": 5,
+      "tag": "section",
+      "label": "Reads the systems you already run.",
+      "domChanges": false
+    },
+    {
+      "i": 6,
+      "tag": "section",
+      "label": "Three layers. One product.",
+      "domChanges": false
+    },
+    {
+      "i": 7,
+      "tag": "section",
+      "label": "One platform. Your infrastructure.",
+      "domChanges": false
+    },
+    {
+      "i": 8,
+      "tag": "section",
+      "label": "Your regulator, already mapped.",
+      "domChanges": false
+    },
+    {
+      "i": 9,
+      "tag": "section",
+      "label": "The questions your security team asks first.",
+      "domChanges": false
+    },
+    {
+      "i": 10,
+      "tag": "section",
+      "label": "Bring your regulator into the room.",
+      "domChanges": false
+    },
+    {
+      "i": 11,
+      "tag": "footer",
+      "label": "Anvax The self-hosted, governed AI workspace for enterprise",
+      "domChanges": false
+    }
+  ]
+}
