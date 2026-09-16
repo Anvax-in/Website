@@ -733,6 +733,129 @@
   background: var(--sage-600);
 }
 
+/* ── Multi-column mock grid (matches homepage structure) ── */
+.hmGrid {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr) 142px;
+  min-height: 300px;
+}
+.hmSidebar {
+  border-right: 1px solid var(--bone-200);
+  padding: 14px 10px;
+  background: var(--bone-25);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.hmSectionLabel {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--slate-400);
+  letter-spacing: 0.04em;
+  padding: 0 6px 6px;
+}
+.hmNavItem {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 7px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--ink-500);
+  opacity: 0;
+}
+.hmNavItemActive {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 7px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue-600);
+  background: var(--blue-50);
+  opacity: 0;
+}
+.hmNavItem:nth-child(2)  { animation: capReveal 0.2s var(--ease-out) 0.1s 1 forwards; }
+.hmNavItem:nth-child(3)  { animation: capReveal 0.2s var(--ease-out) 0.2s 1 forwards; }
+.hmNavItem:nth-child(4)  { animation: capReveal 0.2s var(--ease-out) 0.3s 1 forwards; }
+.hmNavItemActive:nth-child(2) { animation: capReveal 0.2s var(--ease-out) 0.1s 1 forwards; }
+.hmNavItemActive:nth-child(3) { animation: capReveal 0.2s var(--ease-out) 0.2s 1 forwards; }
+.hmNavItemActive:nth-child(4) { animation: capReveal 0.2s var(--ease-out) 0.3s 1 forwards; }
+.hmStatusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sage-600);
+  flex-shrink: 0;
+  animation: capPulse 2s ease-in-out infinite;
+}
+.hmSidebarFooter {
+  margin-top: auto;
+  padding: 8px 6px 0;
+  border-top: 1px solid var(--bone-200);
+  font-size: 10px;
+  line-height: 15px;
+  color: var(--slate-400);
+}
+.hmCenter {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.hmRight {
+  border-left: 1px solid var(--bone-200);
+  padding: 14px 12px;
+  background: var(--bone-25);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.hmMetaRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+.hmMetaDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--sage-600);
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+.hmMetaText {
+  font-size: 10.5px;
+  line-height: 15px;
+  color: var(--ink-900);
+}
+.hmMetaSub {
+  color: var(--slate-400);
+  font-size: 10px;
+}
+.hmRightFooter {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid var(--bone-200);
+  font-size: 10px;
+  line-height: 15px;
+  color: var(--slate-400);
+}
+.hmTokenBar {
+  height: 3px;
+  background: var(--bone-200);
+  border-radius: 2px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+.hmTokenFill {
+  height: 100%;
+  background: var(--sage-600);
+  border-radius: 2px;
+}
+
 /* ── Responsive ── */
 @media (max-width: 1100px) {
   .heroGrid { gap: 40px; }

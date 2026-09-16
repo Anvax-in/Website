@@ -82,26 +82,68 @@ export default function ChatPage() {
                     <span className={styles.hmBarBadgeDot} />Governed
                   </span>
                 </div>
-                <div className={styles.hmBody}>
-                  <div className={styles.hmChat}>
+                <div className={styles.hmGrid}>
+                  {/* Left: thread list */}
+                  <div className={styles.hmSidebar}>
+                    <div className={styles.hmSectionLabel}>Threads</div>
+                    <div className={styles.hmNavItemActive}>AML PEP limits</div>
+                    <div className={styles.hmNavItem}>GDPR retention</div>
+                    <div className={styles.hmNavItem}>RBI circular 74</div>
+                    <div className={styles.hmNavItem}>ISO 27001 gaps</div>
+                    <div className={styles.hmSidebarFooter}>
+                      Model v2024.11<br />4 threads · tenant
+                    </div>
+                  </div>
+
+                  {/* Center: conversation */}
+                  <div className={styles.hmCenter}>
                     <div className={styles.hmMsgUser}>
                       What does our AML policy say about PEP exposure limits?
                     </div>
                     <div className={styles.hmMsgAi}>
                       <p className={styles.hmMsgAiText}>
-                        Per AML Policy v12 §4.3, PEP exposure is capped at 5% of the
-                        credit portfolio. Enhanced due diligence is mandatory for any
-                        relationship above £50k.
+                        Per AML Policy v12 §4.3, PEP exposure is capped at 5% of
+                        the credit portfolio. Enhanced due diligence is mandatory
+                        for any relationship above £50k.
                       </p>
                       <div className={styles.hmMsgSource}>
                         <span className={styles.hmMsgSourceDot} />
-                        Source: AML Policy v12, §4.3
+                        AML Policy v12 · §4.3 · p. 18
                       </div>
                     </div>
                     <div className={styles.hmMsgFooter}>
                       <span className={styles.hmFooterItem}>✓ Grounded</span>
                       <span className={styles.hmFooterItem}>✓ Logged</span>
-                      <span className={styles.hmFooterItem}>✓ Tenant-only</span>
+                      <span className={styles.hmFooterItem}>✓ No egress</span>
+                    </div>
+                  </div>
+
+                  {/* Right: turn metadata */}
+                  <div className={styles.hmRight}>
+                    <div className={styles.hmSectionLabel}>This turn</div>
+                    <div className={styles.hmMetaRow}>
+                      <span className={styles.hmMetaDot} />
+                      <span className={styles.hmMetaText}>
+                        Model pinned<br />
+                        <span className={styles.hmMetaSub}>v2024.11</span>
+                      </span>
+                    </div>
+                    <div className={styles.hmMetaRow}>
+                      <span className={styles.hmMetaDot} />
+                      <span className={styles.hmMetaText}>
+                        Tenant isolated<br />
+                        <span className={styles.hmMetaSub}>your-workspace</span>
+                      </span>
+                    </div>
+                    <div className={styles.hmMetaRow}>
+                      <span className={styles.hmMetaDot} />
+                      <span className={styles.hmMetaText}>
+                        Audit written<br />
+                        <span className={styles.hmMetaSub}>#4,412,910</span>
+                      </span>
+                    </div>
+                    <div className={styles.hmRightFooter}>
+                      No data egress<br />eu-central-1
                     </div>
                   </div>
                 </div>
