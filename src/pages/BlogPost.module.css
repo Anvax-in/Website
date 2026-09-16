@@ -1,56 +1,55 @@
 /* Blog post page */
 .header {
-  padding: 60px 0 64px;
-  border-bottom: 1px solid var(--border);
-  background: var(--ink-900);
+  background: var(--paper);
+  border-bottom: 1px solid var(--bone-200);
   position: relative;
   overflow: hidden;
+  padding: 72px 0 64px;
 }
-.header::before {
-  content: '';
-  position: absolute; inset: 0;
-  background-image: url('/assets/lattice.svg');
-  background-size: 220px 220px;
-  opacity: 0.06;
+.lattice {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--bone-200) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bone-200) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(90% 70% at 50% 0%, #000 0%, transparent 75%);
   pointer-events: none;
 }
 .headerInner {
   position: relative;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
+  max-width: 760px;
 }
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 12px;
-  letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--slate-400);
   margin-bottom: 20px;
 }
 .h1 {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  font-size: 44px;
-  line-height: 54px;
-  letter-spacing: -0.016em;
-  color: var(--bone-100);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(28px, 3.6vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -0.022em;
+  color: var(--ink-900);
   margin-bottom: 24px;
 }
 .meta {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
   font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.02em;
-  color: var(--fg-on-dark-dim);
+  color: var(--slate-400);
 }
-.sep { opacity: 0.4; }
+.sep { opacity: 0.5; }
 .tags {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 6px;
   margin-top: 20px;
 }
@@ -60,9 +59,9 @@
   letter-spacing: 0.02em;
   padding: 3px 9px;
   border-radius: var(--radius-pill);
-  border: 1px solid color-mix(in srgb, var(--bone-100) 18%, transparent);
-  background: color-mix(in srgb, var(--bone-100) 6%, transparent);
-  color: var(--fg-on-dark-dim);
+  border: 1px solid var(--bone-250);
+  background: var(--bone-100);
+  color: var(--slate-400);
   white-space: nowrap;
 }
 
@@ -85,7 +84,7 @@
   font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.02em;
-  color: var(--fg-3);
+  color: var(--slate-400);
   text-decoration: none;
   margin-bottom: 40px;
   transition: color var(--dur-base) var(--ease-out);
@@ -93,5 +92,5 @@
 .backLink:hover { color: var(--ink-900); }
 
 @media (max-width: 960px) {
-  .h1 { font-size: 32px; line-height: 42px; }
+  .h1 { font-size: 28px; }
 }

@@ -74,6 +74,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       <article>
         <header className={styles.header}>
+          <div className={styles.lattice} aria-hidden="true" />
           <div className="container">
             <div className={styles.headerInner}>
               <p className={styles.eyebrow}>Sovereign Stack</p>

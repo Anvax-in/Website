@@ -1,17 +1,19 @@
 /* Blog index page */
 .hero {
-  padding: 60px 0 72px;
-  border-bottom: 1px solid var(--border);
-  background: var(--ink-900);
+  background: var(--paper);
+  border-bottom: 1px solid var(--bone-200);
   position: relative;
   overflow: hidden;
+  padding: 80px 0 72px;
 }
-.hero::before {
-  content: '';
-  position: absolute; inset: 0;
-  background-image: url('/assets/lattice.svg');
-  background-size: 220px 220px;
-  opacity: 0.06;
+.lattice {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--bone-200) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bone-200) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(90% 70% at 50% 0%, #000 0%, transparent 75%);
   pointer-events: none;
 }
 .heroInner {
@@ -20,25 +22,24 @@
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 12px;
-  letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.04em;
+  color: var(--slate-400);
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 .h1 {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 58px;
-  letter-spacing: -0.015em;
-  color: var(--bone-100);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--ink-900);
   margin-bottom: 20px;
-  white-space: nowrap;
 }
 .lede {
-  font-family: var(--font-serif);
   font-size: 18px;
-  line-height: 28px;
-  color: var(--fg-on-dark-dim);
+  line-height: 29px;
+  color: var(--ink-500);
   max-width: 54ch;
   margin-bottom: 28px;
 }
@@ -49,29 +50,28 @@
   font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--slate-400);
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--bone-250);
   border-radius: var(--radius-pill);
   padding: 4px 12px;
   transition: border-color var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out);
 }
-.rssLink:hover { color: rgba(255, 255, 255, 0.9); border-color: rgba(255, 255, 255, 0.45); }
+.rssLink:hover { color: var(--ink-900); border-color: var(--bone-300); }
 
 /* Post grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 1px;
+  background: var(--bone-200);
+  border: 1px solid var(--bone-200);
   margin-top: 48px;
 }
 
 @media (max-width: 960px) {
-  .h1 { font-size: 36px; line-height: 46px; }
+  .h1 { font-size: 34px; }
   .grid { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 768px) {
-  .h1 { white-space: normal; }
 }
 @media (max-width: 640px) {
   .grid { grid-template-columns: 1fr; }

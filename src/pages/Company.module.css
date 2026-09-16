@@ -1,152 +1,106 @@
 /* Company.module.css */
 
 .hero {
+  background: var(--paper);
+  border-bottom: 1px solid var(--bone-200);
   position: relative;
-  padding: 60px 0 72px;
-  border-bottom: 1px solid var(--border-dark);
-  background: var(--ink-900);
   overflow: hidden;
-  background-image:
-    radial-gradient(70% 80% at 90% 0%, rgba(184,132,62,0.18) 0%, rgba(184,132,62,0) 55%),
-    radial-gradient(80% 60% at 0% 100%, rgba(20,35,55,1) 0%, rgba(11,26,42,0) 60%);
+  padding: 80px 0 72px;
 }
-.hero::before {
-  content: '';
-  position: absolute; inset: 0;
-  background-image: url('/assets/lattice.svg');
-  background-size: 220px 220px;
-  opacity: 0.06;
+.lattice {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--bone-200) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bone-200) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(90% 70% at 50% 0%, #000 0%, transparent 75%);
   pointer-events: none;
 }
 .heroInner {
   position: relative;
-  max-width: 700px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 760px;
 }
 .heroEyebrow {
   font-family: var(--font-mono);
   font-size: 12px;
-  letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--slate-400);
   margin-bottom: 20px;
-  justify-content: center;
-  text-align: center;
 }
 .heroH1 {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  font-size: 50px;
-  line-height: 60px;
-  letter-spacing: -0.018em;
-  color: var(--bone-100);
-  text-align: center;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(34px, 4.2vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--ink-900);
 }
 .heroLede {
-  margin-top: 24px;
-  font-family: var(--font-serif);
-  font-size: 20px;
-  line-height: 30px;
-  color: var(--fg-on-dark-dim);
-  text-align: center;
+  margin-top: 22px;
+  font-size: 18px;
+  line-height: 29px;
+  color: var(--ink-500);
+  max-width: 56ch;
 }
 
 /* Vision */
 .visionGrid {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
+  grid-template-columns: 1fr 1.5fr;
   gap: 80px;
   align-items: start;
 }
 .pullquote {
-  font-family: var(--font-serif);
-  font-size: 26px;
-  line-height: 38px;
-  font-weight: 400;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
   color: var(--ink-900);
-  border-left: 3px solid var(--amber-600);
+  border-left: 3px solid var(--blue-600);
   padding-left: 24px;
   margin: 0;
+  letter-spacing: -0.01em;
 }
 .visionBody {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 .visionPara {
   font-size: 16px;
-  line-height: 26px;
-  color: var(--fg-2);
+  line-height: 27px;
+  color: var(--ink-500);
 }
 
 /* Values */
 .valuesGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 1px;
+  background: var(--bone-200);
+  border: 1px solid var(--bone-200);
   margin-top: 40px;
 }
 .valueCard {
-  background: var(--bone-100);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  background: var(--paper);
   padding: 28px 24px;
+  transition: background var(--dur-base) var(--ease-out);
 }
+.valueCard:hover { background: var(--bone-25); }
 .valueH3 {
-  font-family: var(--font-serif);
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 12px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
   color: var(--ink-900);
 }
 .valueDesc {
   font-size: 14px;
   line-height: 22px;
-  color: var(--fg-2);
-}
-
-/* Team */
-.teamGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-top: 40px;
-  max-width: 640px;
-}
-.teamCard {
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 24px;
-  background: var(--paper);
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-.teamAvatar {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--bone-200);
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-serif);
-  font-size: 20px;
   color: var(--ink-500);
-}
-.teamName {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--ink-900);
-  margin-bottom: 4px;
-}
-.teamRole {
-  font-size: 13px;
-  color: var(--fg-3);
-  font-family: var(--font-mono);
 }
 
 /* Careers */
@@ -154,9 +108,8 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
+  border: 1px solid var(--bone-200);
+  background: var(--bone-200);
   margin-top: 40px;
 }
 .careerRow {
@@ -165,26 +118,28 @@
   justify-content: space-between;
   gap: 16px;
   padding: 20px 24px;
-  border-bottom: 1px solid var(--border);
   background: var(--paper);
+  border-bottom: 1px solid var(--bone-200);
   transition: background var(--dur-base) var(--ease-out);
 }
 .careerRow:last-child { border-bottom: 0; }
-.careerRow:hover { background: var(--bone-50); }
+.careerRow:hover { background: var(--bone-25); }
 .careerLeft {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 .careerTitle {
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: 15px;
-  font-weight: 500;
   color: var(--ink-900);
+  letter-spacing: -0.01em;
 }
 .careerMeta {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--fg-3);
+  color: var(--slate-400);
   display: flex;
   gap: 12px;
 }
@@ -194,46 +149,9 @@
   gap: 4px;
 }
 
-/* Contact */
-.contactGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-top: 40px;
-}
-.contactCard {
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 32px;
-  background: var(--paper);
-}
-.contactCardTitle {
-  font-family: var(--font-serif);
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 10px;
-  color: var(--ink-900);
-}
-.contactCardDesc {
-  font-size: 14px;
-  color: var(--fg-2);
-  line-height: 22px;
-  margin-bottom: 20px;
-}
-.contactEmail {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  color: var(--amber-700);
-  text-decoration: none;
-  display: block;
-  margin-bottom: 16px;
-}
-.contactEmail:hover { text-decoration: underline; }
-
 @media (max-width: 960px) {
-  .heroH1 { font-size: 36px; line-height: 46px; }
+  .heroH1 { font-size: 34px; }
   .visionGrid { grid-template-columns: 1fr; gap: 40px; }
   .valuesGrid { grid-template-columns: 1fr; }
-  .teamGrid { grid-template-columns: 1fr; max-width: 100%; }
-  .contactGrid { grid-template-columns: 1fr; }
+  .careerRow { flex-direction: column; align-items: flex-start; gap: 16px; }
 }

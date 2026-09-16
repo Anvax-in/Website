@@ -53,6 +53,7 @@ export default function Company() {
     <>
       {/* Hero */}
       <section className={styles.hero}>
+        <div className={styles.lattice} aria-hidden="true" />
         <div className="container">
           <div className={styles.heroInner}>
             <p className={styles.heroEyebrow}>Company</p>
