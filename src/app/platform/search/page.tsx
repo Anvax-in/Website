@@ -74,11 +74,8 @@ export default function SearchPage() {
 
             <div className={styles.heroMockWrap} aria-hidden="true">
               <div className={styles.hmPanel}>
-                <div className={styles.hmBar}>
-                  <span className={styles.hmDot} />
-                  <span className={styles.hmDot} />
-                  <span className={styles.hmDot} />
-                  <span className={styles.hmBarTitle}>anvax · search · your tenancy</span>
+                <div className={styles.hm2Header}>
+                  <span className={styles.hm2HeaderLabel}>Search · cited results</span>
                   <span className={styles.hmBarBadge}>
                     <span className={styles.hmBarBadgeDot} />Governed
                   </span>

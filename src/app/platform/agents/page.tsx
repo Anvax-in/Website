@@ -74,13 +74,10 @@ export default function AgentsPage() {
 
             <div className={styles.heroMockWrap} aria-hidden="true">
               <div className={styles.hmPanel}>
-                <div className={styles.hmBar}>
-                  <span className={styles.hmDot} />
-                  <span className={styles.hmDot} />
-                  <span className={styles.hmDot} />
-                  <span className={styles.hmBarTitle}>anvax · agents · live</span>
+                <div className={styles.hm2Header}>
+                  <span className={styles.hm2HeaderLabel}>Agents · run 4417</span>
                   <span className={styles.hmBarBadge}>
-                    <span className={styles.hmBarBadgeDot} />3 active
+                    <span className={styles.hmBarBadgeDot} />Governed
                   </span>
                 </div>
                 <div className={styles.hm2AgentBody}>
