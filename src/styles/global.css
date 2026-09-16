@@ -28,8 +28,6 @@ img { display: block; max-width: 100%; }
 
 /* Layout utility */
 .container {
-  max-width: var(--site-max);
-  margin: 0 auto;
   padding: 0 var(--site-gutter);
 }
 @media (max-width: 960px) {

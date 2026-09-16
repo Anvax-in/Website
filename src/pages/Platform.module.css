@@ -1,63 +1,58 @@
 /* Platform.module.css */
 
-/* Inner hero */
+/* Hero */
 .hero {
+  background: var(--paper);
+  border-bottom: 1px solid var(--bone-200);
   position: relative;
-  padding: 60px 0 72px;
-  border-bottom: 1px solid var(--border-dark);
-  background: var(--ink-900);
   overflow: hidden;
+  padding: 80px 0 72px;
 }
-.hero::before {
-  content: '';
-  position: absolute; inset: 0;
-  background-image: url('/assets/lattice.svg');
-  background-size: 220px 220px;
-  opacity: 0.06;
+.lattice {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--bone-200) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bone-200) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(90% 70% at 50% 0%, #000 0%, transparent 75%);
   pointer-events: none;
 }
 .heroInner {
   position: relative;
-  max-width: 760px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 720px;
 }
 .heroEyebrow {
   font-family: var(--font-mono);
   font-size: 12px;
-  letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--slate-400);
   margin-bottom: 20px;
-  justify-content: center;
-  text-align: center;
 }
 .heroH1 {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  font-size: 50px;
-  line-height: 60px;
-  letter-spacing: -0.018em;
-  color: var(--bone-100);
-  text-align: center;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(34px, 4.5vw, 62px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--ink-900);
 }
 .heroLede {
   margin-top: 24px;
-  font-family: var(--font-serif);
-  font-size: 20px;
-  line-height: 30px;
-  color: var(--fg-on-dark-dim);
-  text-align: center;
+  font-size: 18px;
+  line-height: 29px;
+  color: var(--ink-500);
+  max-width: 56ch;
 }
 
 /* Capability overview grid (platform index page) */
 .capabilityGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
-  background: var(--border);
-  border: 1px solid var(--border);
+  gap: 1px;
+  background: var(--bone-200);
+  border: 1px solid var(--bone-200);
   margin-top: 40px;
 }
 .capabilityCard {
@@ -69,7 +64,7 @@
   gap: 0;
   transition: background var(--dur-base) var(--ease-out);
 }
-.capabilityCard:hover { background: var(--bone-50); }
+.capabilityCard:hover { background: var(--bone-25); }
 .capabilityCardTop {
   display: flex;
   align-items: center;
@@ -84,10 +79,11 @@
   justify-content: center;
 }
 .capabilityH3 {
-  font-family: var(--font-serif);
-  font-weight: 400;
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+  letter-spacing: -0.01em;
   color: var(--ink-900);
   margin: 0 0 10px;
 }
@@ -122,10 +118,11 @@
 .capLeft {}
 .capTag { margin-bottom: 16px; }
 .capH3 {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: 26px;
-  font-weight: 400;
   line-height: 34px;
+  letter-spacing: -0.015em;
   margin-bottom: 14px;
   color: var(--ink-900);
 }
@@ -170,20 +167,20 @@
 .moatsGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 1px;
+  background: var(--bone-200);
+  border: 1px solid var(--bone-200);
   margin-top: 40px;
 }
 .moatCard {
   background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
   padding: 28px 28px 24px;
-  text-align: center;
+  transition: background var(--dur-base) var(--ease-out);
 }
+.moatCard:hover { background: var(--bone-25); }
 .moatHeader {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 12px;
   margin-bottom: 14px;
 }
@@ -191,18 +188,20 @@
   width: 36px;
   height: 36px;
   flex-shrink: 0;
-  border-radius: var(--radius-md);
-  background: var(--bone-200);
+  background: var(--bone-100);
+  border: 1px solid var(--bone-200);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
 }
 .moatH3 {
-  font-family: var(--font-serif);
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  color: var(--ink-900);
+  margin: 0;
 }
 .moatDesc {
   font-size: 14px;
@@ -215,9 +214,8 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
+  background: var(--bone-200);
+  border: 1px solid var(--bone-200);
   overflow: hidden;
   margin-top: 40px;
 }
@@ -231,24 +229,13 @@
   padding: 20px 12px;
   text-align: center;
   min-height: 90px;
+  transition: background var(--dur-base) var(--ease-out);
 }
+.logoTile:hover { background: var(--bone-25); }
 .logoImg {
   max-height: 28px;
   max-width: 56px;
   object-fit: contain;
-}
-.logoMark {
-  font-family: var(--font-mono);
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--ink-700);
-  background: var(--bone-200);
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .logoName {
   font-size: 12px;
@@ -267,7 +254,7 @@
 }
 
 @media (max-width: 960px) {
-  .heroH1 { font-size: 36px; line-height: 46px; }
+  .heroH1 { font-size: 36px; }
   .capGrid { grid-template-columns: 1fr; gap: 28px; }
   .moatsGrid { grid-template-columns: 1fr; }
   .logoGrid { grid-template-columns: repeat(3, 1fr); }

@@ -185,7 +185,7 @@
 
   /* ---- Layout ---- */
   --site-max:       1240px;
-  --site-gutter:    72px;
+  --site-gutter:    40px;
   --site-gutter-sm: 24px;
   --section-pad-y:  64px;
   --nav-height:     68px;
