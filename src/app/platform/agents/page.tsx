@@ -126,16 +126,6 @@ export default function AgentsPage() {
                     <div className={styles.hm2ApproveItem}>
                       <div>
                         <div>admin@firm.com</div>
-                        <div className={styles.hm2ApproveMeta}>dormant 94 d</div>
-                      </div>
-                      <div className={styles.hm2ApproveBtns}>
-                        <span className={styles.hm2ApproveBtn}>Approve</span>
-                        <span className={styles.hm2ApproveBtn}>Review</span>
-                      </div>
-                    </div>
-                    <div className={styles.hm2ApproveItem}>
-                      <div>
-                        <div>analyst@firm.com</div>
                         <div className={styles.hm2ApproveMeta}>dormant 107 d</div>
                       </div>
                       <div className={styles.hm2ApproveBtns}>
