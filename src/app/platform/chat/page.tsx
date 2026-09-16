@@ -57,8 +57,8 @@ export default function ChatPage() {
       <section className={styles.hero}>
         <div className={styles.heroLattice} aria-hidden="true" />
         <div className={styles.heroInner}>
-          <div className={styles.heroCenter}>
-            <div className={styles.heroCopyCenter}>
+          <div className={styles.heroGrid}>
+            <div className={styles.heroCopy}>
               <div className={styles.eyebrow}>Platform · Chat</div>
               <h1 className={styles.h1}>Ask your corpus. Get a cited answer.</h1>
               <p className={styles.heroLede}>
@@ -71,7 +71,7 @@ export default function ChatPage() {
               </div>
             </div>
 
-            <div className={styles.heroMockCenter} aria-hidden="true">
+            <div className={styles.heroMockWrap} aria-hidden="true">
               <div className={styles.hmPanel}>
                 <div className={styles.hm2Header}>
                   <span className={styles.hm2HeaderLabel}>Chat · grounded thread</span>
