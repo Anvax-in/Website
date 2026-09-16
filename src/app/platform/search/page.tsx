@@ -57,8 +57,8 @@ export default function SearchPage() {
       <section className={styles.hero}>
         <div className={styles.heroLattice} aria-hidden="true" />
         <div className={styles.heroInner}>
-          <div className={styles.heroGrid}>
-            <div className={styles.heroCopy}>
+          <div className={styles.heroCenter}>
+            <div className={styles.heroCopyCenter}>
               <div className={styles.eyebrow}>Platform · Search</div>
               <h1 className={styles.h1}>Find it in seconds. Cite the source.</h1>
               <p className={styles.heroLede}>
@@ -72,7 +72,7 @@ export default function SearchPage() {
               </div>
             </div>
 
-            <div className={styles.heroMockWrap} aria-hidden="true">
+            <div className={styles.heroMockCenter} aria-hidden="true">
               <div className={styles.hmPanel}>
                 <div className={styles.hm2Header}>
                   <span className={styles.hm2HeaderLabel}>Search · cited results</span>

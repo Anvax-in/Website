@@ -375,6 +375,26 @@
 .heroCopy {}
 .heroMockWrap { position: relative; }
 
+/* ── Centered hero variant (search / chat / agents) ── */
+.heroCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+.heroCopyCenter {
+  text-align: center;
+  max-width: 680px;
+  width: 100%;
+}
+.heroCopyCenter .heroActions {
+  justify-content: center;
+}
+.heroMockCenter {
+  width: 100%;
+  max-width: 760px;
+}
+
 /* ── Mock window (floating light panel) ── */
 .hmPanel {
   background: var(--paper);
