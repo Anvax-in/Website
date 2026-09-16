@@ -82,68 +82,55 @@ export default function ChatPage() {
                     <span className={styles.hmBarBadgeDot} />Governed
                   </span>
                 </div>
-                <div className={styles.hmGrid}>
-                  {/* Left: thread list */}
-                  <div className={styles.hmSidebar}>
-                    <div className={styles.hmSectionLabel}>Threads</div>
-                    <div className={styles.hmNavItemActive}>AML PEP limits</div>
-                    <div className={styles.hmNavItem}>GDPR retention</div>
-                    <div className={styles.hmNavItem}>RBI circular 74</div>
-                    <div className={styles.hmNavItem}>ISO 27001 gaps</div>
-                    <div className={styles.hmSidebarFooter}>
-                      Model v2024.11<br />4 threads · tenant
+                <div className={styles.hm2ChatBody}>
+                  {/* User message */}
+                  <div className={styles.hm2UserMsg}>
+                    Summarise PEP relationships above board exposure limits.
+                  </div>
+
+                  {/* PII redaction notice */}
+                  <div className={styles.hm2PiiPill}>
+                    PII detected · 2 names redacted per policy
+                  </div>
+
+                  {/* Step completion card */}
+                  <div className={styles.hm2StepCard}>
+                    <div className={styles.hm2StepHeader}>
+                      <span className={styles.hm2StepCheck}>✓</span>
+                      Completed · 3 steps · 2 sources
+                    </div>
+                    <div className={styles.hm2StepChips}>
+                      <span className={styles.hm2StepChip}>AML Policy v12</span>
+                      <span className={styles.hm2StepChip}>PEP register</span>
                     </div>
                   </div>
 
-                  {/* Center: conversation */}
-                  <div className={styles.hmCenter}>
-                    <div className={styles.hmMsgUser}>
-                      What does our AML policy say about PEP exposure limits?
+                  {/* AI answer */}
+                  <p className={styles.hm2AiText}>
+                    Three relationships exceed the 5% board limit. Full names redacted per AML
+                    Policy v12 §4.3. Refer to the compliance desk for the unredacted list.
+                  </p>
+
+                  {/* Input bar */}
+                  <div className={styles.hm2InputBar}>
+                    <div className={styles.hm2InputTop}>
+                      <span className={styles.hm2InputScope}>
+                        Governed
+                        <span className={styles.hm2InputScopeSep}> | </span>
+                        <span className={styles.hm2InputScopeVal}>All corpora</span>
+                      </span>
                     </div>
-                    <div className={styles.hmMsgAi}>
-                      <p className={styles.hmMsgAiText}>
-                        Per AML Policy v12 §4.3, PEP exposure is capped at 5% of
-                        the credit portfolio. Enhanced due diligence is mandatory
-                        for any relationship above £50k.
-                      </p>
-                      <div className={styles.hmMsgSource}>
-                        <span className={styles.hmMsgSourceDot} />
-                        AML Policy v12 · §4.3 · p. 18
+                    <div className={styles.hm2InputField}>
+                      <span>Ask about your documents...</span>
+                      <div className={styles.hm2SendBtn}>
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--paper)" strokeWidth="2.5" strokeLinecap="round">
+                          <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" />
+                        </svg>
                       </div>
                     </div>
-                    <div className={styles.hmMsgFooter}>
-                      <span className={styles.hmFooterItem}>✓ Grounded</span>
-                      <span className={styles.hmFooterItem}>✓ Logged</span>
-                      <span className={styles.hmFooterItem}>✓ No egress</span>
-                    </div>
-                  </div>
-
-                  {/* Right: turn metadata */}
-                  <div className={styles.hmRight}>
-                    <div className={styles.hmSectionLabel}>This turn</div>
-                    <div className={styles.hmMetaRow}>
-                      <span className={styles.hmMetaDot} />
-                      <span className={styles.hmMetaText}>
-                        Model pinned<br />
-                        <span className={styles.hmMetaSub}>v2024.11</span>
-                      </span>
-                    </div>
-                    <div className={styles.hmMetaRow}>
-                      <span className={styles.hmMetaDot} />
-                      <span className={styles.hmMetaText}>
-                        Tenant isolated<br />
-                        <span className={styles.hmMetaSub}>your-workspace</span>
-                      </span>
-                    </div>
-                    <div className={styles.hmMetaRow}>
-                      <span className={styles.hmMetaDot} />
-                      <span className={styles.hmMetaText}>
-                        Audit written<br />
-                        <span className={styles.hmMetaSub}>#4,412,910</span>
-                      </span>
-                    </div>
-                    <div className={styles.hmRightFooter}>
-                      No data egress<br />eu-central-1
+                    <div className={styles.hm2LlamaFooter}>
+                      Llama 3.3 70B ·{' '}
+                      <span className={styles.hm2LlamaTeal}>Thread logged</span>
                     </div>
                   </div>
                 </div>

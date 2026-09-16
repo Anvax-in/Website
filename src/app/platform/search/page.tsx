@@ -83,35 +83,52 @@ export default function SearchPage() {
                     <span className={styles.hmBarBadgeDot} />Governed
                   </span>
                 </div>
-                <div className={styles.hmBody}>
-                  <div className={styles.hmSearchBox}>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--slate-400)" strokeWidth="2" strokeLinecap="round" style={{ flexShrink: 0 }}>
+                <div className={styles.hm2Body}>
+                  {/* Search input */}
+                  <div className={styles.hm2SearchRow}>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--fg-3)" strokeWidth="2" strokeLinecap="round" style={{ flexShrink: 0 }}>
                       <path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0" />
                     </svg>
-                    <span className={styles.hmSearchText}>Which credit files were flagged in Q3</span>
-                    <span className={styles.hmCaret} />
-                    <span className={styles.hmKbd}>⌘K</span>
+                    <span className={styles.hm2SearchText}>Treasury sovereign risk exposure</span>
+                    <span className={styles.hm2Caret} />
                   </div>
-                  <div className={styles.hmAnswer}>
-                    <div className={styles.hmAnswerBadge}>Answer · grounded in 3 sources</div>
-                    <p className={styles.hmAnswerText}>
-                      Eleven credit files were flagged in Q3, nine for incomplete refresh documentation
-                      and two for expired verification. All sit with the consumer lending desk.
-                    </p>
+
+                  {/* Filter chips */}
+                  <div className={styles.hm2Chips}>
+                    <span className={`${styles.hm2Chip} ${styles.hm2ChipActive}`}>All corpora</span>
+                    <span className={styles.hm2Chip}>Treasury</span>
+                    <span className={styles.hm2Chip}>Risk</span>
+                    <span className={styles.hm2Chip}>ALCO</span>
                   </div>
-                  <div className={styles.hmResults}>
-                    {[
-                      { n: 1, title: 'Q3 credit review consumer lending.pdf', ref: 'p. 14' },
-                      { n: 2, title: 'Refresh SOP v4.docx', ref: '§ 3.2' },
-                    ].map(r => (
-                      <div key={r.n} className={styles.hmResult}>
-                        <span className={styles.hmResultN}>{r.n}</span>
-                        <div>
-                          <div className={styles.hmResultTitle}>{r.title}</div>
-                          <div className={styles.hmResultRef}>{r.ref}</div>
-                        </div>
-                      </div>
-                    ))}
+
+                  {/* Result cards */}
+                  <div className={styles.hm2ResultCard}>
+                    <div className={styles.hm2ResultTitle}>Treasury exposure — sovereign risk limits</div>
+                    <div className={styles.hm2ResultMeta}>
+                      <span className={styles.hm2ResultTag}>ALCO Policy §4.1</span>
+                      p. 23
+                    </div>
+                  </div>
+                  <div className={styles.hm2ResultCard}>
+                    <div className={styles.hm2ResultTitle}>Q4 ALCO pack — counterparty breakdown</div>
+                    <div className={styles.hm2ResultMeta}>
+                      <span className={styles.hm2ResultTag}>Board deck</span>
+                      slide 11
+                    </div>
+                  </div>
+
+                  {/* Withheld result */}
+                  <div className={styles.hm2Withheld}>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--fg-3)" strokeWidth="2" strokeLinecap="round">
+                      <rect x="3" y="11" width="18" height="11" rx="2" />
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                    <span className={styles.hm2WithheldText}>1 result withheld — insufficient clearance</span>
+                  </div>
+
+                  {/* Footer */}
+                  <div className={styles.hm2SearchFooter}>
+                    Returned in 0.9 s · logged as entry 4,412,911
                   </div>
                 </div>
               </div>

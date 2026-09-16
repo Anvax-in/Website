@@ -888,3 +888,351 @@
   .governedInner { padding-top: 72px; padding-bottom: 72px; }
   .ctaInner { padding-top: 72px; padding-bottom: 72px; }
 }
+
+/* ── hm2: single-card mocks (search / chat / agents) ── */
+
+.hm2Body {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Search */
+.hm2SearchRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bone-50);
+  border: 1px solid var(--bone-200);
+  padding: 7px 10px;
+}
+.hm2SearchText {
+  font-size: 12px;
+  color: var(--ink-700);
+  flex: 1;
+}
+.hm2Caret {
+  display: inline-block;
+  width: 1px;
+  height: 13px;
+  background: var(--ink-900);
+  animation: capCaret 1s step-end infinite;
+  vertical-align: middle;
+}
+
+.hm2Chips {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.hm2Chip {
+  font-size: 10.5px;
+  padding: 2px 8px;
+  border: 1px solid var(--bone-200);
+  border-radius: 20px;
+  color: var(--ink-500);
+  background: var(--paper);
+}
+.hm2ChipActive {
+  background: var(--ink-900);
+  color: var(--paper);
+  border-color: var(--ink-900);
+}
+
+.hm2ResultCard {
+  border: 1px solid var(--bone-200);
+  padding: 9px 11px;
+  background: var(--paper);
+  animation: capReveal 0.4s var(--ease-out) both;
+}
+.hm2ResultCard:nth-child(1) { animation-delay: 0.6s; }
+.hm2ResultCard:nth-child(2) { animation-delay: 0.9s; }
+
+.hm2ResultTitle {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--ink-900);
+  margin-bottom: 3px;
+}
+.hm2ResultMeta {
+  font-size: 10.5px;
+  color: var(--fg-3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hm2ResultTag {
+  font-size: 10px;
+  padding: 1px 6px;
+  background: var(--blue-50);
+  color: var(--blue-600);
+  font-weight: 500;
+}
+
+.hm2Withheld {
+  border: 1px dashed var(--bone-200);
+  padding: 9px 11px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: capReveal 0.4s var(--ease-out) 1.2s both;
+}
+.hm2WithheldText {
+  font-size: 11px;
+  color: var(--fg-3);
+  font-style: italic;
+}
+
+.hm2SearchFooter {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--fg-3);
+  padding-top: 2px;
+  animation: capReveal 0.4s var(--ease-out) 1.5s both;
+}
+
+/* Chat */
+.hm2ChatBody {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.hm2UserMsg {
+  align-self: flex-end;
+  background: var(--ink-900);
+  color: var(--paper);
+  font-size: 11.5px;
+  line-height: 17px;
+  padding: 7px 11px;
+  border-radius: 10px 10px 2px 10px;
+  max-width: 82%;
+  animation: capReveal 0.4s var(--ease-out) both;
+}
+
+.hm2PiiPill {
+  align-self: flex-start;
+  font-size: 10.5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(94, 195, 175, 0.10);
+  color: var(--teal);
+  border: 1px solid rgba(94, 195, 175, 0.28);
+  animation: capReveal 0.4s var(--ease-out) 0.45s both;
+}
+
+.hm2StepCard {
+  border: 1px solid var(--bone-200);
+  padding: 9px 11px;
+  background: var(--bone-25);
+  animation: capReveal 0.4s var(--ease-out) 0.75s both;
+}
+.hm2StepHeader {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-700);
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.hm2StepCheck {
+  color: var(--sage-600);
+}
+.hm2StepChips {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.hm2StepChip {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 2px 6px;
+  border: 1px solid var(--bone-200);
+  color: var(--fg-3);
+  background: var(--paper);
+}
+
+.hm2AiText {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--ink-700);
+  animation: capReveal 0.4s var(--ease-out) 1.05s both;
+}
+
+.hm2InputBar {
+  border: 1px solid var(--bone-200);
+  background: var(--paper);
+  animation: capReveal 0.4s var(--ease-out) 1.35s both;
+  margin-top: 2px;
+}
+.hm2InputTop {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 9px;
+  border-bottom: 1px solid var(--bone-100);
+}
+.hm2InputScope {
+  font-size: 10.5px;
+  color: var(--fg-3);
+  flex: 1;
+}
+.hm2InputScopeSep {
+  color: var(--bone-200);
+  margin: 0 3px;
+}
+.hm2InputScopeVal {
+  color: var(--ink-600);
+}
+.hm2InputField {
+  padding: 7px 9px;
+  font-size: 11px;
+  color: var(--bone-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hm2SendBtn {
+  width: 20px;
+  height: 20px;
+  background: var(--ink-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.hm2LlamaFooter {
+  padding: 4px 9px;
+  border-top: 1px solid var(--bone-100);
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--fg-3);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hm2LlamaTeal {
+  color: var(--teal);
+}
+
+/* Agents */
+.hm2AgentBody {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hm2AgentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hm2AgentTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+.hm2AgentRunBadge {
+  font-size: 10.5px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: rgba(94, 195, 175, 0.10);
+  color: var(--teal);
+  border: 1px solid rgba(94, 195, 175, 0.28);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.hm2AgentRunDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  animation: capPulse 1.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.hm2RunCard {
+  border: 1px solid var(--bone-200);
+  overflow: hidden;
+}
+.hm2StepRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 7px 11px;
+  border-bottom: 1px solid var(--bone-100);
+  animation: capReveal 0.35s var(--ease-out) both;
+}
+.hm2StepRow:last-child { border-bottom: 0; }
+.hm2StepRow:nth-child(1) { animation-delay: 0.15s; }
+.hm2StepRow:nth-child(2) { animation-delay: 0.5s; }
+.hm2StepRow:nth-child(3) { animation-delay: 0.85s; }
+.hm2StepRow:nth-child(4) { animation-delay: 1.2s; }
+
+.hm2StepRowIcon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.hm2StepRowIconDone {
+  background: rgba(94, 195, 175, 0.15);
+  color: var(--teal);
+}
+.hm2StepRowIconPending {
+  background: var(--bone-100);
+  color: var(--fg-3);
+}
+.hm2StepRowLabel {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--ink-800);
+  line-height: 17px;
+}
+.hm2StepRowMeta {
+  font-size: 10.5px;
+  color: var(--fg-3);
+  margin-top: 1px;
+}
+
+.hm2ApproveList {
+  border: 1px solid var(--bone-200);
+  animation: capReveal 0.4s var(--ease-out) 1.6s both;
+}
+.hm2ApproveItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 11px;
+  border-bottom: 1px solid var(--bone-100);
+  font-size: 11px;
+  color: var(--ink-700);
+}
+.hm2ApproveItem:last-child { border-bottom: 0; }
+.hm2ApproveMeta {
+  font-size: 10px;
+  color: var(--fg-3);
+  flex: 1;
+}
+.hm2ApproveBtns {
+  display: flex;
+  gap: 4px;
+}
+.hm2ApproveBtn {
+  font-size: 10px;
+  padding: 2px 7px;
+  border: 1px solid var(--bone-200);
+  color: var(--ink-700);
+  background: var(--paper);
+  cursor: default;
+}

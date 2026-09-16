@@ -83,79 +83,68 @@ export default function AgentsPage() {
                     <span className={styles.hmBarBadgeDot} />3 active
                   </span>
                 </div>
-                <div className={styles.hmGrid}>
-                  {/* Left: agent list */}
-                  <div className={styles.hmSidebar}>
-                    <div className={styles.hmSectionLabel}>Agents</div>
-                    <div className={styles.hmNavItemActive}>
-                      <span className={styles.hmStatusDot} />RBI watch
+                <div className={styles.hm2AgentBody}>
+                  {/* Agent header */}
+                  <div className={styles.hm2AgentHeader}>
+                    <span className={styles.hm2AgentTitle}>Quarterly access review</span>
+                    <span className={styles.hm2AgentRunBadge}>
+                      <span className={styles.hm2AgentRunDot} />Running
+                    </span>
+                  </div>
+
+                  {/* Run steps */}
+                  <div className={styles.hm2RunCard}>
+                    <div className={styles.hm2StepRow}>
+                      <div className={`${styles.hm2StepRowIcon} ${styles.hm2StepRowIconDone}`}>✓</div>
+                      <div>
+                        <div className={styles.hm2StepRowLabel}>Fetched 847 user records</div>
+                        <div className={styles.hm2StepRowMeta}>IAM connector</div>
+                      </div>
                     </div>
-                    <div className={styles.hmNavItem}>
-                      <span className={styles.hmStatusDot} />SEBI watch
+                    <div className={styles.hm2StepRow}>
+                      <div className={`${styles.hm2StepRowIcon} ${styles.hm2StepRowIconDone}`}>✓</div>
+                      <div>
+                        <div className={styles.hm2StepRowLabel}>Flagged 12 dormant accounts</div>
+                        <div className={styles.hm2StepRowMeta}>&gt;90 day threshold</div>
+                      </div>
                     </div>
-                    <div className={styles.hmNavItem}>
-                      <span className={styles.hmStatusDot} />IRDAI watch
+                    <div className={styles.hm2StepRow}>
+                      <div className={`${styles.hm2StepRowIcon} ${styles.hm2StepRowIconDone}`}>✓</div>
+                      <div>
+                        <div className={styles.hm2StepRowLabel}>Drafted revocation requests</div>
+                        <div className={styles.hm2StepRowMeta}>12 pending</div>
+                      </div>
                     </div>
-                    <div className={styles.hmNavItem}>FCA monitor</div>
-                    <div className={styles.hmSidebarFooter}>
-                      3 of 12 active<br />In region · EU
+                    <div className={styles.hm2StepRow}>
+                      <div className={`${styles.hm2StepRowIcon} ${styles.hm2StepRowIconPending}`}>…</div>
+                      <div>
+                        <div className={styles.hm2StepRowLabel}>Awaiting human approval</div>
+                        <div className={styles.hm2StepRowMeta}>0 / 12 approved</div>
+                      </div>
                     </div>
                   </div>
 
-                  {/* Center: event feed */}
-                  <div className={styles.hmCenter}>
-                    <div className={styles.hmFeed}>
-                      <div className={styles.hmFeedItem}>
-                        <span className={`${styles.hmFeedBadge} ${styles.hmFeedBadgeNew}`}>NEW</span>
-                        <div className={styles.hmFeedTitle}>RBI/2024-25/74 · Lending</div>
-                        <div className={styles.hmFeedMeta}>→ Routed to Risk &amp; Compliance</div>
+                  {/* Approval queue */}
+                  <div className={styles.hm2ApproveList}>
+                    <div className={styles.hm2ApproveItem}>
+                      <div>
+                        <div>admin@firm.com</div>
+                        <div className={styles.hm2ApproveMeta}>dormant 94 d</div>
                       </div>
-                      <div className={styles.hmFeedItem}>
-                        <span className={`${styles.hmFeedBadge} ${styles.hmFeedBadgeNew}`}>NEW</span>
-                        <div className={styles.hmFeedTitle}>SEBI/LAD-NRO/GN/2024/86</div>
-                        <div className={styles.hmFeedMeta}>→ Pending human review</div>
-                      </div>
-                      <div className={styles.hmFeedItem}>
-                        <span className={`${styles.hmFeedBadge} ${styles.hmFeedBadgeDone}`}>DONE</span>
-                        <div className={styles.hmFeedTitle}>IRDAI/LIFE/CIR/234/2024</div>
-                        <div className={styles.hmFeedMeta}>Approved and archived</div>
+                      <div className={styles.hm2ApproveBtns}>
+                        <span className={styles.hm2ApproveBtn}>Approve</span>
+                        <span className={styles.hm2ApproveBtn}>Review</span>
                       </div>
                     </div>
-                    <div className={styles.hmFeedFooter}>
-                      <span className={styles.hmFeedPulse} />
-                      Last run 2 min ago · In region
-                    </div>
-                  </div>
-
-                  {/* Right: run detail */}
-                  <div className={styles.hmRight}>
-                    <div className={styles.hmSectionLabel}>RBI run</div>
-                    <div className={styles.hmMetaRow}>
-                      <span className={styles.hmMetaDot} />
-                      <span className={styles.hmMetaText}>
-                        Routed to<br />
-                        <span className={styles.hmMetaSub}>Risk team</span>
-                      </span>
-                    </div>
-                    <div className={styles.hmMetaRow}>
-                      <span className={styles.hmMetaDot} />
-                      <span className={styles.hmMetaText}>
-                        Human gate<br />
-                        <span className={styles.hmMetaSub}>Required</span>
-                      </span>
-                    </div>
-                    <div className={styles.hmMetaRow}>
-                      <span className={styles.hmMetaDot} />
-                      <span className={styles.hmMetaText}>
-                        Token budget<br />
-                        <span className={styles.hmMetaSub}>847 / 5,000</span>
-                      </span>
-                    </div>
-                    <div className={styles.hmTokenBar}>
-                      <div className={styles.hmTokenFill} style={{ width: '17%' }} />
-                    </div>
-                    <div className={styles.hmRightFooter}>
-                      Logged · append-only<br />Action audit #812
+                    <div className={styles.hm2ApproveItem}>
+                      <div>
+                        <div>analyst@firm.com</div>
+                        <div className={styles.hm2ApproveMeta}>dormant 107 d</div>
+                      </div>
+                      <div className={styles.hm2ApproveBtns}>
+                        <span className={styles.hm2ApproveBtn}>Approve</span>
+                        <span className={styles.hm2ApproveBtn}>Review</span>
+                      </div>
                     </div>
                   </div>
                 </div>
