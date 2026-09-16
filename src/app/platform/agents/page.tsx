@@ -57,16 +57,57 @@ export default function AgentsPage() {
       <section className={styles.hero}>
         <div className={styles.heroLattice} aria-hidden="true" />
         <div className={styles.heroInner}>
-          <div className={styles.eyebrow}>Platform · Agents</div>
-          <h1 className={styles.h1}>Your environment, monitored and actioned.</h1>
-          <p className={styles.heroLede}>
-            Persistent agents watch your feeds and connected sources. When something
-            changes, they classify, summarise, and route to the right team before
-            anyone opens their inbox.
-          </p>
-          <div className={styles.heroActions}>
-            <a href="/contact" className={styles.btnPrimary}>Get early access →</a>
-            <a href="/platform" className={styles.btnGhost}>All capabilities</a>
+          <div className={styles.heroGrid}>
+            <div className={styles.heroCopy}>
+              <div className={styles.eyebrow}>Platform · Agents</div>
+              <h1 className={styles.h1}>Your environment, monitored and actioned.</h1>
+              <p className={styles.heroLede}>
+                Persistent agents watch your feeds and connected sources. When something
+                changes, they classify, summarise, and route to the right team before
+                anyone opens their inbox.
+              </p>
+              <div className={styles.heroActions}>
+                <a href="/contact" className={styles.btnPrimary}>Get early access →</a>
+                <a href="/platform" className={styles.btnGhost}>All capabilities</a>
+              </div>
+            </div>
+
+            <div className={styles.heroMockWrap} aria-hidden="true">
+              <div className={styles.hmPanel}>
+                <div className={styles.hmBar}>
+                  <span className={styles.hmDot} />
+                  <span className={styles.hmDot} />
+                  <span className={styles.hmDot} />
+                  <span className={styles.hmBarTitle}>anvax · agents · live</span>
+                  <span className={styles.hmBarBadge}>
+                    <span className={styles.hmBarBadgeDot} />3 active
+                  </span>
+                </div>
+                <div className={styles.hmBody}>
+                  <div className={styles.hmFeed}>
+                    <div className={styles.hmFeedItem}>
+                      <span className={`${styles.hmFeedBadge} ${styles.hmFeedBadgeNew}`}>NEW</span>
+                      <div className={styles.hmFeedTitle}>RBI/2024-25/74 · Lending guidelines</div>
+                      <div className={styles.hmFeedMeta}>Classified: Lending · → Routed to Risk &amp; Compliance</div>
+                    </div>
+                    <div className={styles.hmFeedItem}>
+                      <span className={`${styles.hmFeedBadge} ${styles.hmFeedBadgeNew}`}>NEW</span>
+                      <div className={styles.hmFeedTitle}>SEBI/LAD-NRO/GN/2024/86</div>
+                      <div className={styles.hmFeedMeta}>Classified: Market ops · → Pending human review</div>
+                    </div>
+                    <div className={styles.hmFeedItem}>
+                      <span className={`${styles.hmFeedBadge} ${styles.hmFeedBadgeDone}`}>DONE</span>
+                      <div className={styles.hmFeedTitle}>IRDAI/LIFE/CIR/GV/234/2024</div>
+                      <div className={styles.hmFeedMeta}>Classified: Insurance · Approved and archived</div>
+                    </div>
+                  </div>
+                  <div className={styles.hmFeedFooter}>
+                    <span className={styles.hmFeedPulse} />
+                    3 events · Last run 2 min ago · In region
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

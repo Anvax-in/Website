@@ -57,15 +57,56 @@ export default function ChatPage() {
       <section className={styles.hero}>
         <div className={styles.heroLattice} aria-hidden="true" />
         <div className={styles.heroInner}>
-          <div className={styles.eyebrow}>Platform · Chat</div>
-          <h1 className={styles.h1}>Ask your corpus. Get a cited answer.</h1>
-          <p className={styles.heroLede}>
-            Multi-turn grounded chat across your documents. Anchored to retrieved context,
-            the model says "not found" rather than inventing an answer.
-          </p>
-          <div className={styles.heroActions}>
-            <a href="/contact" className={styles.btnPrimary}>Request a pilot →</a>
-            <a href="/platform" className={styles.btnGhost}>All capabilities</a>
+          <div className={styles.heroGrid}>
+            <div className={styles.heroCopy}>
+              <div className={styles.eyebrow}>Platform · Chat</div>
+              <h1 className={styles.h1}>Ask your corpus. Get a cited answer.</h1>
+              <p className={styles.heroLede}>
+                Multi-turn grounded chat across your documents. Anchored to retrieved context,
+                the model says "not found" rather than inventing an answer.
+              </p>
+              <div className={styles.heroActions}>
+                <a href="/contact" className={styles.btnPrimary}>Request a pilot →</a>
+                <a href="/platform" className={styles.btnGhost}>All capabilities</a>
+              </div>
+            </div>
+
+            <div className={styles.heroMockWrap} aria-hidden="true">
+              <div className={styles.hmPanel}>
+                <div className={styles.hmBar}>
+                  <span className={styles.hmDot} />
+                  <span className={styles.hmDot} />
+                  <span className={styles.hmDot} />
+                  <span className={styles.hmBarTitle}>anvax · chat · your tenancy</span>
+                  <span className={styles.hmBarBadge}>
+                    <span className={styles.hmBarBadgeDot} />Governed
+                  </span>
+                </div>
+                <div className={styles.hmBody}>
+                  <div className={styles.hmChat}>
+                    <div className={styles.hmMsgUser}>
+                      What does our AML policy say about PEP exposure limits?
+                    </div>
+                    <div className={styles.hmMsgAi}>
+                      <p className={styles.hmMsgAiText}>
+                        Per AML Policy v12 §4.3, PEP exposure is capped at 5% of the
+                        credit portfolio. Enhanced due diligence is mandatory for any
+                        relationship above £50k.
+                      </p>
+                      <div className={styles.hmMsgSource}>
+                        <span className={styles.hmMsgSourceDot} />
+                        Source: AML Policy v12, §4.3
+                      </div>
+                    </div>
+                    <div className={styles.hmMsgFooter}>
+                      <span className={styles.hmFooterItem}>✓ Grounded</span>
+                      <span className={styles.hmFooterItem}>✓ Logged</span>
+                      <span className={styles.hmFooterItem}>✓ Tenant-only</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

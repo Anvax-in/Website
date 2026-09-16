@@ -57,16 +57,65 @@ export default function SearchPage() {
       <section className={styles.hero}>
         <div className={styles.heroLattice} aria-hidden="true" />
         <div className={styles.heroInner}>
-          <div className={styles.eyebrow}>Platform · Search</div>
-          <h1 className={styles.h1}>Find it in seconds. Cite the source.</h1>
-          <p className={styles.heroLede}>
-            Hybrid retrieval across your entire document corpus: policies, contracts,
-            circulars, emails, and structured data, with paragraph-level citations on
-            every result.
-          </p>
-          <div className={styles.heroActions}>
-            <a href="/contact" className={styles.btnPrimary}>Request a pilot →</a>
-            <a href="/platform" className={styles.btnGhost}>All capabilities</a>
+          <div className={styles.heroGrid}>
+            <div className={styles.heroCopy}>
+              <div className={styles.eyebrow}>Platform · Search</div>
+              <h1 className={styles.h1}>Find it in seconds. Cite the source.</h1>
+              <p className={styles.heroLede}>
+                Hybrid retrieval across your entire document corpus: policies, contracts,
+                circulars, emails, and structured data, with paragraph-level citations on
+                every result.
+              </p>
+              <div className={styles.heroActions}>
+                <a href="/contact" className={styles.btnPrimary}>Request a pilot →</a>
+                <a href="/platform" className={styles.btnGhost}>All capabilities</a>
+              </div>
+            </div>
+
+            <div className={styles.heroMockWrap} aria-hidden="true">
+              <div className={styles.hmPanel}>
+                <div className={styles.hmBar}>
+                  <span className={styles.hmDot} />
+                  <span className={styles.hmDot} />
+                  <span className={styles.hmDot} />
+                  <span className={styles.hmBarTitle}>anvax · search · your tenancy</span>
+                  <span className={styles.hmBarBadge}>
+                    <span className={styles.hmBarBadgeDot} />Governed
+                  </span>
+                </div>
+                <div className={styles.hmBody}>
+                  <div className={styles.hmSearchBox}>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--slate-400)" strokeWidth="2" strokeLinecap="round" style={{ flexShrink: 0 }}>
+                      <path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0" />
+                    </svg>
+                    <span className={styles.hmSearchText}>Which credit files were flagged in Q3</span>
+                    <span className={styles.hmCaret} />
+                    <span className={styles.hmKbd}>⌘K</span>
+                  </div>
+                  <div className={styles.hmAnswer}>
+                    <div className={styles.hmAnswerBadge}>Answer · grounded in 3 sources</div>
+                    <p className={styles.hmAnswerText}>
+                      Eleven credit files were flagged in Q3, nine for incomplete refresh documentation
+                      and two for expired verification. All sit with the consumer lending desk.
+                    </p>
+                  </div>
+                  <div className={styles.hmResults}>
+                    {[
+                      { n: 1, title: 'Q3 credit review consumer lending.pdf', ref: 'p. 14' },
+                      { n: 2, title: 'Refresh SOP v4.docx', ref: '§ 3.2' },
+                    ].map(r => (
+                      <div key={r.n} className={styles.hmResult}>
+                        <span className={styles.hmResultN}>{r.n}</span>
+                        <div>
+                          <div className={styles.hmResultTitle}>{r.title}</div>
+                          <div className={styles.hmResultRef}>{r.ref}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

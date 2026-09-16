@@ -57,15 +57,62 @@ export default function GovernancePage() {
       <section className={styles.hero}>
         <div className={styles.heroLattice} aria-hidden="true" />
         <div className={styles.heroInner}>
-          <div className={styles.eyebrow}>Platform · Governance</div>
-          <h1 className={styles.h1}>Compliance by construction. Not configuration.</h1>
-          <p className={styles.heroLede}>
-            The governance layer sits between every user and every piece of data, wired
-            into the request path on every capability, not bolted on after the fact.
-          </p>
-          <div className={styles.heroActions}>
-            <a href="/contact" className={styles.btnPrimary}>Book a walkthrough →</a>
-            <a href="/trust" className={styles.btnGhost}>Read the security page</a>
+          <div className={styles.heroGrid}>
+            <div className={styles.heroCopy}>
+              <div className={styles.eyebrow}>Platform · Governance</div>
+              <h1 className={styles.h1}>Compliance by construction. Not configuration.</h1>
+              <p className={styles.heroLede}>
+                The governance layer sits between every user and every piece of data, wired
+                into the request path on every capability, not bolted on after the fact.
+              </p>
+              <div className={styles.heroActions}>
+                <a href="/contact" className={styles.btnPrimary}>Book a walkthrough →</a>
+                <a href="/trust" className={styles.btnGhost}>Read the security page</a>
+              </div>
+            </div>
+
+            <div className={styles.heroMockWrap} aria-hidden="true">
+              <div className={styles.hmPanel}>
+                <div className={styles.hmBar}>
+                  <span className={styles.hmDot} />
+                  <span className={styles.hmDot} />
+                  <span className={styles.hmDot} />
+                  <span className={styles.hmBarTitle}>anvax · audit trail</span>
+                  <span className={styles.hmBarBadge}>
+                    <span className={styles.hmBarBadgeDot} />Append-only
+                  </span>
+                </div>
+                <div className={styles.hmBody}>
+                  <div className={styles.hmAuditHeader}>
+                    <span className={styles.hmAuditCol}>ID</span>
+                    <span className={styles.hmAuditCol}>Action</span>
+                    <span className={styles.hmAuditCol}>User</span>
+                    <span className={styles.hmAuditCol} />
+                  </div>
+                  {[
+                    { id: '#908', type: 'Search', user: 'analyst@firm.com' },
+                    { id: '#909', type: 'Chat', user: 'research@firm.com' },
+                    { id: '#910', type: 'Agent', user: 'system' },
+                    { id: '#911', type: 'Approve', user: 'admin@firm.com' },
+                  ].map(row => (
+                    <div key={row.id} className={styles.hmAuditRow}>
+                      <span className={styles.hmAuditN}>{row.id}</span>
+                      <span className={styles.hmAuditType}>{row.type}</span>
+                      <span className={styles.hmAuditUser}>{row.user}</span>
+                      <span className={styles.hmAuditCheck}>✓</span>
+                    </div>
+                  ))}
+                  <div className={styles.hmAuditFooter}>
+                    <span className={styles.hmAuditFooterItem}>
+                      <span className={styles.hmAuditFooterDot} />Append-only
+                    </span>
+                    <span className={styles.hmAuditFooterItem}>
+                      <span className={styles.hmAuditFooterDot} />Cryptographic
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
