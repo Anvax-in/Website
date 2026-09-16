@@ -210,7 +210,7 @@ export default function TrustClient() {
         <div className={styles.controlsInner}>
           <div className={styles.sectionHead}>
             <div className={styles.sectionEyebrow}>Controls</div>
-            <h2 className={styles.h2}>Six controls, in plain English.</h2>
+            <h2 className={styles.h2}>Six things that make AI safe to deploy.</h2>
             <p className={styles.sectionLede}>
               Written for the person filling in a vendor questionnaire, not a compliance
               team reading a framework.

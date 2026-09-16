@@ -894,6 +894,8 @@
   letter-spacing: -0.02em;
   color: var(--paper);
   max-width: 24ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ctaBody {
