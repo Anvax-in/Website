@@ -20,7 +20,7 @@ That requirement is not negotiable by jurisdiction. Once you accept it, the list
 
 Notice what is absent from that list. Nobody asks how good the model is.
 
-## One: What Do You Have, And Where Is It Running?
+## 1. What Do You Have, And Where Is It Running?
 
 Singapore's supervisory guidance for financial institutions opens on a comprehensive inventory of every AI system in use. The EU regime requires high-risk systems to be registered before they go to market. Colorado's law, which takes effect on 1 January 2027, is narrower but still assumes you can identify which automated decision-making technology touched an employment outcome.
 
@@ -30,7 +30,7 @@ An inventory that holds up is derived from a chokepoint that cannot be routed ar
 
 > **An inventory built from declarations tells you what teams remember. An inventory built from key issuance tells you what is running.**
 
-## Two: Can A Human Actually Overturn It?
+## 2. Can A Human Actually Overturn It?
 
 Colorado requires deployers to establish procedures for meaningful human review and to accept reconsideration requests. The EU regime requires human oversight designed into high-risk systems. Singapore's guidance asks for human review of generative outputs specifically, on hallucination and prompt injection grounds.
 
@@ -38,7 +38,7 @@ The word doing the work in all three is meaningful, and it is where implementati
 
 There is a second half that gets skipped more often than the first. Overturning has to be recorded as an event, with the reason, because the reversal rate is the only real evidence that the review is functioning. A review process that produces no reversals is indistinguishable from no review process, and it is indistinguishable in exactly the way a supervisor will notice.
 
-## Three: Can You Reconstruct One Decision?
+## 3. Can You Reconstruct One Decision?
 
 Every regime asks for records. They disagree, substantially, about how long.
 
@@ -50,7 +50,7 @@ Most organizations do neither deliberately. They pick a retention number from th
 
 > **"Which of our markets has the longest retention window, and is that the one we actually built to?"**
 
-## Four: How Fast Can You Say It Broke?
+## 4. How Fast Can You Say It Broke?
 
 The EU regime gives providers of high-risk systems fifteen days to report a serious incident, dropping to two days where the incident involves a widespread infringement or a serious safety risk, and ten days where a person has died. Colorado gives deployers thirty days after an adverse outcome to give the affected person a plain-language explanation of the decision and the role the technology played in it.
 
