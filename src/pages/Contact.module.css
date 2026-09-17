@@ -6,7 +6,7 @@
   border-bottom: 1px solid var(--bone-200);
   position: relative;
   overflow: hidden;
-  padding: 80px 0 72px;
+  padding: 80px 0 96px;
 }
 .lattice {
   position: absolute;
@@ -18,9 +18,15 @@
   mask-image: radial-gradient(90% 70% at 50% 0%, #000 0%, transparent 75%);
   pointer-events: none;
 }
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
 .heroInner {
   position: relative;
-  max-width: 640px;
+  padding-top: 8px;
 }
 .heroEyebrow {
   font-family: var(--font-mono);
@@ -54,6 +60,7 @@
   align-items: start;
 }
 @media (max-width: 960px) {
+  .heroGrid { grid-template-columns: 1fr; gap: 48px; }
   .layout { grid-template-columns: 1fr; gap: 40px; }
   .aside { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 }
