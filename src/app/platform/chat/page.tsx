@@ -66,7 +66,7 @@ export default function ChatPage() {
                 the model says "not found" rather than inventing an answer.
               </p>
               <div className={styles.heroActions}>
-                <a href="/contact" className={styles.btnPrimary}>Request a pilot →</a>
+                <a href="/contact" className={styles.btnPrimary}>Book a demo →</a>
                 <a href="/platform" className={styles.btnGhost}>All capabilities</a>
               </div>
             </div>
@@ -195,7 +195,7 @@ export default function ChatPage() {
             <p className={styles.ctaBody}>We run a scoped pilot on your corpus. 45 minutes, no slide decks.</p>
           </div>
           <div className={styles.ctaActions}>
-            <a href="/contact" className={styles.ctaWhite}>Request a pilot →</a>
+            <a href="/contact" className={styles.ctaWhite}>Book a demo →</a>
             <a href="/platform" className={styles.ctaOutline}>All capabilities</a>
           </div>
         </div>

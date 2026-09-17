@@ -67,7 +67,7 @@ export default function SearchPage() {
                 every result.
               </p>
               <div className={styles.heroActions}>
-                <a href="/contact" className={styles.btnPrimary}>Request a pilot →</a>
+                <a href="/contact" className={styles.btnPrimary}>Book a demo →</a>
                 <a href="/platform" className={styles.btnGhost}>All capabilities</a>
               </div>
             </div>
@@ -192,7 +192,7 @@ export default function SearchPage() {
             <p className={styles.ctaBody}>We run a scoped pilot on your documents. 45 minutes, no slide decks.</p>
           </div>
           <div className={styles.ctaActions}>
-            <a href="/contact" className={styles.ctaWhite}>Request a pilot →</a>
+            <a href="/contact" className={styles.ctaWhite}>Book a demo →</a>
             <a href="/platform" className={styles.ctaOutline}>All capabilities</a>
           </div>
         </div>
