@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Footer.module.css'
 
@@ -58,7 +59,7 @@ export default function Footer() {
         <div className={styles.grid}>
           <div>
             <div className={styles.brand}>
-              <img src="/anvax-logo-new.png" alt="" className={styles.brandLogo} />
+              <Image src="/anvax-logo.webp" alt="" width={300} height={250} className={styles.brandLogo} />
               <span className={styles.brandName}>Anvax</span>
             </div>
             <p className={styles.blurb}>

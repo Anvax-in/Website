@@ -91,7 +91,7 @@ export default function HeroSection() {
             <a href="/contact" className={styles.btnPrimary}>
               Book a demo <span className={styles.arrow}>→</span>
             </a>
-            <a href="/product" className={styles.btnGhost}>
+            <a href="/platform" className={styles.btnGhost}>
               Take the product tour
             </a>
           </div>

@@ -337,7 +337,7 @@ export default function ProductSection() {
                 <li><Check />Every answer cites the document and revision it came from</li>
                 <li><Check />Hybrid retrieval across files, tickets, and structured records</li>
               </ul>
-              <a href="/search" className={styles.exploreLink}>Explore Search <Arrow /></a>
+              <a href="/platform/search" className={styles.exploreLink}>Explore Search <Arrow /></a>
             </div>
             <SearchMock />
           </div>
@@ -362,7 +362,7 @@ export default function ProductSection() {
                 <li><Check />Threads retained under your own retention policy</li>
                 <li><Check />Model choice governed by role, not by the user</li>
               </ul>
-              <a href="/chat" className={styles.exploreLink}>Explore Chat <Arrow /></a>
+              <a href="/platform/chat" className={styles.exploreLink}>Explore Chat <Arrow /></a>
             </div>
           </div>
 
@@ -384,7 +384,7 @@ export default function ProductSection() {
                 <li><Check />Pre-flight policy check on every action</li>
                 <li><Check />Human approval gates on anything you designate</li>
               </ul>
-              <a href="/agents" className={styles.exploreLink}>Explore Agents <Arrow /></a>
+              <a href="/platform/agents" className={styles.exploreLink}>Explore Agents <Arrow /></a>
             </div>
             <AgentsMock />
           </div>

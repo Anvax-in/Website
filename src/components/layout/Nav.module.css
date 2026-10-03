@@ -183,7 +183,10 @@
   .row        { gap: 10px; }
 }
 @media (max-width: 520px) {
-  .row         { padding: 0 var(--site-gutter-sm); }
+  .row         { padding: 0 var(--site-gutter-sm); gap: 8px; }
   .mobilePanel { padding-left: var(--site-gutter-sm); padding-right: var(--site-gutter-sm); }
   .brandName   { font-size: 19px; }
+  .menuBtn     { gap: 0; padding: 9px; }
+  .menuLabel   { display: none; }
+  .actions a   { padding: 8px 14px; gap: 5px; font-size: 13px; }
 }

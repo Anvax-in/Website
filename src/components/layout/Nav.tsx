@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Button from '../ui/Button'
@@ -79,7 +80,7 @@ export default function Nav() {
     <nav className={styles.nav} aria-label="Primary">
       <div className={styles.row}>
         <Link href="/" className={styles.brand} aria-label="Anvax home">
-          <img src="/anvax-logo-new.png" alt="" className={styles.brandLogo} />
+          <Image src="/anvax-logo.webp" alt="" width={300} height={250} priority className={styles.brandLogo} />
           <span className={styles.brandName}>Anvax</span>
         </Link>
 
@@ -132,13 +133,14 @@ export default function Nav() {
           className={styles.menuBtn}
           aria-expanded={mobileOpen}
           aria-controls="nav-mobile-panel"
+          aria-label="Menu"
           onClick={() => setMobileOpen(o => !o)}
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                strokeWidth="2.5" strokeLinecap="round" aria-hidden="true">
             <path d={mobileOpen ? 'M6 6l12 12M18 6L6 18' : 'M3 6h18M3 12h18M3 18h18'} />
           </svg>
-          Menu
+          <span className={styles.menuLabel}>Menu</span>
         </button>
 
         <div className={styles.actions}>
