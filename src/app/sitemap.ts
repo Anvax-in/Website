@@ -10,8 +10,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: 'https://www.anvax.in',            lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 1.0 },
-    { url: 'https://www.anvax.in/platform',   lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 0.9 },
-    { url: 'https://www.anvax.in/industries', lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 0.8 },
+    { url: 'https://www.anvax.in/platform',            lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 0.9 },
+    { url: 'https://www.anvax.in/platform/search',     lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 0.8 },
+    { url: 'https://www.anvax.in/platform/chat',       lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 0.8 },
+    { url: 'https://www.anvax.in/platform/agents',     lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 0.8 },
+    { url: 'https://www.anvax.in/platform/governance', lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 0.8 },
+    { url: 'https://www.anvax.in/industries',          lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 0.8 },
     { url: 'https://www.anvax.in/trust',      lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 0.8 },
     { url: 'https://www.anvax.in/deployment', lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 0.8 },
     { url: 'https://www.anvax.in/company',    lastModified: new Date('2026-06-03'), changeFrequency: 'monthly', priority: 0.7 },

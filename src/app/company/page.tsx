@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   description: "Who we are, what we're building, and why we started in the world's hardest data-residency market.",
   openGraph: { title: 'Company | Anvax', description: "Who we are, what we're building, and why we started in the world's hardest data-residency market.", url: 'https://www.anvax.in/company' },
   twitter: { card: 'summary_large_image', title: 'Company | Anvax', description: "Built under the hardest data-residency regime. Sold everywhere data cannot leave." },
-  alternates: { canonical: 'https://www.anvax.in/company' },
+  alternates: { canonical: 'https://www.anvax.in/company', languages: { 'x-default': 'https://www.anvax.in/company', en: 'https://www.anvax.in/company' } },
 }
 
 export default function Company() {

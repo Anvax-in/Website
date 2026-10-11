@@ -5,7 +5,7 @@ import styles from '@/pages/Legal.module.css'
 export const metadata: Metadata = {
   title: 'Documentation | Anvax',
   description: 'Private-cloud deployment guides, architecture references, and integration documentation for the Anvax governed AI workspace.',
-  alternates: { canonical: 'https://www.anvax.in/docs' },
+  alternates: { canonical: 'https://www.anvax.in/docs', languages: { 'x-default': 'https://www.anvax.in/docs', en: 'https://www.anvax.in/docs' } },
 }
 
 const guides = [

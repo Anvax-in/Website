@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const { frontmatter } = post
   const canonicalUrl = frontmatter.canonicalURL ?? `https://www.anvax.in/blog/${slug}`
-  const ogImageUrl = `https://www.anvax.in/api/og?title=${encodeURIComponent(frontmatter.title)}`
+  const ogImageUrl = `https://www.anvax.in/api/og?title=${encodeURIComponent(frontmatter.title)}&label=${encodeURIComponent('Sovereign Stack · Anvax')}`
 
   return {
     title: `${frontmatter.title} - Sovereign Stack`,
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: frontmatter.description,
       images: [ogImageUrl],
     },
-    alternates: { canonical: canonicalUrl },
+    alternates: { canonical: canonicalUrl, languages: { 'x-default': canonicalUrl, en: canonicalUrl } },
   }
 }
 

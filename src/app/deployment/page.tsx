@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'Deployment | Anvax',
     description: 'Private cloud to air-gapped on-prem. Same product, three tiers.',
   },
-  alternates: { canonical: 'https://www.anvax.in/deployment' },
+  alternates: { canonical: 'https://www.anvax.in/deployment', languages: { 'x-default': 'https://www.anvax.in/deployment', en: 'https://www.anvax.in/deployment' } },
 }
 
 const tiers = [

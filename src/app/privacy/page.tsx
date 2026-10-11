@@ -5,7 +5,7 @@ import styles from '@/pages/Legal.module.css'
 export const metadata: Metadata = {
   title: 'Privacy Policy | Anvax',
   description: 'How Anvax collects, uses, and protects your data, and what rights you have over it.',
-  alternates: { canonical: 'https://www.anvax.in/privacy' },
+  alternates: { canonical: 'https://www.anvax.in/privacy', languages: { 'x-default': 'https://www.anvax.in/privacy', en: 'https://www.anvax.in/privacy' } },
 }
 
 const toc = [

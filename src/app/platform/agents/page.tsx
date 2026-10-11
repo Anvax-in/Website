@@ -1,11 +1,19 @@
 import type { Metadata } from 'next'
 import styles from '../Capability.module.css'
 
+const ogImageUrl = `https://www.anvax.in/api/og?title=${encodeURIComponent('Agents')}&label=${encodeURIComponent('Anvax Platform')}`
+
 export const metadata: Metadata = {
   title: 'Agents | Anvax Platform',
   description: 'Persistent agents that monitor regulatory feeds, classify new publications, and route to the right team, all inside your perimeter.',
-  openGraph: { title: 'Agents | Anvax Platform', description: 'Your environment, monitored and actioned without manual triage.', url: 'https://www.anvax.in/platform/agents' },
-  alternates: { canonical: 'https://www.anvax.in/platform/agents' },
+  openGraph: {
+    title: 'Agents | Anvax Platform',
+    description: 'Your environment, monitored and actioned without manual triage.',
+    url: 'https://www.anvax.in/platform/agents',
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: 'Anvax Platform — Agents' }],
+  },
+  twitter: { card: 'summary_large_image', title: 'Agents | Anvax Platform', description: 'Your environment, monitored and actioned without manual triage.', images: [ogImageUrl] },
+  alternates: { canonical: 'https://www.anvax.in/platform/agents', languages: { 'x-default': 'https://www.anvax.in/platform/agents', en: 'https://www.anvax.in/platform/agents' } },
 }
 
 const siblings = [

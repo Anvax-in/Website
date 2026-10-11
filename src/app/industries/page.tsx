@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     url: 'https://www.anvax.in/industries',
   },
   twitter: { card: 'summary_large_image', title: 'Industries | Anvax', description: 'Six vertical packs for enterprises where data cannot leave the building.' },
-  alternates: { canonical: 'https://www.anvax.in/industries' },
+  alternates: { canonical: 'https://www.anvax.in/industries', languages: { 'x-default': 'https://www.anvax.in/industries', en: 'https://www.anvax.in/industries' } },
 }
 
 export default function IndustriesPage() {

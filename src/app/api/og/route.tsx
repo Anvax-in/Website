@@ -5,7 +5,9 @@ import React from 'react'
 export const runtime = 'edge'
 
 export async function GET(request: NextRequest) {
-  const title = new URL(request.url).searchParams.get('title') ?? 'Sovereign Stack'
+  const { searchParams } = new URL(request.url)
+  const title = searchParams.get('title') ?? 'Sovereign Stack'
+  const label = searchParams.get('label') ?? 'Anvax'
 
   return new ImageResponse(
     (
@@ -56,7 +58,7 @@ export async function GET(request: NextRequest) {
               letterSpacing: '0.1em',
             }}
           >
-            Sovereign Stack · Anvax
+            {label}
           </span>
         </div>
 

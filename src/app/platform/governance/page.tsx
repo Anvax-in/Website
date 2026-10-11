@@ -1,11 +1,19 @@
 import type { Metadata } from 'next'
 import styles from '../Capability.module.css'
 
+const ogImageUrl = `https://www.anvax.in/api/og?title=${encodeURIComponent('Governance')}&label=${encodeURIComponent('Anvax Platform')}`
+
 export const metadata: Metadata = {
   title: 'Governance | Anvax Platform',
   description: 'Immutable audit trail, policy engine, and framework control mappings wired into the request path, not bolted on.',
-  openGraph: { title: 'Governance | Anvax Platform', description: 'Compliance by construction. Not configuration.', url: 'https://www.anvax.in/platform/governance' },
-  alternates: { canonical: 'https://www.anvax.in/platform/governance' },
+  openGraph: {
+    title: 'Governance | Anvax Platform',
+    description: 'Compliance by construction. Not configuration.',
+    url: 'https://www.anvax.in/platform/governance',
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: 'Anvax Platform — Governance' }],
+  },
+  twitter: { card: 'summary_large_image', title: 'Governance | Anvax Platform', description: 'Compliance by construction. Not configuration.', images: [ogImageUrl] },
+  alternates: { canonical: 'https://www.anvax.in/platform/governance', languages: { 'x-default': 'https://www.anvax.in/platform/governance', en: 'https://www.anvax.in/platform/governance' } },
 }
 
 const siblings = [

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     url: 'https://www.anvax.in/contact',
   },
   twitter: { card: 'summary_large_image', title: 'Contact | Anvax', description: 'Request a demo or get in touch.' },
-  alternates: { canonical: 'https://www.anvax.in/contact' },
+  alternates: { canonical: 'https://www.anvax.in/contact', languages: { 'x-default': 'https://www.anvax.in/contact', en: 'https://www.anvax.in/contact' } },
 }
 
 export default function ContactPage() {

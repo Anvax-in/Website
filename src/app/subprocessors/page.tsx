@@ -5,7 +5,7 @@ import styles from '@/pages/Legal.module.css'
 export const metadata: Metadata = {
   title: 'Sub-processors | Anvax',
   description: 'The complete list of sub-processors Anvax uses, and why the list is short on self-hosted tiers.',
-  alternates: { canonical: 'https://www.anvax.in/subprocessors' },
+  alternates: { canonical: 'https://www.anvax.in/subprocessors', languages: { 'x-default': 'https://www.anvax.in/subprocessors', en: 'https://www.anvax.in/subprocessors' } },
 }
 
 type Processor = {

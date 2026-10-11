@@ -1,11 +1,19 @@
 import type { Metadata } from 'next'
 import styles from '../Capability.module.css'
 
+const ogImageUrl = `https://www.anvax.in/api/og?title=${encodeURIComponent('Search')}&label=${encodeURIComponent('Anvax Platform')}`
+
 export const metadata: Metadata = {
   title: 'Search | Anvax Platform',
   description: 'Hybrid semantic search over your entire document corpus, cited, PII-guarded, and logged. Inside your perimeter.',
-  openGraph: { title: 'Search | Anvax Platform', description: 'Find it in seconds. Cite the source.', url: 'https://www.anvax.in/platform/search' },
-  alternates: { canonical: 'https://www.anvax.in/platform/search' },
+  openGraph: {
+    title: 'Search | Anvax Platform',
+    description: 'Find it in seconds. Cite the source.',
+    url: 'https://www.anvax.in/platform/search',
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: 'Anvax Platform — Search' }],
+  },
+  twitter: { card: 'summary_large_image', title: 'Search | Anvax Platform', description: 'Find it in seconds. Cite the source.', images: [ogImageUrl] },
+  alternates: { canonical: 'https://www.anvax.in/platform/search', languages: { 'x-default': 'https://www.anvax.in/platform/search', en: 'https://www.anvax.in/platform/search' } },
 }
 
 const siblings = [

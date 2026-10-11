@@ -21,9 +21,10 @@ type Props = { params: Promise<{ page: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { page } = await params
   const pageNum = Number(page)
+  const canonicalUrl = `https://www.anvax.in/blog/page/${pageNum}`
   return {
     title: `Sovereign Stack: Page ${pageNum} · Anvax`,
-    alternates: { canonical: `https://www.anvax.in/blog/page/${pageNum}` },
+    alternates: { canonical: canonicalUrl, languages: { 'x-default': canonicalUrl, en: canonicalUrl } },
   }
 }
 

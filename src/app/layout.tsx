@@ -6,6 +6,7 @@ import '@/styles/tokens.css'
 import '@/styles/global.css'
 import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
+import OrganizationJsonLd from '@/components/OrganizationJsonLd'
 
 const archivo = Archivo({
   subsets: ['latin'],
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${archivo.variable} ${GeistMono.variable}`}
     >
       <body>
+        <OrganizationJsonLd />
         <Script
           id="microsoft-clarity"
           strategy="afterInteractive"

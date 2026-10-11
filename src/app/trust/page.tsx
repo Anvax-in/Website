@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     url: 'https://www.anvax.in/trust',
   },
   twitter: { card: 'summary_large_image', title: 'Security & Architecture | Anvax', description: 'Built to pass your security review, not just your demo. Controls, certifications, and framework mappings.' },
-  alternates: { canonical: 'https://www.anvax.in/trust' },
+  alternates: { canonical: 'https://www.anvax.in/trust', languages: { 'x-default': 'https://www.anvax.in/trust', en: 'https://www.anvax.in/trust' } },
 }
 
 export default function TrustPage() {

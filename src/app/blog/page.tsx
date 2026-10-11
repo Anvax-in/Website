@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: 'Sovereign Stack | AI Governance for Regulated Enterprises',
     description: 'Analysis of AI governance, regulatory frameworks, and compliance strategy for regulated enterprises.',
   },
-  alternates: { canonical: 'https://www.anvax.in/blog' },
+  alternates: { canonical: 'https://www.anvax.in/blog', languages: { 'x-default': 'https://www.anvax.in/blog', en: 'https://www.anvax.in/blog' } },
 }
 
 export default function BlogIndex() {

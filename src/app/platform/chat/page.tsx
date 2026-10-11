@@ -1,11 +1,19 @@
 import type { Metadata } from 'next'
 import styles from '../Capability.module.css'
 
+const ogImageUrl = `https://www.anvax.in/api/og?title=${encodeURIComponent('Chat')}&label=${encodeURIComponent('Anvax Platform')}`
+
 export const metadata: Metadata = {
   title: 'Chat | Anvax Platform',
   description: 'Multi-turn grounded AI chat anchored to your corpus, never hallucinates, every turn logged, tenant-isolated by construction.',
-  openGraph: { title: 'Chat | Anvax Platform', description: 'Ask your corpus. Get a cited answer.', url: 'https://www.anvax.in/platform/chat' },
-  alternates: { canonical: 'https://www.anvax.in/platform/chat' },
+  openGraph: {
+    title: 'Chat | Anvax Platform',
+    description: 'Ask your corpus. Get a cited answer.',
+    url: 'https://www.anvax.in/platform/chat',
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: 'Anvax Platform — Chat' }],
+  },
+  twitter: { card: 'summary_large_image', title: 'Chat | Anvax Platform', description: 'Ask your corpus. Get a cited answer.', images: [ogImageUrl] },
+  alternates: { canonical: 'https://www.anvax.in/platform/chat', languages: { 'x-default': 'https://www.anvax.in/platform/chat', en: 'https://www.anvax.in/platform/chat' } },
 }
 
 const siblings = [

@@ -10,6 +10,8 @@ import PillarsSection from '@/components/sections/PillarsSection'
 import FAQSection from '@/components/sections/FAQSection'
 import CtaSection from '@/components/sections/CtaSection'
 
+const ogImageUrl = `https://www.anvax.in/api/og?title=${encodeURIComponent('Self-hosted governed AI workspace for regulated enterprises')}`
+
 export const metadata: Metadata = {
   title: 'Anvax | Self-hosted governed AI workspace for regulated enterprises',
   description: "The AI workspace for enterprises that cannot put their data into ChatGPT, Glean, or Copilot. Search, chat, agents, and governance, audited, inside your own perimeter.",
@@ -17,13 +19,15 @@ export const metadata: Metadata = {
     title: 'Anvax | Self-hosted governed AI workspace for regulated enterprises',
     description: "The AI workspace for enterprises that cannot put their data into ChatGPT, Glean, or Copilot. Search, chat, agents, and governance, audited, inside your own perimeter.",
     url: 'https://www.anvax.in',
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: 'Anvax' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Anvax | Self-hosted governed AI workspace for regulated enterprises',
     description: "The AI workspace for enterprises that cannot put their data into ChatGPT, Glean, or Copilot. Audited and inside your perimeter.",
+    images: [ogImageUrl],
   },
-  alternates: { canonical: 'https://www.anvax.in' },
+  alternates: { canonical: 'https://www.anvax.in', languages: { 'x-default': 'https://www.anvax.in', en: 'https://www.anvax.in' } },
 }
 
 export default function Home() {

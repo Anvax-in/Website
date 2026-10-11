@@ -5,7 +5,7 @@ import styles from '@/pages/Legal.module.css'
 export const metadata: Metadata = {
   title: 'Terms of Service | Anvax',
   description: 'Anvax Terms of Service, the agreement that governs your use of the Anvax platform.',
-  alternates: { canonical: 'https://www.anvax.in/terms' },
+  alternates: { canonical: 'https://www.anvax.in/terms', languages: { 'x-default': 'https://www.anvax.in/terms', en: 'https://www.anvax.in/terms' } },
 }
 
 const toc = [
