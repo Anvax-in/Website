@@ -48,10 +48,10 @@ export default async function BlogPage({ params }: Props) {
         <div className="container">
           <div className={styles.heroInner}>
             <p className={styles.eyebrow}>Sovereign Stack</p>
-            <h1 className={styles.h1}>AI governance for India&apos;s regulators.</h1>
+            <h1 className={styles.h1}>AI governance for regulated enterprises.</h1>
             <p className={styles.lede}>
-              Weekly analysis on RBI FREE-AI, DPDP, SEBI circulars, and what they actually
-              mean for compliance officers in BFSI.
+              Analysis of AI governance frameworks, compliance requirements, and
+              what regulators actually expect from enterprise AI deployments.
             </p>
             <a href="/blog/rss.xml" className={styles.rssLink} aria-label="Subscribe via RSS">
               RSS feed

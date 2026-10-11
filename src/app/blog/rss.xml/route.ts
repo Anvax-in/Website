@@ -9,7 +9,7 @@ export async function GET() {
   const feed = new Feed({
     title: 'Sovereign Stack by Anvax',
     description:
-      "Weekly analysis of AI governance, RBI regulations, and compliance strategy for India's regulated financial sector.",
+      'Analysis of AI governance frameworks, regulatory requirements, and compliance strategy for risk and compliance teams at regulated enterprises.',
     id: 'https://www.anvax.in/blog',
     link: 'https://www.anvax.in/blog',
     language: 'en',
