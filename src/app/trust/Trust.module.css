@@ -339,84 +339,6 @@
   padding: 104px 40px;
 }
 
-.certTable {
-  border: 1px solid var(--bone-200);
-}
-
-.certRow {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) 120px minmax(0, 3fr) 90px;
-  gap: 24px;
-  align-items: center;
-  padding: 18px 24px;
-  border-bottom: 1px solid var(--bone-200);
-  transition: background var(--dur-base) var(--ease-out);
-}
-
-.certRow:last-child {
-  border-bottom: none;
-}
-
-.certRow:hover {
-  background: var(--bone-25);
-}
-
-.certRowHead {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) 120px minmax(0, 3fr) 90px;
-  gap: 24px;
-  padding: 12px 24px;
-  background: var(--bone-25);
-  border-bottom: 1px solid var(--bone-200);
-}
-
-.certColHead {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--slate-400);
-}
-
-.certName {
-  font-size: 14.5px;
-  font-weight: 700;
-  color: var(--ink-900);
-}
-
-.certStatusPill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: var(--radius-pill);
-}
-
-.certStatusLive {
-  background: var(--sage-50);
-  color: var(--sage-600);
-  border: 1px solid var(--sage-200);
-}
-
-.certStatusWip {
-  background: var(--blue-50);
-  color: var(--blue-600);
-  border: 1px solid var(--blue-100);
-}
-
-.certNote {
-  font-size: 13.5px;
-  line-height: 20px;
-  color: var(--ink-500);
-}
-
-.certJurisdiction {
-  font-size: 12.5px;
-  color: var(--slate-400);
-  text-align: right;
-}
-
 /* ── Framework mappings ── */
 .mappings {
   width: 100%;
@@ -557,18 +479,6 @@
 
 .pipelineStepActive:hover {
   background: var(--ink-950);
-}
-
-.pipelineStepNum {
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--slate-400);
-  font-variant-numeric: tabular-nums;
-}
-
-.pipelineStepActive .pipelineStepNum {
-  color: var(--fg-on-dark-3);
 }
 
 .pipelineStepTitle {
@@ -987,17 +897,6 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .certRow,
-  .certRowHead {
-    grid-template-columns: minmax(0, 1fr) 100px;
-  }
-
-  .certNote,
-  .certColNoteHead {
-    display: none;
-  }
-
-  .certJurisdiction { display: none; }
 }
 
 @media (max-width: 760px) {

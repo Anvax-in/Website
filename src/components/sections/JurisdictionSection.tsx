@@ -1,16 +1,5 @@
+import ComplianceBadgeWall from '@/components/ui/ComplianceBadgeWall'
 import styles from './JurisdictionSection.module.css'
-
-const frameworks = [
-  { name: 'SOC 2 Type II',             jurisdiction: 'Global',          status: 'Audit underway', variant: 'blue' },
-  { name: 'ISO/IEC 27001',             jurisdiction: 'Global',          status: 'Audit underway', variant: 'blue' },
-  { name: 'GDPR',                      jurisdiction: 'European Union',  status: 'Mapped',         variant: 'sage' },
-  { name: 'EU AI Act',                 jurisdiction: 'European Union',  status: 'Mapped',         variant: 'sage' },
-  { name: 'DORA',                      jurisdiction: 'European Union',  status: 'Mapped',         variant: 'sage' },
-  { name: 'NIST AI RMF',              jurisdiction: 'United States',   status: 'Mapped',         variant: 'sage' },
-  { name: 'FCA operational resilience',jurisdiction: 'United Kingdom',  status: 'Mapped',         variant: 'sage' },
-  { name: 'MAS FEAT',                  jurisdiction: 'Singapore',       status: 'Mapped',         variant: 'sage' },
-  { name: 'RBI FREE-AI',               jurisdiction: 'India',           status: 'Mapped',         variant: 'sage' },
-] as const
 
 export default function JurisdictionSection() {
   return (
@@ -30,18 +19,8 @@ export default function JurisdictionSection() {
             </a>
           </div>
 
-          {/* Right — framework table */}
-          <div className={styles.table}>
-            {frameworks.map(({ name, jurisdiction, status, variant }) => (
-              <div key={name} className={styles.row}>
-                <span className={styles.framework}>{name}</span>
-                <span className={styles.jurisdiction}>{jurisdiction}</span>
-                <span className={variant === 'blue' ? styles.statusBlue : styles.statusSage}>
-                  {status}
-                </span>
-              </div>
-            ))}
-          </div>
+          {/* Right — badge wall */}
+          <ComplianceBadgeWall />
         </div>
       </div>
     </section>

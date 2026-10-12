@@ -71,6 +71,11 @@ export default function Footer() {
           <Col title="Company"   links={company} />
         </div>
 
+        <p className={styles.statement}>
+          <span className={styles.statementMuted}>Your enterprise has rules.</span>
+          <span className={styles.statementBright}>Your AI should too.</span>
+        </p>
+
         <div className={styles.legal}>
           <span>© {new Date().getFullYear()} Anvax Technologies Pvt. Ltd.</span>
           <span className={styles.legalLinks}>

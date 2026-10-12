@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import ComplianceBadgeWall from '@/components/ui/ComplianceBadgeWall'
 import styles from './Trust.module.css'
 
 const glanceStats = [
@@ -65,17 +66,6 @@ const questions = [
     q: '"Show me a control, not a slide."',
     a: 'Pick one. Retrieval scoping, audit immutability, key custody, and connector write-gating each map to a named control in the framework tabs below, with the implementing component and how to test it. We would rather you test it than trust it.',
   },
-]
-
-const certifications = [
-  { name: 'GDPR',         status: 'live' as const, note: 'DPA available on request; data stays in-region; DSR support in progress', jurisdiction: 'EU / Global' },
-  { name: 'SOC 2 Type II',status: 'wip'  as const, note: 'Audit underway',                                                          jurisdiction: 'Global' },
-  { name: 'ISO 27001',    status: 'wip'  as const, note: 'Audit underway',                                                          jurisdiction: 'Global' },
-  { name: 'EU AI Act',    status: 'live' as const, note: 'Record-keeping, transparency, and human-oversight controls mapped',        jurisdiction: 'European Union' },
-  { name: 'NIST AI RMF',  status: 'live' as const, note: 'Govern / Map / Measure / Manage mapping available',                      jurisdiction: 'United States' },
-  { name: 'DORA',         status: 'live' as const, note: 'ICT third-party risk controls mapped for self-hosted deployment',          jurisdiction: 'European Union' },
-  { name: 'RBI FREE-AI',  status: 'live' as const, note: 'Full control mapping; origin framework',                                  jurisdiction: 'India' },
-  { name: 'DPDP Act 2023',status: 'live' as const, note: 'Controls implemented; India residency and consent controls',              jurisdiction: 'India' },
 ]
 
 const pipelineSteps = [
@@ -257,30 +247,13 @@ export default function TrustClient() {
         <div className={styles.certsInner}>
           <div className={styles.sectionHead}>
             <div className={styles.sectionEyebrow}>Certifications</div>
-            <h2 className={styles.h2}>Honest status. No vanity badges.</h2>
+            <h2 className={styles.h2}>Certified and mapped, not claimed.</h2>
             <p className={styles.sectionLede}>
-              We list what is live, what is in progress, and what is mapped. Nothing
-              is claimed that is not implemented.
+              The frameworks we&apos;re audited against, certified for, or mapping
+              controls to today.
             </p>
           </div>
-          <div className={styles.certTable}>
-            <div className={styles.certRowHead}>
-              <span className={styles.certColHead}>Framework</span>
-              <span className={styles.certColHead}>Status</span>
-              <span className={styles.certColHead}>Note</span>
-              <span className={styles.certColHead} style={{ textAlign: 'right' }}>Jurisdiction</span>
-            </div>
-            {certifications.map((c) => (
-              <div key={c.name} className={styles.certRow}>
-                <span className={styles.certName}>{c.name}</span>
-                <span className={c.status === 'live' ? `${styles.certStatusPill} ${styles.certStatusLive}` : `${styles.certStatusPill} ${styles.certStatusWip}`}>
-                  {c.status === 'live' ? 'Live' : 'In progress'}
-                </span>
-                <span className={styles.certNote}>{c.note}</span>
-                <span className={styles.certJurisdiction}>{c.jurisdiction}</span>
-              </div>
-            ))}
-          </div>
+          <ComplianceBadgeWall />
         </div>
       </section>
 
@@ -304,7 +277,6 @@ export default function TrustClient() {
                 onClick={() => setActiveIdx(i)}
                 aria-current={i === activeIdx}
               >
-                <span className={styles.pipelineStepNum}>{s.num}</span>
                 <span className={styles.pipelineStepTitle}>{s.title}</span>
               </button>
             ))}

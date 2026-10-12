@@ -80,54 +80,6 @@
   transform: translateX(3px);
 }
 
-/* ── Right table ── */
-.table {
-  border: 1px solid var(--bone-200);
-}
-
-.row {
-  display: grid;
-  grid-template-columns: 1fr 130px 120px;
-  gap: 16px;
-  align-items: center;
-  padding: 15px 20px;
-  border-bottom: 1px solid var(--bone-200);
-  transition: background var(--dur-base) var(--ease-out);
-}
-
-.row:last-child {
-  border-bottom: none;
-}
-
-.row:hover {
-  background: var(--bone-25);
-}
-
-.framework {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--ink-900);
-}
-
-.jurisdiction {
-  font-size: 13px;
-  color: var(--slate-400);
-}
-
-.statusBlue {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--blue-600);
-  text-align: right;
-}
-
-.statusSage {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--sage-600);
-  text-align: right;
-}
-
 /* ── Responsive ── */
 @media (max-width: 900px) {
   .layout {
@@ -139,16 +91,5 @@
 @media (max-width: 760px) {
   .inner {
     padding: 72px 24px;
-  }
-}
-
-@media (max-width: 520px) {
-  .row {
-    grid-template-columns: 1fr auto;
-    gap: 8px;
-  }
-
-  .jurisdiction {
-    display: none;
   }
 }
