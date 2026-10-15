@@ -8,8 +8,6 @@ draft: false
 
 ![Split diagram showing a rented model card on the left and four owned layers, context and index, permissions, audit record, and workflows, stacked on the right](/assets/blog/the-model-is-rented.webp)
 
-# The Model Is Rented. Here Is What You Actually Own.
-
 An enterprise AI system has two layers. The model layer, meaning the weights and the inference capacity that runs them, is usually rented, and it changes every few months as providers release new versions. The layer around the model holds the organization's documents, its access rules, its record of what happened, and the workflows that turn outputs into decisions. That layer changes slowly and carries most of the institutional value. **The model is not the asset. The layer that makes any model useful inside the organization is.**
 
 ## What Ownership Actually Means
