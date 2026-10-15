@@ -8,8 +8,6 @@ draft: false
 
 ![Diagram of a document being deleted while an AI system still holds a search index, cache, logs, and derived summaries drawn from it](/assets/blog/deleting-documents-from-ai-systems.webp)
 
-# What Happens When You Delete a Document From an AI System?
-
 Someone in finance uploads a pricing memo to the shared drive by mistake. It was a draft, it names three customers, and it was never meant to leave the team. An hour later they delete it.
 
 The next morning, a colleague asks the company AI assistant what pricing was agreed with one of those customers. The answer comes back, accurate and well-sourced, quoting a document that no longer exists.
