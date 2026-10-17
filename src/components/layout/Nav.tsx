@@ -144,6 +144,7 @@ export default function Nav() {
         </button>
 
         <div className={styles.actions}>
+          <Button variant="ghost" href="https://app.anvax.in/auth/login">Sign in</Button>
           <Button variant="primary" href="/contact" arrow>Book a demo</Button>
         </div>
       </div>
