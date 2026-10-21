@@ -4,7 +4,8 @@
 export function mountSilkFlock(canvas, opts = {}) {
   const BLUE = opts.blue || [47, 111, 237];
   const INK = opts.ink || [31, 37, 46];
-  const CYCLE = opts.cycle || 18;
+  // Starts as the scattered flock, settles into the organised silk sheet once and stays there.
+  const SETTLE_START = 0.6, SETTLE_END = 3.8;
   const rgba = (c, a) => `rgba(${c[0]},${c[1]},${c[2]},${a})`;
   let seed = 7;
   const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
@@ -34,7 +35,7 @@ export function mountSilkFlock(canvas, opts = {}) {
   const frame = (t) => {
     const dt = Math.min(0.05, t - last); last = t;
     const a = t * 0.07, cx = W / 2, cy = H / 2, tw = 0.95 * Math.sin(t * 0.27), s1 = Math.sin(t * 0.21), s2 = Math.cos(t * 0.17);
-    const c = t % CYCLE, gm = smooth(CYCLE * 0.333, CYCLE * 0.5, c) * (1 - smooth(CYCLE * 0.778, CYCLE * 0.972, c));
+    const gm = 1 - smooth(SETTLE_START, SETTLE_END, t);
     ctx.globalCompositeOperation = 'destination-out'; ctx.fillStyle = 'rgba(0,0,0,0.5)'; ctx.fillRect(0, 0, W, H); ctx.globalCompositeOperation = 'source-over';
     for (const p of P) {
       const { u, v } = p;
@@ -60,7 +61,7 @@ export function mountSilkFlock(canvas, opts = {}) {
   resize();
   const ro = new ResizeObserver(resize); ro.observe(canvas);
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduced) { for (let t = 0; t <= 4; t += 1 / 30) frame(t); return () => ro.disconnect(); }
+  if (reduced) { for (let t = SETTLE_END; t <= SETTLE_END + 4; t += 1 / 30) frame(t); return () => ro.disconnect(); }
 
   let raf = 0, visible = true, elapsed = 0, prev = performance.now();
   const loop = (now) => { elapsed += Math.min(0.05, (now - prev) / 1000); prev = now; if (visible && !document.hidden) frame(elapsed); raf = requestAnimationFrame(loop); };
