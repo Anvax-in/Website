@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect, useRef, useState } from 'react'
 import styles from './StatsSection.module.css'
 
 const stats = [
@@ -7,6 +10,58 @@ const stats = [
   { value: '0',    label: 'Bytes of customer data leaving your perimeter' },
 ]
 
+function parseStat(raw: string) {
+  const match = raw.match(/^(\d+(?:\.\d+)?)(.*)$/)
+  if (!match) return { target: 0, decimals: 0, suffix: raw }
+  const [, numStr, suffix] = match
+  const decimals = numStr.includes('.') ? numStr.split('.')[1].length : 0
+  return { target: parseFloat(numStr), decimals, suffix }
+}
+
+function StatValue({ raw }: { raw: string }) {
+  const { target, decimals, suffix } = parseStat(raw)
+  const ref = useRef<HTMLSpanElement>(null)
+  const [display, setDisplay] = useState(raw)
+
+  useEffect(() => {
+    const el = ref.current
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (!el || target === 0 || reduced) return
+
+    let done = false
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting || done) return
+        done = true
+        io.disconnect()
+        const duration = 1800
+        const start = performance.now()
+        const step = (now: number) => {
+          const t = Math.min(1, (now - start) / duration)
+          const eased = 1 - Math.pow(1 - t, 3)
+          if (t < 1) {
+            setDisplay(`${(target * eased).toFixed(decimals)}${suffix}`)
+            requestAnimationFrame(step)
+          } else {
+            setDisplay(raw)
+          }
+        }
+        setDisplay(`${(0).toFixed(decimals)}${suffix}`)
+        requestAnimationFrame(step)
+      },
+      { threshold: 0.4 },
+    )
+    io.observe(el)
+    return () => io.disconnect()
+  }, [target, decimals, suffix, raw])
+
+  return (
+    <span ref={ref} className={styles.value}>
+      {display}
+    </span>
+  )
+}
+
 export default function StatsSection() {
   return (
     <section className={styles.band}>
@@ -14,7 +69,7 @@ export default function StatsSection() {
         <div className={styles.grid}>
           {stats.map(({ value, label }) => (
             <div key={value} className={styles.stat}>
-              <span className={styles.value}>{value}</span>
+              <StatValue raw={value} />
               <span className={styles.label}>{label}</span>
             </div>
           ))}

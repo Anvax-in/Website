@@ -1,4 +1,5 @@
 import styles from './HeroSection.module.css'
+import SilkFlock from '@/components/hero/SilkFlock'
 
 const navItems = [
   {
@@ -77,28 +78,32 @@ export default function HeroSection() {
       <div className={styles.lattice} aria-hidden="true" />
 
       <div className={styles.inner}>
-        {/* ── Copy block ── */}
-        <div className={styles.copy}>
-          <h1 className={styles.h1}>
-            Governed AI your data<br />never has to leave for.
-          </h1>
-          <p className={styles.lede}>
-            Your teams search, chat, and run real work across your own documents
-            and systems. Every query logged, every prompt policy-checked, nothing
-            crossing your perimeter.
-          </p>
-          <div className={styles.ctaRow}>
-            <a href="/contact" className={styles.btnPrimary}>
-              Book a demo <span className={styles.arrow}>→</span>
-            </a>
-            <a href="/platform" className={styles.btnGhost}>
-              Take the product tour
-            </a>
+        <div className={styles.top}>
+          {/* ── Copy block ── */}
+          <div className={styles.copy}>
+            <h1 className={styles.h1}>
+              Enterprise AI.<br /><span className={styles.h1Line}>Under your control.</span>
+            </h1>
+            <p className={styles.lede}>
+              Bring your company&apos;s knowledge, systems, and workflows into one AI workspace - with control over your data, models, access, and actions.
+            </p>
+            <div className={styles.ctaRow}>
+              <a href="/contact" className={styles.btnPrimary}>
+                Book a demo <span className={styles.arrow}>→</span>
+              </a>
+              <a href="/platform" className={styles.btnGhost}>
+                Take the product tour
+              </a>
+            </div>
+            <p className={styles.tagline}>
+              Runs in your VPC, your sovereign cloud, or fully air-gapped. No data
+              leaves your tenancy.
+            </p>
           </div>
-          <p className={styles.tagline}>
-            Runs in your VPC, your sovereign cloud, or fully air-gapped. No data
-            leaves your tenancy.
-          </p>
+
+          <div className={styles.animSlot}>
+            <SilkFlock className={styles.anim} />
+          </div>
         </div>
 
         {/* ── Product mock ── */}
