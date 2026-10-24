@@ -143,7 +143,7 @@ export default function HeroSection() {
                   {connectors.map(({ name, logo }) => (
                     <div key={name} className={styles.mockConnector}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={logo} alt="" width="15" height="15" className={styles.mockLogo} />
+                      <img src={logo} alt="" role="presentation" width="15" height="15" className={styles.mockLogo} />
                       {name}
                     </div>
                   ))}
@@ -185,7 +185,7 @@ export default function HeroSection() {
                       <div className={styles.mockResultHead}>
                         <span className={styles.mockResultN}>{n}</span>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={logo} alt="" width="14" height="14" className={styles.mockLogo} />
+                        <img src={logo} alt="" role="presentation" width="14" height="14" className={styles.mockLogo} />
                         <span className={styles.mockResultTitle}>{title}</span>
                         <span className={styles.mockResultRef}>{ref}</span>
                       </div>
