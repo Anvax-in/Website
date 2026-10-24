@@ -60,6 +60,14 @@ export function getAllPosts(): Post[] {
     .sort((a, b) => b.frontmatter.pubDate.getTime() - a.frontmatter.pubDate.getTime())
 }
 
+export function getRelatedPosts(allPosts: Post[], current: Post, limit = 3): Post[] {
+  const currentTags = new Set(current.frontmatter.tags)
+  return allPosts
+    .filter(p => p.slug !== current.slug && p.frontmatter.tags.some(tag => currentTags.has(tag)))
+    .sort((a, b) => b.frontmatter.pubDate.getTime() - a.frontmatter.pubDate.getTime())
+    .slice(0, limit)
+}
+
 export function getPostBySlug(slug: string): PostWithContent | null {
   for (const ext of ['mdx', 'md']) {
     const filepath = path.join(CONTENT_DIR, `${slug}.${ext}`)
