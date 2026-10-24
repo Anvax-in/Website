@@ -1,0 +1,28 @@
+/* AuthorBio — static org bio footer, rendered at the end of every post body */
+.bio {
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+.text {
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--fg-2);
+}
+.name {
+  color: var(--ink-900);
+  font-weight: 600;
+}
+.dash {
+  color: var(--slate-400);
+}
+.link {
+  color: var(--amber-700);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-base) var(--ease-out);
+}
+.link:hover {
+  color: var(--amber-600);
+}

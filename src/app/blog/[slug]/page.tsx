@@ -6,6 +6,8 @@ import { compileMDX } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import { getAllPosts, getPostBySlug } from '@/lib/blog'
 import JsonLd from '@/components/blog/JsonLd'
+import ByLine from '@/components/blog/ByLine'
+import AuthorBio from '@/components/blog/AuthorBio'
 import styles from '@/pages/BlogPost.module.css'
 import proseStyles from '@/components/blog/Prose.module.css'
 
@@ -16,10 +18,6 @@ export async function generateStaticParams() {
 }
 
 type Props = { params: Promise<{ slug: string }> }
-
-function formatDate(date: Date): string {
-  return date.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })
-}
 
 function buildOgImageUrl(title: string): string {
   return `https://www.anvax.in/api/og?title=${encodeURIComponent(title)}&label=${encodeURIComponent('Anvax')}`
@@ -92,13 +90,11 @@ export default async function BlogPostPage({ params }: Props) {
                   </Fragment>
                 ))}
               </h1>
-              <div className={styles.meta}>
-                <time dateTime={frontmatter.pubDate.toISOString()}>
-                  {formatDate(frontmatter.pubDate)}
-                </time>
-                <span className={styles.sep}>·</span>
-                <span>{readingTime} min read</span>
-              </div>
+              <ByLine
+                publishedAt={frontmatter.pubDate}
+                updatedAt={frontmatter.updatedDate}
+                readingTimeMinutes={readingTime}
+              />
               {frontmatter.tags.length > 0 && (
                 <div className={styles.tags}>
                   {frontmatter.tags.map(tag => (
@@ -115,6 +111,7 @@ export default async function BlogPostPage({ params }: Props) {
             <div>
               <Link href="/blog" className={styles.backLink}>← All posts</Link>
               <div className={proseStyles.prose}>{content}</div>
+              <AuthorBio />
             </div>
           </div>
         </div>
