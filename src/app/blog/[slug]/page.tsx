@@ -4,8 +4,11 @@ import Link from 'next/link'
 import { Fragment } from 'react'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
-import { getAllPosts, getPostBySlug } from '@/lib/blog'
+import { getAllPosts, getPostBySlug, getRelatedPosts } from '@/lib/blog'
 import JsonLd from '@/components/blog/JsonLd'
+import ByLine from '@/components/blog/ByLine'
+import AuthorBio from '@/components/blog/AuthorBio'
+import RelatedPosts from '@/components/blog/RelatedPosts'
 import styles from '@/pages/BlogPost.module.css'
 import proseStyles from '@/components/blog/Prose.module.css'
 
@@ -17,8 +20,8 @@ export async function generateStaticParams() {
 
 type Props = { params: Promise<{ slug: string }> }
 
-function formatDate(date: Date): string {
-  return date.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })
+function buildOgImageUrl(title: string): string {
+  return `https://www.anvax.in/api/og?title=${encodeURIComponent(title)}&label=${encodeURIComponent('Anvax')}`
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -28,15 +31,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const { frontmatter } = post
   const canonicalUrl = frontmatter.canonicalURL ?? `https://www.anvax.in/blog/${slug}`
-  const ogImageUrl = `https://www.anvax.in/api/og?title=${encodeURIComponent(frontmatter.title)}&label=${encodeURIComponent('Sovereign Stack · Anvax')}`
+  const ogImageUrl = buildOgImageUrl(frontmatter.title)
 
   return {
-    title: `${frontmatter.title} - Sovereign Stack`,
+    title: `${frontmatter.title} - Anvax`,
     description: frontmatter.description,
     openGraph: {
       title: frontmatter.title,
       description: frontmatter.description,
-      url: `https://www.anvax.in/blog/${slug}`,
+      url: canonicalUrl,
       type: 'article',
       publishedTime: frontmatter.pubDate.toISOString(),
       modifiedTime: frontmatter.updatedDate?.toISOString(),
@@ -61,6 +64,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   const { frontmatter, readingTime } = post
   const canonicalUrl = frontmatter.canonicalURL ?? `https://www.anvax.in/blog/${slug}`
+  const relatedPosts = getRelatedPosts(getAllPosts(), post, 3)
 
   return (
     <>
@@ -70,6 +74,7 @@ export default async function BlogPostPage({ params }: Props) {
         pubDateISO={frontmatter.pubDate.toISOString()}
         updatedDateISO={frontmatter.updatedDate?.toISOString()}
         postUrl={canonicalUrl}
+        image={buildOgImageUrl(frontmatter.title)}
       />
 
       <article>
@@ -87,13 +92,11 @@ export default async function BlogPostPage({ params }: Props) {
                   </Fragment>
                 ))}
               </h1>
-              <div className={styles.meta}>
-                <time dateTime={frontmatter.pubDate.toISOString()}>
-                  {formatDate(frontmatter.pubDate)}
-                </time>
-                <span className={styles.sep}>·</span>
-                <span>{readingTime} min read</span>
-              </div>
+              <ByLine
+                publishedAt={frontmatter.pubDate}
+                updatedAt={frontmatter.updatedDate}
+                readingTimeMinutes={readingTime}
+              />
               {frontmatter.tags.length > 0 && (
                 <div className={styles.tags}>
                   {frontmatter.tags.map(tag => (
@@ -110,6 +113,8 @@ export default async function BlogPostPage({ params }: Props) {
             <div>
               <Link href="/blog" className={styles.backLink}>← All posts</Link>
               <div className={proseStyles.prose}>{content}</div>
+              <AuthorBio />
+              <RelatedPosts posts={relatedPosts} />
             </div>
           </div>
         </div>

@@ -150,6 +150,12 @@ export default function IndustriesClient() {
                               <span key={c} className={styles.corpusPill}>{c}</span>
                             ))}
                           </div>
+                          {v.id === 'public-sector' && (
+                            <a href="/industries/public-sector" className={styles.readMore}>Read more →</a>
+                          )}
+                          {v.id === 'legal' && (
+                            <a href="/industries/legal-professional-services" className={styles.readMore}>Read more →</a>
+                          )}
                         </div>
                         <div>
                           <table className={styles.roleTable}>

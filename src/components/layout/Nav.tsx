@@ -80,7 +80,7 @@ export default function Nav() {
     <nav className={styles.nav} aria-label="Primary">
       <div className={styles.row}>
         <Link href="/" className={styles.brand} aria-label="Anvax home">
-          <Image src="/anvax-logo.webp" alt="" width={300} height={250} priority className={styles.brandLogo} />
+          <Image src="/anvax-logo.webp" alt="Anvax — governed AI workspace" width={300} height={250} priority className={styles.brandLogo} />
           <span className={styles.brandName}>Anvax</span>
         </Link>
 

@@ -1,6 +1,6 @@
 ---
 title: "Your AI Is Only As Compliant As Its Training Data's Paper Trail"
-description: "Model documentation means nothing if you can't prove what the model was trained on. Why training data provenance is the compliance gap BFSI institutions haven't priced yet."
+description: "Documentation means nothing if you can't prove what the model was trained on. Why training data provenance is the compliance gap BFSI hasn't priced yet."
 pubDate: 2026-07-23
 tags: ["AI Governance", "Data Lineage", "RBI", "BFSI", "Model Risk", "Compliance"]
 draft: false

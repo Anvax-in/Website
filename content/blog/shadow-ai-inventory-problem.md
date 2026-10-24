@@ -1,6 +1,6 @@
 ---
 title: "You Cannot Govern Models You Have Not Listed"
-description: "The shadow AI inventory problem: BFSI institutions can't govern models, prompts, and agents nobody registered. Here is why that gap is now a regulatory exposure."
+description: "The shadow AI inventory problem: BFSI institutions can't govern models, prompts, and agents nobody registered. Why that gap is now a regulatory exposure."
 pubDate: 2026-07-21
 tags: ["AI Governance", "Model Risk", "RBI", "BFSI", "AI Audit", "Compliance"]
 draft: false

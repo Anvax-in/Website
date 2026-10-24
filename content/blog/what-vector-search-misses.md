@@ -8,8 +8,6 @@ draft: false
 
 ![Diagram of a two-retriever pipeline merging lexical and vector search results through rank fusion and reranking](/assets/blog/what-vector-search-misses.webp)
 
-# What Vector Search Misses, and What To Put Next To It
-
 Someone types a policy number into the internal assistant and gets back three documents about something else entirely. The policy exists. Its number appears, verbatim, in a document the system has indexed. Search still missed it.
 
 This surprises people because vector search is the part of the stack with the best reputation. It handles synonyms, it understands paraphrase, it finds the right passage when the user's wording is nothing like the document's. All of that is true, and none of it helps with an identifier.

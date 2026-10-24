@@ -14,10 +14,10 @@ const ogImageUrl = `https://www.anvax.in/api/og?title=${encodeURIComponent('Gove
 
 export const metadata: Metadata = {
   title: 'Anvax | Governed AI Workspace',
-  description: "The AI workspace for enterprises that cannot put their data into ChatGPT, Glean, or Copilot. Search, chat, agents, and governance, audited, inside your own perimeter.",
+  description: "The AI workspace for enterprises that cannot put data into ChatGPT or Copilot. Self-hosted, model-agnostic, with a full audit record.",
   openGraph: {
     title: 'Anvax | Governed AI Workspace',
-    description: "The AI workspace for enterprises that cannot put their data into ChatGPT, Glean, or Copilot. Search, chat, agents, and governance, audited, inside your own perimeter.",
+    description: "The AI workspace for enterprises that cannot put data into ChatGPT or Copilot. Self-hosted, model-agnostic, with a full audit record.",
     url: 'https://www.anvax.in',
     images: [{ url: ogImageUrl, width: 1200, height: 630, alt: 'Anvax' }],
   },

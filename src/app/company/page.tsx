@@ -124,6 +124,17 @@ export default function Company() {
         </div>
       </section>
 
+      {/* Team */}
+      <section className="section" id="team">
+        <div className="container">
+          <SectionHead
+            eyebrow="Team"
+            title="Team Anvax."
+            lede="A small team building the self-hosted AI workspace for enterprises that can't put their data into public AI tools. We work directly with risk, compliance, and security teams at regulated enterprises — the governance model comes from that work, not a generic framework."
+          />
+        </div>
+      </section>
+
       {/* Careers */}
       <section className="section alt" id="careers">
         <div className="container">

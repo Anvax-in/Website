@@ -42,7 +42,7 @@ export default function ConnectorsSection() {
           {featured.map(({ name, logo }) => (
             <div key={name} className={styles.tile}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={logo} alt={name} className={styles.logo} />
+              <img src={logo} alt={`${name} integration — Anvax`} className={styles.logo} />
               <span className={styles.tileName}>{name}</span>
             </div>
           ))}

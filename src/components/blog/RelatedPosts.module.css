@@ -1,0 +1,22 @@
+/* RelatedPosts — "Related reading" grid, rendered at the end of every post body */
+.related {
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+.heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--type-h4-size);
+  line-height: var(--type-h4-line);
+  letter-spacing: -0.015em;
+  color: var(--ink-900);
+  margin-bottom: 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--bone-200);
+  border: 1px solid var(--bone-200);
+}

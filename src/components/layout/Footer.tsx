@@ -116,7 +116,7 @@ export default function Footer() {
         <div className={styles.grid}>
           <div>
             <div className={styles.brand}>
-              <Image src="/anvax-logo.webp" alt="" width={300} height={250} className={styles.brandLogo} />
+              <Image src="/anvax-logo.webp" alt="Anvax — governed AI workspace" width={300} height={250} className={styles.brandLogo} />
               <span className={styles.brandName}>Anvax</span>
             </div>
             <p className={styles.blurb}>

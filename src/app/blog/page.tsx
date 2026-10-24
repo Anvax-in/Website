@@ -5,16 +5,16 @@ import Pagination from '@/components/blog/Pagination'
 import styles from '@/pages/Blog.module.css'
 
 export const metadata: Metadata = {
-  title: 'Sovereign Stack | AI Governance for Regulated Enterprises',
+  title: 'AI Governance & Compliance Insights | Anvax',
   description: 'Analysis of AI governance frameworks, regulatory requirements, and compliance strategy for risk and compliance teams at regulated enterprises.',
   openGraph: {
-    title: 'Sovereign Stack | AI Governance for Regulated Enterprises',
+    title: 'AI Governance & Compliance Insights | Anvax',
     description: 'Analysis of AI governance frameworks, regulatory requirements, and compliance strategy for risk and compliance teams at regulated enterprises.',
     url: 'https://www.anvax.in/blog',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sovereign Stack | AI Governance for Regulated Enterprises',
+    title: 'AI Governance & Compliance Insights | Anvax',
     description: 'Analysis of AI governance, regulatory frameworks, and compliance strategy for regulated enterprises.',
   },
   alternates: { canonical: 'https://www.anvax.in/blog', languages: { 'x-default': 'https://www.anvax.in/blog', en: 'https://www.anvax.in/blog' } },

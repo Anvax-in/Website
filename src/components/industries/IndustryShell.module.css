@@ -1,0 +1,72 @@
+/* IndustryShell.module.css */
+
+.h1 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: var(--type-h1-size);
+  line-height: var(--type-h1-line);
+  letter-spacing: var(--type-h1-track);
+  color: var(--ink-900);
+  margin-top: 16px;
+  max-width: 20ch;
+}
+
+.useCaseList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 60ch;
+}
+
+.useCaseItem {
+  position: relative;
+  padding-left: var(--space-6);
+  font-size: var(--type-prose-size);
+  line-height: var(--type-prose-line);
+  color: var(--fg-2);
+}
+
+.useCaseItem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 8px;
+  height: 8px;
+  background: var(--cta);
+}
+
+.deploymentNote {
+  font-size: var(--type-prose-size);
+  line-height: var(--type-prose-line);
+  color: var(--fg-2);
+  max-width: 60ch;
+}
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-7);
+  flex-wrap: wrap;
+}
+
+.ctaText {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-semibold);
+  font-size: var(--type-h4-size);
+  line-height: var(--type-h4-line);
+  color: var(--ink-900);
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .ctaRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+}

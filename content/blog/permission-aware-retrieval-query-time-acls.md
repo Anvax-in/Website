@@ -1,14 +1,12 @@
 ---
 title: "Permission-Aware Retrieval: Query-Time ACLs, Not Index-Time"
-description: "Permission-aware retrieval has to check access at the moment of the question, not rely on access lists copied into the index at ingestion."
+description: "Permission-aware retrieval has to check access at the moment of the question, not rely on access lists copied into the index at ingestion time."
 pubDate: 2026-10-01
 tags: ["AI Governance", "AI Audit", "AI Security", "Enterprise AI", "Compliance"]
 draft: false
 ---
 
 ![Side-by-side diagram comparing index-time ACLs, which go stale, with query-time ACLs, which check access at the moment of the question](/assets/blog/permission-aware-retrieval-query-time-acls.webp)
-
-# Permission-Aware Retrieval: Query-Time ACLs, Not Index-Time
 
 A retrieval system answers questions by searching an index built from an organization's documents. Those documents come with access rules, and the answer a user receives must respect them. Most systems copy each document's access list into the index when the document is ingested and filter against that copy. The copy ages from the moment it is written. **Permission-aware retrieval is not a property of the index. It is a check that has to be current at the moment a question is asked.**
 

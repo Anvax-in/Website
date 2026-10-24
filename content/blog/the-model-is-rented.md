@@ -1,6 +1,6 @@
 ---
 title: "The Model Is Rented. Here Is What You Actually Own."
-description: "An enterprise AI system has a rented model layer and an owned layer around it: context, permissions, audit records, and workflows."
+description: "An enterprise AI system has a rented model layer and an owned layer around it: context, permissions, audit records, and the workflows that use them."
 pubDate: 2026-09-24
 tags: ["Sovereign AI", "Enterprise AI", "AI Governance", "Model Risk", "AI Audit"]
 draft: false
