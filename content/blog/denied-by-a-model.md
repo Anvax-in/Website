@@ -1,6 +1,6 @@
 ---
 title: "Your Customer Does Not Know They Were Denied by a Model"
-description: "A rejection letter that never mentions a model isn't neutral - it's a disclosure gap. Why silent algorithmic denial is becoming BFSI's next transparency problem."
+description: "A rejection letter that never names a model isn't neutral - it's a disclosure gap. Why silent algorithmic denial is becoming BFSI's transparency problem."
 pubDate: 2026-07-30
 tags: ["AI Governance", "Explainability", "RBI", "BFSI", "Customer Trust", "Compliance"]
 draft: false

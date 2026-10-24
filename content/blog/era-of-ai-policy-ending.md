@@ -1,6 +1,6 @@
 ---
 title: "The era of AI policy is ending. The era of AI evidence is beginning."
-description: "Inside RBI's draft Guidance on Model Risk Management - what the shift from AI policy to AI evidence means for regulated entities."
+description: "Inside RBI's draft Guidance on Model Risk Management - what the shift from AI policy to AI evidence actually means for regulated entities in practice."
 pubDate: 2026-06-30
 tags: ["RBI", "AI Governance", "Model Risk", "Regulation", "BFSI"]
 draft: false

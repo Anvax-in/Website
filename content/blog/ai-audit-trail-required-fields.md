@@ -1,6 +1,6 @@
 ---
 title: "What an AI Audit Trail Actually Needs to Contain"
-description: "A real AI audit trail records six fields — assembled prompt, retrieved context, model version, exact output, reviewer, and multiple timestamps — most systems keep fewer."
+description: "An AI audit trail records six fields — assembled prompt, retrieved context, model version, exact output, reviewer, timestamps — most systems keep fewer."
 pubDate: 2026-09-17
 tags: ["AI Audit", "AI Governance", "Compliance", "Enterprise AI", "Model Risk"]
 draft: false

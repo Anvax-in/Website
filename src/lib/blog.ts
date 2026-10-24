@@ -31,21 +31,34 @@ function calculateReadingTime(content: string): number {
   return Math.max(1, Math.ceil(wordCount / 200))
 }
 
+function assertValidFrontmatter(data: Record<string, unknown>, slug: string): PostFrontmatter {
+  if (!data.description) {
+    throw new Error(`Blog post "${slug}" is missing a meta description`)
+  }
+  const description = data.description as string
+  if (description.length < 140 || description.length > 155) {
+    console.warn(
+      `Blog post "${slug}" has a meta description of ${description.length} characters (expected 140-155)`
+    )
+  }
+  return {
+    title: data.title as string,
+    description,
+    pubDate: new Date(data.pubDate as string),
+    updatedDate: data.updatedDate ? new Date(data.updatedDate as string) : undefined,
+    tags: (data.tags as string[]) ?? [],
+    canonicalURL: data.canonicalURL as string | undefined,
+    draft: (data.draft as boolean) ?? false,
+  }
+}
+
 function parsePost(filename: string): Post {
   const slug = filename.replace(/\.mdx?$/, '')
   const raw = fs.readFileSync(path.join(CONTENT_DIR, filename), 'utf-8')
   const { data, content } = matter(raw)
   return {
     slug,
-    frontmatter: {
-      title: data.title as string,
-      description: data.description as string,
-      pubDate: new Date(data.pubDate as string),
-      updatedDate: data.updatedDate ? new Date(data.updatedDate as string) : undefined,
-      tags: (data.tags as string[]) ?? [],
-      canonicalURL: data.canonicalURL as string | undefined,
-      draft: (data.draft as boolean) ?? false,
-    },
+    frontmatter: assertValidFrontmatter(data, slug),
     readingTime: calculateReadingTime(content),
   }
 }
@@ -76,15 +89,7 @@ export function getPostBySlug(slug: string): PostWithContent | null {
       const { data, content } = matter(raw)
       const post: PostWithContent = {
         slug,
-        frontmatter: {
-          title: data.title as string,
-          description: data.description as string,
-          pubDate: new Date(data.pubDate as string),
-          updatedDate: data.updatedDate ? new Date(data.updatedDate as string) : undefined,
-          tags: (data.tags as string[]) ?? [],
-          canonicalURL: data.canonicalURL as string | undefined,
-          draft: (data.draft as boolean) ?? false,
-        },
+        frontmatter: assertValidFrontmatter(data, slug),
         readingTime: calculateReadingTime(content),
         content,
       }

@@ -1,6 +1,6 @@
 ---
 title: "Self-Hosted Is Not a Deployment Preference. It Is a Procurement Requirement."
-description: "Self-hosted deployment is often a mandatory tender filter, not a scored preference. What buyers actually test, the real cost, and the offline install proof."
+description: "Self-hosted deployment is often a mandatory tender filter, not a scored preference. What buyers test, the real cost, and the offline install proof."
 pubDate: 2026-10-08
 tags: ["Self-Hosted AI", "Sovereign AI", "Enterprise AI", "Data Residency", "Compliance"]
 draft: false

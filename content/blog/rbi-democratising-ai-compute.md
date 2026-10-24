@@ -1,6 +1,6 @@
 ---
 title: "RBI Is Serious About Democratising AI Compute"
-description: "RBI's FREE-AI report treats compute access, not just governance, as the real bottleneck to inclusive AI adoption in Indian finance."
+description: "RBI's FREE-AI report treats compute access, not just governance, as the real bottleneck to inclusive AI adoption across the Indian financial system."
 pubDate: 2026-08-18
 tags: ["RBI", "FREE-AI", "AI Governance", "BFSI", "IndiaAI Mission", "Compliance"]
 draft: false

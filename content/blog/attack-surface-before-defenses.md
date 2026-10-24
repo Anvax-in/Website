@@ -1,6 +1,6 @@
 ---
 title: "AI Gives Your Institution New Attack Surface Before It Gives You New Defenses"
-description: "Every AI system a bank ships opens a new door before anyone builds the lock for it. Why the security gap between AI adoption and AI defense is BFSI's next real exposure."
+description: "Every AI system a bank ships opens a new door before the lock exists. Why the security gap between AI adoption and AI defense is BFSI's next real exposure."
 pubDate: 2026-08-04
 tags: ["AI Security", "Cyber Risk", "RBI", "BFSI", "AI Governance", "Compliance"]
 draft: false

@@ -1,6 +1,6 @@
 ---
 title: "Permission-Aware Retrieval: Query-Time ACLs, Not Index-Time"
-description: "Permission-aware retrieval has to check access at the moment of the question, not rely on access lists copied into the index at ingestion."
+description: "Permission-aware retrieval has to check access at the moment of the question, not rely on access lists copied into the index at ingestion time."
 pubDate: 2026-10-01
 tags: ["AI Governance", "AI Audit", "AI Security", "Enterprise AI", "Compliance"]
 draft: false
