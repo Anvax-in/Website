@@ -151,10 +151,10 @@ export default function IndustriesClient() {
                             ))}
                           </div>
                           {v.id === 'public-sector' && (
-                            <a href="/industries/public-sector">Read more →</a>
+                            <a href="/industries/public-sector" className={styles.readMore}>Read more →</a>
                           )}
                           {v.id === 'legal' && (
-                            <a href="/industries/legal-professional-services">Read more →</a>
+                            <a href="/industries/legal-professional-services" className={styles.readMore}>Read more →</a>
                           )}
                         </div>
                         <div>
