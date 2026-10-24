@@ -1,0 +1,294 @@
+/* ── Panel shell (duplicated from ProductSection.module.css — shared
+   visual language with SearchMock/AgentsMock, which stay there) ── */
+.mockPanel {
+  border: 1px solid var(--bone-200);
+  background: var(--paper);
+  transition: box-shadow var(--dur-base) var(--ease-out);
+}
+
+.mockPanel:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.mockBar {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--bone-200);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.mockBarLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--slate-400);
+}
+
+.mockGoverned {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--sage-600);
+}
+
+.mockGovernedDot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--sage-600);
+}
+
+.mockBody {
+  padding: 18px;
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Chat bubble + answer (rendered directly by ChatWindowMock) ── */
+.mockChatBubble {
+  max-width: 76%;
+  background: var(--bone-100);
+  color: var(--ink-900);
+  border-radius: 16px;
+  padding: 11px 15px;
+  font-size: 13.5px;
+  line-height: 20px;
+  align-self: flex-end;
+  margin-bottom: 12px;
+}
+
+.mockChatAnswer {
+  font-size: 13.5px;
+  line-height: 21px;
+  color: var(--ink-900);
+  margin: 0 0 16px;
+}
+
+/* ── Redact pill + step card (used by ProductSection's `middle` slot
+   content — the rules live here, not in ProductSection.module.css, so
+   their reveal animation shares a CSS-module scope with .playing below;
+   see ChatWindowMock.tsx for why) ── */
+.mockRedactPill {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--sage-200);
+  border-radius: var(--radius-pill);
+  background: var(--sage-50);
+  padding: 6px 12px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--sage-600);
+  margin-bottom: 12px;
+}
+
+.mockStepCard {
+  border: 1px solid var(--bone-200);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+
+.mockStepHead {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.mockStepTitle {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--ink-900);
+}
+
+.mockStepTime {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--slate-400);
+  flex-shrink: 0;
+}
+
+.mockStepChips {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.mockChipLogo {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--bone-250);
+  color: var(--ink-900);
+}
+
+/* ── Chat input (used by ProductSection's `footer` slot content) ── */
+.mockChatInput {
+  margin-top: auto;
+  border: 1px solid var(--bone-250);
+  border-radius: 14px;
+  padding: 9px 12px;
+  box-shadow: rgba(13, 18, 25, 0.05) 0px 1px 3px;
+}
+
+.mockChatInputTop {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 9px;
+}
+
+.mockChatGovernedPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  background: var(--bone-100);
+  padding: 3px 10px;
+}
+
+.mockChatGovernedDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ink-900);
+  display: inline-block;
+}
+
+.mockChatCorpora {
+  font-size: 11.5px;
+  color: var(--slate-400);
+}
+
+.mockChatInputRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mockChatPlaceholder {
+  font-size: 13px;
+  color: var(--slate-400);
+  flex: 1;
+}
+
+.mockSendBtn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--blue-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mockChatMeta {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 11.5px;
+  color: var(--slate-400);
+}
+
+.mockChatLogged {
+  color: var(--sage-600);
+  font-weight: 700;
+}
+
+/* ── Staged reveal, triggered by ChatWindowMock's own IntersectionObserver
+   (see ChatWindowMock.tsx). Kept self-contained in this module so the
+   `.playing` class added to .mockPanel and the four `.crX` target classes
+   resolve to the same CSS-module scope — a class added from
+   ProductSection.module.css would never match a selector compiled from
+   this file, and vice versa. ── */
+@keyframes anvReveal {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.crBubble { opacity: 0; animation: anvReveal 0.3s var(--ease-out) 0.3s 1 forwards; animation-play-state: paused; }
+.crPill   { opacity: 0; animation: anvReveal 0.3s var(--ease-out) 0.8s 1 forwards; animation-play-state: paused; }
+.crStep   { opacity: 0; animation: anvReveal 0.3s var(--ease-out) 1.3s 1 forwards; animation-play-state: paused; }
+.crAnswer { opacity: 0; animation: anvReveal 0.3s var(--ease-out) 1.9s 1 forwards; animation-play-state: paused; }
+
+.playing .crBubble,
+.playing .crPill,
+.playing .crStep,
+.playing .crAnswer { animation-play-state: running; }
+
+/* ── Sources / tags (industry hero only) ── */
+.sources {
+  list-style: none;
+  display: grid;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin: 0;
+  padding: 0;
+}
+
+.sources li {
+  background: var(--paper);
+  padding: 9px 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.sources b {
+  color: var(--blue-600);
+  font-weight: 800;
+}
+
+.sources span {
+  font-weight: 600;
+}
+
+.sources em {
+  margin-left: auto;
+  font-style: normal;
+  color: var(--slate-400);
+}
+
+.tags {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.tagInk,
+.tagSage {
+  font-size: 11.5px;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+}
+
+.tagInk {
+  color: var(--ink-700);
+  border: 1px solid var(--bone-250);
+  background: var(--bone-50);
+}
+
+.tagSage {
+  color: var(--sage-600);
+  border: 1px solid var(--sage-200);
+  background: var(--sage-50);
+}

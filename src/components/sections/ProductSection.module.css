@@ -343,11 +343,10 @@
 .srResults{ opacity: 0; animation: anvReveal 0.35s var(--ease-out) 2.35s 1 forwards; animation-play-state: paused; }
 .srFooter { opacity: 0; animation: anvReveal 0.25s var(--ease-out) 2.8s  1 forwards; animation-play-state: paused; }
 
-/* Chat mock staged reveal */
-.crBubble { opacity: 0; animation: anvReveal 0.3s var(--ease-out) 0.3s  1 forwards; animation-play-state: paused; }
-.crPill   { opacity: 0; animation: anvReveal 0.3s var(--ease-out) 0.8s  1 forwards; animation-play-state: paused; }
-.crStep   { opacity: 0; animation: anvReveal 0.3s var(--ease-out) 1.3s  1 forwards; animation-play-state: paused; }
-.crAnswer { opacity: 0; animation: anvReveal 0.3s var(--ease-out) 1.9s  1 forwards; animation-play-state: paused; }
+/* Chat mock staged reveal now lives in ChatWindowMock.module.css — the
+   bubble/pill/step/answer classes it stages all live there too, so the
+   `.playing` trigger and the classes it targets stay in one CSS-module
+   scope. See ChatWindowMock.tsx. */
 
 /* Agents mock step reveal */
 .arStep1 { opacity: 0; animation: anvReveal 0.25s var(--ease-out) 0.3s  1 forwards; animation-play-state: paused; }
@@ -362,10 +361,6 @@
 .playing .srChips,
 .playing .srResults,
 .playing .srFooter,
-.playing .crBubble,
-.playing .crPill,
-.playing .crStep,
-.playing .crAnswer,
 .playing .arStep1,
 .playing .arStep2,
 .playing .arStep3,
@@ -378,142 +373,17 @@
   color: var(--slate-400);
 }
 
-/* ── Chat mock ── */
-.mockChatBubble {
-  max-width: 76%;
-  background: var(--bone-100);
-  color: var(--ink-900);
-  border-radius: 16px;
-  padding: 11px 15px;
-  font-size: 13.5px;
-  line-height: 20px;
-  align-self: flex-end;
-  margin-bottom: 12px;
-}
-
-.mockRedactPill {
-  display: inline-flex;
-  align-self: flex-start;
-  align-items: center;
-  gap: 8px;
-  border: 1px solid var(--sage-200);
-  border-radius: var(--radius-pill);
-  background: var(--sage-50);
-  padding: 6px 12px;
-  font-size: 11.5px;
-  font-weight: 700;
-  color: var(--sage-600);
-  margin-bottom: 12px;
-}
-
-.mockStepCard {
-  border: 1px solid var(--bone-200);
-  border-radius: 12px;
-  padding: 12px 14px;
-  margin-bottom: 12px;
-}
-
-.mockStepHead {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-}
-
-.mockStepTitle {
-  font-size: 12.5px;
-  font-weight: 700;
-  color: var(--ink-900);
-}
+/* ── Chat mock ──
+   The bubble, redact-pill, step-card, and answer rules moved to
+   ChatWindowMock.module.css. .mockStepTime, .mockStepChips, and
+   .mockChipLogo below stay here too (duplicated) because AgentsMock
+   (and, for .mockChipLogo, SearchMock) still use them directly. */
 
 .mockStepTime {
   margin-left: auto;
   font-size: 11px;
   color: var(--slate-400);
   flex-shrink: 0;
-}
-
-.mockChatAnswer {
-  font-size: 13.5px;
-  line-height: 21px;
-  color: var(--ink-900);
-  margin: 0 0 16px;
-}
-
-.mockChatInput {
-  margin-top: auto;
-  border: 1px solid var(--bone-250);
-  border-radius: 14px;
-  padding: 9px 12px;
-  box-shadow: rgba(13, 18, 25, 0.05) 0px 1px 3px;
-}
-
-.mockChatInputTop {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin-bottom: 9px;
-}
-
-.mockChatGovernedPill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 11.5px;
-  font-weight: 700;
-  border-radius: var(--radius-pill);
-  background: var(--bone-100);
-  padding: 3px 10px;
-}
-
-.mockChatGovernedDot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--ink-900);
-  display: inline-block;
-}
-
-.mockChatCorpora {
-  font-size: 11.5px;
-  color: var(--slate-400);
-}
-
-.mockChatInputRow {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.mockChatPlaceholder {
-  font-size: 13px;
-  color: var(--slate-400);
-  flex: 1;
-}
-
-.mockSendBtn {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: var(--blue-600);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.mockChatMeta {
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  font-size: 11.5px;
-  color: var(--slate-400);
-}
-
-.mockChatLogged {
-  color: var(--sage-600);
-  font-weight: 700;
 }
 
 /* ── Agents mock ── */
@@ -651,8 +521,11 @@
     padding: 48px 0;
   }
 
-  /* On mobile, always show copy first, mock second */
-  .rowReverse .mockPanel {
+  /* On mobile, always show copy first, mock second. Targets the Chat
+     row's first child structurally (not by class) because that child
+     is now ChatWindowMock's own root element, styled from a different
+     CSS module than .mockPanel here. */
+  .rowReverse > :first-child {
     order: -1;
   }
 }

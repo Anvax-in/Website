@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from 'react'
 import styles from './ProductSection.module.css'
+import ChatWindowMock from '@/components/ui/ChatWindowMock'
+import chatMockStyles from '@/components/ui/ChatWindowMock.module.css'
 
 function Check() {
   return (
@@ -96,81 +98,77 @@ function SearchMock() {
 
 function ChatMock() {
   return (
-    <div className={styles.mockPanel}>
-      <div className={styles.mockBar}>
-        <span className={styles.mockBarLabel}>Chat · grounded thread</span>
-        <GovernedBadge />
-      </div>
-      <div className={styles.mockBody}>
-        <div className={`${styles.mockChatBubble} ${styles.crBubble}`}>
-          Summarise the outstanding exceptions on account 4417-88-2301 and tell me who owns them.
-        </div>
-
-        <div className={`${styles.mockRedactPill} ${styles.crPill}`}>
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--sage-600)" strokeWidth="2.5" strokeLinecap="round" style={{ flexShrink: 0 }} aria-hidden="true">
-            <path d="M20 6L9 17l-5-5" />
-          </svg>
-          Account number redacted before the model saw it
-        </div>
-
-        <div className={`${styles.mockStepCard} ${styles.crStep}`}>
-          <div className={styles.mockStepHead}>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--sage-600)" strokeWidth="2.5" strokeLinecap="round" style={{ flexShrink: 0 }} aria-hidden="true">
+    <ChatWindowMock
+      label="Chat · grounded thread"
+      question="Summarise the outstanding exceptions on account 4417-88-2301 and tell me who owns them."
+      middle={
+        <>
+          <div className={`${chatMockStyles.mockRedactPill} ${chatMockStyles.crPill}`}>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--sage-600)" strokeWidth="2.5" strokeLinecap="round" style={{ flexShrink: 0 }} aria-hidden="true">
               <path d="M20 6L9 17l-5-5" />
             </svg>
-            <span className={styles.mockStepTitle}>Completed · 3 steps · 2 sources</span>
-            <span className={styles.mockStepTime}>16:56</span>
+            Account number redacted before the model saw it
           </div>
-          <div className={styles.mockStepChips}>
-            <span className={styles.mockChipLogo}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/assets/logos/salesforce.svg" alt="Salesforce" width="12" height="12" style={{ objectFit: 'contain' }} />
-              Exceptions register
-            </span>
-            <span className={styles.mockChipLogo}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/assets/logos/sharepoint.svg" alt="SharePoint" width="12" height="12" style={{ objectFit: 'contain' }} />
-              Financial crime log
-            </span>
+
+          <div className={`${chatMockStyles.mockStepCard} ${chatMockStyles.crStep}`}>
+            <div className={chatMockStyles.mockStepHead}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--sage-600)" strokeWidth="2.5" strokeLinecap="round" style={{ flexShrink: 0 }} aria-hidden="true">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span className={chatMockStyles.mockStepTitle}>Completed · 3 steps · 2 sources</span>
+              <span className={chatMockStyles.mockStepTime}>16:56</span>
+            </div>
+            <div className={chatMockStyles.mockStepChips}>
+              <span className={chatMockStyles.mockChipLogo}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/assets/logos/salesforce.svg" alt="Salesforce" width="12" height="12" style={{ objectFit: 'contain' }} />
+                Exceptions register
+              </span>
+              <span className={chatMockStyles.mockChipLogo}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/assets/logos/sharepoint.svg" alt="SharePoint" width="12" height="12" style={{ objectFit: 'contain' }} />
+                Financial crime log
+              </span>
+            </div>
           </div>
-        </div>
-
-        <p className={`${styles.mockChatAnswer} ${styles.crAnswer}`}>
-          Three exceptions are open. Two are documentation refreshes owned by the onboarding desk, both past their 30-day window. The third is a sanctions re-screen owned by financial crime, raised 6 September.
-        </p>
-
-        <div className={styles.mockChatInput}>
-          <div className={styles.mockChatInputTop}>
-            <span className={styles.mockChatGovernedPill}>
-              <span className={styles.mockChatGovernedDot} />
+        </>
+      }
+      answer={[
+        'Three exceptions are open. Two are documentation refreshes owned by the onboarding desk, both past their 30-day window. The third is a sanctions re-screen owned by financial crime, raised 6 September.',
+      ]}
+      footer={
+        <div className={chatMockStyles.mockChatInput}>
+          <div className={chatMockStyles.mockChatInputTop}>
+            <span className={chatMockStyles.mockChatGovernedPill}>
+              <span className={chatMockStyles.mockChatGovernedDot} />
               Governed
             </span>
-            <span className={styles.mockChatCorpora}>All corpora</span>
+            <span className={chatMockStyles.mockChatCorpora}>All corpora</span>
           </div>
-          <div className={styles.mockChatInputRow}>
+          <div className={chatMockStyles.mockChatInputRow}>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--slate-400)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }} aria-hidden="true">
               <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
             </svg>
-            <span className={styles.mockChatPlaceholder}>Ask about a policy, a contract or a control…</span>
+            <span className={chatMockStyles.mockChatPlaceholder}>Ask about a policy, a contract or a control…</span>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--slate-400)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginLeft: 'auto' }} aria-hidden="true">
               <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2M12 19v4" />
             </svg>
-            <span className={styles.mockSendBtn} aria-hidden="true">
+            <span className={chatMockStyles.mockSendBtn} aria-hidden="true">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M12 19V5M5 12l7-7 7 7" />
               </svg>
             </span>
           </div>
-          <div className={styles.mockChatMeta}>
+          <div className={chatMockStyles.mockChatMeta}>
             <span>Llama 3.1 70B · self-hosted</span>
             <span>·</span>
             <span>Retention: 90 days</span>
             <span>·</span>
-            <span className={styles.mockChatLogged}>Thread logged</span>
+            <span className={chatMockStyles.mockChatLogged}>Thread logged</span>
           </div>
         </div>
-      </div>
-    </div>
+      }
+    />
   )
 }
 
