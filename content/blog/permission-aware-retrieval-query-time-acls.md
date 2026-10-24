@@ -8,8 +8,6 @@ draft: false
 
 ![Side-by-side diagram comparing index-time ACLs, which go stale, with query-time ACLs, which check access at the moment of the question](/assets/blog/permission-aware-retrieval-query-time-acls.webp)
 
-# Permission-Aware Retrieval: Query-Time ACLs, Not Index-Time
-
 A retrieval system answers questions by searching an index built from an organization's documents. Those documents come with access rules, and the answer a user receives must respect them. Most systems copy each document's access list into the index when the document is ingested and filter against that copy. The copy ages from the moment it is written. **Permission-aware retrieval is not a property of the index. It is a check that has to be current at the moment a question is asked.**
 
 ## What Permission-Aware Actually Means
