@@ -78,3 +78,17 @@ img { display: block; max-width: 100%; }
   max-width: 58ch;
   text-wrap: pretty;
 }
+
+/* Reveal-on-scroll — consumed by the Reveal component */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity var(--dur-reveal) var(--ease-out),
+    transform var(--dur-reveal) var(--ease-out);
+}
+.reveal.isIn { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}

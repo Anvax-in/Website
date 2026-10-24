@@ -55,6 +55,7 @@
   --clay-600: #A8543A;
   --clay-100: #F1DDD2;
   --rust-700: #8B2E1F;
+  --rust-600: #A83F2B;
   --rust-100: #EBD2CC;
 
   /* ---- Semantic surfaces ---- */
@@ -109,6 +110,7 @@
   /* ---- Typography ---- */
   --font-heading:        var(--font-sans);
   --font-heading-weight: 800;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
   --weight-regular:  400;
   --weight-medium:   500;
@@ -168,6 +170,7 @@
   --ease-out: cubic-bezier(0.2, 0, 0, 1);
   --dur-fast: 120ms;
   --dur-base: 180ms;
+  --dur-reveal: 420ms;
 
   /* ---- Surface treatments ---- */
   --hover-wash:     rgba(31, 37, 46, 0.04);
