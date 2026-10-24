@@ -8,6 +8,10 @@ export default function OrganizationJsonLd() {
         name: 'Anvax',
         url: 'https://www.anvax.in',
         logo: 'https://www.anvax.in/assets/anvax-wordmark-ink.svg',
+        sameAs: [
+          'https://www.linkedin.com/company/anvax/',
+          'https://medium.com/@anvax',
+        ],
       },
       {
         '@type': 'WebSite',

@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const pageNum = Number(page)
   const canonicalUrl = `https://www.anvax.in/blog/page/${pageNum}`
   return {
-    title: `Sovereign Stack: Page ${pageNum} · Anvax`,
+    title: `AI Governance & Compliance Insights | Anvax — Page ${pageNum}`,
     alternates: { canonical: canonicalUrl, languages: { 'x-default': canonicalUrl, en: canonicalUrl } },
   }
 }
