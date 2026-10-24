@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: frontmatter.title,
       description: frontmatter.description,
-      url: `https://www.anvax.in/blog/${slug}`,
+      url: canonicalUrl,
       type: 'article',
       publishedTime: frontmatter.pubDate.toISOString(),
       modifiedTime: frontmatter.updatedDate?.toISOString(),
