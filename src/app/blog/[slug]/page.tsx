@@ -28,10 +28,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const { frontmatter } = post
   const canonicalUrl = frontmatter.canonicalURL ?? `https://www.anvax.in/blog/${slug}`
-  const ogImageUrl = `https://www.anvax.in/api/og?title=${encodeURIComponent(frontmatter.title)}&label=${encodeURIComponent('Sovereign Stack · Anvax')}`
+  const ogImageUrl = `https://www.anvax.in/api/og?title=${encodeURIComponent(frontmatter.title)}&label=${encodeURIComponent('Anvax')}`
 
   return {
-    title: `${frontmatter.title} - Sovereign Stack`,
+    title: `${frontmatter.title} - Anvax`,
     description: frontmatter.description,
     openGraph: {
       title: frontmatter.title,
