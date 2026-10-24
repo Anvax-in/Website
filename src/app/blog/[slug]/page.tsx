@@ -21,6 +21,10 @@ function formatDate(date: Date): string {
   return date.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })
 }
 
+function buildOgImageUrl(title: string): string {
+  return `https://www.anvax.in/api/og?title=${encodeURIComponent(title)}&label=${encodeURIComponent('Anvax')}`
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const post = getPostBySlug(slug)
@@ -28,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const { frontmatter } = post
   const canonicalUrl = frontmatter.canonicalURL ?? `https://www.anvax.in/blog/${slug}`
-  const ogImageUrl = `https://www.anvax.in/api/og?title=${encodeURIComponent(frontmatter.title)}&label=${encodeURIComponent('Anvax')}`
+  const ogImageUrl = buildOgImageUrl(frontmatter.title)
 
   return {
     title: `${frontmatter.title} - Anvax`,
@@ -70,6 +74,7 @@ export default async function BlogPostPage({ params }: Props) {
         pubDateISO={frontmatter.pubDate.toISOString()}
         updatedDateISO={frontmatter.updatedDate?.toISOString()}
         postUrl={canonicalUrl}
+        image={buildOgImageUrl(frontmatter.title)}
       />
 
       <article>

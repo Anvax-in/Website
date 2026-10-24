@@ -4,14 +4,16 @@ interface JsonLdProps {
   pubDateISO: string
   updatedDateISO?: string
   postUrl: string // canonical URL for this post
+  image: string
 }
 
-export default function JsonLd({ title, description, pubDateISO, updatedDateISO, postUrl }: JsonLdProps) {
+export default function JsonLd({ title, description, pubDateISO, updatedDateISO, postUrl, image }: JsonLdProps) {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: title,
     description,
+    image,
     datePublished: pubDateISO,
     dateModified: updatedDateISO ?? pubDateISO,
     author: {
