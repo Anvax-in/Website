@@ -12,7 +12,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1.7fr 1fr 1fr 1fr;
+  grid-template-columns: 1.7fr 1fr 1fr 1fr 1fr;
   gap: var(--space-8);
 }
 
@@ -58,6 +58,27 @@
   transition: color var(--dur-base) var(--ease-out);
 }
 .colLink:hover { color: var(--paper); }
+
+/* ---- ask-ai icons ---- */
+.aiGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+.aiTile {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ink-900);
+  border: var(--rule-hair) solid var(--border-on-ink);
+  border-radius: var(--radius-sm);
+  color: var(--fg-on-dark-3);
+  transition: color var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+}
+.aiTile:hover { color: var(--paper); transform: translateY(-3px); }
+.aiTile:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
 
 /* ---- statement ---- */
 .statement {
