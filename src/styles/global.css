@@ -79,16 +79,18 @@ img { display: block; max-width: 100%; }
   text-wrap: pretty;
 }
 
-/* Reveal-on-scroll — consumed by the Reveal component */
+/* Reveal-on-scroll — consumed by the Reveal component.
+   Visible by default (server-rendered / no-JS): plain .reveal has no hiding
+   style. The component adds .pending client-side, before the element can be
+   observed, then swaps it for .isIn once it scrolls into view. */
 .reveal {
-  opacity: 0;
-  transform: translateY(14px);
   transition:
     opacity var(--dur-reveal) var(--ease-out),
     transform var(--dur-reveal) var(--ease-out);
 }
+.reveal.pending { opacity: 0; transform: translateY(14px); }
 .reveal.isIn { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .reveal, .reveal.pending { opacity: 1; transform: none; transition: none; }
 }

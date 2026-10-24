@@ -7,7 +7,7 @@ export default function IndustryFaq({ items }: { items: { q: string; a: string }
   return (
     <div className={styles.faq}>
       {items.map((f, i) => (
-        <div key={f.q} className={styles.faqItem}>
+        <div key={i} className={styles.faqItem}>
           <button type="button" aria-expanded={open === i} onClick={() => setOpen(open === i ? -1 : i)}>
             <span>{f.q}</span><span aria-hidden>{open === i ? '\u2212' : '+'}</span>
           </button>
