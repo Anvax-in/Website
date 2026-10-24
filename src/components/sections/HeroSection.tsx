@@ -52,6 +52,7 @@ const results = [
   {
     n: 1,
     logo: '/assets/logos/sharepoint.svg',
+    system: 'SharePoint',
     title: 'Q3 credit review consumer lending.pdf',
     ref: 'p. 14',
     excerpt: '"Eleven files were flagged for incomplete refresh documentation…"',
@@ -59,6 +60,7 @@ const results = [
   {
     n: 2,
     logo: '/assets/logos/confluence.svg',
+    system: 'Confluence',
     title: 'Refresh SOP v4.docx',
     ref: '§ 3.2',
     excerpt: '"Documentation must be re-verified every 24 months…"',
@@ -66,6 +68,7 @@ const results = [
   {
     n: 3,
     logo: '/assets/logos/snowflake.svg',
+    system: 'Snowflake',
     title: 'Risk committee minutes 19 Aug',
     ref: 'row 6',
     excerpt: '"Desk to clear the backlog before the October cycle."',
@@ -180,12 +183,12 @@ export default function HeroSection() {
                 </div>
 
                 <div className={styles.mockResults}>
-                  {results.map(({ n, logo, title, ref, excerpt }) => (
+                  {results.map(({ n, logo, system, title, ref, excerpt }) => (
                     <div key={n} className={styles.mockResult}>
                       <div className={styles.mockResultHead}>
                         <span className={styles.mockResultN}>{n}</span>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={logo} alt="" role="presentation" width="14" height="14" className={styles.mockLogo} />
+                        <img src={logo} alt={system} width="14" height="14" className={styles.mockLogo} />
                         <span className={styles.mockResultTitle}>{title}</span>
                         <span className={styles.mockResultRef}>{ref}</span>
                       </div>

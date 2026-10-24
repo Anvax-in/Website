@@ -64,7 +64,7 @@ function SearchMock() {
             <div className={styles.mockResultHead}>
               <span className={styles.mockResultN}>1</span>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/assets/logos/snowflake.svg" alt="" role="presentation" width="14" height="14" style={{ objectFit: 'contain', flexShrink: 0 }} />
+              <img src="/assets/logos/snowflake.svg" alt="Snowflake" width="14" height="14" style={{ objectFit: 'contain', flexShrink: 0 }} />
               <span className={styles.mockResultTitle}>Treasury exposure October.xlsx</span>
               <span className={styles.mockResultRef}>Sheet 2</span>
             </div>
@@ -74,7 +74,7 @@ function SearchMock() {
             <div className={styles.mockResultHead}>
               <span className={styles.mockResultN}>2</span>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/assets/logos/sharepoint.svg" alt="" role="presentation" width="14" height="14" style={{ objectFit: 'contain', flexShrink: 0 }} />
+              <img src="/assets/logos/sharepoint.svg" alt="SharePoint" width="14" height="14" style={{ objectFit: 'contain', flexShrink: 0 }} />
               <span className={styles.mockResultTitle}>ALCO pack 02 Sep.pdf</span>
               <span className={styles.mockResultRef}>p. 7</span>
             </div>
@@ -124,12 +124,12 @@ function ChatMock() {
           <div className={styles.mockStepChips}>
             <span className={styles.mockChipLogo}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/assets/logos/salesforce.svg" alt="" role="presentation" width="12" height="12" style={{ objectFit: 'contain' }} />
+              <img src="/assets/logos/salesforce.svg" alt="Salesforce" width="12" height="12" style={{ objectFit: 'contain' }} />
               Exceptions register
             </span>
             <span className={styles.mockChipLogo}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/assets/logos/sharepoint.svg" alt="" role="presentation" width="12" height="12" style={{ objectFit: 'contain' }} />
+              <img src="/assets/logos/sharepoint.svg" alt="SharePoint" width="12" height="12" style={{ objectFit: 'contain' }} />
               Financial crime log
             </span>
           </div>
