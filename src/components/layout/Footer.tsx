@@ -15,11 +15,8 @@ const product = [
 ]
 
 const solutions = [
-  { to: '/industries#financial-services', label: 'Financial services' },
-  { to: '/industries#healthcare',         label: 'Healthcare' },
-  { to: '/industries#legal',              label: 'Legal' },
-  { to: '/industries#public-sector',      label: 'Public sector' },
-  { to: '/industries',                    label: 'All industries' },
+  { to: '/industries/financial-services', label: 'Financial services' },
+  { to: '/industries/insurance',           label: 'Insurance' },
 ]
 
 const company = [

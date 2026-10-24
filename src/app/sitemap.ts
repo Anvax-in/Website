@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog'
+import { industries } from '@/content/industries'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts()
@@ -36,5 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...blogPosts]
+  const industryPages: MetadataRoute.Sitemap = industries.map(i => ({
+    url: `https://www.anvax.in/industries/${i.slug}`,
+    lastModified: new Date('2026-10-24'),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  return [...staticPages, ...industryPages, ...blogPosts]
 }
