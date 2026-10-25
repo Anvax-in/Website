@@ -25,7 +25,7 @@ export type Industry = {
   benefitsTitle: string
   benefits: { icon: string; title: string; body: string }[]
   teamsTitle: string
-  teams: { team: string; title: string; body: string; points: { t: string; d: string }[]; tint: 'blue' | 'sage' | 'bone'; mock: Mock }[]
+  teams: { team: string; title: string; body: string; points: { t: string; d: string; icon?: string }[]; tint: 'blue' | 'sage' | 'bone'; mock: Mock }[]
   quote: { text: string; role: string }
   securityNote: string
   faqs: { q: string; a: string }[]

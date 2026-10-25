@@ -15,7 +15,7 @@ export const insurance: Industry = {
         'This policy carries a $1,000 excess for escape of water claims. The customer has no other open claims this year.',
       ],
       sources: [
-        { n: 1, title: 'Home Plus policy wording v7 · §3.2', system: 'SharePoint' },
+        { n: 1, title: 'Home Plus policy wording v7 · section 3.2', system: 'SharePoint' },
         { n: 2, title: 'Policy schedule HO-48213', system: 'Guidewire' },
       ],
       tags: [{ t: '2 personal details redacted', tone: 'ink' }, { t: 'Logged · entry 5,904,118', tone: 'sage' }],
@@ -45,14 +45,14 @@ export const insurance: Industry = {
       team: 'Claims', title: 'Move every claim to a decision faster',
       body: "Check cover, gather documents and summarise the claim file, so handlers can decide quickly and customers aren't left waiting.",
       points: [
-        { t: 'Coverage checks', d: 'Confirm what is covered against the exact policy wording.' },
-        { t: 'Claim file summaries', d: 'Notes, photos and reports condensed into one clear view.' },
-        { t: 'Fraud signals', d: 'Flag claims that look unusual for a closer look.' },
+        { t: 'Coverage checks', d: 'Confirm what is covered against the exact policy wording.', icon: 'check' },
+        { t: 'Claim file summaries', d: 'Notes, photos and reports condensed into one clear view.', icon: 'file' },
+        { t: 'Fraud signals', d: 'Flag claims that look unusual for a closer look.', icon: 'bolt' },
       ],
       tint: 'blue',
       mock: {
         kind: 'timeline', title: 'Claim CL-20931 · Escape of water',
-        chips: [{ t: 'Covered · §3.2', tone: 'sage' }, { t: 'No fraud signals', tone: 'ink' }],
+        chips: [{ t: 'Covered · section 3.2', tone: 'sage' }, { t: 'No fraud signals', tone: 'ink' }],
         stats: [{ k: 'Reserve', v: '$8,400' }, { k: 'Excess', v: '$1,000' }, { k: 'Days open', v: '2' }],
         events: [
           { time: 'Mon 09:12', t: 'First notice of loss received' },
@@ -67,9 +67,9 @@ export const insurance: Industry = {
       team: 'Underwriting', title: 'Underwrite with the full picture',
       body: 'Bring submissions, loss history and your guidelines together so underwriters can assess a risk and quote with confidence.',
       points: [
-        { t: 'Submission triage', d: 'Sort new submissions by appetite and priority.' },
-        { t: 'Guideline checks', d: 'Test any risk against your underwriting rules instantly.' },
-        { t: 'Loss history analysis', d: 'Summarise past claims for any account in seconds.' },
+        { t: 'Submission triage', d: 'Sort new submissions by appetite and priority.', icon: 'workflow' },
+        { t: 'Guideline checks', d: 'Test any risk against your underwriting rules instantly.', icon: 'check' },
+        { t: 'Loss history analysis', d: 'Summarise past claims for any account in seconds.', icon: 'trend' },
       ],
       tint: 'sage',
       mock: {
@@ -87,25 +87,25 @@ export const insurance: Industry = {
       team: 'Customer service', title: 'Answer every policyholder first time',
       body: 'Give service teams instant, accurate answers on cover, billing and claim status, so fewer calls need escalating.',
       points: [
-        { t: 'Policy answers', d: 'Clear answers on cover, straight from the wording.' },
-        { t: 'Claim status updates', d: 'Tell customers exactly where their claim stands.' },
-        { t: 'Customer letters', d: 'Draft clear, compliant letters and emails in any language.' },
+        { t: 'Policy answers', d: 'Clear answers on cover, straight from the wording.', icon: 'search' },
+        { t: 'Claim status updates', d: 'Tell customers exactly where their claim stands.', icon: 'clock' },
+        { t: 'Customer letters', d: 'Draft clear, compliant letters and emails in any language.', icon: 'file' },
       ],
       tint: 'bone',
       mock: {
         kind: 'brief', title: 'Service desk · Live call', initials: 'MT', name: 'Policy MT-77120', sub: 'Motor comprehensive · renews 14 Jan',
         quote: "Am I covered if I drive a friend's car?", listTitle: 'Suggested answer',
         answer: "Yes, for third-party damage only, as long as the car is insured and you have the owner's permission. Damage to your friend's car itself is not covered under this policy.",
-        chips: ['Motor wording §5.1'],
+        chips: ['Motor wording section 5.1'],
       },
     },
     {
       team: 'Legal & compliance', title: 'Review wordings and contracts in minutes',
       body: 'Check policy wordings, broker agreements and contracts for key terms, gaps and compliance issues before they become problems.',
       points: [
-        { t: 'Policy answers', d: 'Compare versions and see exactly how cover changed.' },
-        { t: 'Contract checks', d: 'Find key clauses and risks in partner agreements.' },
-        { t: 'Regulatory updates', d: 'See what new rules mean for your products.' },
+        { t: 'Policy answers', d: 'Compare versions and see exactly how cover changed.', icon: 'file' },
+        { t: 'Contract checks', d: 'Find key clauses and risks in partner agreements.', icon: 'check' },
+        { t: 'Regulatory updates', d: 'See what new rules mean for your products.', icon: 'bolt' },
       ],
       tint: 'blue',
       mock: {

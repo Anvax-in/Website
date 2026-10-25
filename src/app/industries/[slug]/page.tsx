@@ -8,6 +8,7 @@ import ChatWindowMock from '@/components/ui/ChatWindowMock'
 import IndustryMock from '@/components/industries/IndustryMock'
 import IndustryFaq from '@/components/industries/IndustryFaq'
 import styles from '@/pages/Industry.module.css'
+import chatMockStyles from '@/components/ui/ChatWindowMock.module.css'
 
 export function generateStaticParams() {
   return industries.map(i => ({ slug: i.slug }))
@@ -46,9 +47,65 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
           <ChatWindowMock
             label={`Chat · ${ind.hero.chat.workspace}`}
             question={ind.hero.chat.question}
+            middle={
+              <>
+                <div className={`${chatMockStyles.mockRedactPill} ${chatMockStyles.crPill}`}>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--sage-600)" strokeWidth="2.5" strokeLinecap="round" style={{ flexShrink: 0 }} aria-hidden="true">
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  {ind.hero.chat.tags.find(t => t.tone === 'ink')?.t}
+                </div>
+                <div className={`${chatMockStyles.mockStepCard} ${chatMockStyles.crStep}`}>
+                  <div className={chatMockStyles.mockStepHead}>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--sage-600)" strokeWidth="2.5" strokeLinecap="round" style={{ flexShrink: 0 }} aria-hidden="true">
+                      <path d="M20 6L9 17l-5-5" />
+                    </svg>
+                    <span className={chatMockStyles.mockStepTitle}>Completed · {ind.hero.chat.sources.length} sources</span>
+                  </div>
+                  <div className={chatMockStyles.mockStepChips}>
+                    {ind.hero.chat.sources.map(s => (
+                      <span key={s.n} className={chatMockStyles.mockChipLogo}>
+                        <Icon name="file" size={12} />
+                        {s.system}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </>
+            }
             answer={ind.hero.chat.answer}
-            sources={ind.hero.chat.sources}
-            tags={ind.hero.chat.tags}
+            footer={
+              <div className={chatMockStyles.mockChatInput}>
+                <div className={chatMockStyles.mockChatInputTop}>
+                  <span className={chatMockStyles.mockChatGovernedPill}>
+                    <span className={chatMockStyles.mockChatGovernedDot} />
+                    Governed
+                  </span>
+                  <span className={chatMockStyles.mockChatCorpora}>All corpora</span>
+                </div>
+                <div className={chatMockStyles.mockChatInputRow}>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--slate-400)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }} aria-hidden="true">
+                    <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+                  </svg>
+                  <span className={chatMockStyles.mockChatPlaceholder}>Ask about a policy, a contract or a control…</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--slate-400)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginLeft: 'auto' }} aria-hidden="true">
+                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2M12 19v4" />
+                  </svg>
+                  <span className={chatMockStyles.mockSendBtn} aria-hidden="true">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M12 19V5M5 12l7-7 7 7" />
+                    </svg>
+                  </span>
+                </div>
+                <div className={chatMockStyles.mockChatMeta}>
+                  <span>Llama 3.1 70B · self-hosted</span>
+                  <span>·</span>
+                  <span>Retention: 90 days</span>
+                  <span>·</span>
+                  <span className={chatMockStyles.mockChatLogged}>{ind.hero.chat.tags.find(t => t.tone === 'sage')?.t}</span>
+                </div>
+              </div>
+            }
           />
         </div>
       </header>
@@ -102,7 +159,26 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
                 <h3 className={styles.h3}>{t.title}</h3>
                 <p className={styles.rowBody}>{t.body}</p>
                 <ul className={styles.points}>
-                  {t.points.map(p => <li key={p.t}><strong>{p.t}</strong><span>{p.d}</span></li>)}
+                  {t.points.map(p => (
+                    <li key={p.t}>
+                      {p.icon ? (
+                        <>
+                          <div className={styles.pointHead}>
+                            <div className={`${styles.pointIcon} ${styles['pointIcon_' + t.tint]}`}>
+                              <Icon name={p.icon} size={15} />
+                            </div>
+                            <strong>{p.t}</strong>
+                          </div>
+                          <span className={styles.pointBodyIndent}>{p.d}</span>
+                        </>
+                      ) : (
+                        <>
+                          <strong>{p.t}</strong>
+                          <span>{p.d}</span>
+                        </>
+                      )}
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div className={`${styles.panel} ${styles['tint_' + t.tint]}`}>

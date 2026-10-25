@@ -45,9 +45,9 @@ export const financialServices: Industry = {
       team: 'Credit & lending', title: 'Get to a credit decision faster',
       body: "Pull financials, bureau data and past approvals into a ready-to-review credit memo, written in your bank's own template.",
       points: [
-        { t: 'Credit memo drafting', d: 'A complete first draft with every figure linked to its source.' },
-        { t: 'Covenant monitoring', d: 'Spot breaches the day a compliance certificate arrives.' },
-        { t: 'Approval routing', d: 'Know instantly who can sign off on any deal.' },
+        { t: 'Credit memo drafting', d: 'A complete first draft with every figure linked to its source.', icon: 'file' },
+        { t: 'Covenant monitoring', d: 'Spot breaches the day a compliance certificate arrives.', icon: 'clock' },
+        { t: 'Approval routing', d: 'Know instantly who can sign off on any deal.', icon: 'workflow' },
       ],
       tint: 'blue',
       mock: {
@@ -57,16 +57,16 @@ export const financialServices: Industry = {
         table: { head: ['Metric', 'FY24', 'FY25'], rows: [['Revenue', '$38.2M', '$44.9M'], ['EBITDA margin', '14.1%', '15.6%'], ['DSCR', '1.42x', '1.58x']] },
         heading2: 'Recommendation',
         body2: 'Within appetite. Approve at Level 2 authority, subject to a 1.25x DSCR covenant.',
-        sources: ['1 · Audited financials FY25', '2 · Credit policy §4.2'],
+        sources: ['1 · Audited financials FY25', '2 · Credit policy section 4.2'],
       },
     },
     {
       team: 'Compliance & KYC', title: 'Keep every customer file current',
       body: 'Check KYC files against your current requirements, see exactly what is missing and send the customer one clear request.',
       points: [
-        { t: 'KYC refresh', d: 'Find gaps in a file in seconds, not hours.' },
-        { t: 'Alert investigations', d: 'Draft the case narrative from notes and account history.' },
-        { t: 'Screening summaries', d: 'Sanctions and adverse media results in plain language.' },
+        { t: 'KYC refresh', d: 'Find gaps in a file in seconds, not hours.', icon: 'shieldPlain' },
+        { t: 'Alert investigations', d: 'Draft the case narrative from notes and account history.', icon: 'search' },
+        { t: 'Screening summaries', d: 'Sanctions and adverse media results in plain language.', icon: 'auditBook' },
       ],
       tint: 'sage',
       mock: {
@@ -85,9 +85,9 @@ export const financialServices: Industry = {
       team: 'Relationship management', title: 'Walk into every meeting prepared',
       body: 'Give relationship managers a one-page brief on any client, with exposure, recent activity and what to raise next.',
       points: [
-        { t: 'Client briefs', d: 'Everything you need to know before the call.' },
-        { t: 'Renewal pipeline', d: 'See which facilities are coming up and who to call first.' },
-        { t: 'Call notes to CRM', d: 'Turn notes into updates and follow-ups automatically.' },
+        { t: 'Client briefs', d: 'Everything you need to know before the call.', icon: 'file' },
+        { t: 'Renewal pipeline', d: 'See which facilities are coming up and who to call first.', icon: 'trend' },
+        { t: 'Call notes to CRM', d: 'Turn notes into updates and follow-ups automatically.', icon: 'chat' },
       ],
       tint: 'bone',
       mock: {
@@ -100,9 +100,9 @@ export const financialServices: Industry = {
       team: 'Risk & policy', title: 'Know what every policy change means',
       body: 'When a policy or regulation changes, see what is different, who it affects and which procedures need updating.',
       points: [
-        { t: 'Policy answers', d: 'Ask any question and get the answer with its source.' },
-        { t: 'Change tracking', d: 'Compare versions and see exactly what moved.' },
-        { t: 'Committee summaries', d: 'Decisions and actions from every pack, in minutes.' },
+        { t: 'Policy answers', d: 'Ask any question and get the answer with its source.', icon: 'search' },
+        { t: 'Change tracking', d: 'Compare versions and see exactly what moved.', icon: 'bolt' },
+        { t: 'Committee summaries', d: 'Decisions and actions from every pack, in minutes.', icon: 'auditBook' },
       ],
       tint: 'blue',
       mock: {
