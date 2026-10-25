@@ -43,9 +43,53 @@ const productMenu = [
   },
 ]
 
+const industriesMenu = [
+  {
+    to: '/industries/financial-services',
+    title: 'Financial Services',
+    body: 'Credit, KYC and relationship workflows for banks',
+    icon: 'M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6',
+  },
+  {
+    to: '/industries/insurance',
+    title: 'Insurance',
+    body: 'Claims, underwriting and service workflows for insurers',
+    icon: 'M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6z',
+  },
+  {
+    to: '/industries/healthcare',
+    title: 'Healthcare',
+    body: 'Discharge, care coordination and compliance workflows for hospitals',
+    icon: 'M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z',
+  },
+  {
+    to: '/industries/legal',
+    title: 'Legal & Professional Services',
+    body: 'Research, contract review and compliance workflows for firms',
+    icon: 'M3 7h18v13H3zM8 7V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3M3 12h18',
+  },
+  {
+    to: '/industries/public-sector-government',
+    title: 'Public Sector & Government',
+    body: 'Policy, procurement and case workflows for government',
+    icon: 'M4 21V7l8-4 8 4v14M4 21h16M9 21v-6h6v6M9 11h.01M15 11h.01M9 7h.01M15 7h.01',
+  },
+  {
+    to: '/industries/energy',
+    title: 'Energy',
+    body: 'Maintenance, safety and field workflows for operators',
+    icon: 'M13 2 3 14h9l-1 8 10-12h-9l1-8z',
+  },
+  {
+    to: '/industries/education',
+    title: 'Education',
+    body: 'Advising, admissions and compliance workflows for institutions',
+    icon: 'M22 10 12 5 2 10l10 5 10-5zM6 12v5c0 1.5 2.5 3 6 3s6-1.5 6-3v-5',
+  },
+]
+
 const links = [
   { to: '/company',    label: 'Why Anvax' },
-  { to: '/industries', label: 'Industries' },
   { to: '/deployment', label: 'Deployment' },
   { to: '/trust',      label: 'Security' },
   { to: '/blog',       label: 'Blog' },
@@ -53,17 +97,17 @@ const links = [
 
 export default function Nav() {
   const pathname = usePathname()
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [openMenu, setOpenMenu] = useState<'product' | 'industries' | null>(null)
   const [mobileOpen, setMobileOpen] = useState(false)
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   // Close both panels whenever the route changes.
-  useEffect(() => { setMenuOpen(false); setMobileOpen(false) }, [pathname])
+  useEffect(() => { setOpenMenu(null); setMobileOpen(false) }, [pathname])
 
   // Escape closes whatever is open.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') { setMenuOpen(false); setMobileOpen(false) }
+      if (e.key === 'Escape') { setOpenMenu(null); setMobileOpen(false) }
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
@@ -71,8 +115,8 @@ export default function Nav() {
 
   useEffect(() => () => { if (closeTimer.current) clearTimeout(closeTimer.current) }, [])
 
-  const openMenu = () => { if (closeTimer.current) clearTimeout(closeTimer.current); setMenuOpen(true) }
-  const closeMenu = () => { closeTimer.current = setTimeout(() => setMenuOpen(false), 120) }
+  const showMenu = (key: 'product' | 'industries') => { if (closeTimer.current) clearTimeout(closeTimer.current); setOpenMenu(key) }
+  const hideMenuSoon = () => { closeTimer.current = setTimeout(() => setOpenMenu(null), 120) }
 
   const isActive = (to: string) => pathname === to || pathname?.startsWith(`${to}/`)
 
@@ -86,13 +130,13 @@ export default function Nav() {
 
         {/* Desktop navigation */}
         <div className={styles.links}>
-          <div className={styles.menuWrap} onMouseEnter={openMenu} onMouseLeave={closeMenu}>
+          <div className={styles.menuWrap} onMouseEnter={() => showMenu('product')} onMouseLeave={hideMenuSoon}>
             <button
               type="button"
               className={styles.link}
-              aria-expanded={menuOpen}
+              aria-expanded={openMenu === 'product'}
               aria-haspopup="true"
-              onClick={() => setMenuOpen(o => !o)}
+              onClick={() => setOpenMenu(o => (o === 'product' ? null : 'product'))}
             >
               Product
               <svg className={styles.chev} width="12" height="12" viewBox="0 0 24 24" fill="none"
@@ -100,7 +144,7 @@ export default function Nav() {
                 <path d="M6 9l6 6 6-6" />
               </svg>
             </button>
-            {menuOpen && (
+            {openMenu === 'product' && (
               <div className={styles.mega}>
                 {productMenu.map(({ to, title, body, icon }) => (
                   <Link key={to} href={to} className={`${styles.megaItem} ${title === 'Connectors' ? styles.megaItemWide : ''}`}>
@@ -115,6 +159,44 @@ export default function Nav() {
                     </span>
                   </Link>
                 ))}
+              </div>
+            )}
+          </div>
+
+          <div className={styles.menuWrap} onMouseEnter={() => showMenu('industries')} onMouseLeave={hideMenuSoon}>
+            <button
+              type="button"
+              className={styles.link}
+              aria-expanded={openMenu === 'industries'}
+              aria-haspopup="true"
+              onClick={() => setOpenMenu(o => (o === 'industries' ? null : 'industries'))}
+            >
+              Industries
+              <svg className={styles.chev} width="12" height="12" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            {openMenu === 'industries' && (
+              <div className={styles.mega}>
+                {industriesMenu.map(({ to, title, body, icon }) => (
+                  <Link key={to} href={to} className={styles.megaItem}>
+                    <span className={styles.megaIcon} aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d={icon} />
+                      </svg>
+                    </span>
+                    <span className={styles.megaText}>
+                      <span className={styles.megaTitle}>{title}</span>
+                      <span className={styles.megaBody}>{body}</span>
+                    </span>
+                  </Link>
+                ))}
+                <Link href="/industries" className={`${styles.megaItem} ${styles.megaItemWide}`}>
+                  <span className={styles.megaText}>
+                    <span className={styles.megaTitle}>View all industries</span>
+                  </span>
+                </Link>
               </div>
             )}
           </div>
@@ -154,6 +236,11 @@ export default function Nav() {
           {productMenu.map(({ to, title }) => (
             <Link key={to} href={to} className={styles.mobileLink}>{title}</Link>
           ))}
+          <span className={styles.mobileRule} />
+          {industriesMenu.map(({ to, title }) => (
+            <Link key={to} href={to} className={styles.mobileLink}>{title}</Link>
+          ))}
+          <Link href="/industries" className={styles.mobileLink}>View all industries</Link>
           <span className={styles.mobileRule} />
           {links.map(({ to, label }) => (
             <Link key={to} href={to} className={styles.mobileLink}>{label}</Link>
