@@ -6,9 +6,7 @@ tags: ["AI Governance", "Compliance", "Enterprise AI", "AI Security", "GDPR"]
 draft: false
 ---
 
-![A navy and blue diagram showing that blocking ChatGPT does not stop the work, and the four tests an approved AI replacement must pass: company sign-in, signed data terms, permissions checked live, and a full record](/assets/blog/banning-chatgpt-approved-alternative.webp)
-
-# Banning ChatGPT Moves the Problem. Here Is What to Give People Instead.
+![Banning ChatGPT Moves the Problem. Here Is What to Give People Instead.](/assets/blog/banning-chatgpt-approved-alternative.webp)
 
 On Monday, October 26, staff at Sweden's Government Offices, the body that runs the prime minister's office and every ministry, found ChatGPT and Claude blocked on their work computers. According to Sveriges Radio's Ekot, which reported the decision the previous Friday, staff were pointed to Microsoft Copilot instead. The reason given internally was that using AI services without a contract could have consequences for information security.
 
@@ -42,11 +40,11 @@ The four requirements above are what the firm needs. The tool also has to be wha
 
 ## The Cost of Getting This Wrong
 
-First, an approved tool rolled out over messy permissions turns a hidden risk into a visible one. Staff get accurate answers built from documents they should never have been able to open, and the tool is blamed for a sharing problem that predates it.
+1 - An approved tool rolled out over messy permissions turns a hidden risk into a visible one. Staff get accurate answers built from documents they should never have been able to open, and the tool is blamed for a sharing problem that predates it.
 
-Second, an approved tool without a full answer record leaves the firm unable to reconstruct a decision made with AI help. That is a smaller gap than shadow AI, but it is the same kind of gap.
+2 - An approved tool without a full answer record leaves the firm unable to reconstruct a decision made with AI help. That is a smaller gap than shadow AI, but it is the same kind of gap.
 
-Third, the quickest route is usually the AI that ships with the office suite, and for many firms it is a sensible start. The tradeoff is that the firm's AI governance (which models run, how long logs are kept, what a record contains) then follows that one vendor's roadmap and license tiers. That is worth deciding deliberately rather than by default.
+3 - The quickest route is usually the AI that ships with the office suite, and for many firms it is a sensible start. The tradeoff is that the firm's AI governance (which models run, how long logs are kept, what a record contains) then follows that one vendor's roadmap and license tiers. That is worth deciding deliberately rather than by default.
 
 ## How To Check Any Approved-AI Option
 
