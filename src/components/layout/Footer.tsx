@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { compareContent } from '@/content/compare'
 import styles from './Footer.module.css'
 
 /* Structure and column split from docs/redesign-spec/html/desktop/11-footer.html.
@@ -23,6 +24,8 @@ const solutions = [
   { to: '/industries/energy',                     label: 'Energy' },
   { to: '/industries/education',                  label: 'Education' },
 ]
+
+const compare = compareContent.map(c => ({ to: `/compare/${c.slug}`, label: `vs. ${c.competitorName}` }))
 
 const company = [
   { to: '/company',         label: 'About' },
@@ -127,6 +130,7 @@ export default function Footer() {
           </div>
           <Col title="Product"   links={product} />
           <Col title="Solutions" links={solutions} />
+          <Col title="Compare"   links={compare} />
           <Col title="Company"   links={company} />
           <AskAiColumn />
         </div>

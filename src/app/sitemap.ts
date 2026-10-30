@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog'
 import { industries } from '@/content/industries'
+import { compareContent } from '@/content/compare'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts()
@@ -44,5 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  return [...staticPages, ...industryPages, ...blogPosts]
+  const comparePages: MetadataRoute.Sitemap = compareContent.map(c => ({
+    url: `https://www.anvax.in/compare/${c.slug}`,
+    lastModified: new Date('2026-10-30'),
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  return [...staticPages, ...industryPages, ...comparePages, ...blogPosts]
 }

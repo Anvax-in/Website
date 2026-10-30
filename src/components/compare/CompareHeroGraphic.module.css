@@ -1,0 +1,145 @@
+@keyframes compareSpin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes compareSpinReverse {
+  from { transform: translate(-50%, -50%) rotate(360deg); }
+  to { transform: translate(-50%, -50%) rotate(0deg); }
+}
+@keyframes compareFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes comparePulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.55; }
+  100% { transform: translate(-50%, -50%) scale(1.9); opacity: 0; }
+}
+@keyframes compareFlow {
+  from { background-position: 0 0; }
+  to { background-position: 24px 0; }
+}
+
+.stage {
+  min-height: 460px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.graphic {
+  --size: 440px;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 720px) {
+  .stage { min-height: 320px; }
+  .graphic { --size: 280px; }
+}
+@media (max-width: 420px) {
+  .graphic { --size: 230px; }
+}
+
+.ringOuter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(var(--size) * 0.9364);
+  height: calc(var(--size) * 0.9364);
+  border-radius: 50%;
+  border: 1.5px dashed var(--border-strong);
+  box-sizing: border-box;
+  animation: compareSpin 40s linear infinite;
+}
+.ringInner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(var(--size) * 0.6818);
+  height: calc(var(--size) * 0.6818);
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  animation: compareSpinReverse 26s linear infinite;
+}
+
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.dotTop { left: 50%; top: -5px; margin-left: -5px; }
+.dotBottom { left: 50%; bottom: -5px; margin-left: -5px; }
+.dotLeft { left: -5px; top: 50%; margin-top: -5px; width: 9px; height: 9px; }
+.dotBlue { background: var(--blue-600); box-shadow: 0 0 0 4px var(--blue-50); }
+.dotInk { background: var(--ink-900); box-shadow: 0 0 0 4px var(--bone-100); }
+.dotSage { background: var(--sage-600); box-shadow: 0 0 0 4px var(--sage-50); }
+
+.row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.tile {
+  width: calc(var(--size) * 0.3864);
+  height: calc(var(--size) * 0.3864);
+  background: var(--paper);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: compareFloat 6s ease-in-out infinite;
+}
+.tileB { animation-delay: 3s; }
+
+.connector {
+  width: calc(var(--size) * 0.1636);
+  height: 2px;
+  position: relative;
+  background-image: repeating-linear-gradient(90deg, var(--ink-900) 0 8px, transparent 8px 12px);
+  background-size: 24px 2px;
+  animation: compareFlow 0.9s linear infinite;
+}
+.pulse {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(var(--size) * 0.1);
+  height: calc(var(--size) * 0.1);
+  border-radius: 50%;
+  border: 2px solid var(--blue-600);
+  animation: comparePulse 2.4s ease-out infinite;
+}
+.vsBadge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(var(--size) * 0.1);
+  height: calc(var(--size) * 0.1);
+  border-radius: 50%;
+  background: var(--ink-900);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ringOuter, .ringInner, .tile, .connector, .pulse {
+    animation: none;
+  }
+}
