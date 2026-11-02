@@ -142,7 +142,10 @@ export default function SavingsCalculator() {
               <div className={styles.savingsBox}>
                 <span className={styles.savingsLabel}>You save, every year</span>
                 {selected.length === 0 ? (
-                  <span className={styles.savingsSub}>Select at least one tool to compare.</span>
+                  <>
+                    <span className={styles.savingsBig}>&mdash;</span>
+                    <span className={styles.savingsSub}>Select at least one tool to compare.</span>
+                  </>
                 ) : avgAbs > 0 ? (
                   <>
                     <span className={styles.savingsBig}>{formatUSD(avgAbs)}</span>
