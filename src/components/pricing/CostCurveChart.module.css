@@ -1,0 +1,51 @@
+.wrap {
+  width: 100%;
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.gridline {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+
+.axisLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  fill: var(--slate-400);
+}
+
+.lineLabel {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semibold);
+}
+
+.breakLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  fill: var(--ink-500);
+}
+
+.marker {
+  stroke: var(--ink-500);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+
+.markerLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  fill: var(--ink-500);
+}
+
+.caption {
+  margin-top: var(--space-5);
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line);
+  color: var(--ink-500);
+}
