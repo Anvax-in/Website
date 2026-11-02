@@ -92,6 +92,7 @@ const links = [
   { to: '/company',    label: 'Why Anvax' },
   { to: '/deployment', label: 'Deployment' },
   { to: '/trust',      label: 'Security' },
+  { to: '/pricing',    label: 'Pricing' },
   { to: '/blog',       label: 'Blog' },
 ]
 
