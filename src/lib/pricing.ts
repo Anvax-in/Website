@@ -182,17 +182,6 @@ export const CHART_Y1 = 30
 export const CHART_NMAX = 2000
 const CHART_CMAX = 1500000
 
-// Short display name for chart line labels / break captions. The canvas
-// source only strips the "Microsoft 365 " prefix (`c.name.replace('Microsoft
-// 365 ', '')`, handoff/pricing/Anvax Pricing.dc.html:342,348), which leaves
-// "ChatGPT Enterprise" / "Claude Enterprise" unshortened. The verified golden
-// breakCaption ("Copilot ... Claude ... Glean ...") requires the " Enterprise"
-// suffix stripped too, so this also removes that — full names ("Claude
-// Enterprise") are preserved everywhere else via `Competitor.name`.
-function shortCompetitorName(name: string): string {
-  return name.replace('Microsoft 365 ', '').replace(' Enterprise', '')
-}
-
 export function buildChartData(seats: number): ChartData {
   const fee = ANVAX_ANNUAL_FEE_USD
   const x = (n: number) => CHART_X0 + (n / CHART_NMAX) * (CHART_X1 - CHART_X0)
@@ -208,7 +197,7 @@ export function buildChartData(seats: number): ChartData {
       color: c.color,
       width: 2,
       dash: c.dash,
-      name: shortCompetitorName(c.name),
+      name: c.name.replace('Microsoft 365 ', ''),
       ly: y(annualCost(c, CHART_NMAX)) + 4,
     }
   })
@@ -225,7 +214,7 @@ export function buildChartData(seats: number): ChartData {
     .map((c) => {
       const n = fee / (c.ratePerUserMonth * 12)
       if (n <= c.minSeats || n > CHART_NMAX) return null
-      return { x: x(n), y: y(fee), color: c.color, n: Math.round(n), name: shortCompetitorName(c.name) }
+      return { x: x(n), y: y(fee), color: c.color, n: Math.round(n), name: c.name.replace('Microsoft 365 ', '') }
     })
     .filter((b): b is ChartBreak => b !== null)
 
