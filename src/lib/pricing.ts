@@ -8,7 +8,7 @@
 // Colour values are expressed as CSS custom-property references (tokens),
 // not raw hex, per the house rule in CLAUDE.md ("Tokens only. No raw hex...").
 // Three of the four competitor colours already existed as tokens
-// (`--ink-900`, `--clay-600`); the other two (`--chart-line-2`,
+// (`--amber-600`, `--clay-600`); the other two (`--chart-line-2`,
 // `--chart-line-3`) were added in Task 1 specifically so this module could
 // reference them instead of inlining `#4A515C` / `#8A8F98`.
 
@@ -39,7 +39,7 @@ export const competitors: Competitor[] = [
     ratePerUserMonth: 30,
     minSeats: 1,
     note: '$30 per user a month, plus a Microsoft 365 licence',
-    color: 'var(--ink-900)',
+    color: 'var(--amber-600)',
     dash: '',
   },
   {
@@ -79,13 +79,13 @@ export function annualCost(c: Competitor, seats: number): number {
 }
 
 export function seatsFromSlider(slider: number): number {
-  const raw = 200 * Math.pow(50, slider / 1000)
+  const raw = MIN_SEATS * Math.pow(50, slider / 1000)
   const step = raw < 1000 ? 50 : raw < 5000 ? 100 : 500
-  return Math.max(200, Math.min(10000, Math.round(raw / step) * step))
+  return Math.max(MIN_SEATS, Math.min(MAX_SEATS, Math.round(raw / step) * step))
 }
 
 export function sliderFromSeats(seats: number): number {
-  return Math.round((1000 * Math.log(Math.max(seats, 200) / 200)) / Math.log(50))
+  return Math.round((1000 * Math.log(Math.max(seats, MIN_SEATS) / MIN_SEATS)) / Math.log(50))
 }
 
 export function formatUSD(n: number): string {
