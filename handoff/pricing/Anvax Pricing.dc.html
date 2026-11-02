@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/anvax-design-system-ae97693e-df28-4f0a-8d1f-4fb8eac3204c/tokens/colors.css">
+<link rel="stylesheet" href="_ds/anvax-design-system-ae97693e-df28-4f0a-8d1f-4fb8eac3204c/tokens/typography.css">
+<link rel="stylesheet" href="_ds/anvax-design-system-ae97693e-df28-4f0a-8d1f-4fb8eac3204c/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/anvax-design-system-ae97693e-df28-4f0a-8d1f-4fb8eac3204c/tokens/effects.css">
+<link rel="stylesheet" href="_ds/anvax-design-system-ae97693e-df28-4f0a-8d1f-4fb8eac3204c/tokens/base.css">
+<link rel="stylesheet" href="_ds/anvax-design-system-ae97693e-df28-4f0a-8d1f-4fb8eac3204c/styles.css">
+<script src="_ds/anvax-design-system-ae97693e-df28-4f0a-8d1f-4fb8eac3204c/_ds_bundle.js"></script>
+<link rel="stylesheet" href="_ds/anvax-design-system-ae97693e-df28-4f0a-8d1f-4fb8eac3204c/tokens/fonts.css">
+<link rel="stylesheet" href="anvax-v1/tokens/colors.css">
+<link rel="stylesheet" href="anvax-v1/tokens/effects.css">
+<style>
+body{margin:0;background:var(--paper);color:var(--ink-900);font-family:Archivo,system-ui,sans-serif;font-size:16px;line-height:26px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{margin:0;color:var(--ink-900);text-wrap:balance;letter-spacing:-0.022em}
+p{margin:0;text-wrap:pretty}
+a{color:var(--blue-600);text-decoration:none}
+a:hover{color:var(--blue-700)}
+img{display:block;max-width:100%}
+input[type=range]{accent-color:var(--blue-600)}
+</style>
+</helmet>
+
+<div style="background:var(--paper);overflow-x:hidden">
+<nav style="position:sticky;top:0;z-index:40;background:rgba(255,255,255,0.9);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);border-bottom:1px solid var(--bone-200);width:100%">
+<div style="max-width:1240px;margin:0 auto;padding:0 40px;display:flex;align-items:center;gap:{{ navGap }};height:68px">
+<a href="Anvax Home - Redesign.dc.html" style="display:flex;align-items:center;gap:10px;color:var(--ink-900);flex:none"><img src="assets/anvax-mark.png" alt="" style="height:34px;width:34px"><span style="font-weight:800;font-size:21px;line-height:1;letter-spacing:-0.04em;white-space:nowrap">Anvax</span></a>
+<sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;gap:2px;align-items:center;margin-right:auto;flex:none">
+<a href="Anvax Product.dc.html" style="font-size:{{ navFont }};font-weight:600;color:var(--ink-900);padding:{{ navPad }};white-space:nowrap;flex:none" style-hover="color:var(--blue-600)">Product</a>
+<a href="Anvax Why Anvax.dc.html" style="font-size:{{ navFont }};font-weight:600;color:var(--ink-900);padding:{{ navPad }};white-space:nowrap;flex:none" style-hover="color:var(--blue-600)">Why Anvax</a>
+<a href="Anvax Industry - Banking v2.dc.html" style="font-size:{{ navFont }};font-weight:600;color:var(--ink-900);padding:{{ navPad }};white-space:nowrap;flex:none" style-hover="color:var(--blue-600)">Industries</a>
+<a href="Anvax Deployment.dc.html" style="font-size:{{ navFont }};font-weight:600;color:var(--ink-900);padding:{{ navPad }};white-space:nowrap;flex:none" style-hover="color:var(--blue-600)">Deployment</a>
+<a href="Anvax Security.dc.html" style="font-size:{{ navFont }};font-weight:600;color:var(--ink-900);padding:{{ navPad }};white-space:nowrap;flex:none" style-hover="color:var(--blue-600)">Security</a>
+<a href="Anvax Pricing.dc.html" style="font-size:{{ navFont }};font-weight:700;color:var(--blue-600);padding:{{ navPad }};white-space:nowrap;flex:none">Pricing</a>
+<a href="#" style="font-size:{{ navFont }};font-weight:600;color:var(--ink-900);padding:{{ navPad }};white-space:nowrap;flex:none" style-hover="color:var(--blue-600)">Blog</a>
+</div>
+<sc-if value="{{ roomy }}" hint-placeholder-val="{{ true }}">
+<a href="#" style="font-size:14.5px;font-weight:600;color:var(--ink-900);white-space:nowrap;flex:none" style-hover="color:var(--blue-600)">Sign in</a>
+</sc-if>
+</sc-if>
+<x-import component-from-global-scope="AnvaxDesignSystem_ae9769.Button" href="#" arrow="{{ true }}" dc-props="{{ ctaNav }}" hint-size="auto,42px">Book a demo</x-import>
+</div>
+</nav>
+
+<header style="width:100%;background:var(--paper);border-bottom:1px solid var(--bone-200);position:relative">
+<div style="position:absolute;inset:0;background-image:linear-gradient(var(--bone-200) 1px,transparent 1px),linear-gradient(90deg,var(--bone-200) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(90% 70% at 50% 0%,#000 0%,transparent 75%);-webkit-mask-image:radial-gradient(90% 70% at 50% 0%,#000 0%,transparent 75%);pointer-events:none"></div>
+<div style="max-width:1240px;margin:0 auto;padding:88px 40px 88px;position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:56px;align-items:center">
+<div>
+<div style="display:inline-flex;font-size:13px;font-weight:700;color:var(--blue-600);border:1px solid var(--blue-100);background:var(--blue-50);border-radius:999px;padding:5px 14px;margin-bottom:22px">Pricing</div>
+<h1 style="font-weight:800;font-size:clamp(40px,5vw,64px);line-height:1.02;letter-spacing:-0.03em">One platform fee. Every employee.</h1>
+<p style="font-size:19px;line-height:30px;color:var(--ink-500);max-width:52ch;margin-top:24px">Enterprise AI workspaces charge per seat, so the bill grows with every team you add. Anvax is one flat annual fee for the whole organisation, whether 200 people use it or 10,000.</p>
+<div style="margin-top:34px;display:flex;gap:12px;flex-wrap:wrap">
+<x-import component-from-global-scope="AnvaxDesignSystem_ae9769.Button" href="#" arrow="{{ true }}" dc-props="{{ ctaHero }}" hint-size="auto,50px">Get a quote</x-import>
+<x-import component-from-global-scope="AnvaxDesignSystem_ae9769.Button" href="#calculator" variant="secondary" dc-props="{{ ctaBig }}" hint-size="auto,50px">Calculate your savings</x-import>
+</div>
+</div>
+<div style="background:var(--paper);border:1px solid var(--bone-200);box-shadow:0 18px 48px rgba(13,18,25,0.10);min-width:0">
+<div style="padding:22px 28px;border-bottom:1px solid var(--bone-200);display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap"><span style="font-family:var(--font-mono),'Geist Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-500)">Annual cost · 1,000 employees</span><span style="font-family:var(--font-mono),'Geist Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--slate-400)">USD</span></div>
+<div style="padding:10px 28px 6px">
+<sc-for list="{{ heroRows }}" as="r" hint-placeholder-count="4">
+<div style="padding:14px 0;border-bottom:1px solid var(--bone-200);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;align-items:center">
+<span style="font-size:15px;font-weight:700">{{ r.name }}</span>
+<span style="font-family:var(--font-mono),'Geist Mono',monospace;font-size:14px;color:var(--ink-900)">{{ r.cost }}</span>
+<div style="grid-column:1 / -1;height:8px;background:var(--bone-100)"><div style="height:8px;width:{{ r.bar }};background:var(--ink-900)"></div></div>
+</div>
+</sc-for>
+<div style="padding:16px 0 18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;align-items:center">
+<span style="font-size:15px;font-weight:800;display:flex;align-items:center;gap:9px"><img src="assets/compare/anvax-logo.png" alt="" style="width:20px;height:20px;object-fit:contain">Anvax</span>
+<span style="font-family:var(--font-mono),'Geist Mono',monospace;font-size:13px;color:var(--blue-600)">One flat fee</span>
+<div style="grid-column:1 / -1;height:8px;background:var(--bone-100)"><div style="height:8px;width:{{ heroAnvaxBar }};background:var(--blue-600)"></div></div>
+</div>
+</div>
+<div style="background:var(--ink-900);padding:22px 28px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap"><span style="font-size:40px;line-height:1;font-weight:800;letter-spacing:-0.03em;color:var(--paper)">{{ heroPct }}</span><span style="font-size:15px;line-height:22px;color:rgba(255,255,255,0.75)">less than the most expensive per-seat option at this size</span></div>
+</div>
+</div>
+</header>
+
+<section id="calculator" style="width:100%;background:var(--bone-100);border-bottom:1px solid var(--bone-200);scroll-margin-top:68px">
+<div style="max-width:1240px;margin:0 auto;padding:96px 40px">
+<div style="max-width:760px;margin-bottom:44px"><div style="font-size:13px;font-weight:700;letter-spacing:0.03em;color:var(--blue-600);margin-bottom:16px">Savings calculator</div><h2 style="font-size:clamp(30px,3.4vw,44px);line-height:1.1">Enter your headcount.<br>See what per-seat AI would cost.</h2><p style="font-size:17px;line-height:28px;color:var(--ink-500);margin-top:18px">Competitor figures use published or widely reported per-seat prices and seat minimums. Your quote may differ.</p></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:1px;background:var(--bone-200);border:1px solid var(--bone-200)">
+<div style="background:var(--paper);padding:34px 32px;display:flex;flex-direction:column;gap:30px;min-width:0">
+<div>
+<div style="font-family:var(--font-mono),'Geist Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-500)">Employees using AI</div>
+<div style="font-size:56px;line-height:1;font-weight:800;letter-spacing:-0.035em;margin-top:14px">{{ seatsLabel }}</div>
+<input type="range" min="0" max="1000" step="1" value="{{ slider }}" onChange="{{ onSlide }}" aria-label="Employees using AI" style="width:100%;margin-top:22px;cursor:pointer">
+<div style="display:flex;justify-content:space-between;font-family:var(--font-mono),'Geist Mono',monospace;font-size:11px;color:var(--slate-400);margin-top:6px"><span>200</span><span>750</span><span>2,700</span><span>10,000</span></div>
+</div>
+<div>
+<div style="font-family:var(--font-mono),'Geist Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-500);margin-bottom:12px">Compare against</div>
+<div style="display:flex;flex-direction:column;border-top:1px solid var(--bone-200)">
+<sc-for list="{{ toggles }}" as="t" hint-placeholder-count="4">
+<button onClick="{{ t.toggle }}" style="background:none;border:0;border-bottom:1px solid var(--bone-200);padding:14px 0;display:flex;gap:14px;align-items:flex-start;text-align:left;cursor:pointer;font-family:inherit;color:var(--ink-900)">
+<span style="width:20px;height:20px;flex:none;margin-top:2px;border:1.5px solid {{ t.boxBorder }};background:{{ t.boxBg }};color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800">{{ t.tick }}</span>
+<span style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-size:15.5px;font-weight:700;line-height:22px">{{ t.name }}</span><span style="font-size:13.5px;line-height:20px;color:var(--ink-500)">{{ t.note }}</span></span>
+</button>
+</sc-for>
+</div>
+</div>
+</div>
+<div style="background:var(--paper);padding:34px 32px;display:flex;flex-direction:column;min-width:0">
+<div style="font-family:var(--font-mono),'Geist Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-500);margin-bottom:8px">Estimated annual cost</div>
+<sc-for list="{{ results }}" as="r" hint-placeholder-count="4">
+<div style="padding:18px 0;border-bottom:1px solid var(--bone-200);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;align-items:center">
+<span style="display:flex;align-items:center;gap:10px;min-width:0">
+<span style="width:24px;height:24px;flex:none;background-color:{{ r.tileBg }};background-image:{{ r.tileImg }};background-size:contain;background-repeat:no-repeat;background-position:center;font-family:var(--font-mono),'Geist Mono',monospace;font-size:10px;font-weight:600;display:flex;align-items:center;justify-content:center">{{ r.mono }}</span>
+<span style="font-size:15.5px;font-weight:700">{{ r.name }}</span>
+</span>
+<span style="font-family:var(--font-mono),'Geist Mono',monospace;font-size:15px">{{ r.cost }}</span>
+<div style="grid-column:1 / -1;height:10px;background:var(--bone-100)"><div style="height:10px;width:{{ r.bar }};background:var(--ink-900);transition:width var(--dur-base) var(--ease-out)"></div></div>
+<span style="grid-column:1 / -1;font-size:14px;line-height:20px;font-weight:600;color:{{ r.saveColor }}">{{ r.saveText }}</span>
+</div>
+</sc-for>
+<div style="padding:18px 0 0;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;align-items:center">
+<span style="display:flex;align-items:center;gap:10px"><img src="assets/compare/anvax-logo.png" alt="" style="width:24px;height:24px;object-fit:contain"><span style="font-size:15.5px;font-weight:800">Anvax</span></span>
+<span style="font-family:var(--font-mono),'Geist Mono',monospace;font-size:14px;color:var(--blue-600)">{{ anvaxCostLabel }}</span>
+<div style="grid-column:1 / -1;height:10px;background:var(--bone-100)"><div style="height:10px;width:{{ anvaxBar }};background:var(--blue-600);transition:width var(--dur-base) var(--ease-out)"></div></div>
+<span style="grid-column:1 / -1;font-size:14px;line-height:20px;color:var(--ink-500)">Same fee at 200 employees or 10,000.</span>
+</div>
+<div style="margin-top:auto;padding-top:28px">
+<div style="background:var(--ink-900);padding:24px 26px;display:flex;flex-direction:column;gap:6px">
+<span style="font-family:var(--font-mono),'Geist Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.68)">You save, every year</span>
+<span style="font-size:48px;line-height:1.05;font-weight:800;letter-spacing:-0.03em;color:var(--paper);font-variant-numeric:tabular-nums">{{ avgSave }}</span>
+<span style="font-size:14.5px;line-height:22px;color:rgba(255,255,255,0.75)">{{ avgSub }}</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="width:100%;background:var(--paper);border-bottom:1px solid var(--bone-200)">
+
+</section>
+
+<section style="width:100%;background:var(--bone-100);border-bottom:1px solid var(--bone-200)">
+<div style="max-width:1240px;margin:0 auto;padding:96px 40px">
+<div style="max-width:760px;margin-bottom:44px"><div style="font-size:13px;font-weight:700;letter-spacing:0.03em;color:var(--blue-600);margin-bottom:16px">Beyond the seat price</div><h2 style="font-size:clamp(30px,3.4vw,44px);line-height:1.1">The seat price is where the bill starts.</h2></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:1px;background:var(--bone-200);border:1px solid var(--bone-200)">
+<div style="background:var(--paper);padding:30px 28px;display:flex;flex-direction:column;gap:18px;min-width:0">
+<div style="display:flex;align-items:center;gap:11px"><img src="assets/compare/copilot-logo.png" alt="" style="width:28px;height:28px;object-fit:contain"><h3 style="font-size:18px;line-height:24px">Microsoft 365 Copilot</h3></div>
+<div style="font-family:var(--font-mono),'Geist Mono',monospace;font-size:13px;color:var(--ink-500)">$30 / user / month</div>
+<div style="display:flex;flex-direction:column;border-top:1px solid var(--bone-200)">
+<div style="padding:12px 0;border-bottom:1px solid var(--bone-200);font-size:14.5px;line-height:22px;display:flex;gap:10px"><span style="color:#A8543A;font-weight:800">+</span><span>A qualifying Microsoft 365 licence underneath, E3 or E5</span></div>
+<div style="padding:12px 0;border-bottom:1px solid var(--bone-200);font-size:14.5px;line-height:22px;display:flex;gap:10px"><span style="color:#A8543A;font-weight:800">+</span><span>Copilot Studio agents licensed and metered separately</span></div>
+<div style="padding:12px 0;border-bottom:1px solid var(--bone-200);font-size:14.5px;line-height:22px;display:flex;gap:10px"><span style="color:#A8543A;font-weight:800">+</span><span>Audit depth tied to your Purview tier</span></div>
+<div style="padding:12px 0;font-size:14.5px;line-height:22px;display:flex;gap:10px"><span style="color:#A8543A;font-weight:800">+</span><span>Permissions clean-up before rollout, often with a partner</span></div>
+</div>
+</div>
+<div style="background:var(--paper);padding:30px 28px;display:flex;flex-direction:column;gap:18px;min-width:0">
+<div style="display:flex;align-items:center;gap:11px"><img src="assets/compare/chatgpt-logo.png" alt="" style="width:28px;height:28px;object-fit:contain"><h3 style="font-size:18px;line-height:24px">ChatGPT Enterprise</h3></div>
+<div style="font-family:var(--font-mono),'Geist Mono',monospace;font-size:13px;color:var(--ink-500)">~$60 / user / month, reported</div>
+<div style="display:flex;flex-direction:column;border-top:1px solid var(--bone-200)">
+<div style="padding:12px 0;border-bottom:1px solid var(--bone-200);font-size:14.5px;line-height:22px;display:flex;gap:10px"><span style="color:#A8543A;font-weight:800">+</span><span>A 150-seat minimum, paid annually up front</span></div>
+<div style="padding:12px 0;border-bottom:1px solid var(--bone-200);font-size:14.5px;line-height:22px;display:flex;gap:10px"><span style="color:#A8543A;font-weight:800">+</span><span>Credits for agents, Codex and advanced features on top</span></div>
+<div style="padding:12px 0;font-size:14.5px;line-height:22px;display:flex;gap:10px"><span style="color:#A8543A;font-weight:800">+</span><span>No public price, so every renewal is a negotiation</span></div>
+</div>
+</div>
+<div style="background:var(--paper);padding:30px 28px;display:flex;flex-direction:column;gap:18px;min-width:0">
+<div style="display:flex;align-items:center;gap:11px"><img src="assets/compare/claude-logo.png" alt="" style="width:28px;height:28px;object-fit:contain"><h3 style="font-size:18px;line-height:24px">Claude Enterprise</h3></div>
+<div style="font-family:var(--font-mono),'Geist Mono',monospace;font-size:13px;color:var(--ink-500)">$20 / seat / month + usage</div>
+<div style="display:flex;flex-direction:column;border-top:1px solid var(--bone-200)">
+<div style="padding:12px 0;border-bottom:1px solid var(--bone-200);font-size:14.5px;line-height:22px;display:flex;gap:10px"><span style="color:#A8543A;font-weight:800">+</span><span>The seat fee covers access only</span></div>
+<div style="padding:12px 0;border-bottom:1px solid var(--bone-200);font-size:14.5px;line-height:22px;display:flex;gap:10px"><span style="color:#A8543A;font-weight:800">+</span><span>Usage billed separately at API rates</span></div>
+<div style="padding:12px 0;font-size:14.5px;line-height:22px;display:flex;gap:10px"><span style="color:#A8543A;font-weight:800">+</span><span>Spend rises with adoption, which makes budgets hard to fix</span></div>
+</div>
+</div>
+<div style="background:var(--paper);padding:30px 28px;display:flex;flex-direction:column;gap:18px;min-width:0">
+<div style="display:flex;align-items:center;gap:11px"><img src="assets/compare/glean-logo.png" alt="" style="width:28px;height:28px;object-fit:contain"><h3 style="font-size:18px;line-height:24px">Glean</h3></div>
+<div style="font-family:var(--font-mono),'Geist Mono',monospace;font-size:13px;color:var(--ink-500)">$40–75 / user / month, reported</div>
+<div style="display:flex;flex-direction:column;border-top:1px solid var(--bone-200)">
+<div style="padding:12px 0;border-bottom:1px solid var(--bone-200);font-size:14.5px;line-height:22px;display:flex;gap:10px"><span style="color:#A8543A;font-weight:800">+</span><span>Deployments commonly start around 100 seats</span></div>
+<div style="padding:12px 0;border-bottom:1px solid var(--bone-200);font-size:14.5px;line-height:22px;display:flex;gap:10px"><span style="color:#A8543A;font-weight:800">+</span><span>A median contract near $99,000 a year</span></div>
+<div style="padding:12px 0;font-size:14.5px;line-height:22px;display:flex;gap:10px"><span style="color:#A8543A;font-weight:800">+</span><span>Enterprise tiers needed for serious use</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="width:100%;background:var(--paper);border-bottom:1px solid var(--bone-200)">
+<div style="max-width:1240px;margin:0 auto;padding:96px 40px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:1px;background:var(--bone-200);border:1px solid var(--bone-200)">
+<div style="background:var(--ink-900);padding:48px 44px;display:flex;flex-direction:column;gap:22px;min-width:0">
+<div style="font-family:var(--font-mono),'Geist Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.68)">Anvax pricing</div>
+<h2 style="font-size:clamp(30px,3.4vw,44px);line-height:1.1;color:var(--paper)">No tiers. No seat count. One annual fee.</h2>
+<p style="font-size:17px;line-height:28px;color:rgba(255,255,255,0.78);max-width:46ch">Every product, every governance control and every employee is in the same contract. Adding a team never needs a new purchase order.</p>
+<div style="margin-top:10px;display:flex;gap:12px;flex-wrap:wrap">
+<x-import component-from-global-scope="AnvaxDesignSystem_ae9769.Button" href="#" arrow="{{ true }}" dc-props="{{ ctaOnDark }}" hint-size="auto,52px">Talk to us</x-import>
+</div>
+</div>
+<div style="background:var(--paper);padding:44px 44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:34px 40px;min-width:0">
+<div>
+<div style="font-family:var(--font-mono),'Geist Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue-600);margin-bottom:14px">Included</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:11px;align-items:flex-start"><span style="width:20px;height:20px;flex:none;border-radius:50%;background:var(--sage-600);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;margin-top:2px">✓</span><span style="font-size:15px;line-height:23px">Unlimited employees</span></div>
+<div style="display:flex;gap:11px;align-items:flex-start"><span style="width:20px;height:20px;flex:none;border-radius:50%;background:var(--sage-600);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;margin-top:2px">✓</span><span style="font-size:15px;line-height:23px">Search, chat, workflows and agents</span></div>
+<div style="display:flex;gap:11px;align-items:flex-start"><span style="width:20px;height:20px;flex:none;border-radius:50%;background:var(--sage-600);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;margin-top:2px">✓</span><span style="font-size:15px;line-height:23px">PII redaction, prompt-injection checks and model gateway</span></div>
+<div style="display:flex;gap:11px;align-items:flex-start"><span style="width:20px;height:20px;flex:none;border-radius:50%;background:var(--sage-600);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;margin-top:2px">✓</span><span style="font-size:15px;line-height:23px">Immutable audit trail</span></div>
+<div style="display:flex;gap:11px;align-items:flex-start"><span style="width:20px;height:20px;flex:none;border-radius:50%;background:var(--sage-600);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;margin-top:2px">✓</span><span style="font-size:15px;line-height:23px">All connectors</span></div>
+<div style="display:flex;gap:11px;align-items:flex-start"><span style="width:20px;height:20px;flex:none;border-radius:50%;background:var(--sage-600);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;margin-top:2px">✓</span><span style="font-size:15px;line-height:23px">Updates and support</span></div>
+</div>
+</div>
+<div>
+<div style="font-family:var(--font-mono),'Geist Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-500);margin-bottom:14px">You provide</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:11px;align-items:flex-start"><span style="color:var(--ink-500);font-weight:800;margin-top:0">→</span><span style="font-size:15px;line-height:23px">The infrastructure it runs on: your servers, private cloud or air-gapped environment</span></div>
+<div style="display:flex;gap:11px;align-items:flex-start"><span style="color:var(--ink-500);font-weight:800">→</span><span style="font-size:15px;line-height:23px">Model costs, if you route requests to a hosted provider</span></div>
+</div>
+<p style="font-size:13.5px;line-height:21px;color:var(--ink-500);margin-top:18px">We size the infrastructure with you before you sign, so the full cost is known up front.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="width:100%;background:var(--paper);border-bottom:1px solid var(--bone-200)">
+<div style="max-width:1240px;margin:0 auto;padding:96px 40px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:56px;align-items:start">
+<h2 style="font-size:clamp(28px,3vw,38px);line-height:1.14">FAQs</h2>
+<div style="grid-column:span 2;min-width:0;border-top:1px solid var(--bone-250)">
+<sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+<div style="border-bottom:1px solid var(--bone-250)">
+<button onClick="{{ f.toggle }}" style="width:100%;background:none;border:0;padding:22px 0;display:flex;align-items:center;gap:20px;text-align:left;cursor:pointer;font-family:inherit;color:var(--ink-900)"><span style="font-size:17.5px;line-height:26px;font-weight:700;flex:1">{{ f.q }}</span><span style="font-size:24px;font-weight:400;color:var(--blue-600);flex:none;width:20px;text-align:center">{{ f.sign }}</span></button>
+<sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}"><p style="font-size:15.5px;line-height:26px;color:var(--ink-500);padding:0 40px 24px 0;max-width:68ch">{{ f.a }}</p></sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+<p style="font-size:12.5px;line-height:20px;color:var(--slate-400);margin-top:48px;max-width:90ch">Competitor prices from vendor pricing pages and published buyer reports (CloudZero, Vendr via Coworker, GoSearch, Tech Insider), checked November 2026. ChatGPT Enterprise and Glean do not publish prices; figures are reported averages. Claude Enterprise usage is estimated at $20 per user per month. Microsoft 365 Copilot excludes the base Microsoft 365 licence.</p>
+</div>
+</section>
+
+<section style="width:100%;background:linear-gradient(135deg,var(--blue-600) 0%,var(--ink-950) 100%)">
+<div style="max-width:1240px;margin:0 auto;padding:104px 40px;text-align:center">
+<h2 style="font-size:clamp(32px,4.2vw,52px);line-height:1.08;color:var(--paper);max-width:20ch;margin:0 auto">Get a quote for your whole organisation.</h2>
+<p style="font-size:18px;line-height:29px;color:rgba(255,255,255,0.85);max-width:52ch;margin:22px auto 0">Tell us your headcount and where you want Anvax to run. We will come back with one annual figure and the infrastructure it needs.</p>
+<div style="margin-top:34px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+<x-import component-from-global-scope="AnvaxDesignSystem_ae9769.Button" href="#" arrow="{{ true }}" dc-props="{{ ctaOnDark }}" hint-size="auto,52px">Talk to us</x-import>
+<x-import component-from-global-scope="AnvaxDesignSystem_ae9769.Button" href="Anvax Deployment.dc.html" variant="secondaryDark" dc-props="{{ ctaBig }}" hint-size="auto,52px">See deployment options</x-import>
+</div>
+</div>
+</section>
+
+<footer style="width:100%;background:var(--ink-950);padding:72px 0 36px">
+<div style="max-width:1240px;margin:0 auto;padding:0 40px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:40px">
+<div>
+<div style="display:flex;align-items:center;gap:9px"><img src="assets/anvax-mark.png" alt="" style="height:28px;width:28px"><span style="font-weight:800;font-size:19px;line-height:1;letter-spacing:-0.04em;color:var(--paper)">Anvax</span></div>
+<p style="margin-top:16px;font-size:13.5px;line-height:22px;color:var(--fg-on-dark-2);max-width:34ch">The self-hosted, governed AI workspace for enterprises that cannot use public AI.</p>
+</div>
+<sc-for list="{{ footerCols }}" as="col" hint-placeholder-count="3">
+<div>
+<h4 style="font-size:11.5px;font-weight:700;letter-spacing:0.08em;color:var(--fg-on-dark-2);margin:0 0 16px">{{ col.title }}</h4>
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px">
+<sc-for list="{{ col.links }}" as="l" hint-placeholder-count="6"><li><a href="{{ l.h }}" style="font-size:14px;color:var(--fg-on-dark-3)" style-hover="color:var(--paper)">{{ l.t }}</a></li></sc-for>
+</ul>
+</div>
+</sc-for>
+</div>
+<div style="margin-top:56px;padding-top:24px;border-top:1px solid var(--border-on-ink);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--fg-on-dark-2)">
+<span>© 2026 Anvax Technologies Pvt. Ltd.</span>
+<span style="display:flex;gap:22px;flex-wrap:wrap"><span>SOC 2 · audit underway</span><span>ISO 27001 · audit underway</span><span style="color:var(--sage-600)">GDPR-ready</span></span>
+</div>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;anvaxAnnualFee&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:72000,&quot;min&quot;:10000,&quot;max&quot;:1000000,&quot;step&quot;:1000,&quot;unit&quot;:&quot;USD&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Savings maths&quot;},&quot;showAnvaxFee&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Savings maths&quot;},&quot;defaultSeats&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:500,&quot;min&quot;:200,&quot;max&quot;:10000,&quot;step&quot;:50,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Savings maths&quot;}}">
+class Component extends DCLogic {
+  state = { wide: true, roomy: true, open: 0, slider: null, off: {} };
+  componentDidMount() {
+    const root = this.el || document;
+    this._fit = () => {
+      const w = (root.getBoundingClientRect ? root.getBoundingClientRect().width : 0) || window.innerWidth;
+      const wide = w >= 900, roomy = w >= 1180;
+      if (wide !== this.state.wide || roomy !== this.state.roomy) this.setState({ wide, roomy });
+    };
+    this._fit();
+    window.addEventListener('resize', this._fit);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this._fit); }
+  seatsFrom(s) {
+    const raw = 200 * Math.pow(50, s / 1000);
+    const step = raw < 1000 ? 50 : raw < 5000 ? 100 : 500;
+    return Math.max(200, Math.min(10000, Math.round(raw / step) * step));
+  }
+  sliderFrom(seats) { return Math.round(1000 * Math.log(Math.max(seats, 200) / 200) / Math.log(50)); }
+  renderVals() {
+    const fee = this.props.anvaxAnnualFee ?? 72000;
+    const showFee = this.props.showAnvaxFee ?? false;
+    const slider = this.state.slider ?? this.sliderFrom(this.props.defaultSeats ?? 500);
+    const seats = this.seatsFrom(slider);
+    const usd = n => '$' + Math.round(n).toLocaleString('en-US');
+    const short = n => n >= 1e6 ? '$' + (n / 1e6).toFixed(n >= 1e7 ? 0 : 1).replace(/\.0$/, '') + 'M' : '$' + Math.round(n / 1000) + 'K';
+    const comps = [
+      { id: 'copilot', name: 'Microsoft 365 Copilot', logo: 'assets/compare/copilot-logo.png', mono: '', rate: 30, min: 1, note: '$30 per user a month, plus a Microsoft 365 licence', color: '#1F252E', dash: '' },
+      { id: 'chatgpt', name: 'ChatGPT Enterprise', logo: 'assets/compare/chatgpt-logo.png', mono: '', rate: 60, min: 150, note: '~$60 per user a month reported, 150-seat minimum', color: '#4A515C', dash: '8 5' },
+      { id: 'claude', name: 'Claude Enterprise', logo: 'assets/compare/claude-logo.png', mono: '', rate: 40, min: 1, note: '$20 seat fee plus ~$20 estimated usage', color: '#8A8F98', dash: '2 4' },
+      { id: 'glean', name: 'Glean', logo: 'assets/compare/glean-logo.png', mono: '', rate: 50, min: 100, note: '~$50 per user a month reported, ~100-seat floor', color: '#A8543A', dash: '12 4 2 4' },
+    ];
+    const costAt = (c, n) => c.rate * 12 * Math.max(n, c.min);
+    const off = this.state.off;
+    const sel = comps.filter(c => !off[c.id]);
+    const maxCost = Math.max(fee, ...sel.map(c => costAt(c, seats)), 1);
+    const results = sel.map(c => {
+      const cost = costAt(c, seats), save = cost - fee, pct = Math.round(save / cost * 100);
+      return {
+        name: c.name, mono: c.mono, tileBg: c.logo ? 'transparent' : 'var(--bone-200)', tileImg: c.logo ? `url("${c.logo}")` : 'none', cost: usd(cost), bar: (cost / maxCost * 100).toFixed(1) + '%',
+        saveText: save > 0 ? 'Anvax saves ' + usd(save) + ' a year (' + pct + '%)' : 'Per-seat costs less at this headcount',
+        saveColor: save > 0 ? 'var(--sage-600)' : '#A8543A',
+      };
+    });
+    const savers = sel.map(c => { const cost = costAt(c, seats); return { save: cost - fee, pct: (cost - fee) / cost }; });
+    const avg = savers.length ? savers.reduce((a, b) => a + b.pct, 0) / savers.length : 0;
+    const avgAbs = savers.length ? savers.reduce((a, b) => a + b.save, 0) / savers.length : 0;
+    const toggles = comps.map(c => {
+      const on = !off[c.id];
+      return { name: c.name, note: c.note, tick: on ? '✓' : '', boxBg: on ? 'var(--ink-900)' : 'transparent', boxBorder: on ? 'var(--ink-900)' : 'var(--bone-250)',
+        toggle: () => this.setState(s => ({ off: { ...s.off, [c.id]: !s.off[c.id] } })) };
+    });
+    // hero at 1,000
+    const heroMax = Math.max(...comps.map(c => costAt(c, 1000)));
+    const heroRows = [...comps].sort((a, b) => costAt(b, 1000) - costAt(a, 1000)).map(c => ({ name: c.name, cost: usd(costAt(c, 1000)), bar: (costAt(c, 1000) / heroMax * 100).toFixed(1) + '%' }));
+    // chart
+    const X0 = 70, X1 = 800, Y0 = 400, Y1 = 30, NMAX = 2000, CMAX = 1500000;
+    const x = n => X0 + (n / NMAX) * (X1 - X0);
+    const y = v => Y0 - (Math.min(v, CMAX) / CMAX) * (Y0 - Y1);
+    const lines = comps.map(c => {
+      const d = c.min > 1
+        ? `M${x(0)},${y(costAt(c, 0))} L${x(c.min)},${y(costAt(c, c.min))} L${x(NMAX)},${y(costAt(c, NMAX))}`
+        : `M${x(0)},${y(0)} L${x(NMAX)},${y(costAt(c, NMAX))}`;
+      return { d, color: c.color, width: 2, dash: c.dash, name: c.name.replace('Microsoft 365 ', ''), ly: y(costAt(c, NMAX)) + 4 };
+    });
+    lines.push({ d: `M${x(0)},${y(fee)} L${x(NMAX)},${y(fee)}`, color: '#2F6FED', width: 3.5, dash: '', name: 'Anvax', ly: y(fee) + 4 });
+    const breaks = comps.map(c => {
+      const n = fee / (c.rate * 12);
+      if (n <= c.min || n > NMAX) return null;
+      return { x: x(n), y: y(fee), color: c.color, n: Math.round(n), name: c.name.replace('Microsoft 365 ', '') };
+    }).filter(Boolean);
+    const breakCaption = breaks.length
+      ? 'Circles mark where Anvax becomes cheaper: ' + breaks.map(b => b.name + ' at ' + b.n.toLocaleString('en-US') + ' employees').join(', ') + '. Below that, a per-seat plan can cost less.'
+      : 'Anvax costs less than every per-seat tool shown, from the first employee.';
+    const yTicks = [0, 500000, 1000000, 1500000].map(v => ({ y: y(v), ty: y(v) + 4, label: v === 0 ? '$0' : short(v) }));
+    const xTicks = [0, 500, 1000, 1500, 2000].map(n => ({ x: x(n), label: n.toLocaleString('en-US') }));
+    const open = this.state.open;
+    const faqData = [
+      { q: 'Why don’t you charge per seat?', a: 'Per-seat pricing makes every new team a budget decision, so most organisations ration access. Governance only works if everyone uses the governed tool, so we price the platform, not the headcount.' },
+      { q: 'How is the annual fee set?', a: 'By the size and shape of the deployment: where it runs, how many source systems it connects to, and the support you need. Headcount does not change it.' },
+      { q: 'What happens to the fee when we add more teams?', a: 'Nothing. Adding a department, a subsidiary or another thousand employees does not change the annual fee or need a new purchase order.' },
+      { q: 'Can we start with a pilot before committing?', a: 'Yes. Most organisations start with one department and two or three workflows, are live within a few weeks, then roll out to everyone on the same contract.' },
+      { q: 'Is the fee the same for on-premises and private cloud?', a: 'The product is the same in every deployment. The fee reflects the deployment you choose and the support it needs, which we agree with you before you sign.' }
+    ];
+    return {
+      wide: this.state.wide, roomy: this.state.roomy,
+      navGap: this.state.roomy ? '28px' : '10px', navPad: this.state.roomy ? '10px 12px' : '9px 7px', navFont: this.state.roomy ? '14.5px' : '13.5px',
+      slider, seatsLabel: seats.toLocaleString('en-US'),
+      onSlide: e => this.setState({ slider: +e.target.value }),
+      toggles, results,
+      anvaxCostLabel: showFee ? usd(fee) : 'One flat fee',
+      anvaxBar: (fee / maxCost * 100).toFixed(1) + '%',
+      avgSave: savers.length && avgAbs > 0 ? usd(avgAbs) : '—',
+      avgSub: !savers.length ? 'Select at least one tool to compare.' : avgAbs > 0 ? 'Average across the selected tools, at ' + seats.toLocaleString('en-US') + ' employees.' : 'At this headcount a per-seat plan is cheaper on average.',
+      heroRows, heroAnvaxBar: (fee / heroMax * 100).toFixed(1) + '%', heroPct: Math.round((1 - fee / heroMax) * 100) + '%',
+      breakCaption,
+      chart: { lines, breaks, yTicks, xTicks, markerX: x(Math.min(seats, NMAX)), markerOpacity: seats <= NMAX ? 1 : 0 },
+      faqs: faqData.map((f, i) => ({ q: f.q, a: f.a, open: open === i, sign: open === i ? '\u2212' : '+', toggle: () => this.setState({ open: open === i ? -1 : i }) })),
+      ctaNav: { style: { background: 'var(--blue-600)', backgroundImage: 'var(--sheen-primary)', color: 'var(--paper)', fontSize: 14.5, padding: '12px 20px' } },
+      ctaHero: { style: { background: 'var(--blue-600)', backgroundImage: 'var(--sheen-primary)', color: 'var(--paper)', fontSize: 15.5, padding: '15px 26px' } },
+      ctaOnDark: { style: { background: 'var(--paper)', color: 'var(--ink-950)', fontSize: 16, padding: '16px 30px' } },
+      ctaBig: { style: { fontSize: 15.5, padding: '15px 24px' } },
+      footerCols: [
+        { title: 'Product', links: [{ t: 'Overview', h: 'Anvax Product.dc.html' }, { t: 'Search', h: 'Anvax Search.dc.html' }, { t: 'Chat', h: 'Anvax Chat.dc.html' }, { t: 'Agents', h: 'Anvax Agents.dc.html' }, { t: 'Governance', h: 'Anvax Governance.dc.html' }, { t: 'Pricing', h: 'Anvax Pricing.dc.html' }] },
+        { title: 'Compare', links: [{ t: 'vs Microsoft 365 Copilot', h: 'Anvax vs Microsoft Copilot.dc.html' }, { t: 'vs ChatGPT Enterprise', h: 'Anvax vs ChatGPT Enterprise.dc.html' }, { t: 'vs Claude Enterprise', h: 'Anvax vs Claude Enterprise.dc.html' }, { t: 'vs Glean', h: 'Anvax vs Glean.dc.html' }] },
+        { title: 'Company', links: [{ t: 'About', h: '#' }, { t: 'Security', h: 'Anvax Security.dc.html' }, { t: 'Blog', h: '#' }, { t: 'Careers', h: '#' }, { t: 'Contact', h: '#' }, { t: 'Book a demo', h: '#' }] },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

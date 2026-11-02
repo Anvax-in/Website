@@ -1,0 +1,280 @@
+{
+  "desktop": [
+    {
+      "i": 0,
+      "tag": "nav",
+      "label": "Anvax Product Why Anvax Industries Deployment Security Prici",
+      "height": 69,
+      "len": 3291,
+      "inlineStyles": 16
+    },
+    {
+      "i": 1,
+      "tag": "header",
+      "label": "One platform fee. Every employee.",
+      "height": 710,
+      "len": 7833,
+      "inlineStyles": 45
+    },
+    {
+      "i": 2,
+      "tag": "section",
+      "label": "Enter your headcount. See what per-seat AI would cost.",
+      "height": 1286,
+      "len": 14785,
+      "inlineStyles": 80
+    },
+    {
+      "i": 3,
+      "tag": "section",
+      "label": "",
+      "height": 1,
+      "len": 139,
+      "inlineStyles": 0
+    },
+    {
+      "i": 4,
+      "tag": "section",
+      "label": "The seat price is where the bill starts.",
+      "height": 959,
+      "len": 7672,
+      "inlineStyles": 55
+    },
+    {
+      "i": 5,
+      "tag": "section",
+      "label": "No tiers. No seat count. One annual fee.",
+      "height": 624,
+      "len": 6670,
+      "inlineStyles": 40
+    },
+    {
+      "i": 6,
+      "tag": "section",
+      "label": "FAQs",
+      "height": 779,
+      "len": 4808,
+      "inlineStyles": 26
+    },
+    {
+      "i": 7,
+      "tag": "section",
+      "label": "Get a quote for your whole organisation.",
+      "height": 484,
+      "len": 2348,
+      "inlineStyles": 9
+    },
+    {
+      "i": 8,
+      "tag": "footer",
+      "label": "Anvax The self-hosted, governed AI workspace for enterprise",
+      "height": 474,
+      "len": 5473,
+      "inlineStyles": 31
+    }
+  ],
+  "tablet": [
+    {
+      "i": 0,
+      "tag": "nav",
+      "label": "Anvax Product Why Anvax Industries Deployment Security Prici",
+      "height": 69,
+      "len": 3119,
+      "inlineStyles": 15
+    },
+    {
+      "i": 1,
+      "tag": "header",
+      "label": "One platform fee. Every employee.",
+      "height": 1073,
+      "len": 7833,
+      "inlineStyles": 45
+    },
+    {
+      "i": 2,
+      "tag": "section",
+      "label": "Enter your headcount. See what per-seat AI would cost.",
+      "height": 1264,
+      "len": 14785,
+      "inlineStyles": 80
+    },
+    {
+      "i": 3,
+      "tag": "section",
+      "label": "",
+      "height": 1,
+      "len": 139,
+      "inlineStyles": 0
+    },
+    {
+      "i": 4,
+      "tag": "section",
+      "label": "The seat price is where the bill starts.",
+      "height": 948,
+      "len": 7672,
+      "inlineStyles": 55
+    },
+    {
+      "i": 5,
+      "tag": "section",
+      "label": "No tiers. No seat count. One annual fee.",
+      "height": 782,
+      "len": 6670,
+      "inlineStyles": 40
+    },
+    {
+      "i": 6,
+      "tag": "section",
+      "label": "FAQs",
+      "height": 869,
+      "len": 4808,
+      "inlineStyles": 26
+    },
+    {
+      "i": 7,
+      "tag": "section",
+      "label": "Get a quote for your whole organisation.",
+      "height": 463,
+      "len": 2348,
+      "inlineStyles": 9
+    },
+    {
+      "i": 8,
+      "tag": "footer",
+      "label": "Anvax The self-hosted, governed AI workspace for enterprise",
+      "height": 474,
+      "len": 5473,
+      "inlineStyles": 31
+    }
+  ],
+  "mobile": [
+    {
+      "i": 0,
+      "tag": "nav",
+      "label": "Anvax Book a demo →",
+      "height": 69,
+      "len": 1635,
+      "inlineStyles": 7
+    },
+    {
+      "i": 1,
+      "tag": "header",
+      "label": "One platform fee. Every employee.",
+      "height": 1139,
+      "len": 7833,
+      "inlineStyles": 45
+    },
+    {
+      "i": 2,
+      "tag": "section",
+      "label": "Enter your headcount. See what per-seat AI would cost.",
+      "height": 1859,
+      "len": 14785,
+      "inlineStyles": 80
+    },
+    {
+      "i": 3,
+      "tag": "section",
+      "label": "",
+      "height": 1,
+      "len": 139,
+      "inlineStyles": 0
+    },
+    {
+      "i": 4,
+      "tag": "section",
+      "label": "The seat price is where the bill starts.",
+      "height": 1528,
+      "len": 7672,
+      "inlineStyles": 55
+    },
+    {
+      "i": 5,
+      "tag": "section",
+      "label": "No tiers. No seat count. One annual fee.",
+      "height": 1138,
+      "len": 6670,
+      "inlineStyles": 40
+    },
+    {
+      "i": 6,
+      "tag": "section",
+      "label": "FAQs",
+      "height": 887,
+      "len": 4808,
+      "inlineStyles": 26
+    },
+    {
+      "i": 7,
+      "tag": "section",
+      "label": "Get a quote for your whole organisation.",
+      "height": 441,
+      "len": 2348,
+      "inlineStyles": 9
+    },
+    {
+      "i": 8,
+      "tag": "footer",
+      "label": "Anvax The self-hosted, governed AI workspace for enterprise",
+      "height": 815,
+      "len": 5473,
+      "inlineStyles": 31
+    }
+  ],
+  "responsive": [
+    {
+      "i": 0,
+      "tag": "nav",
+      "label": "Anvax Product Why Anvax Industries Deployment Security Prici",
+      "domChangesAtMobile": true
+    },
+    {
+      "i": 1,
+      "tag": "header",
+      "label": "One platform fee. Every employee.",
+      "domChangesAtMobile": false
+    },
+    {
+      "i": 2,
+      "tag": "section",
+      "label": "Enter your headcount. See what per-seat AI would cost.",
+      "domChangesAtMobile": false
+    },
+    {
+      "i": 3,
+      "tag": "section",
+      "label": "",
+      "domChangesAtMobile": false
+    },
+    {
+      "i": 4,
+      "tag": "section",
+      "label": "The seat price is where the bill starts.",
+      "domChangesAtMobile": false
+    },
+    {
+      "i": 5,
+      "tag": "section",
+      "label": "No tiers. No seat count. One annual fee.",
+      "domChangesAtMobile": false
+    },
+    {
+      "i": 6,
+      "tag": "section",
+      "label": "FAQs",
+      "domChangesAtMobile": false
+    },
+    {
+      "i": 7,
+      "tag": "section",
+      "label": "Get a quote for your whole organisation.",
+      "domChangesAtMobile": false
+    },
+    {
+      "i": 8,
+      "tag": "footer",
+      "label": "Anvax The self-hosted, governed AI workspace for enterprise",
+      "domChangesAtMobile": false
+    }
+  ]
+}
