@@ -291,12 +291,11 @@
 }
 
 .savingsBig {
-  font-size: 48px;
+  font-size: clamp(28px, 11vw, 48px);
   line-height: 1.05;
   font-weight: var(--weight-black);
   letter-spacing: -0.03em;
   color: var(--paper);
-  font-variant-numeric: tabular-nums;
 }
 
 .savingsSub {

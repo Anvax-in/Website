@@ -32,6 +32,19 @@
   border-top: 1px solid var(--bone-250);
 }
 
+/*
+ * Below 736px the grid (repeat(auto-fit, minmax(min(100%, 300px), 1fr)))
+ * collapses to a single real column. "span 2" would still ask for a second
+ * column there, so the browser invents an implicit one sized to content,
+ * pushing the FAQ panel (and its +/- toggle) off-screen. Spanning every
+ * actual column (1 / -1) is safe here because there is only ever one.
+ */
+@media (max-width: 735px) {
+  .faq {
+    grid-column: 1 / -1;
+  }
+}
+
 .faqItem {
   border-bottom: 1px solid var(--bone-250);
 }
