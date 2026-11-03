@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
 }
 
-const gaId = process.env.NEXT_PUBLIC_GA_ID || 'G-X136BCT4C9'
+const gaId = process.env.NEXT_GA_ID || 'G-X136BCT4C9'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
