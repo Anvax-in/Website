@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import PricingHero from '@/components/pricing/PricingHero'
 import SavingsCalculator from '@/components/pricing/SavingsCalculator'
-import CostCurveChart from '@/components/pricing/CostCurveChart'
 import BeyondSeatPrice from '@/components/pricing/BeyondSeatPrice'
 import OneFeePanel from '@/components/pricing/OneFeePanel'
 import PricingFaq from '@/components/pricing/PricingFaq'
@@ -26,11 +25,6 @@ export default function PricingPage() {
     <>
       <PricingHero />
       <SavingsCalculator />
-      <section className="section">
-        <div className="container">
-          <CostCurveChart />
-        </div>
-      </section>
       <BeyondSeatPrice />
       <OneFeePanel />
       <PricingFaq />

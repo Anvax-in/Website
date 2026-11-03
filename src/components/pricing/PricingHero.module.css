@@ -19,8 +19,6 @@
 }
 
 .inner {
-  max-width: 1240px;
-  margin: 0 auto;
   padding: 88px 40px;
   position: relative;
   display: grid;

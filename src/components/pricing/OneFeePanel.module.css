@@ -5,8 +5,6 @@
 }
 
 .inner {
-  max-width: var(--site-max);
-  margin: 0 auto;
   padding: var(--space-12) var(--site-gutter);
 }
 
