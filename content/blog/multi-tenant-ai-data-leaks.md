@@ -8,8 +8,6 @@ draft: false
 
 ![Diagram showing how one company's data can end up in another company's AI answer through shared application, cache, and inference layers](/assets/blog/multi-tenant-ai-data-leaks.webp)
 
-# How One Company's Data Ends Up in Another Company's AI Answer
-
 On May 1, 2025, Asana launched a new AI connector that let assistants such as ChatGPT and Claude read and summarize a company's projects and tasks. On June 4, Asana found a bug in it. For about a month, a user at one company asking an AI tool about their own work could be shown projects, tasks and comments belonging to a different company. Asana took the connector offline from June 5 to June 17, fixed the code, and notified every customer whose users had used it. Asana stressed it was not a hack. Nobody broke in. The separation between customers simply failed in one piece of code.
 
 That is how cross-customer leaks in AI usually happen. Not through an attacker, but through an ordinary bug in a shared component that every customer passes through.
