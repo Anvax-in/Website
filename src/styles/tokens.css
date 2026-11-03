@@ -107,6 +107,10 @@
   --teal:           var(--sage-600);
   --teal-light:     var(--sage-100);
 
+  /* ---- Chart categorical (cost-curve lines only) ---- */
+  --chart-line-2:   #4A515C;
+  --chart-line-3:   #8A8F98;
+
   /* ---- Typography ---- */
   --font-heading:        var(--font-sans);
   --font-heading-weight: 800;
@@ -137,7 +141,7 @@
   --type-micro-size:   12px;  --type-micro-line:   16px;
 
   /* Mono label — eyebrows, status pills, table headers */
-  --type-label-size:  11px;   --type-label-track: 0.02em;
+  --type-label-size:  11px;   --type-label-track: 0.08em;
   --type-pill-size:   10px;   --type-pill-track:  0.08em;
 
   /* Semantic text roles */

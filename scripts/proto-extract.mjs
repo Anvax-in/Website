@@ -44,9 +44,14 @@ const PORT = 8899;
 
 // The canvas fetches React from unpkg. Serve the local copies instead so this works
 // offline / behind a proxy — and so the version is pinned to what the runtime expects.
+// require.resolve('react/umd/...') fails once a package's "exports" map stops
+// listing that subpath (newer react/npm). Resolve via the package root instead.
+function umdFile(pkg, file) {
+  return path.join(path.dirname(require.resolve(`${pkg}/package.json`)), 'umd', file);
+}
 const REACT = {
-  'react.production.min.js':     require.resolve('react/umd/react.production.min.js'),
-  'react-dom.production.min.js': require.resolve('react-dom/umd/react-dom.production.min.js'),
+  'react.production.min.js':     umdFile('react', 'react.production.min.js'),
+  'react-dom.production.min.js': umdFile('react-dom', 'react-dom.production.min.js'),
 };
 
 // Same reason for fonts: Google Fonts may be unreachable, and a fallback face makes

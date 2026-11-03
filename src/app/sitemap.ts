@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.anvax.in/industries/legal-professional-services',              lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 0.7 },
     { url: 'https://www.anvax.in/industries/public-sector',                            lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 0.7 },
     { url: 'https://www.anvax.in/trust',      lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 0.8 },
+    { url: 'https://www.anvax.in/pricing',    lastModified: new Date('2026-11-02'), changeFrequency: 'weekly',  priority: 0.8 },
     { url: 'https://www.anvax.in/deployment', lastModified: new Date('2026-06-03'), changeFrequency: 'weekly',  priority: 0.8 },
     { url: 'https://www.anvax.in/company',    lastModified: new Date('2026-06-03'), changeFrequency: 'monthly', priority: 0.7 },
     { url: 'https://www.anvax.in/contact',    lastModified: new Date('2026-06-03'), changeFrequency: 'monthly', priority: 0.7 },

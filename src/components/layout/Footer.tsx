@@ -13,6 +13,7 @@ const product = [
   { to: '/platform/agents',     label: 'Agents' },
   { to: '/platform/governance', label: 'Governance' },
   { to: '/deployment',          label: 'Deployment' },
+  { to: '/pricing',             label: 'Pricing' },
 ]
 
 const solutions = [

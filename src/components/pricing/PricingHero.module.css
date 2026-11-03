@@ -1,0 +1,183 @@
+.hero {
+  width: 100%;
+  background: var(--paper);
+  border-bottom: 1px solid var(--bone-200);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Dotted-grid background decoration ── */
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--bone-200) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bone-200) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(90% 70% at 50% 0%, #000 0%, transparent 75%);
+  pointer-events: none;
+}
+
+.inner {
+  padding: 88px 40px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+  gap: 56px;
+  align-items: center;
+}
+
+/* ── Copy column ── */
+.eyebrow {
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue-600);
+  border: 1px solid var(--blue-100);
+  background: var(--blue-50);
+  border-radius: var(--radius-pill);
+  padding: 5px 14px;
+  margin-bottom: 22px;
+}
+
+.h1 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  color: var(--ink-900);
+  margin: 0;
+}
+
+.lede {
+  font-size: 19px;
+  line-height: 30px;
+  color: var(--ink-500);
+  max-width: 52ch;
+  margin-top: 24px;
+}
+
+.ctaRow {
+  margin-top: 34px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ── Cost card ── */
+.card {
+  background: var(--paper);
+  border: 1px solid var(--bone-200);
+  box-shadow: var(--shadow-lift);
+  min-width: 0;
+}
+
+.cardHead {
+  padding: 22px 28px;
+  border-bottom: 1px solid var(--bone-200);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.cardLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-500);
+}
+
+.cardUnit {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate-400);
+}
+
+.rows {
+  padding: 10px 28px 6px;
+}
+
+.row {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--bone-200);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px 16px;
+  align-items: center;
+}
+
+/* Anvax row: no divider above the dark strip, bolder label, logo inline */
+.rows .row:last-child {
+  padding: 16px 0 18px;
+  border-bottom: none;
+}
+
+.rowName {
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.rows .row:last-child .rowName {
+  font-weight: 800;
+}
+
+.rowCost {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--ink-900);
+}
+
+.anvaxCost {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--blue-600);
+}
+
+.barTrack {
+  grid-column: 1 / -1;
+  height: 8px;
+  background: var(--bone-100);
+}
+
+.barFill {
+  height: 8px;
+  background: var(--ink-900);
+}
+
+.anvaxBarFill {
+  height: 8px;
+  background: var(--blue-600);
+}
+
+/* ── Bottom dark strip ── */
+.strip {
+  background: var(--ink-900);
+  padding: 22px 28px;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.stripPct {
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--paper);
+}
+
+.stripCaption {
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--fg-on-dark-dim);
+}

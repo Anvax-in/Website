@@ -1,0 +1,303 @@
+.section {
+  width: 100%;
+  background: var(--bone-100);
+  border-bottom: 1px solid var(--bone-200);
+  scroll-margin-top: var(--nav-height);
+}
+
+.inner {
+  padding: var(--space-12) var(--site-gutter);
+}
+
+/* ── Head ── */
+.head {
+  max-width: 760px;
+  margin-bottom: 44px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--blue-600);
+  margin-bottom: 16px;
+}
+
+.h2 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: clamp(30px, 3.4vw, 44px);
+  line-height: 1.1;
+  color: var(--ink-900);
+  margin: 0;
+}
+
+.lede {
+  font-size: var(--type-prose-size);
+  line-height: var(--type-prose-line);
+  color: var(--ink-500);
+  margin-top: 18px;
+}
+
+/* ── Card grid: 1px gap lines are the grid background showing through ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+  gap: 1px;
+  background: var(--bone-200);
+  border: 1px solid var(--bone-200);
+}
+
+.panel {
+  background: var(--paper);
+  padding: 34px 32px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--type-label-size);
+  letter-spacing: var(--type-label-track);
+  text-transform: uppercase;
+  color: var(--ink-500);
+}
+
+/* ── Left panel: slider ── */
+.sliderBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.toggleBlock {
+  margin-top: 30px;
+}
+
+.costLabel {
+  margin-bottom: 8px;
+}
+
+.seatCount {
+  font-size: 56px;
+  line-height: 1;
+  font-weight: var(--weight-black);
+  letter-spacing: -0.035em;
+  color: var(--ink-900);
+  margin-top: 14px;
+}
+
+.range {
+  width: 100%;
+  margin-top: 22px;
+  cursor: pointer;
+  accent-color: var(--blue-600);
+}
+
+.ticks {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--slate-400);
+  margin-top: 6px;
+}
+
+/* ── Left panel: compare toggles ── */
+.toggleBlock .label {
+  margin-bottom: 12px;
+}
+
+.toggleList {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--bone-200);
+}
+
+.toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--bone-200);
+  padding: 14px 0;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--ink-900);
+}
+
+.toggle:hover {
+  background: var(--hover-wash);
+}
+
+.checkboxOn,
+.checkboxOff {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  margin-top: 2px;
+  border: 1.5px solid var(--ink-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: var(--weight-black);
+}
+
+.checkboxOn {
+  background: var(--ink-900);
+  color: var(--paper);
+}
+
+.checkboxOff {
+  background: none;
+  border-color: var(--slate-300);
+}
+
+.toggleText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.toggleName {
+  font-size: 15.5px;
+  font-weight: var(--weight-bold);
+  line-height: 22px;
+}
+
+.toggleNote {
+  font-size: 13.5px;
+  line-height: 20px;
+  color: var(--ink-500);
+}
+
+/* ── Right panel: cost rows ── */
+.rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.row,
+.anvaxRow {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--bone-200);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px 16px;
+  align-items: center;
+}
+
+.anvaxRow {
+  padding: 18px 0 0;
+  border-bottom: none;
+}
+
+.rowName {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  font-size: 15.5px;
+  font-weight: var(--weight-bold);
+}
+
+.rowCost {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  color: var(--ink-900);
+}
+
+.anvaxCost {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--blue-600);
+}
+
+.barTrack {
+  grid-column: 1 / -1;
+  height: 10px;
+  background: var(--bone-100);
+}
+
+.barFill {
+  height: 10px;
+  background: var(--ink-900);
+  transition: width var(--dur-base) var(--ease-out);
+}
+
+.anvaxBarFill {
+  height: 10px;
+  background: var(--blue-600);
+  transition: width var(--dur-base) var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .barFill,
+  .anvaxBarFill {
+    transition: none;
+  }
+}
+
+.saveTextPositive {
+  grid-column: 1 / -1;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: var(--weight-semibold);
+  color: var(--sage-600);
+}
+
+.saveTextNegative {
+  grid-column: 1 / -1;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: var(--weight-semibold);
+  color: var(--clay-600);
+}
+
+.anvaxCaption {
+  grid-column: 1 / -1;
+  font-size: var(--type-small-size);
+  line-height: var(--type-small-line);
+  color: var(--ink-500);
+}
+
+/* ── Savings box ── */
+.savingsBoxWrap {
+  margin-top: auto;
+  padding-top: 28px;
+}
+
+.savingsBox {
+  background: var(--ink-900);
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.savingsLabel {
+  font-family: var(--font-mono);
+  font-size: var(--type-label-size);
+  letter-spacing: var(--type-label-track);
+  text-transform: uppercase;
+  color: var(--fg-on-dark-dim);
+}
+
+.savingsBig {
+  font-size: clamp(28px, 11vw, 48px);
+  line-height: 1.05;
+  font-weight: var(--weight-black);
+  letter-spacing: -0.03em;
+  color: var(--paper);
+}
+
+.savingsSub {
+  font-size: 14.5px;
+  line-height: 22px;
+  color: var(--fg-on-dark-dim);
+}
