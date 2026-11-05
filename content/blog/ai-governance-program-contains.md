@@ -8,8 +8,6 @@ draft: false
 
 ![A diagram showing the six parts of an AI governance program: an AI inventory with owners, risk, and status for each tool; a one-page usage policy; and controls including company sign-in, permission checks, retention settings, and a record of every answer.](/assets/blog/ai-governance-program-contains.webp)
 
-# What an AI Governance Program Actually Contains
-
 At the end of a board meeting, a director turns to the IT director of a 500-person firm and asks: what is our AI governance? The honest answer, at most firms that size, is a policy document from last year, a Copilot pilot, and a sense that people are probably using ChatGPT. The question will come back next quarter, and the answer will need to be better.
 
 AI governance sounds like a large program with a committee and a framework. For a firm of a few hundred people, it does not need to be. It needs six things that work, kept up to date. Most of the public frameworks, including the NIST AI Risk Management Framework and the ISO/IEC 42001 standard for AI management systems, describe a larger version of the same core.
