@@ -1,1 +1,73 @@
-LS0tCnRpdGxlOiAiV2hhdCBhbiBBSSBHb3Zlcm5hbmNlIFByb2dyYW0gQWN0dWFsbHkgQ29udGFpbnMiCmRlc2NyaXB0aW9uOiAiQUkgZ292ZXJuYW5jZSBzb3VuZHMgbGlrZSBhIGxhcmdlIHByb2dyYW0gd2l0aCBhIGNvbW1pdHRlZSBhbmQgYSBmcmFtZXdvcmsuIEZvciBhIGZldyBodW5kcmVkIHBlb3BsZSwgaXQgbmVlZHMgc2l4IHRoaW5ncyB0aGF0IHdvcmsuIgpwdWJEYXRlOiAyMDI2LTExLTA1CnRhZ3M6IFsiQUkgR292ZXJuYW5jZSIsICJFbnRlcnByaXNlIEFJIiwgIkFJIEF1ZGl0IiwgIkNvbXBsaWFuY2UiLCAiR2VuQUkiXQpkcmFmdDogZmFsc2UKLS0tCgohW0EgZGlhZ3JhbSBzaG93aW5nIHRoZSBzaXggcGFydHMgb2YgYW4gQUkgZ292ZXJuYW5jZSBwcm9ncmFtOiBhbiBBSSBpbnZlbnRvcnkgd2l0aCBvd25lcnMsIHJpc2ssIGFuZCBzdGF0dXMgZm9yIGVhY2ggdG9vbDsgYSBvbmUtcGFnZSB1c2FnZSBwb2xpY3k7IGFuZCBjb250cm9scyBpbmNsdWRpbmcgY29tcGFueSBzaWduLWluLCBwZXJtaXNzaW9uIGNoZWNrcywgcmV0ZW50aW9uIHNldHRpbmdzLCBhbmQgYSByZWNvcmQgb2YgZXZlcnkgYW5zd2VyLl0oL2Fzc2V0cy9ibG9nL2FpLWdvdmVybmFuY2UtcHJvZ3JhbS1jb250YWlucy53ZWJwKQoKIyBXaGF0IGFuIEFJIEdvdmVybmFuY2UgUHJvZ3JhbSBBY3R1YWxseSBDb250YWlucwoKQXQgdGhlIGVuZCBvZiBhIGJvYXJkIG1lZXRpbmcsIGEgZGlyZWN0b3IgdHVybnMgdG8gdGhlIElUIGRpcmVjdG9yIG9mIGEgNTAwLXBlcnNvbiBmaXJtIGFuZCBhc2tzOiB3aGF0IGlzIG91ciBBSSBnb3Zlcm5hbmNlPyBUaGUgaG9uZXN0IGFuc3dlciwgYXQgbW9zdCBmaXJtcyB0aGF0IHNpemUsIGlzIGEgcG9saWN5IGRvY3VtZW50IGZyb20gbGFzdCB5ZWFyLCBhIENvcGlsb3QgcGlsb3QsIGFuZCBhIHNlbnNlIHRoYXQgcGVvcGxlIGFyZSBwcm9iYWJseSB1c2luZyBDaGF0R1BULiBUaGUgcXVlc3Rpb24gd2lsbCBjb21lIGJhY2sgbmV4dCBxdWFydGVyLCBhbmQgdGhlIGFuc3dlciB3aWxsIG5lZWQgdG8gYmUgYmV0dGVyLgoKQUkgZ292ZXJuYW5jZSBzb3VuZHMgbGlrZSBhIGxhcmdlIHByb2dyYW0gd2l0aCBhIGNvbW1pdHRlZSBhbmQgYSBmcmFtZXdvcmsuIEZvciBhIGZpcm0gb2YgYSBmZXcgaHVuZHJlZCBwZW9wbGUsIGl0IGRvZXMgbm90IG5lZWQgdG8gYmUuIEl0IG5lZWRzIHNpeCB0aGluZ3MgdGhhdCB3b3JrLCBrZXB0IHVwIHRvIGRhdGUuIE1vc3Qgb2YgdGhlIHB1YmxpYyBmcmFtZXdvcmtzLCBpbmNsdWRpbmcgdGhlIE5JU1QgQUkgUmlzayBNYW5hZ2VtZW50IEZyYW1ld29yayBhbmQgdGhlIElTTy9JRUMgNDIwMDEgc3RhbmRhcmQgZm9yIEFJIG1hbmFnZW1lbnQgc3lzdGVtcywgZGVzY3JpYmUgYSBsYXJnZXIgdmVyc2lvbiBvZiB0aGUgc2FtZSBjb3JlLgoKIyMgV2hhdCBHb3Zlcm5hbmNlIElzIEZvcgoKQUkgZ292ZXJuYW5jZSBhbnN3ZXJzIHRocmVlIHF1ZXN0aW9ucyBhdCBhbnkgbW9tZW50OiB3aGF0IEFJIGlzIGluIHVzZSwgd2hvIGlzIHJlc3BvbnNpYmxlIGZvciBlYWNoIHVzZSwgYW5kIGhvdyB0aGUgZmlybSB3b3VsZCBrbm93IGlmIHNvbWV0aGluZyB3ZW50IHdyb25nLiBBIHByb2dyYW0gdGhhdCBhbnN3ZXJzIHRob3NlIHRocmVlIGNsZWFybHkgaXMgZ292ZXJuYW5jZS4gQSBwcm9ncmFtIHRoYXQgY2Fubm90IGlzIGEgcG9saWN5IGRvY3VtZW50LgoKQSBwb2xpY3kgc2F5cyB3aGF0IHBlb3BsZSBzaG91bGQgZG8uIEdvdmVybmFuY2Ugc2hvd3Mgd2hhdCB0aGUgZmlybSBhY3R1YWxseSBrbm93cyBhbmQgY29udHJvbHMuCgojIyBUaGUgU2l4IFBhcnRzCgoxLiBBbiBpbnZlbnRvcnkuIEEgbGlzdCBvZiBldmVyeSBBSSB0b29sIGFuZCB1c2UgaW4gdGhlIGZpcm06IGFwcHJvdmVkIGFzc2lzdGFudHMsIEFJIGZlYXR1cmVzIGluc2lkZSBleGlzdGluZyBzb2Z0d2FyZSwgYWdlbnRzLCBhbmQgdGhlIG1haW4gdW5hcHByb3ZlZCB0b29scyBwZW9wbGUgYXJlIGtub3duIHRvIHVzZS4gRm9yIGVhY2ggb25lLCB0aGUgb3duZXIsIHRoZSB1c2Vycywgd2hhdCBkYXRhIGl0IHRvdWNoZXMsIGFuZCB3aGVyZSB0aGF0IGRhdGEgZ29lcy4gRXZlcnl0aGluZyBlbHNlIGRlcGVuZHMgb24gdGhpcyBsaXN0LgoKMi4gQSBzaG9ydCB1c2FnZSBwb2xpY3kuIE9uZSBwYWdlIHRoYXQgcGVvcGxlIHdpbGwgcmVhZC4gV2hhdCBkYXRhIG1heSBnbyBpbnRvIHdoaWNoIHRvb2xzLCB3aGF0IG1heSBuZXZlciBnbyBpbnRvIGFueSBwdWJsaWMgdG9vbCwgYW5kIHdoZXJlIHRvIGFzayB3aGVuIHVuc3VyZS4gTG9uZyBwb2xpY2llcyBhcmUgd3JpdHRlbiBmb3IgYXVkaXRvcnMuIFNob3J0IG9uZXMgY2hhbmdlIGJlaGF2aW9yLgoKMy4gTmFtZWQgb3duZXJzLiBPbmUgYWNjb3VudGFibGUgZXhlY3V0aXZlIGZvciBBSSBvdmVyYWxsLCBhbmQgb25lIG5hbWVkIG93bmVyIGZvciBlYWNoIHRvb2wgb3IgYWdlbnQuIFRoZSBvd25lciBhcHByb3ZlcyBjaGFuZ2VzLCByZXZpZXdzIGFjY2VzcywgYW5kIGFuc3dlcnMgd2hlbiBzb21ldGhpbmcgZ29lcyB3cm9uZy4KCjQuIFJpc2sgdGllcnMuIE5vdCBldmVyeSB1c2UgbmVlZHMgdGhlIHNhbWUgY29udHJvbHMuIEEgdG9vbCB0aGF0IGRyYWZ0cyBpbnRlcm5hbCBtZWV0aW5nIG5vdGVzIGlzIGxvdyByaXNrLiBBbiBhZ2VudCB0aGF0IHNlbmRzIGRvY3VtZW50cyB0byBjbGllbnRzLCBvciBhbiBhc3Npc3RhbnQgdXNlZCBmb3IgYWR2aWNlIHRoYXQgY2xpZW50cyByZWx5IG9uLCBpcyBoaWdoIHJpc2suIFR3byBvciB0aHJlZSB0aWVycywgZGVjaWRlZCBieSB3aGF0IGRhdGEgaXMgaW52b2x2ZWQgYW5kIHdoYXQgdGhlIG91dHB1dCBhZmZlY3RzLCBrZWVwIGVmZm9ydCB3aGVyZSBpdCBtYXR0ZXJzLgoKNS4gQ29udHJvbHMgaW5zaWRlIHRoZSB0b29scy4gVGhpcyBpcyB3aGVyZSBnb3Zlcm5hbmNlIGJlY29tZXMgcmVhbC4gQ29tcGFueSBzaWduLWluLCBwZXJtaXNzaW9uIGNoZWNrcyBvbiB3aGF0IGVhY2ggcGVyc29uIGNhbiByZWFjaCwgZGF0YSBrZXB0IHdpdGhpbiBhZ3JlZWQgYm91bmRhcmllcywgcmV0ZW50aW9uIHNldHRpbmdzLCBhbmQgYSByZWNvcmQgb2Ygd2hhdCB3YXMgYXNrZWQgYW5kIGFuc3dlcmVkLiBBIHJ1bGUgdGhhdCBpcyBub3QgYmFja2VkIGJ5IGEgc2V0dGluZyBpbiB0aGUgdG9vbCBpcyBhIHJlcXVlc3QuCgo2LiBSZWNvcmRzIGFuZCByZXZpZXcuIEEgbG9nIG9mIGluY2lkZW50cyBhbmQgbmVhciBtaXNzZXMsIGEgcmV2aWV3IG9mIHRoZSBpbnZlbnRvcnkgYW5kIGFjY2VzcyBldmVyeSBxdWFydGVyLCBhbmQgYSBzaG9ydCByZXBvcnQgdG8gbGVhZGVyc2hpcC4gVGhpcyBpcyB3aGF0IGxldHMgdGhlIElUIGRpcmVjdG9yIGFuc3dlciB0aGUgYm9hcmQgcXVlc3Rpb24gd2l0aCBmYWN0cyBpbnN0ZWFkIG9mIHJlYXNzdXJhbmNlLgoKIyMgRG8ncwoKMS4gRG8gc3RhcnQgd2l0aCB0aGUgaW52ZW50b3J5LCBldmVuIGlmIGl0IGlzIGluY29tcGxldGUuIEEgbGlzdCB3aXRoIGdhcHMgaXMgYmV0dGVyIHRoYW4gbm8gbGlzdC4KMi4gRG8gdGllIGVhY2ggcnVsZSBpbiB0aGUgcG9saWN5IHRvIGEgY29udHJvbCBpbiBhIHRvb2wgd2hlcmV2ZXIgcG9zc2libGUuCjMuIERvIHNjYWxlIGNvbnRyb2xzIHRvIHRoZSByaXNrIHRpZXIsIHNvIGxvdy1yaXNrIHVzZXMgYXJlIGVhc3kgYW5kIGhpZ2gtcmlzayB1c2VzIGFyZSBjaGVja2VkLgo0LiBEbyB0cmFpbiBwZW9wbGUgYnJpZWZseSBhbmQgb2Z0ZW4uIFNpbmNlIEZlYnJ1YXJ5IDIwMjUgdGhlIEVVIEFJIEFjdCBoYXMgcmVxdWlyZWQgb3JnYW5pemF0aW9ucyB0aGF0IHVzZSBBSSB0byB0YWtlIG1lYXN1cmVzIHN1cHBvcnRpbmcgdGhlaXIgc3RhZmYncyBBSSBsaXRlcmFjeS4gVGhlIEp1bHkgMjAyNiBEaWdpdGFsIE9tbmlidXMgYW1lbmRtZW50IHNvZnRlbmVkIHRoZSB3b3JkaW5nIGJ1dCBrZXB0IHRoZSBkdXR5LCBhbmQgc2hvcnQsIHByYWN0aWNhbCBndWlkYW5jZSBpcyB3aGF0IGNoYW5nZXMgYmVoYXZpb3IgYW55d2hlcmUuCjUuIERvIHJlcG9ydCB0byBsZWFkZXJzaGlwIG9uIGEgZml4ZWQgc2NoZWR1bGUsIHdpdGggdGhlIHNhbWUgZmV3IG1lYXN1cmVzIGVhY2ggdGltZS4KCiMjIERvbid0cwoKMS4gRG9uJ3Qgc3RhcnQgd2l0aCBhIGNvbW1pdHRlZSBhbmQgYSA0MC1wYWdlIHBvbGljeS4gU3RhcnQgd2l0aCB0aGUgbGlzdCBhbmQgdGhlIG93bmVycy4KMi4gRG9uJ3QgZ292ZXJuIG9ubHkgdGhlIGFwcHJvdmVkIHRvb2xzLiBUaGUgdW5hcHByb3ZlZCBvbmVzIGJlbG9uZyBpbiB0aGUgaW52ZW50b3J5IHRvby4KMy4gRG9uJ3QgYnV5IGEgZ292ZXJuYW5jZSBwbGF0Zm9ybSBiZWZvcmUgeW91IGtub3cgd2hhdCB5b3UgYXJlIGdvdmVybmluZy4KNC4gRG9uJ3QgdHJlYXQgZ292ZXJuYW5jZSBhcyBhIG9uZS1vZmYgcHJvamVjdC4gVG9vbHMsIHRlYW1zIGFuZCBtb2RlbHMgY2hhbmdlIGV2ZXJ5IHF1YXJ0ZXIuCgojIyBUaGUgQ29zdCBvZiBHZXR0aW5nIFRoaXMgV3JvbmcKCjEgLSBUaGUgYm9hcmQgcXVlc3Rpb24gaGFzIG5vIGFuc3dlci4gV2l0aG91dCBhbiBpbnZlbnRvcnkgYW5kIHJlY29yZHMsIGV2ZXJ5IGFuc3dlciB0byAid2hhdCBpcyBvdXIgQUkgZXhwb3N1cmU/IiBpcyBhIGd1ZXNzLgoKMiAtIFJ1bGVzIHdpdGhvdXQgY29udHJvbHMgZmFpbCBxdWlldGx5LiBQZW9wbGUgZm9sbG93IGEgcG9saWN5IHVudGlsIGl0IGlzIGluY29udmVuaWVudC4gU2V0dGluZ3MgaW4gdGhlIHRvb2xzIGhvbGQgZWl0aGVyIHdheS4KCjMgLSBDbGllbnRzIGFuZCByZWd1bGF0b3JzIGFzayBiZWZvcmUgeW91IGFyZSByZWFkeS4gU2VjdXJpdHkgcXVlc3Rpb25uYWlyZXMsIGNsaWVudCBkdWUgZGlsaWdlbmNlIGFuZCByZWd1bGF0b3JzIGluY3JlYXNpbmdseSBhc2sgaG93IEFJIGlzIGdvdmVybmVkLiBBIGZpcm0gdGhhdCBoYXMgdG8gYnVpbGQgaXRzIGFuc3dlciBvbiBkZW1hbmQgbG9zZXMgdGltZSBhbmQgY3JlZGliaWxpdHkuCgojIyBIb3cgVG8gQ2hlY2sgV2hlcmUgWW91IFN0YW5kCgoxLiAqKkludmVudG9yeSoqIC0gQ291bGQgd2UgbGlzdCBldmVyeSBBSSB0b29sIGluIHVzZSwgd2l0aCBhbiBvd25lciwgYnkgdGhlIGVuZCBvZiB0aGlzIHdlZWs/CjIuICoqUG9saWN5KiogLSBJcyB0aGVyZSBhIG9uZS1wYWdlIHVzYWdlIHBvbGljeSB0aGF0IG1vc3QgZW1wbG95ZWVzIGhhdmUgYWN0dWFsbHkgc2Vlbj8KMy4gKipPd25lcnNoaXAqKiAtIERvZXMgZXZlcnkgQUkgdG9vbCBhbmQgYWdlbnQgaGF2ZSBhIG5hbWVkIG93bmVyPwo0LiAqKlRpZXJzKiogLSBEbyB3ZSBrbm93IHdoaWNoIHVzZXMgYXJlIGhpZ2ggcmlzaywgYW5kIGFyZSB0aGV5IGNvbnRyb2xsZWQgZGlmZmVyZW50bHk/CjUuICoqQ29udHJvbHMqKiAtIFdoaWNoIHJ1bGVzIGluIHRoZSBwb2xpY3kgYXJlIGVuZm9yY2VkIGJ5IGEgc2V0dGluZyBpbiBhIHRvb2w/CjYuICoqUmVjb3JkcyoqIC0gQ291bGQgd2Ugc2hvdyB0aGUgbGFzdCBxdWFydGVyJ3MgaW5jaWRlbnRzLCBhY2Nlc3MgcmV2aWV3cyBhbmQgY2hhbmdlcz8KCi0tLQoKQW52YXggY292ZXJzIHRoZSBjb250cm9scyBwYXJ0IG9mIHRoYXQgbGlzdCBmb3IgdGhlIEFJIHdvcmsgaXQgcnVucy4gQXNzaXN0YW50cyBhbmQgYWdlbnRzIHNpdCBpbiBvbmUgd29ya3NwYWNlLCBlYWNoIHdpdGggaXRzIG93biBzY29wZSBvZiBzb3VyY2VzIGFuZCB0b29scy4gQWNjZXNzIGdvZXMgdGhyb3VnaCBjb21wYW55IHNpZ24taW4gd2l0aCBwZXJtaXNzaW9uIGNoZWNrcyBvbiBldmVyeSBxdWVzdGlvbiwgYW5kIGV2ZXJ5IGludGVyYWN0aW9uIGlzIHJlY29yZGVkIHdpdGggdGhlIHVzZXIsIHRoZSBxdWVzdGlvbiwgdGhlIGRvY3VtZW50cyB1c2VkLCB0aGUgbW9kZWwgYW5kIHRoZSBhbnN3ZXIuIFRoYXQgbWFrZXMgcGFydHMgMSwgNSBhbmQgNiBhIG1hdHRlciBvZiByZWFkaW5nIHdoYXQgdGhlIHN5c3RlbSBhbHJlYWR5IGhvbGRzLgoKKklmIHlvdSBhcmUgcHJlcGFyaW5nIGFuIGFuc3dlciB0byB0aGUgYm9hcmQncyBBSSBxdWVzdGlvbiwgd2UgYXJlIGhhcHB5IHRvIHdhbGsgdGhyb3VnaCB3aGF0IGEgdXNlZnVsIGZpcnN0IGludmVudG9yeSBsb29rcyBsaWtlLiopCg==
+---
+title: "What an AI Governance Program Actually Contains"
+description: "AI governance sounds like a large program with a committee and a framework. For a few hundred people, it needs six things that work."
+pubDate: 2026-11-05
+tags: ["AI Governance", "Enterprise AI", "AI Audit", "Compliance", "GenAI"]
+draft: false
+---
+
+![A diagram showing the six parts of an AI governance program: an AI inventory with owners, risk, and status for each tool; a one-page usage policy; and controls including company sign-in, permission checks, retention settings, and a record of every answer.](/assets/blog/ai-governance-program-contains.webp)
+
+# What an AI Governance Program Actually Contains
+
+At the end of a board meeting, a director turns to the IT director of a 500-person firm and asks: what is our AI governance? The honest answer, at most firms that size, is a policy document from last year, a Copilot pilot, and a sense that people are probably using ChatGPT. The question will come back next quarter, and the answer will need to be better.
+
+AI governance sounds like a large program with a committee and a framework. For a firm of a few hundred people, it does not need to be. It needs six things that work, kept up to date. Most of the public frameworks, including the NIST AI Risk Management Framework and the ISO/IEC 42001 standard for AI management systems, describe a larger version of the same core.
+
+## What Governance Is For
+
+AI governance answers three questions at any moment: what AI is in use, who is responsible for each use, and how the firm would know if something went wrong. A program that answers those three clearly is governance. A program that cannot is a policy document.
+
+A policy says what people should do. Governance shows what the firm actually knows and controls.
+
+## The Six Parts
+
+1. An inventory. A list of every AI tool and use in the firm: approved assistants, AI features inside existing software, agents, and the main unapproved tools people are known to use. For each one, the owner, the users, what data it touches, and where that data goes. Everything else depends on this list.
+
+2. A short usage policy. One page that people will read. What data may go into which tools, what may never go into any public tool, and where to ask when unsure. Long policies are written for auditors. Short ones change behavior.
+
+3. Named owners. One accountable executive for AI overall, and one named owner for each tool or agent. The owner approves changes, reviews access, and answers when something goes wrong.
+
+4. Risk tiers. Not every use needs the same controls. A tool that drafts internal meeting notes is low risk. An agent that sends documents to clients, or an assistant used for advice that clients rely on, is high risk. Two or three tiers, decided by what data is involved and what the output affects, keep effort where it matters.
+
+5. Controls inside the tools. This is where governance becomes real. Company sign-in, permission checks on what each person can reach, data kept within agreed boundaries, retention settings, and a record of what was asked and answered. A rule that is not backed by a setting in the tool is a request.
+
+6. Records and review. A log of incidents and near misses, a review of the inventory and access every quarter, and a short report to leadership. This is what lets the IT director answer the board question with facts instead of reassurance.
+
+## Do's
+
+1. Do start with the inventory, even if it is incomplete. A list with gaps is better than no list.
+2. Do tie each rule in the policy to a control in a tool wherever possible.
+3. Do scale controls to the risk tier, so low-risk uses are easy and high-risk uses are checked.
+4. Do train people briefly and often. Since February 2025 the EU AI Act has required organizations that use AI to take measures supporting their staff's AI literacy. The July 2026 Digital Omnibus amendment softened the wording but kept the duty, and short, practical guidance is what changes behavior anywhere.
+5. Do report to leadership on a fixed schedule, with the same few measures each time.
+
+## Don'ts
+
+1. Don't start with a committee and a 40-page policy. Start with the list and the owners.
+2. Don't govern only the approved tools. The unapproved ones belong in the inventory too.
+3. Don't buy a governance platform before you know what you are governing.
+4. Don't treat governance as a one-off project. Tools, teams and models change every quarter.
+
+## The Cost of Getting This Wrong
+
+1 - The board question has no answer. Without an inventory and records, every answer to "what is our AI exposure?" is a guess.
+
+2 - Rules without controls fail quietly. People follow a policy until it is inconvenient. Settings in the tools hold either way.
+
+3 - Clients and regulators ask before you are ready. Security questionnaires, client due diligence and regulators increasingly ask how AI is governed. A firm that has to build its answer on demand loses time and credibility.
+
+## How To Check Where You Stand
+
+1. **Inventory** - Could we list every AI tool in use, with an owner, by the end of this week?
+2. **Policy** - Is there a one-page usage policy that most employees have actually seen?
+3. **Ownership** - Does every AI tool and agent have a named owner?
+4. **Tiers** - Do we know which uses are high risk, and are they controlled differently?
+5. **Controls** - Which rules in the policy are enforced by a setting in a tool?
+6. **Records** - Could we show the last quarter's incidents, access reviews and changes?
+
+---
+
+Anvax covers the controls part of that list for the AI work it runs. Assistants and agents sit in one workspace, each with its own scope of sources and tools. Access goes through company sign-in with permission checks on every question, and every interaction is recorded with the user, the question, the documents used, the model and the answer. That makes parts 1, 5 and 6 a matter of reading what the system already holds.
+
+*If you are preparing an answer to the board's AI question, we are happy to walk through what a useful first inventory looks like.*
