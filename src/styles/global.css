@@ -28,10 +28,11 @@ img { display: block; max-width: 100%; }
 
 /* Layout utility */
 .container {
-  padding: 0 var(--site-gutter);
+  padding-left: var(--site-gutter);
+  padding-right: var(--site-gutter);
 }
 @media (max-width: 960px) {
-  .container { padding: 0 var(--site-gutter-sm); }
+  .container { padding-left: var(--site-gutter-sm); padding-right: var(--site-gutter-sm); }
 }
 
 /* Section frame */

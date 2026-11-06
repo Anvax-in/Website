@@ -62,7 +62,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
         <div className={`container ${styles.heroInner}`}>
           <div>
             <h1 className={styles.h1}>
-              Anvax <span className={styles.vsWord}>vs.</span> {c.competitorName}
+              Anvax <span className={styles.vsWord}>vs</span> {c.competitorName}
             </h1>
             <p className={styles.lede}>{c.heroLede}</p>
             <div className={styles.ctas}>
