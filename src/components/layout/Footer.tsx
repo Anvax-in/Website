@@ -126,7 +126,7 @@ export default function Footer() {
               <span className={styles.brandName}>Anvax</span>
             </div>
             <p className={styles.blurb}>
-              The self-hosted, governed AI workspace for enterprises that cannot use public AI.
+              The governed AI workspace for enterprises that cannot use public AI.
             </p>
           </div>
           <Col title="Product"   links={product} />
