@@ -55,7 +55,7 @@ export default function DocsPage() {
           <div className={styles.docsHero}>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', letterSpacing: '0.02em', color: 'var(--fg-3)', marginBottom: '20px' }}>Documentation</p>
             <h1 className={styles.docsH1}>Deployment guides and technical references.</h1>
-            <p className={styles.docsLede}>Anvax is self-hosted. These guides are sent to your infrastructure team before deployment, not published openly, because your deployment topology is yours.</p>
+            <p className={styles.docsLede}>These guides are sent to your infrastructure team before deployment, not published openly, because your deployment topology is yours.</p>
             <Button variant="accent" href="/contact" arrow>Request documentation access</Button>
           </div>
 

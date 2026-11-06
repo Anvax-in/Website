@@ -1,6 +1,6 @@
 # Anvax
 
-> The self-hosted, governed AI workspace for enterprises that cannot put their data into ChatGPT, Glean, or Copilot.
+> The governed AI workspace for enterprises that cannot put their data into ChatGPT, Glean, or Copilot.
 
 Anvax is a private-deployment AI platform, search, chat, agents, and governance, that runs entirely inside a customer's own infrastructure (private cloud, sovereign cloud partner, or air-gapped on-prem). No customer data transits Anvax systems. Every deployment is tenant-isolated with an immutable audit trail, PII redaction, and framework-mapped controls.
 

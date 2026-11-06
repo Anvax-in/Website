@@ -130,7 +130,7 @@ export default function Company() {
           <SectionHead
             eyebrow="Team"
             title="Team Anvax."
-            lede="A small team building the self-hosted AI workspace for enterprises that can't put their data into public AI tools. We work directly with risk, compliance, and security teams at regulated enterprises — the governance model comes from that work, not a generic framework."
+            lede="A small team building the governed AI workspace for enterprises that can't put their data into public AI tools. We work directly with risk, compliance, and security teams at regulated enterprises — the governance model comes from that work, not a generic framework."
           />
         </div>
       </section>
