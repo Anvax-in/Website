@@ -634,59 +634,21 @@
 
 .faqInner {
   padding: 104px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 56px;
+  align-items: start;
 }
 
-.faqList {
-  border: 1px solid var(--bone-200);
+.faqInner > :last-child {
+  grid-column: span 2;
+  min-width: 0;
 }
 
-.faqItem {
-  border-bottom: 1px solid var(--bone-200);
-}
-
-.faqItem:last-child {
-  border-bottom: none;
-}
-
-.faqQuestion {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  padding: 20px 24px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  text-align: left;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--ink-900);
-  transition: background var(--dur-base) var(--ease-out);
-}
-
-.faqQuestion:hover {
-  background: var(--bone-25);
-}
-
-.faqChevron {
-  color: var(--slate-400);
-  font-size: 16px;
-  flex-shrink: 0;
-  transition: transform var(--dur-base) var(--ease-out);
-  display: inline-block;
-}
-
-.faqChevronOpen {
-  transform: rotate(180deg);
-}
-
-.faqAnswer {
-  font-size: 14.5px;
-  line-height: 24px;
-  color: var(--ink-500);
-  padding: 0 24px 22px;
-  margin: 0;
+@media (max-width: 735px) {
+  .faqInner > :last-child {
+    grid-column: 1 / -1;
+  }
 }
 
 /* ── Downloads ── */

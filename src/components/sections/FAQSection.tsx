@@ -1,3 +1,4 @@
+import IndustryFaq from '@/components/industries/IndustryFaq'
 import styles from './FAQSection.module.css'
 
 const faqs = [
@@ -43,30 +44,7 @@ export default function FAQSection() {
       <div className={styles.inner}>
         <div className={styles.layout}>
           <h2 className={styles.h2}>The questions your security team asks first.</h2>
-          <div className={styles.list}>
-            {faqs.map(({ q, a }) => (
-              <details key={q} className={styles.item}>
-                <summary className={styles.summary}>
-                  <span>{q}</span>
-                  <svg
-                    className={styles.chevron}
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M6 9l6 6 6-6" />
-                  </svg>
-                </summary>
-                <p className={styles.answer}>{a}</p>
-              </details>
-            ))}
-          </div>
+          <IndustryFaq items={faqs} />
         </div>
       </div>
     </section>

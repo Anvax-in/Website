@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import ComplianceBadgeWall from '@/components/ui/ComplianceBadgeWall'
+import IndustryFaq from '@/components/industries/IndustryFaq'
 import styles from './Trust.module.css'
 
 const glanceStats = [
@@ -156,7 +157,6 @@ function CheckIcon({ color = 'var(--sage-600)' }: { color?: string }) {
 
 export default function TrustClient() {
   const [activeIdx, setActiveIdx] = useState(0)
-  const [openFaq, setOpenFaq] = useState<number | null>(null)
   const activeStep = pipelineSteps[activeIdx]
 
   return (
@@ -349,24 +349,7 @@ export default function TrustClient() {
             <div className={styles.sectionEyebrow}>FAQ</div>
             <h2 className={styles.h2}>Questions your procurement team will ask.</h2>
           </div>
-          <div className={styles.faqList}>
-            {faqs.map((item, i) => (
-              <div key={i} className={styles.faqItem}>
-                <button
-                  type="button"
-                  className={styles.faqQuestion}
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  aria-expanded={openFaq === i}
-                >
-                  <span>{item.q}</span>
-                  <span className={`${styles.faqChevron} ${openFaq === i ? styles.faqChevronOpen : ''}`}>▾</span>
-                </button>
-                {openFaq === i && (
-                  <p className={styles.faqAnswer}>{item.a}</p>
-                )}
-              </div>
-            ))}
-          </div>
+          <IndustryFaq items={faqs} />
         </div>
       </section>
 

@@ -169,4 +169,5 @@
 
 @media (max-width: 720px) {
   .ctaInner { padding-top: 72px; padding-bottom: 72px; }
+  .secGrid > :last-child { grid-column: 1; }
 }
