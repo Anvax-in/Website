@@ -8,8 +8,6 @@ draft: false
 
 ![A diagram showing how an AI connector's application access can read an entire tenant, versus the delegated access a single signed-in user has](/assets/blog/connector-account-read-everything.webp)
 
-# The Connector Account That Can Read Everything
-
 To connect SharePoint to a new AI tool, an IT admin follows the setup guide and clicks "Accept" on a Microsoft consent screen. The app asks to read all sites. From that moment, the app can read every document in every SharePoint site in the company, whoever is asking, at any time. The AI tool then promises to show each user only what they are allowed to see. That promise is now the only thing standing between any employee and the entire tenant.
 
 Most conversations about AI data access focus on what each user can see. The connector that feeds the AI usually has far more access than any user, and it gets much less scrutiny.
