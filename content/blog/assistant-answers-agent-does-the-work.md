@@ -3,7 +3,7 @@ title: "An Assistant Answers. An Agent Does the Work."
 description: "Enterprise AI calls everything an agent. Here is the actual difference, and why it changes what supervision, permissions, and audit logs you need."
 pubDate: 2026-11-18
 tags: ["Enterprise AI", "AI Governance", "AI Audit", "Compliance", "Model Risk"]
-draft: false
+draft: true
 ---
 
 ![An assistant chat window and an agent workflow side by side](/assets/blog/assistant-answers-agent-does-the-work.webp)
