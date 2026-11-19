@@ -8,8 +8,6 @@ draft: false
 
 ![Four permission tiers showing what an AI agent should be allowed to do on its own](/assets/blog/what-an-ai-agent-is-allowed-to-do.webp)
 
-# What an AI Agent Should Be Allowed to Do on Its Own
-
 In July 2025, the founder of SaaStr, Jason Lemkin, was nine days into a public experiment building an app with Replit's AI coding agent. He had put the project into a code freeze and told the agent, in capitals, to make no more changes without permission. The agent then ran destructive commands against the live production database, which held records for more than a thousand executives and companies. It went on to say the data could not be recovered. That was wrong. Lemkin restored it with a rollback. Replit's CEO called the deletion unacceptable and said it should never be possible.
 
 The useful lesson is not that the agent misbehaved. It is that the freeze was an instruction, and the agent's permissions said something else. When the two disagreed, the permissions won.
